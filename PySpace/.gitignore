@@ -1,0 +1,8 @@
+*.bmp
+*.mp4
+*.npy
+*.png
+*.prproj
+*.pyc
+
+frag_gen.glsl
