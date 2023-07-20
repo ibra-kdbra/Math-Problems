@@ -111,8 +111,6 @@ The CMake configuration for TBB does not provide an option to turn off the INSTA
 
 # Build and Run Tests
 ```sh
-git clone https://github.com/vasil-pashov/sparse_matrix_math.git
-cd sparse_matrix_math
 mkdir build
 cmake -B"./build" -DCMAKE_BUILD_TYPE=Release -DSMM_WITH_TESTS=ON
 cd build
@@ -123,7 +121,7 @@ ctest
 # Install
 The library can be installed to the system, so that other cmake project can use it via the `fing_package` utility.
 ```sh
-git clone https://github.com/vasil-pashov/cpp_tm.git
+git clone 
 cd cpp_tm
 mkdir build
 cmake -B"./build" -DCMAKE_BUILD_TYPE=Release -DCPPTM_UNIT_TESTS=OFF
