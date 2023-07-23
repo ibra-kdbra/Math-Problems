@@ -1,0 +1,10 @@
+a
+#d
+/d
+/.vscode
+#cmake
+/CMakeFiles
+CMakeCache.txt
+cmake_install.cmake
+#makefile
+/Makefile
