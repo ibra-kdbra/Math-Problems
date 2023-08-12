@@ -18,8 +18,8 @@ SymbolTreeView::SymbolTreeView(const Forscape::Code::SymbolTable& symbol_table, 
     for(size_t scope_segment_index = 0; scope_segment_index < symbol_table.scope_segments.size(); scope_segment_index++){
         const Forscape::Code::ScopeSegment& scope_segment = symbol_table.scope_segments[scope_segment_index];
         const size_t sym_end = (&scope_segment == &symbol_table.scope_segments.back()) ?
-                               symbol_table.symbols.size() :
-                               symbol_table.scope_segments[scope_segment_index+1].first_sym_index;
+                            symbol_table.symbols.size() :
+                            symbol_table.scope_segments[scope_segment_index+1].first_sym_index;
 
         if(scope_segment.isStartOfScope()){
             if(scope_segment.parent_lexical_segment_index == NONE){
