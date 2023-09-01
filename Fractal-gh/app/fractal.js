@@ -297,7 +297,7 @@
     var rgbIncrements = Math.floor(((this.maxEscapeTime) / 7));
     var caseNum = Math.floor(escapeTime / rgbIncrements);
     var remainNum = escapeTime % rgbIncrements;
-
+  //find the case to expect te colors of the next pixel...
     switch (caseNum) {
       case 0:
         redNum = 0;
