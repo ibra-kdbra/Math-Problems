@@ -1,0 +1,126 @@
+//Yet another implementation of a parallel continuum robot
+//https://github.com/JohnDTill/ContinuumRobotExamples
+
+//Independent params
+pd = 000.4⊤ //Desired end-effector position (m)
+Rd = I3×3 //Desired end-effector rotation
+N = 40 //Number of gridpoints
+v*(s) = e3×12 //Initial shear
+u*(s) = 03×1 //Initial curvature
+r = 0.001 //Rod radius (m)
+re = 0.087 //Attachment pattern radius (m)
+α1 = 100 × (π/180) //Pattern major angle (rad)
+ρ = 8000 //Material density, kg/m^3
+E = 207 × 109 //Young's modulus (Pa)
+ν = 0.3 //Poisson's ratio
+Fe = 03×1 //External force on end-effector (N)
+Me = 03×1 //External moment on end-effector (Nm)
+//Dependent params
+G = E2(1 + ν) //Shear modulus (Pa)
+A = πr2 //Cross-sectional area (m^2)
+I = πr44 //Bending moment of inertia (m^4)
+J = 2I //Polar moment of inertia (m^4)
+Kse = GA000GA000EA //Shear/extension stiffness (N)
+Kbt = EI000EI000GJ //Bending/torsion stiffness (Nm^2)
+f = -ρ A 00-9.81⊤ //Distributed force (N/m)
+l = 03×1 //Distributed moment (Nm)
+α2 = 120 × (π/180) - α1 //Pattern minor angle (rad)
+
+alg quat2rot(h){
+    R = I3×3 + 2h⊤h-h22-h23h1h2-h0h3h1h3+h0h2h1h2+h0h3-h21-h23h2h3-h0h1h1h3-h0h2h2h3+h0h1-h21-h22
+    return R
+}
+
+alg cosseratEqns(s, x){
+    h = x3:6 //Quaternion
+    R = quat2rot(h) //Rotation
+    n = x7:9 //Internal force (N)
+    m = x10:12 //Internal moment (Nm)
+    
+    v = v*(s) + Kse-1R⊤n //Shear
+    u = u*(s) + Kbt-1R⊤m //Curvature (1/m)
+    
+    pd = Rv
+    hd = 12 0-u0-u1-u2u00u2-u1u1-u20u0u2u1-u00h
+    nd = -f
+    md = -pd×n - l
+    
+    return pd⊤hd⊤nd⊤md⊤⊤
+}
+    
+alg rk4(f, y0, t0, tf, N){
+    h = tf - t0N - 1 //Step size
+    Y ← 0len(y0)×N //ODE approximate solution
+    Y:,0 ← y0
+    for(i ← 0; i < N-1; i ← i + 1){
+        tn = t0 + i*h
+        yn = Y:,i
+        k1 = f(tn, yn) 
+        k2 = f(tn + h2 , yn + hk12)
+        k3 = f(tn + h2 , yn + hk22)
+        k4 = f(tn + h , yn + h k3)
+        Y:,i+1 ← yn + 16 h (k1 + 2k2 + 2k3 + k4)
+    }
+    
+    return Y
+}
+
+alg findRoot(f, x, tol=10-15, max_iter = 100, λ=10-6){
+    for(iter ← 0; iter ≤ max_iter; iter ← iter + 1){
+        r = f(x)
+        if(‖r‖2 < tol) return x
+        J = ∂f(x)∂x //Objective function Jacobian
+        x ← x - (J⊤J + λIlen(x)×len(x))-1 J⊤r //Levenberg-Marquardt step
+    }
+    assert(false) //Fail to meet tolerance in allowed iterations
+}
+
+py ← 01×12N
+pz ← 01×12N
+
+alg objFun(x){
+    Ef ← Fe //Running force error
+    Em ← Me //Running moment error
+    res ← 036×1 //Residual vector
+    
+    for(i ← 0; i < 6; i ← i + 1){
+        θB = -α2/2 + (i + 1) - (i + 1)%22α2 + i - i%22α1
+        θE = -α1/2 + (i + 1) - (i + 1)%22α1 + i - i%22α2
+        p0 = re cosθBsinθB0⊤ //Rod proximal position
+        rF = re cosθEsinθE0⊤ //Vector from end-effector center to distal rod in EE frame
+        h0 = e4×10
+        n0 = x5i:5i+2 //Internal force at base (N)
+        m0 = x5i+3x5i+40⊤ //Moment at base (Nm)
+        L = x30+i //Length of rod (m)
+        y0 = p0⊤h0⊤n0⊤m0⊤⊤
+        
+        Y = rk4(cosseratEqns, y0, 0, L, N)
+        yf = Y:,N-1
+        py2N*i : 2N*(i+1)-1 ← Y1,::-1Y1,:
+        pz2N*i : 2N*(i+1)-1 ← Y2,::-1Y2,:
+
+        pf = yf0:2
+        hf = yf3:6
+        Rf = quat2rot(hf)
+        nf = yf7:9
+        mf = yf10:12
+        
+        Ep = pd + RdrF - pf //Rod position error
+        ER = (Rd⊤Rf - RdRf⊤)∨0:1 //Rod orientation error
+        res5i : 5i+2 ← Ep
+        res5i +3: 5i+4 ← ER
+        Ef ← Ef - nf
+        Em ← Em - (mf + (RdrF) × nf)
+    }
+    
+    res30:32 ← Ef
+    res33:35 ← Em
+    
+    return res
+}
+
+guess = 01×300.4*11×6⊤
+sol = findRoot(objFun, guess)
+L = sol30:35
+print("L = ", L⊤)
+plot("Continuum Stewart-Gough Solution", "x (m)", py, "z(m)", pz)

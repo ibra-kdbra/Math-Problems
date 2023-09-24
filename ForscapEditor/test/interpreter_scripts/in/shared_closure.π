@@ -1,0 +1,27 @@
+alg void(){}
+alg zero() return 0
+incr ← void
+decr ← void
+get ← zero
+alg initFuncs(){
+    x ← 0
+    alg incrX(){
+        x ← x + 1
+    }
+    alg decrX(){
+        x ← x - 1
+    }
+    alg getX(){
+        return x
+    }
+    incr ← incrX
+    decr ← decrX
+    get ← getX
+}
+
+initFuncs()
+print(get(), "\n")
+incr()
+print(get(), "\n")
+decr()
+print(get())
