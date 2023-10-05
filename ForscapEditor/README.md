@@ -72,19 +72,3 @@ Progress and feature ideas are tracked in a [Jira board](https://forscape.atlass
 
 There is no documentation yet, either user or design docs. [Crafting Interpreters](http://www.craftinginterpreters.com/) is an excellent programming-languages primer and instant classic for anyone wanting to experiment with languages.
 
-[![C++ Integration Tests (ubuntu-latest gcc)](https://github.com/JohnDTill/Forscape/actions/workflows/cpp_integration_tests.yml/badge.svg)](https://github.com/JohnDTill/Forscape/actions/workflows/cpp_integration_tests.yml)
-
-[![C++ Integration Tests (ubuntu-latest gcc 32-bit)](https://github.com/JohnDTill/Forscape/actions/workflows/cpp_integration_tests_32bit.yml/badge.svg)](https://github.com/JohnDTill/Forscape/actions/workflows/cpp_integration_tests_32bit.yml)
-
-[![C++ Integration Tests (ubuntu-latest clang)](https://github.com/JohnDTill/Forscape/actions/workflows/cpp_integration_tests_clang.yml/badge.svg)](https://github.com/JohnDTill/Forscape/actions/workflows/cpp_integration_tests_clang.yml)
-
-[![C++ Integration Tests (windows-latest msbuild)](https://github.com/JohnDTill/Forscape/actions/workflows/cpp_integration_tests_win.yml/badge.svg)](https://github.com/JohnDTill/Forscape/actions/workflows/cpp_integration_tests_win.yml)
-
-[![C++ Integration Tests (macos-latest)](https://github.com/JohnDTill/Forscape/actions/workflows/cpp_integration_tests_mac.yml/badge.svg)](https://github.com/JohnDTill/Forscape/actions/workflows/cpp_integration_tests_mac.yml)
-
-[![Qt Integration Tests (ubuntu-latest gcc)](https://github.com/JohnDTill/Forscape/actions/workflows/qt_integration_tests.yml/badge.svg)](https://github.com/JohnDTill/Forscape/actions/workflows/qt_integration_tests.yml)
-
-
-[![Qt Integration Tests (macos-latest)](https://github.com/JohnDTill/Forscape/actions/workflows/qt_integration_tests_mac.yml/badge.svg)](https://github.com/JohnDTill/Forscape/actions/workflows/qt_integration_tests_mac.yml)
-
-[![Forscape App Compiles And Runs (ubuntu-latest gcc)](https://github.com/JohnDTill/Forscape/actions/workflows/app_compiles_and_runs.yml/badge.svg)](https://github.com/JohnDTill/Forscape/actions/workflows/app_compiles_and_runs.yml)
