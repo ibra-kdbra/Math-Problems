@@ -1,6 +1,6 @@
-// The idea of a segmented sieve is to divide the range [0..n-1] in different segments and 
-// compute primes in all segments one by one.
-// This algorithm first uses Simple Sieve to find primes smaller than or equal to √(n).
+/* The idea of a segmented sieve is to divide the range [0..n-1] in different segments and 
+compute primes in all segments one by one.
+This algorithm first uses Simple Sieve to find primes smaller than or equal to √(n). */
 #include<bits/stdc++.h>
 using namespace std;
 #define ll long long int
