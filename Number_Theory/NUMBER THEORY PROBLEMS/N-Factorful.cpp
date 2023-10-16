@@ -11,7 +11,6 @@ void seive(ll n)
     for(ll i=0;i<=n+1;i++){
     a[i]=0;
     }
-   
     for(ll j=2;j<=n;j+=2)
     {
         a[j]+=1;
