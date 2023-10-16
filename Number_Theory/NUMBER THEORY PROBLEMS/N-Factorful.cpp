@@ -63,13 +63,11 @@ int main()
     ll t,c,n,i,j,k,x,d,a,b;
     c=0;
     seive(1000004);
-   
+    
     cin>>t;
     while(t--)
     {
     	cin>>a>>b>>d;
-    	
-
         // ALL CALCULATIONS ARE DONE TILL NOW VALUE IS COMPUTED FURTHER
         if(d==0 && a==1)
         {
