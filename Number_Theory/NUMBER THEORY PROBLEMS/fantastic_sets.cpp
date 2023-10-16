@@ -1,5 +1,5 @@
-// The code calculates the sum of all distinct divisors for each test 
-// case using dynamic programming and prints the final sum
+/* The code calculates the sum of all distinct divisors for each test 
+case using dynamic programming and prints the final sum */
 
 #include<iostream>
 using namespace std;

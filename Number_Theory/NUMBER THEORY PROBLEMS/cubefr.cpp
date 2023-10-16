@@ -1,7 +1,7 @@
-// The purpose of each section of code,
-// including marking multiples of cubes as non-cube-free numbers,
-// assigning unique numbers to cube-free numbers,
-// and processing each test case.
+/* The purpose of each section of code,
+including marking multiples of cubes as non-cube-free numbers,
+assigning unique numbers to cube-free numbers,
+and processing each test case. */
 
 #include<bits/stdc++.h>
 using namespace std;

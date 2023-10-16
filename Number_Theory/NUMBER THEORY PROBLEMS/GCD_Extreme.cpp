@@ -1,6 +1,6 @@
-// The purpose of each section of code, including the calculation of Euler's Totient Phi
-// valuesusing the Sieve of Eratosthenes and
-// the main loop that reads input and prints the corresponding Euler's Totient Phi values.
+/* The purpose of each section of code, including the calculation of Euler's Totient Phi
+valuesusing the Sieve of Eratosthenes and
+the main loop that reads input and prints the corresponding Euler's Totient Phi values. */
 
 
 #include<bits/stdc++.h>
