@@ -17,7 +17,11 @@ Flower Pollination Algorithmn to Minimize Functions with Continuous Variables. T
 
 * target_function = Function to be minimized.
 
-# Other Metaheuristics
+## Credits
+**[Valdecy](https://github.com/Valdecy)**
+
+
+### Other Metaheuristics
 
 Some  **Colab** project from - [pyMetaheuristic](https://github.com/Valdecy/pyMetaheuristic).
 
