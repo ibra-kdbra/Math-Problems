@@ -1,4 +1,12 @@
 # Math Problems
+[![forthebadge](https://forthebadge.com/images/badges/fixed-bugs.svg)](https://forthebadge.com)
+[![forthebadge](https://forthebadge.com/images/badges/made-with-c-plus-plus.svg)](https://forthebadge.com)
+[![forthebadge](https://forthebadge.com/images/badges/made-with-javascript.svg)](https://forthebadge.com)
+[![forthebadge](https://forthebadge.com/images/badges/made-with-python.svg)](https://forthebadge.com)
+
+
+[![forthebadge](https://forthebadge.com/images/badges/powered-by-qt.svg)](https://forthebadge.com)
+[![forthebadge](https://forthebadge.com/images/badges/you-didnt-ask-for-this.svg)](https://forthebadge.com)
 
 Mathematics is the foundation of programming and the use of it. It helps programmers to solve problems, design algorithms, optimize performance, and create beautiful applications. Some of the mathematical concepts that are essential for programming are logic, sets, functions, relations, graphs, matrices, calculus, discrete mathematics, and cryptography. 
 
