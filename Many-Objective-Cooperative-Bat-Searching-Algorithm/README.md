@@ -3,5 +3,5 @@ Implementing [Many objective cooperative bat searching algorithm](https://www.sc
 paper to optimize problems with different objective functions.  
 
 
-# Plot of the fitness function optimization over time (iterations)
-![Confusion Matrix](/images/Fitness_Best.png)
+### Plot of the fitness function optimization over time (iterations)
+![Confusion Matrix](./images/Fitness_Best.png)
