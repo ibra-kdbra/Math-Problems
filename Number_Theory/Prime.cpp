@@ -1,4 +1,7 @@
+// Include the standard C++ library.
 #include <bits/stdc++.h>
+
+// Use the standard C++ namespace.
 using namespace std;
 
 // Check if a number is prime
