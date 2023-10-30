@@ -1,6 +1,12 @@
+// Include the standard C++ library.
 #include <bits/stdc++.h>
+
+// Use the standard C++ namespace.
 using namespace std;
+// Macro to define the push_back() function
 #define pb push_back
+
+// Macro to define the long long int type
 #define ll long long int
 
 // Calculates the modular exponentiation of a to the power of b modulo c.
