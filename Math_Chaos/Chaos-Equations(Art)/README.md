@@ -1,9 +1,11 @@
 # Chaos-Equations
+
 Simple mathematical art
 
 This is for trying many arts using simple mathmatic equations and simulate them using c++,CASSERT,SFML,OPENGL
 
 ## Summary
+
 These are plots of random recursive equations, which
 often produce chaos, and results in beautiful patterns.
 For every time t, a point (x,y) is initialized to (t,t).
@@ -13,7 +15,6 @@ iteration is drawn in a unique color.
 =========================================================
 
 Controls:
-
 
     'A' - Automatic Mode (randomize equations)
     'R' - Repeat Mode (keep same equation)
