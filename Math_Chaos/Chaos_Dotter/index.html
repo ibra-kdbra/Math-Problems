@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
+    <title>Chaos Visual</title>
+    <style>
+        body {
+            min-width: 820px;
+        }
+        #player {
+            margin: auto;
+            height: 20px;
+        }
+        #container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;  
+        }
+        #container * {
+            margin: 10px;
+        }
+        .footer-menu {
+            margin: auto;
+        }
+        
+    </style>
+</head>
+<body >
+    <section name="header">
+        <div class="ui inverted menu">
+            <a class="item" target="_blank" href="https://github.com/ibra-kdbra/Math-Problem/Math_Chaos/Chaos_Dotter">
+            <i class="github icon"></i> Star on GitHub
+            </a>
+            <audio controls autoplay loop id="player">
+                <source src="./background_music.webm">
+            </audio>
+        </div>
+    </section>
+
+    <section name="canvas">
+        <div class="ui placeholder segment">
+            <canvas id="mycanvas" width="800" height="600" style="display:block;margin:0 auto"></canvas>
+        </div>
+    </section>
+
+    <div id="container">
+        <div class="ui floating message">
+            Enter number of bigger vertices: 
+            <div class="ui input focus">
+                <input id="nthsidedpolygon" type="number" placeholder="must be greater than 2" style="width:200px"/>
+            </div>
+            <br/>
+            Enter %age of distance to travel: 
+            <div class="ui input focus">
+                <input id="distratio" type="number" placeholder="Try 61.8 i.e GoldenRatio Inverse" style="width:200px"/>
+            </div>
+            <br/>
+        </div>
+        <button class="ui primary button" onclick="playForSide()">
+            Amaze me!
+        </button>
+        
+        <div class="ui divider"></div>
+
+        <div class="ui styled accordion">
+            <div class="active title">
+                <i class="dropdown icon"></i>
+                How this works?
+            </div>
+            <div class="active content">
+                <ul class="list">
+                    <li>We start with a random point.</li>
+                    <li>In each step, we chose randomly one of the bigger vertex and move 50% (or what ever %age you specified) towards it from our current position.</li>
+                    <li>We keep repeating the previous step till infinity.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <section name="footer">
+    </section>
+    <script>
+        // accordion needs initialization -.-
+        $(document).ready(function(){
+            $('.ui.accordion').accordion();
+        });
+
+        let canvas = document.querySelector('#mycanvas');
+        let canvasContext = canvas.getContext('2d');
+
+        let centerX = Math.random() * canvas.width;
+        let centerY = Math.random() * canvas.height;
+        let RAD = 1;
+        let POINTS = [];
+        let N = 3;
+        let PADDING = 50;
+        let distRatio = 0.5;
+        
+        function playForSide() {
+            N = document.querySelector('#nthsidedpolygon').value;
+            if (N < 3) {
+                alert('vertices must be greater than 2');
+                return;
+            }
+
+            distRatio = document.querySelector('#distratio').value/100;
+            if (distRatio > 0 && distRatio < 1) {
+                // all good here 
+            }
+            else {
+                alert('distance to travel must be less than 100%, try 61.8');
+                document.querySelector('#distratio').value = 61.8;
+                distRatio = 61.8;
+            }
+            
+            init();
+        }
+
+        function colorRect(topLeftX,topLeftY, boxWidth,boxHeight, fillColor) {
+            canvasContext.beginPath();
+
+            canvasContext.fillStyle = fillColor;
+            canvasContext.fillRect(topLeftX,topLeftY, boxWidth,boxHeight);
+
+            canvasContext.closePath();
+        }
+        
+        function colorCircle(centerX,centerY, radius, fillColor) {
+            canvasContext.beginPath();
+
+            canvasContext.fillStyle = fillColor;
+            canvasContext.arc(centerX,centerY, radius, 0,Math.PI*2, true);
+            canvasContext.fill();
+
+            canvasContext.closePath();
+        }
+
+        function draw() {
+            let W = canvas.width;
+            let H = canvas.height;
+            let h = H - PADDING;
+            let origin = [W/2, h/2+PADDING/2];
+            let rad = h/2;
+            let theta = (Math.PI*2)/N; 
+            let target = Math.floor(Math.random() * N);
+
+            for (let i=0; i<N; i++) {
+                let currentTheta = i*theta - (Math.PI/2); //rotating by 90 degs for better aesthetics
+                POINTS[i] = [origin[0] + rad*Math.cos(currentTheta), origin[1]+rad*Math.sin(currentTheta)];
+                colorCircle(POINTS[i][0],POINTS[i][1], RAD*10, i == target?'red':'cyan');
+            }
+            
+            colorCircle(centerX, centerY, RAD, 'cyan');
+
+            
+            centerX = (distRatio * POINTS[target][0]) + (1-distRatio) * centerX;
+            centerY = (distRatio * POINTS[target][1]) + (1-distRatio) * centerY;
+
+            const myTimer = setTimeout(draw, 1000/300);
+        }
+        
+        function init() {
+            colorRect(0,0, canvas.width,canvas.height, 'black'); 
+            draw();
+        }
+
+        window.onload = function() {
+            init();
+        }
+
+    </script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-142508299-2"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-142508299-2');
+    </script>
+</body>
+</html>
