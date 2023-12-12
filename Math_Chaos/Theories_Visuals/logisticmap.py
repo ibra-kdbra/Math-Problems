@@ -1,6 +1,7 @@
 import time
 import numpy as np
 import matplotlib.pyplot as plt
+import matplotlib.image as mpimg
 from scipy.integrate import solve_ivp
 
 from parameters import inv, endv
@@ -23,7 +24,9 @@ def main(inputs):
             lims[i+1] = r*lims[i]*(1-lims[i])
         biax.plot([r]*numtoplot, lims[reps-numtoplot:], 'b.', markersize=.02)
     biax.set(xlabel='r', ylabel='X Axis', title='Logistic Map')
-    plt.show()
+    # Save the plot to an image file
+    plt7.savefig("./assets/LogisticMap.png")
+    # plt.show()
 
 # Calling main function with example inputs
 inputs = {'inv': inv, 'endv': endv}
