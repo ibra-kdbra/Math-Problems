@@ -7,15 +7,15 @@ Visualize chaos with your own chosen parameters.
 
 <p align="center">
 
-[3D Lorenz Attractor](https://github.com/DorsaRoh/Chaos-Theory/blob/main/3D_lorenzattractor.py) : 3D representation of the Lorenz Attractor
+[3D Lorenz Attractor](./3D_Lorenz_Attractor.py) : 3D representation of the Lorenz Attractor
 
 <img width="800px" src="assets\3d_lorenz.png">
 
-[2D Lorenz Attractor](https://github.com/DorsaRoh/Chaos-Theory/blob/main/2D_lorenzattractor.py) : 2D representation of the Lorenz Attractor's axes and dimension
+[2D Lorenz Attractor](./2D_Lorenz_Attractor.py) : 2D representation of the Lorenz Attractor's axes and dimension
 
 <img width="850px" src="assets\2d_lorenz.png">
 
-[Logistic Map](https://github.com/DorsaRoh/Chaos-Theory/blob/main/logisticmap.py) : 2D Representation of Logistic Map
+[Logistic Map](./logisticmap.py) : 2D Representation of Logistic Map
 
 <img width="600px" src="assets\LogisticMap.png">
 </p>
@@ -39,7 +39,7 @@ pip install -r requirements.txt
 ```
 
 ### 3. Usage
-
+<https://en.wikipedia.org/wiki/Logistic_map>
 **Enter your parameters in [parameters.py](/Math_Chaos/Chaos-Theory_Visuals/parameters.py) file**
 
 Run file
@@ -53,3 +53,8 @@ For example:
 ```shell
 python 3D_lorenzattractor.py
 ```
+
+### References
+
+- [Lorenz_Attractor](https://en.wikipedia.org/wiki/Lorenz_system)
+- [Logistic_Map](https://en.wikipedia.org/wiki/Logistic_map)
