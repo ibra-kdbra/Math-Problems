@@ -1,7 +1,9 @@
+// main.cpp
 #include <Eigen/Dense>
-#include <SFML/Graphics.hpp>
-#include <chrono>
+#include <GLFW/glfw3.h>
 #include <iostream>
+#include <cmath>
+#include "OrbitCamera.h"
 
 // Initial conditions
 const int size = 100000;
@@ -28,41 +30,84 @@ Eigen::MatrixXf iter() {
 }
 
 int main() {
-    auto start_time = std::chrono::high_resolution_clock::now();
-
+    // Calculate xy
     Eigen::MatrixXf xy = iter();
 
-    auto end_time = std::chrono::high_resolution_clock::now();
-    auto elapsed = std::chrono::duration_cast<std::chrono::seconds>(end_time - start_time);
-    std::cout << "--- " << elapsed.count() << " seconds ---" << std::endl;
-
-    // Plotting with SFML
-    sf::RenderWindow window(sf::VideoMode(800, 600), "Scatter Plot");
-    sf::CircleShape point(0.5f);
-    point.setFillColor(sf::Color::Black);
-
-    while (window.isOpen()) {
-        sf::Event event;
-        while (window.pollEvent(event)) {
-            if (event.type == sf::Event::Closed)
-                window.close();
-            if (event.type == sf::Event::KeyPressed && event.key.code == sf::Keyboard::Escape)
-                window.close();
-        }
-
-        window.clear(sf::Color::White);
-        for (int i = 0; i < size; ++i) {
-            point.setPosition(xy(0, i) * 100 + 400, xy(1, i) * 100 + 300);  // Scale and translate points
-            window.draw(point);
-        }
-        window.display();
+    // Initialize GLFW
+    if (!glfwInit()) {
+        std::cerr << "Failed to initialize GLFW" << std::endl;
+        return -1;
     }
 
-    // Save the window content to a file
-    sf::Texture texture;
-    texture.create(window.getSize().x, window.getSize().y);
-    texture.update(window);
-    texture.copyToImage().saveToFile("output.ppm");
+    // Create a windowed mode window and its OpenGL context
+    GLFWwindow* window = glfwCreateWindow(800, 600, "Scatter Plot", NULL, NULL);
+    if (!window) {
+        std::cerr << "Failed to create GLFW window" << std::endl;
+        glfwTerminate();
+        return -1;
+    }
 
+    // Make the window's context current
+    glfwMakeContextCurrent(window);
+
+    // OrbitCamera camera(5.0f);
+
+    double lastX = 400, lastY = 300;
+    float yaw = -90.0f, pitch = 0.0f;
+    float speed = 0.05f;
+    Eigen::Vector3f cameraPos(0.0f, 0.0f, 3.0f);
+    Eigen::Vector3f cameraFront(0.0f, 0.0f, -1.0f);
+    Eigen::Vector3f cameraUp(0.0f, 1.0f, 0.0f);
+
+    // Loop until the user closes the window
+    while (!glfwWindowShouldClose(window)) {
+        // Handle mouse input
+        double mouseX, mouseY;
+        glfwGetCursorPos(window, &mouseX, &mouseY);
+
+        float xoffset = mouseX - lastX;
+        float yoffset = lastY - mouseY; // reversed since y-coordinates range from bottom to top
+        lastX = mouseX;
+        lastY = mouseY;
+
+        float sensitivity = 0.1f;
+        xoffset *= sensitivity;
+        yoffset *= sensitivity;
+
+        yaw += xoffset;
+        pitch += yoffset;
+
+        // Make sure that when pitch is out of bounds, screen doesn't get flipped
+        if(pitch > 89.0f)
+            pitch = 89.0f;
+        if(pitch < -89.0f)
+            pitch = -89.0f;
+
+        Eigen::Vector3f front;
+        front[0] = cos(yaw) * cos(pitch);
+        front[1] = sin(pitch);
+        front[2] = sin(yaw) * cos(pitch);
+        cameraFront = front.normalized();
+
+        // Render here
+        glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+
+        // Draw points
+        glBegin(GL_POINTS);
+        for (int i = 0; i < size; ++i) {
+            float t = static_cast<float>(i) / (size - 1);  // Normalize i to [0, 1]
+            glColor3f((1 - t), 0, t);  // Interpolate from red to blue
+            glVertex3f(xy(0, i), xy(1, i), 0.0f);  // Scale and translate points
+        }
+        glEnd();
+
+        // Swap front and back buffers
+        glfwSwapBuffers(window);
+
+        // Poll for and process events
+        glfwPollEvents();
+    }
+
+    glfwTerminate();
     return 0;
 }
