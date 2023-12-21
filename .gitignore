@@ -1,0 +1,5 @@
+# ignored files
+
+*.ppm
+.vscode
+build/
