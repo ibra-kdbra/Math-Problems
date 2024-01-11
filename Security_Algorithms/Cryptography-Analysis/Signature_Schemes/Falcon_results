@@ -1,0 +1,399 @@
+1st time:
+Short message
+Signature scheme Falcon-512 - Before any operations Virtual Memory usage (VmSize): 8900 kB
+ Resident Set Size (RSS): 2944 kB
+[Signature scheme Falcon-512 - Key generation] Execution time: 0.015996 seconds
+Signature scheme Falcon-512 - After key generation Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 5888 kB
+[Signature scheme Falcon-512 - Signature creation] Execution time: 0.000320 seconds
+Signature scheme Falcon-512 - After signature creation Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 5888 kB
+[Signature scheme Falcon-512 - Signature verification] Execution time: 0.000062 seconds
+Signature scheme Falcon-512 - After signature verification Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 5888 kB
+----------------------------------------
+Medium message
+Signature scheme Falcon-512 - Before any operations Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 5888 kB
+[Signature scheme Falcon-512 - Key generation] Execution time: 0.007431 seconds
+Signature scheme Falcon-512 - After key generation Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 5888 kB
+[Signature scheme Falcon-512 - Signature creation] Execution time: 0.000297 seconds
+Signature scheme Falcon-512 - After signature creation Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 5888 kB
+[Signature scheme Falcon-512 - Signature verification] Execution time: 0.000060 seconds
+Signature scheme Falcon-512 - After signature verification Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 5888 kB
+----------------------------------------
+Long message
+Signature scheme Falcon-512 - Before any operations Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 5888 kB
+[Signature scheme Falcon-512 - Key generation] Execution time: 0.008217 seconds
+Signature scheme Falcon-512 - After key generation Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 5888 kB
+[Signature scheme Falcon-512 - Signature creation] Execution time: 0.000300 seconds
+Signature scheme Falcon-512 - After signature creation Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 5888 kB
+[Signature scheme Falcon-512 - Signature verification] Execution time: 0.000060 seconds
+Signature scheme Falcon-512 - After signature verification Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 5888 kB
+----------------------------------------
+Short message
+Signature scheme Falcon-1024 - Before any operations Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 5888 kB
+[Signature scheme Falcon-1024 - Key generation] Execution time: 0.036987 seconds
+Signature scheme Falcon-1024 - After key generation Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 6144 kB
+[Signature scheme Falcon-1024 - Signature creation] Execution time: 0.001012 seconds
+Signature scheme Falcon-1024 - After signature creation Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 6400 kB
+[Signature scheme Falcon-1024 - Signature verification] Execution time: 0.000117 seconds
+Signature scheme Falcon-1024 - After signature verification Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 6400 kB
+----------------------------------------
+Medium message
+Signature scheme Falcon-1024 - Before any operations Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 6400 kB
+[Signature scheme Falcon-1024 - Key generation] Execution time: 0.030516 seconds
+Signature scheme Falcon-1024 - After key generation Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 6400 kB
+[Signature scheme Falcon-1024 - Signature creation] Execution time: 0.000591 seconds
+Signature scheme Falcon-1024 - After signature creation Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 6400 kB
+[Signature scheme Falcon-1024 - Signature verification] Execution time: 0.000118 seconds
+Signature scheme Falcon-1024 - After signature verification Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 6400 kB
+----------------------------------------
+Long message
+Signature scheme Falcon-1024 - Before any operations Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 6400 kB
+[Signature scheme Falcon-1024 - Key generation] Execution time: 0.021890 seconds
+Signature scheme Falcon-1024 - After key generation Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 6400 kB
+[Signature scheme Falcon-1024 - Signature creation] Execution time: 0.000575 seconds
+Signature scheme Falcon-1024 - After signature creation Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 6400 kB
+[Signature scheme Falcon-1024 - Signature verification] Execution time: 0.000116 seconds
+Signature scheme Falcon-1024 - After signature verification Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 6400 kB
+----------------------------------------
+
+2nd time:
+Short message
+Signature scheme Falcon-512 - Before any operations Virtual Memory usage (VmSize): 8900 kB
+ Resident Set Size (RSS): 2944 kB
+[Signature scheme Falcon-512 - Key generation] Execution time: 0.020387 seconds
+Signature scheme Falcon-512 - After key generation Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 6016 kB
+[Signature scheme Falcon-512 - Signature creation] Execution time: 0.000636 seconds
+Signature scheme Falcon-512 - After signature creation Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 6016 kB
+[Signature scheme Falcon-512 - Signature verification] Execution time: 0.000112 seconds
+Signature scheme Falcon-512 - After signature verification Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 6016 kB
+----------------------------------------
+Medium message
+Signature scheme Falcon-512 - Before any operations Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 6016 kB
+[Signature scheme Falcon-512 - Key generation] Execution time: 0.014533 seconds
+Signature scheme Falcon-512 - After key generation Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 6016 kB
+[Signature scheme Falcon-512 - Signature creation] Execution time: 0.000607 seconds
+Signature scheme Falcon-512 - After signature creation Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 6016 kB
+[Signature scheme Falcon-512 - Signature verification] Execution time: 0.000112 seconds
+Signature scheme Falcon-512 - After signature verification Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 6016 kB
+----------------------------------------
+Long message
+Signature scheme Falcon-512 - Before any operations Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 6016 kB
+[Signature scheme Falcon-512 - Key generation] Execution time: 0.025319 seconds
+Signature scheme Falcon-512 - After key generation Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 6016 kB
+[Signature scheme Falcon-512 - Signature creation] Execution time: 0.000597 seconds
+Signature scheme Falcon-512 - After signature creation Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 6016 kB
+[Signature scheme Falcon-512 - Signature verification] Execution time: 0.000110 seconds
+Signature scheme Falcon-512 - After signature verification Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 6016 kB
+----------------------------------------
+Short message
+Signature scheme Falcon-1024 - Before any operations Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 6016 kB
+[Signature scheme Falcon-1024 - Key generation] Execution time: 0.056297 seconds
+Signature scheme Falcon-1024 - After key generation Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 6272 kB
+[Signature scheme Falcon-1024 - Signature creation] Execution time: 0.001226 seconds
+Signature scheme Falcon-1024 - After signature creation Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 6400 kB
+[Signature scheme Falcon-1024 - Signature verification] Execution time: 0.000219 seconds
+Signature scheme Falcon-1024 - After signature verification Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 6400 kB
+----------------------------------------
+Medium message
+Signature scheme Falcon-1024 - Before any operations Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 6400 kB
+[Signature scheme Falcon-1024 - Key generation] Execution time: 0.049750 seconds
+Signature scheme Falcon-1024 - After key generation Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 6400 kB
+[Signature scheme Falcon-1024 - Signature creation] Execution time: 0.001178 seconds
+Signature scheme Falcon-1024 - After signature creation Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 6400 kB
+[Signature scheme Falcon-1024 - Signature verification] Execution time: 0.000224 seconds
+Signature scheme Falcon-1024 - After signature verification Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 6400 kB
+----------------------------------------
+Long message
+Signature scheme Falcon-1024 - Before any operations Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 6400 kB
+[Signature scheme Falcon-1024 - Key generation] Execution time: 0.043473 seconds
+Signature scheme Falcon-1024 - After key generation Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 6400 kB
+[Signature scheme Falcon-1024 - Signature creation] Execution time: 0.001176 seconds
+Signature scheme Falcon-1024 - After signature creation Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 6400 kB
+[Signature scheme Falcon-1024 - Signature verification] Execution time: 0.000218 seconds
+Signature scheme Falcon-1024 - After signature verification Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 6400 kB
+----------------------------------------
+
+3rd time:
+Short message
+Signature scheme Falcon-512 - Before any operations Virtual Memory usage (VmSize): 8900 kB
+ Resident Set Size (RSS): 2944 kB
+[Signature scheme Falcon-512 - Key generation] Execution time: 0.023905 seconds
+Signature scheme Falcon-512 - After key generation Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 6016 kB
+[Signature scheme Falcon-512 - Signature creation] Execution time: 0.000629 seconds
+Signature scheme Falcon-512 - After signature creation Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 6016 kB
+[Signature scheme Falcon-512 - Signature verification] Execution time: 0.000114 seconds
+Signature scheme Falcon-512 - After signature verification Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 6016 kB
+----------------------------------------
+Medium message
+Signature scheme Falcon-512 - Before any operations Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 6016 kB
+[Signature scheme Falcon-512 - Key generation] Execution time: 0.014029 seconds
+Signature scheme Falcon-512 - After key generation Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 6016 kB
+[Signature scheme Falcon-512 - Signature creation] Execution time: 0.000608 seconds
+Signature scheme Falcon-512 - After signature creation Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 6016 kB
+[Signature scheme Falcon-512 - Signature verification] Execution time: 0.000111 seconds
+Signature scheme Falcon-512 - After signature verification Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 6016 kB
+----------------------------------------
+Long message
+Signature scheme Falcon-512 - Before any operations Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 6016 kB
+[Signature scheme Falcon-512 - Key generation] Execution time: 0.013989 seconds
+Signature scheme Falcon-512 - After key generation Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 6016 kB
+[Signature scheme Falcon-512 - Signature creation] Execution time: 0.000594 seconds
+Signature scheme Falcon-512 - After signature creation Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 6016 kB
+[Signature scheme Falcon-512 - Signature verification] Execution time: 0.000111 seconds
+Signature scheme Falcon-512 - After signature verification Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 6016 kB
+----------------------------------------
+Short message
+Signature scheme Falcon-1024 - Before any operations Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 6016 kB
+[Signature scheme Falcon-1024 - Key generation] Execution time: 0.043571 seconds
+Signature scheme Falcon-1024 - After key generation Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 6272 kB
+[Signature scheme Falcon-1024 - Signature creation] Execution time: 0.001220 seconds
+Signature scheme Falcon-1024 - After signature creation Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 6400 kB
+[Signature scheme Falcon-1024 - Signature verification] Execution time: 0.000219 seconds
+Signature scheme Falcon-1024 - After signature verification Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 6400 kB
+----------------------------------------
+Medium message
+Signature scheme Falcon-1024 - Before any operations Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 6400 kB
+[Signature scheme Falcon-1024 - Key generation] Execution time: 0.044555 seconds
+Signature scheme Falcon-1024 - After key generation Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 6400 kB
+[Signature scheme Falcon-1024 - Signature creation] Execution time: 0.001178 seconds
+Signature scheme Falcon-1024 - After signature creation Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 6400 kB
+[Signature scheme Falcon-1024 - Signature verification] Execution time: 0.000226 seconds
+Signature scheme Falcon-1024 - After signature verification Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 6400 kB
+----------------------------------------
+Long message
+Signature scheme Falcon-1024 - Before any operations Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 6400 kB
+[Signature scheme Falcon-1024 - Key generation] Execution time: 0.040833 seconds
+Signature scheme Falcon-1024 - After key generation Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 6400 kB
+[Signature scheme Falcon-1024 - Signature creation] Execution time: 0.001185 seconds
+Signature scheme Falcon-1024 - After signature creation Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 6400 kB
+[Signature scheme Falcon-1024 - Signature verification] Execution time: 0.000218 seconds
+Signature scheme Falcon-1024 - After signature verification Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 6400 kB
+----------------------------------------
+
+4th time:
+Short message
+Signature scheme Falcon-512 - Before any operations Virtual Memory usage (VmSize): 8900 kB
+ Resident Set Size (RSS): 2944 kB
+[Signature scheme Falcon-512 - Key generation] Execution time: 0.009739 seconds
+Signature scheme Falcon-512 - After key generation Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 5888 kB
+[Signature scheme Falcon-512 - Signature creation] Execution time: 0.000314 seconds
+Signature scheme Falcon-512 - After signature creation Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 5888 kB
+[Signature scheme Falcon-512 - Signature verification] Execution time: 0.000061 seconds
+Signature scheme Falcon-512 - After signature verification Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 5888 kB
+----------------------------------------
+Medium message
+Signature scheme Falcon-512 - Before any operations Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 5888 kB
+[Signature scheme Falcon-512 - Key generation] Execution time: 0.012631 seconds
+Signature scheme Falcon-512 - After key generation Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 5888 kB
+[Signature scheme Falcon-512 - Signature creation] Execution time: 0.000297 seconds
+Signature scheme Falcon-512 - After signature creation Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 5888 kB
+[Signature scheme Falcon-512 - Signature verification] Execution time: 0.000060 seconds
+Signature scheme Falcon-512 - After signature verification Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 5888 kB
+----------------------------------------
+Long message
+Signature scheme Falcon-512 - Before any operations Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 5888 kB
+[Signature scheme Falcon-512 - Key generation] Execution time: 0.007241 seconds
+Signature scheme Falcon-512 - After key generation Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 5888 kB
+[Signature scheme Falcon-512 - Signature creation] Execution time: 0.000300 seconds
+Signature scheme Falcon-512 - After signature creation Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 5888 kB
+[Signature scheme Falcon-512 - Signature verification] Execution time: 0.000061 seconds
+Signature scheme Falcon-512 - After signature verification Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 5888 kB
+----------------------------------------
+Short message
+Signature scheme Falcon-1024 - Before any operations Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 5888 kB
+[Signature scheme Falcon-1024 - Key generation] Execution time: 0.026283 seconds
+Signature scheme Falcon-1024 - After key generation Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 6272 kB
+[Signature scheme Falcon-1024 - Signature creation] Execution time: 0.000609 seconds
+Signature scheme Falcon-1024 - After signature creation Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 6400 kB
+[Signature scheme Falcon-1024 - Signature verification] Execution time: 0.000115 seconds
+Signature scheme Falcon-1024 - After signature verification Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 6400 kB
+----------------------------------------
+Medium message
+Signature scheme Falcon-1024 - Before any operations Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 6400 kB
+[Signature scheme Falcon-1024 - Key generation] Execution time: 0.023314 seconds
+Signature scheme Falcon-1024 - After key generation Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 6400 kB
+[Signature scheme Falcon-1024 - Signature creation] Execution time: 0.000584 seconds
+Signature scheme Falcon-1024 - After signature creation Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 6400 kB
+[Signature scheme Falcon-1024 - Signature verification] Execution time: 0.000117 seconds
+Signature scheme Falcon-1024 - After signature verification Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 6400 kB
+----------------------------------------
+Long message
+Signature scheme Falcon-1024 - Before any operations Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 6400 kB
+[Signature scheme Falcon-1024 - Key generation] Execution time: 0.027253 seconds
+Signature scheme Falcon-1024 - After key generation Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 6400 kB
+[Signature scheme Falcon-1024 - Signature creation] Execution time: 0.000583 seconds
+Signature scheme Falcon-1024 - After signature creation Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 6400 kB
+[Signature scheme Falcon-1024 - Signature verification] Execution time: 0.000115 seconds
+Signature scheme Falcon-1024 - After signature verification Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 6400 kB
+----------------------------------------
+
+5th time:
+Short message
+Signature scheme Falcon-512 - Before any operations Virtual Memory usage (VmSize): 8900 kB
+ Resident Set Size (RSS): 2944 kB
+[Signature scheme Falcon-512 - Key generation] Execution time: 0.009380 seconds
+Signature scheme Falcon-512 - After key generation Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 5888 kB
+[Signature scheme Falcon-512 - Signature creation] Execution time: 0.000318 seconds
+Signature scheme Falcon-512 - After signature creation Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 5888 kB
+[Signature scheme Falcon-512 - Signature verification] Execution time: 0.000061 seconds
+Signature scheme Falcon-512 - After signature verification Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 5888 kB
+----------------------------------------
+Medium message
+Signature scheme Falcon-512 - Before any operations Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 5888 kB
+[Signature scheme Falcon-512 - Key generation] Execution time: 0.006780 seconds
+Signature scheme Falcon-512 - After key generation Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 5888 kB
+[Signature scheme Falcon-512 - Signature creation] Execution time: 0.000306 seconds
+Signature scheme Falcon-512 - After signature creation Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 5888 kB
+[Signature scheme Falcon-512 - Signature verification] Execution time: 0.000059 seconds
+Signature scheme Falcon-512 - After signature verification Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 5888 kB
+----------------------------------------
+Long message
+Signature scheme Falcon-512 - Before any operations Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 5888 kB
+[Signature scheme Falcon-512 - Key generation] Execution time: 0.008141 seconds
+Signature scheme Falcon-512 - After key generation Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 5888 kB
+[Signature scheme Falcon-512 - Signature creation] Execution time: 0.000302 seconds
+Signature scheme Falcon-512 - After signature creation Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 5888 kB
+[Signature scheme Falcon-512 - Signature verification] Execution time: 0.000060 seconds
+Signature scheme Falcon-512 - After signature verification Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 5888 kB
+----------------------------------------
+Short message
+Signature scheme Falcon-1024 - Before any operations Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 5888 kB
+[Signature scheme Falcon-1024 - Key generation] Execution time: 0.021995 seconds
+Signature scheme Falcon-1024 - After key generation Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 6272 kB
+[Signature scheme Falcon-1024 - Signature creation] Execution time: 0.000618 seconds
+Signature scheme Falcon-1024 - After signature creation Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 6400 kB
+[Signature scheme Falcon-1024 - Signature verification] Execution time: 0.000118 seconds
+Signature scheme Falcon-1024 - After signature verification Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 6400 kB
+----------------------------------------
+Medium message
+Signature scheme Falcon-1024 - Before any operations Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 6400 kB
+[Signature scheme Falcon-1024 - Key generation] Execution time: 0.022364 seconds
+Signature scheme Falcon-1024 - After key generation Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 6400 kB
+[Signature scheme Falcon-1024 - Signature creation] Execution time: 0.000594 seconds
+Signature scheme Falcon-1024 - After signature creation Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 6400 kB
+[Signature scheme Falcon-1024 - Signature verification] Execution time: 0.000119 seconds
+Signature scheme Falcon-1024 - After signature verification Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 6400 kB
+----------------------------------------
+Long message
+Signature scheme Falcon-1024 - Before any operations Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 6400 kB
+[Signature scheme Falcon-1024 - Key generation] Execution time: 0.024319 seconds
+Signature scheme Falcon-1024 - After key generation Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 6400 kB
+[Signature scheme Falcon-1024 - Signature creation] Execution time: 0.000591 seconds
+Signature scheme Falcon-1024 - After signature creation Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 6400 kB
+[Signature scheme Falcon-1024 - Signature verification] Execution time: 0.000116 seconds
+Signature scheme Falcon-1024 - After signature verification Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 6400 kB
+----------------------------------------

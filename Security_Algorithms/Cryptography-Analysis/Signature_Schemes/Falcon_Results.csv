@@ -1,0 +1,7 @@
+Signature Scheme,Key Generation Time (s),Signature Creation Time (s),Signature Verification Time (s),Resident Set Size Memory (kB),Virtual Memory (kB)
+Falcon-512 (Short),0.015996,0.00032,6.2e-05,5888,9460
+Falcon-512 (Medium),0.007431,0.000297,6e-05,5888,9460
+Falcon-512 (Long),0.008217,0.0003,6e-05,5888,9460
+Falcon-1024 (Short),0.036987,0.001012,0.000117,6400,9460
+Falcon-1024 (Medium),0.030516,0.000591,0.000118,6400,9460
+Falcon-1024 (Long),0.02189,0.000575,0.000116,6400,9460
