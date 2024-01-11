@@ -1,0 +1,413 @@
+1st time:
+
+Short message
+
+RSA key size: 2048 bits -- Before key generation Virtual Memory usage (VmSize): 7136 kB
+
+Resident Set Size (RSS): 2944 kB
+
+[RSA key size: 2048 bits -- Key generation] Execution time: 0.314792 seconds
+
+RSA key size: 2048 bits -- After key generation Virtual Memory usage (VmSize): 7696 kB
+
+Resident Set Size (RSS): 5504 kB
+
+[RSA key size: 2048 bits -- Encryption] Execution time: 0.000198 seconds
+
+RSA key size: 2048 bits -- After encryption Virtual Memory usage (VmSize): 7848 kB
+
+Resident Set Size (RSS): 5888 kB
+
+[RSA key size: 2048 bits -- Decryption] Execution time: 0.001229 seconds
+
+RSA key size: 2048 bits -- After decryption Virtual Memory usage (VmSize): 7848 kB
+
+Resident Set Size (RSS): 5888 kB
+
+[RSA key size: 2048 bits -- Decrypted data_to_encrypt : This is the message to be signed]
+
+
+
+--------------------------------
+
+Short message
+
+RSA key size: 4096 bits -- Before key generation Virtual Memory usage (VmSize): 7848 kB
+
+Resident Set Size (RSS): 5888 kB
+
+[RSA key size: 4096 bits -- Key generation] Execution time: 4.820795 seconds
+
+RSA key size: 4096 bits -- After key generation Virtual Memory usage (VmSize): 7848 kB
+
+Resident Set Size (RSS): 6016 kB
+
+[RSA key size: 4096 bits -- Encryption] Execution time: 0.000141 seconds
+
+RSA key size: 4096 bits -- After encryption Virtual Memory usage (VmSize): 7848 kB
+
+Resident Set Size (RSS): 6016 kB
+
+[RSA key size: 4096 bits -- Decryption] Execution time: 0.007130 seconds
+
+RSA key size: 4096 bits -- After decryption Virtual Memory usage (VmSize): 7848 kB
+
+Resident Set Size (RSS): 6016 kB
+
+[RSA key size: 4096 bits -- Decrypted data_to_encrypt : This is the message to be signed]
+
+
+
+--------------------------------
+
+Short message
+
+RSA key size: 8192 bits -- Before key generation Virtual Memory usage (VmSize): 7848 kB
+
+Resident Set Size (RSS): 6016 kB
+
+[RSA key size: 8192 bits -- Key generation] Execution time: 18.633197 seconds
+
+RSA key size: 8192 bits -- After key generation Virtual Memory usage (VmSize): 7944 kB
+
+Resident Set Size (RSS): 6016 kB
+
+[RSA key size: 8192 bits -- Encryption] Execution time: 0.000473 seconds
+
+RSA key size: 8192 bits -- After encryption Virtual Memory usage (VmSize): 7944 kB
+
+Resident Set Size (RSS): 6016 kB
+
+[RSA key size: 8192 bits -- Decryption] Execution time: 0.049380 seconds
+
+RSA key size: 8192 bits -- After decryption Virtual Memory usage (VmSize): 7944 kB
+
+Resident Set Size (RSS): 6016 kB
+
+[RSA key size: 8192 bits -- Decrypted data_to_encrypt : This is the message to be signed]
+
+
+
+--------------------------------
+
+2nd time:
+
+Short message
+
+RSA key size: 2048 bits -- Before key generation Virtual Memory usage (VmSize): 7136 kB
+
+Resident Set Size (RSS): 2944 kB
+
+[RSA key size: 2048 bits -- Key generation] Execution time: 0.358822 seconds
+
+RSA key size: 2048 bits -- After key generation Virtual Memory usage (VmSize): 7696 kB
+
+Resident Set Size (RSS): 5504 kB
+
+[RSA key size: 2048 bits -- Encryption] Execution time: 0.000353 seconds
+
+RSA key size: 2048 bits -- After encryption Virtual Memory usage (VmSize): 7848 kB
+
+Resident Set Size (RSS): 5888 kB
+
+[RSA key size: 2048 bits -- Decryption] Execution time: 0.003616 seconds
+
+RSA key size: 2048 bits -- After decryption Virtual Memory usage (VmSize): 7848 kB
+
+Resident Set Size (RSS): 5888 kB
+
+[RSA key size: 2048 bits -- Decrypted data_to_encrypt : This is the message to be signed]
+
+
+
+--------------------------------
+
+Short message
+
+RSA key size: 4096 bits -- Before key generation Virtual Memory usage (VmSize): 7848 kB
+
+Resident Set Size (RSS): 5888 kB
+
+[RSA key size: 4096 bits -- Key generation] Execution time: 3.476582 seconds
+
+RSA key size: 4096 bits -- After key generation Virtual Memory usage (VmSize): 7848 kB
+
+Resident Set Size (RSS): 6016 kB
+
+[RSA key size: 4096 bits -- Encryption] Execution time: 0.000393 seconds
+
+RSA key size: 4096 bits -- After encryption Virtual Memory usage (VmSize): 7848 kB
+
+Resident Set Size (RSS): 6016 kB
+
+[RSA key size: 4096 bits -- Decryption] Execution time: 0.023058 seconds
+
+RSA key size: 4096 bits -- After decryption Virtual Memory usage (VmSize): 7848 kB
+
+Resident Set Size (RSS): 6016 kB
+
+[RSA key size: 4096 bits -- Decrypted data_to_encrypt : This is the message to be signed]
+
+
+
+--------------------------------
+
+Short message
+
+RSA key size: 8192 bits -- Before key generation Virtual Memory usage (VmSize): 7848 kB
+
+Resident Set Size (RSS): 6016 kB
+
+[RSA key size: 8192 bits -- Key generation] Execution time: 25.259339 seconds
+
+RSA key size: 8192 bits -- After key generation Virtual Memory usage (VmSize): 7944 kB
+
+Resident Set Size (RSS): 6016 kB
+
+[RSA key size: 8192 bits -- Encryption] Execution time: 0.001421 seconds
+
+RSA key size: 8192 bits -- After encryption Virtual Memory usage (VmSize): 7944 kB
+
+Resident Set Size (RSS): 6016 kB
+
+[RSA key size: 8192 bits -- Decryption] Execution time: 0.166590 seconds
+
+RSA key size: 8192 bits -- After decryption Virtual Memory usage (VmSize): 7944 kB
+
+Resident Set Size (RSS): 6016 kB
+
+[RSA key size: 8192 bits -- Decrypted data_to_encrypt : This is the message to be signed]
+
+
+
+--------------------------------
+
+3rd time:
+
+Short message
+
+RSA key size: 2048 bits -- Before key generation Virtual Memory usage (VmSize): 7136 kB
+
+Resident Set Size (RSS): 2944 kB
+
+[RSA key size: 2048 bits -- Key generation] Execution time: 0.739235 seconds
+
+RSA key size: 2048 bits -- After key generation Virtual Memory usage (VmSize): 7696 kB
+
+Resident Set Size (RSS): 5504 kB
+
+[RSA key size: 2048 bits -- Encryption] Execution time: 0.000345 seconds
+
+RSA key size: 2048 bits -- After encryption Virtual Memory usage (VmSize): 7848 kB
+
+Resident Set Size (RSS): 5888 kB
+
+[RSA key size: 2048 bits -- Decryption] Execution time: 0.003606 seconds
+
+RSA key size: 2048 bits -- After decryption Virtual Memory usage (VmSize): 7848 kB
+
+Resident Set Size (RSS): 5888 kB
+
+[RSA key size: 2048 bits -- Decrypted data_to_encrypt : This is the message to be signed]
+
+
+
+--------------------------------
+
+Short message
+
+RSA key size: 4096 bits -- Before key generation Virtual Memory usage (VmSize): 7848 kB
+
+Resident Set Size (RSS): 5888 kB
+
+[RSA key size: 4096 bits -- Key generation] Execution time: 3.725085 seconds
+
+RSA key size: 4096 bits -- After key generation Virtual Memory usage (VmSize): 7848 kB
+
+Resident Set Size (RSS): 6016 kB
+
+[RSA key size: 4096 bits -- Encryption] Execution time: 0.000388 seconds
+
+RSA key size: 4096 bits -- After encryption Virtual Memory usage (VmSize): 7848 kB
+
+Resident Set Size (RSS): 6016 kB
+
+[RSA key size: 4096 bits -- Decryption] Execution time: 0.023098 seconds
+
+RSA key size: 4096 bits -- After decryption Virtual Memory usage (VmSize): 7848 kB
+
+Resident Set Size (RSS): 6016 kB
+
+[RSA key size: 4096 bits -- Decrypted data_to_encrypt : This is the message to be signed]
+
+
+
+--------------------------------
+
+Short message
+
+RSA key size: 8192 bits -- Before key generation Virtual Memory usage (VmSize): 7848 kB
+
+Resident Set Size (RSS): 6016 kB
+
+[RSA key size: 8192 bits -- Key generation] Execution time: 61.177890 seconds
+
+RSA key size: 8192 bits -- After key generation Virtual Memory usage (VmSize): 7944 kB
+
+Resident Set Size (RSS): 6016 kB
+
+[RSA key size: 8192 bits -- Encryption] Execution time: 0.001422 seconds
+
+RSA key size: 8192 bits -- After encryption Virtual Memory usage (VmSize): 7944 kB
+
+Resident Set Size (RSS): 6016 kB
+
+[RSA key size: 8192 bits -- Decryption] Execution time: 0.166546 seconds
+
+RSA key size: 8192 bits -- After decryption Virtual Memory usage (VmSize): 7944 kB
+
+Resident Set Size (RSS): 6016 kB
+
+[RSA key size: 8192 bits -- Decrypted data_to_encrypt : This is the message to be signed]
+
+
+
+--------------------------------
+
+4th time:
+
+Short message
+
+RSA key size: 2048 bits -- Before key generation Virtual Memory usage (VmSize): 7136 kB
+
+Resident Set Size (RSS): 2944 kB
+
+[RSA key size: 2048 bits -- Key generation] Execution time: 0.082863 seconds
+
+RSA key size: 2048 bits -- After key generation Virtual Memory usage (VmSize): 7696 kB
+
+Resident Set Size (RSS): 5504 kB
+
+[RSA key size: 2048 bits -- Encryption] Execution time: 0.000188 seconds
+
+RSA key size: 2048 bits -- After encryption Virtual Memory usage (VmSize): 7848 kB
+
+Resident Set Size (RSS): 5888 kB
+
+[RSA key size: 2048 bits -- Decryption] Execution time: 0.001240 seconds
+
+RSA key size: 2048 bits -- After decryption Virtual Memory usage (VmSize): 7848 kB
+
+Resident Set Size (RSS): 5888 kB
+
+[RSA key size: 2048 bits -- Decrypted data_to_encrypt : This is the message to be signed]
+
+
+
+--------------------------------
+
+Short message
+
+RSA key size: 4096 bits -- Before key generation Virtual Memory usage (VmSize): 7848 kB
+
+Resident Set Size (RSS): 5888 kB
+
+[RSA key size: 4096 bits -- Key generation] Execution time: 3.130988 seconds
+
+RSA key size: 4096 bits -- After key generation Virtual Memory usage (VmSize): 7848 kB
+
+Resident Set Size (RSS): 6016 kB
+
+[RSA key size: 4096 bits -- Encryption] Execution time: 0.000144 seconds
+
+RSA key size: 4096 bits -- After encryption Virtual Memory usage (VmSize): 7848 kB
+
+Resident Set Size (RSS): 6016 kB
+
+[RSA key size: 4096 bits -- Decryption] Execution time: 0.007120 seconds
+
+RSA key size: 4096 bits -- After decryption Virtual Memory usage (VmSize): 7848 kB
+
+Resident Set Size (RSS): 6016 kB
+
+[RSA key size: 4096 bits -- Decrypted data_to_encrypt : This is the message to be signed]
+
+
+
+--------------------------------
+
+Short message
+
+RSA key size: 8192 bits -- Before key generation Virtual Memory usage (VmSize): 7848 kB
+
+Resident Set Size (RSS): 6016 kB
+
+[RSA key size: 8192 bits -- Key generation] Execution time: 34.823124 seconds
+
+RSA key size: 8192 bits -- After key generation Virtual Memory usage (VmSize): 7944 kB
+
+Resident Set Size (RSS): 6016 kB
+
+[RSA key size: 8192 bits -- Encryption] Execution time: 0.000466 seconds
+
+RSA key size: 8192 bits -- After encryption Virtual Memory usage (VmSize): 7944 kB
+
+Resident Set Size (RSS): 6016 kB
+
+[RSA key size: 8192 bits -- Decryption] Execution time: 0.049354 seconds
+
+RSA key size: 8192 bits -- After decryption Virtual Memory usage (VmSize): 7944 kB
+
+Resident Set Size (RSS): 6016 kB
+
+[RSA key size: 8192 bits -- Decrypted data_to_encrypt : This is the message to be signed]
+
+--------------------------------
+
+5th time:
+
+Short message
+RSA key size: 2048 bits -- Before key generation Virtual Memory usage (VmSize): 7136 kB
+ Resident Set Size (RSS): 2944 kB
+[RSA key size: 2048 bits -- Key generation] Execution time: 0.223894 seconds
+RSA key size: 2048 bits -- After key generation Virtual Memory usage (VmSize): 7696 kB
+ Resident Set Size (RSS): 5504 kB
+[RSA key size: 2048 bits -- Encryption] Execution time: 0.000191 seconds
+RSA key size: 2048 bits -- After encryption Virtual Memory usage (VmSize): 7848 kB
+ Resident Set Size (RSS): 5888 kB
+[RSA key size: 2048 bits -- Decryption] Execution time: 0.001230 seconds
+RSA key size: 2048 bits -- After decryption Virtual Memory usage (VmSize): 7848 kB
+ Resident Set Size (RSS): 5888 kB
+[RSA key size: 2048 bits -- Decrypted data_to_encrypt : This is the message to be signed]
+
+--------------------------------
+Short message
+RSA key size: 4096 bits -- Before key generation Virtual Memory usage (VmSize): 7848 kB
+ Resident Set Size (RSS): 5888 kB
+[RSA key size: 4096 bits -- Key generation] Execution time: 1.182768 seconds
+RSA key size: 4096 bits -- After key generation Virtual Memory usage (VmSize): 7848 kB
+ Resident Set Size (RSS): 6016 kB
+[RSA key size: 4096 bits -- Encryption] Execution time: 0.000142 seconds
+RSA key size: 4096 bits -- After encryption Virtual Memory usage (VmSize): 7848 kB
+ Resident Set Size (RSS): 6016 kB
+[RSA key size: 4096 bits -- Decryption] Execution time: 0.007125 seconds
+RSA key size: 4096 bits -- After decryption Virtual Memory usage (VmSize): 7848 kB
+ Resident Set Size (RSS): 6016 kB
+[RSA key size: 4096 bits -- Decrypted data_to_encrypt : This is the message to be signed]
+
+--------------------------------
+Short message
+RSA key size: 8192 bits -- Before key generation Virtual Memory usage (VmSize): 7848 kB
+ Resident Set Size (RSS): 6016 kB
+[RSA key size: 8192 bits -- Key generation] Execution time: 25.035416 seconds
+RSA key size: 8192 bits -- After key generation Virtual Memory usage (VmSize): 7944 kB
+ Resident Set Size (RSS): 6016 kB
+[RSA key size: 8192 bits -- Encryption] Execution time: 0.000462 seconds
+RSA key size: 8192 bits -- After encryption Virtual Memory usage (VmSize): 7944 kB
+ Resident Set Size (RSS): 6016 kB
+[RSA key size: 8192 bits -- Decryption] Execution time: 0.049414 seconds
+RSA key size: 8192 bits -- After decryption Virtual Memory usage (VmSize): 7944 kB
+ Resident Set Size (RSS): 6016 kB
+[RSA key size: 8192 bits -- Decrypted data_to_encrypt : This is the message to be signed]
+
+--------------------------------
