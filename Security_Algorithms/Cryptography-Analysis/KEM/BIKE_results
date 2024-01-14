@@ -1,0 +1,1044 @@
+1st time:
+Short message
+KEM BIKE-L1 -- Before any operations Virtual Memory usage (VmSize): 9336 kB
+ Resident Set Size (RSS): 2944 kB
+[KEM BIKE-L1 -- Key generation] Execution time: 0.002097 seconds
+KEM BIKE-L1 -- After key generation Virtual Memory usage (VmSize): 9904 kB
+ Resident Set Size (RSS): 5760 kB
+[KEM BIKE-L1 -- Encapsulation] Execution time: 0.000058 seconds
+KEM BIKE-L1 -- After encapsulation Virtual Memory usage (VmSize): 9904 kB
+ Resident Set Size (RSS): 5760 kB
+[KEM BIKE-L1 -- Decapsulation] Execution time: 0.000824 seconds
+KEM BIKE-L1 -- After decapsulation Virtual Memory usage (VmSize): 9904 kB
+ Resident Set Size (RSS): 5760 kB
+Shared secrets match.
+[KEM BIKE-L1 -- AES encryption] Execution time: 0.000003 seconds
+KEM BIKE-L1 -- After AES encryption Virtual Memory usage (VmSize): 9904 kB
+ Resident Set Size (RSS): 5760 kB
+[KEM BIKE-L1 -- AES decryption] Execution time: 0.000003 seconds
+KEM BIKE-L1 -- After AES decryption Virtual Memory usage (VmSize): 9904 kB
+ Resident Set Size (RSS): 5760 kB
+Decrypted text matches the original plaintext.
+KEM BIKE-L1 -- After all operations Virtual Memory usage (VmSize): 9904 kB
+ Resident Set Size (RSS): 5760 kB
+-------------------------------------
+Medium message
+KEM BIKE-L1 -- Before any operations Virtual Memory usage (VmSize): 9904 kB
+ Resident Set Size (RSS): 5760 kB
+[KEM BIKE-L1 -- Key generation] Execution time: 0.000216 seconds
+KEM BIKE-L1 -- After key generation Virtual Memory usage (VmSize): 9904 kB
+ Resident Set Size (RSS): 5760 kB
+[KEM BIKE-L1 -- Encapsulation] Execution time: 0.000057 seconds
+KEM BIKE-L1 -- After encapsulation Virtual Memory usage (VmSize): 9904 kB
+ Resident Set Size (RSS): 5760 kB
+[KEM BIKE-L1 -- Decapsulation] Execution time: 0.000802 seconds
+KEM BIKE-L1 -- After decapsulation Virtual Memory usage (VmSize): 9904 kB
+ Resident Set Size (RSS): 5760 kB
+Shared secrets match.
+[KEM BIKE-L1 -- AES encryption] Execution time: 0.000002 seconds
+KEM BIKE-L1 -- After AES encryption Virtual Memory usage (VmSize): 9904 kB
+ Resident Set Size (RSS): 5760 kB
+[KEM BIKE-L1 -- AES decryption] Execution time: 0.000002 seconds
+KEM BIKE-L1 -- After AES decryption Virtual Memory usage (VmSize): 9904 kB
+ Resident Set Size (RSS): 5760 kB
+Decrypted text matches the original plaintext.
+KEM BIKE-L1 -- After all operations Virtual Memory usage (VmSize): 9904 kB
+ Resident Set Size (RSS): 5760 kB
+-------------------------------------
+Long message
+KEM BIKE-L1 -- Before any operations Virtual Memory usage (VmSize): 9904 kB
+ Resident Set Size (RSS): 5760 kB
+[KEM BIKE-L1 -- Key generation] Execution time: 0.000211 seconds
+KEM BIKE-L1 -- After key generation Virtual Memory usage (VmSize): 9904 kB
+ Resident Set Size (RSS): 5760 kB
+[KEM BIKE-L1 -- Encapsulation] Execution time: 0.000058 seconds
+KEM BIKE-L1 -- After encapsulation Virtual Memory usage (VmSize): 9904 kB
+ Resident Set Size (RSS): 5760 kB
+[KEM BIKE-L1 -- Decapsulation] Execution time: 0.000812 seconds
+KEM BIKE-L1 -- After decapsulation Virtual Memory usage (VmSize): 9904 kB
+ Resident Set Size (RSS): 5760 kB
+Shared secrets match.
+[KEM BIKE-L1 -- AES encryption] Execution time: 0.000002 seconds
+KEM BIKE-L1 -- After AES encryption Virtual Memory usage (VmSize): 9904 kB
+ Resident Set Size (RSS): 5760 kB
+[KEM BIKE-L1 -- AES decryption] Execution time: 0.000002 seconds
+KEM BIKE-L1 -- After AES decryption Virtual Memory usage (VmSize): 9904 kB
+ Resident Set Size (RSS): 5760 kB
+Decrypted text matches the original plaintext.
+KEM BIKE-L1 -- After all operations Virtual Memory usage (VmSize): 9904 kB
+ Resident Set Size (RSS): 5760 kB
+-------------------------------------
+Short message
+KEM BIKE-L3 -- Before any operations Virtual Memory usage (VmSize): 9904 kB
+ Resident Set Size (RSS): 5760 kB
+[KEM BIKE-L3 -- Key generation] Execution time: 0.000730 seconds
+KEM BIKE-L3 -- After key generation Virtual Memory usage (VmSize): 9956 kB
+ Resident Set Size (RSS): 5888 kB
+[KEM BIKE-L3 -- Encapsulation] Execution time: 0.000126 seconds
+KEM BIKE-L3 -- After encapsulation Virtual Memory usage (VmSize): 9956 kB
+ Resident Set Size (RSS): 5888 kB
+[KEM BIKE-L3 -- Decapsulation] Execution time: 0.002676 seconds
+KEM BIKE-L3 -- After decapsulation Virtual Memory usage (VmSize): 9956 kB
+ Resident Set Size (RSS): 5888 kB
+Shared secrets match.
+[KEM BIKE-L3 -- AES encryption] Execution time: 0.000001 seconds
+KEM BIKE-L3 -- After AES encryption Virtual Memory usage (VmSize): 9956 kB
+ Resident Set Size (RSS): 5888 kB
+[KEM BIKE-L3 -- AES decryption] Execution time: 0.000001 seconds
+KEM BIKE-L3 -- After AES decryption Virtual Memory usage (VmSize): 9956 kB
+ Resident Set Size (RSS): 5888 kB
+Decrypted text matches the original plaintext.
+KEM BIKE-L3 -- After all operations Virtual Memory usage (VmSize): 9956 kB
+ Resident Set Size (RSS): 5888 kB
+-------------------------------------
+Medium message
+KEM BIKE-L3 -- Before any operations Virtual Memory usage (VmSize): 9956 kB
+ Resident Set Size (RSS): 5888 kB
+[KEM BIKE-L3 -- Key generation] Execution time: 0.000689 seconds
+KEM BIKE-L3 -- After key generation Virtual Memory usage (VmSize): 9956 kB
+ Resident Set Size (RSS): 5888 kB
+[KEM BIKE-L3 -- Encapsulation] Execution time: 0.000126 seconds
+KEM BIKE-L3 -- After encapsulation Virtual Memory usage (VmSize): 9956 kB
+ Resident Set Size (RSS): 5888 kB
+[KEM BIKE-L3 -- Decapsulation] Execution time: 0.002656 seconds
+KEM BIKE-L3 -- After decapsulation Virtual Memory usage (VmSize): 9956 kB
+ Resident Set Size (RSS): 5888 kB
+Shared secrets match.
+[KEM BIKE-L3 -- AES encryption] Execution time: 0.000002 seconds
+KEM BIKE-L3 -- After AES encryption Virtual Memory usage (VmSize): 9956 kB
+ Resident Set Size (RSS): 5888 kB
+[KEM BIKE-L3 -- AES decryption] Execution time: 0.000002 seconds
+KEM BIKE-L3 -- After AES decryption Virtual Memory usage (VmSize): 9956 kB
+ Resident Set Size (RSS): 5888 kB
+Decrypted text matches the original plaintext.
+KEM BIKE-L3 -- After all operations Virtual Memory usage (VmSize): 9956 kB
+ Resident Set Size (RSS): 5888 kB
+-------------------------------------
+Long message
+KEM BIKE-L3 -- Before any operations Virtual Memory usage (VmSize): 9956 kB
+ Resident Set Size (RSS): 5888 kB
+[KEM BIKE-L3 -- Key generation] Execution time: 0.000671 seconds
+KEM BIKE-L3 -- After key generation Virtual Memory usage (VmSize): 9956 kB
+ Resident Set Size (RSS): 5888 kB
+[KEM BIKE-L3 -- Encapsulation] Execution time: 0.000126 seconds
+KEM BIKE-L3 -- After encapsulation Virtual Memory usage (VmSize): 9956 kB
+ Resident Set Size (RSS): 5888 kB
+[KEM BIKE-L3 -- Decapsulation] Execution time: 0.002677 seconds
+KEM BIKE-L3 -- After decapsulation Virtual Memory usage (VmSize): 9956 kB
+ Resident Set Size (RSS): 5888 kB
+Shared secrets match.
+[KEM BIKE-L3 -- AES encryption] Execution time: 0.000002 seconds
+KEM BIKE-L3 -- After AES encryption Virtual Memory usage (VmSize): 9956 kB
+ Resident Set Size (RSS): 5888 kB
+[KEM BIKE-L3 -- AES decryption] Execution time: 0.000001 seconds
+KEM BIKE-L3 -- After AES decryption Virtual Memory usage (VmSize): 9956 kB
+ Resident Set Size (RSS): 5888 kB
+Decrypted text matches the original plaintext.
+KEM BIKE-L3 -- After all operations Virtual Memory usage (VmSize): 9956 kB
+ Resident Set Size (RSS): 5888 kB
+-------------------------------------
+Short message
+KEM BIKE-L5 -- Before any operations Virtual Memory usage (VmSize): 9956 kB
+ Resident Set Size (RSS): 5888 kB
+[KEM BIKE-L5 -- Key generation] Execution time: 0.001806 seconds
+KEM BIKE-L5 -- After key generation Virtual Memory usage (VmSize): 10252 kB
+ Resident Set Size (RSS): 6272 kB
+[KEM BIKE-L5 -- Encapsulation] Execution time: 0.000264 seconds
+KEM BIKE-L5 -- After encapsulation Virtual Memory usage (VmSize): 10252 kB
+ Resident Set Size (RSS): 6272 kB
+[KEM BIKE-L5 -- Decapsulation] Execution time: 0.007113 seconds
+KEM BIKE-L5 -- After decapsulation Virtual Memory usage (VmSize): 10252 kB
+ Resident Set Size (RSS): 6272 kB
+Shared secrets match.
+[KEM BIKE-L5 -- AES encryption] Execution time: 0.000002 seconds
+KEM BIKE-L5 -- After AES encryption Virtual Memory usage (VmSize): 10252 kB
+ Resident Set Size (RSS): 6272 kB
+[KEM BIKE-L5 -- AES decryption] Execution time: 0.000002 seconds
+KEM BIKE-L5 -- After AES decryption Virtual Memory usage (VmSize): 10252 kB
+ Resident Set Size (RSS): 6272 kB
+Decrypted text matches the original plaintext.
+KEM BIKE-L5 -- After all operations Virtual Memory usage (VmSize): 10252 kB
+ Resident Set Size (RSS): 6272 kB
+-------------------------------------
+Medium message
+KEM BIKE-L5 -- Before any operations Virtual Memory usage (VmSize): 10252 kB
+ Resident Set Size (RSS): 6272 kB
+[KEM BIKE-L5 -- Key generation] Execution time: 0.001621 seconds
+KEM BIKE-L5 -- After key generation Virtual Memory usage (VmSize): 10252 kB
+ Resident Set Size (RSS): 6272 kB
+[KEM BIKE-L5 -- Encapsulation] Execution time: 0.000263 seconds
+KEM BIKE-L5 -- After encapsulation Virtual Memory usage (VmSize): 10252 kB
+ Resident Set Size (RSS): 6272 kB
+[KEM BIKE-L5 -- Decapsulation] Execution time: 0.007095 seconds
+KEM BIKE-L5 -- After decapsulation Virtual Memory usage (VmSize): 10252 kB
+ Resident Set Size (RSS): 6272 kB
+Shared secrets match.
+[KEM BIKE-L5 -- AES encryption] Execution time: 0.000002 seconds
+KEM BIKE-L5 -- After AES encryption Virtual Memory usage (VmSize): 10252 kB
+ Resident Set Size (RSS): 6272 kB
+[KEM BIKE-L5 -- AES decryption] Execution time: 0.000002 seconds
+KEM BIKE-L5 -- After AES decryption Virtual Memory usage (VmSize): 10252 kB
+ Resident Set Size (RSS): 6272 kB
+Decrypted text matches the original plaintext.
+KEM BIKE-L5 -- After all operations Virtual Memory usage (VmSize): 10252 kB
+ Resident Set Size (RSS): 6272 kB
+-------------------------------------
+Long message
+KEM BIKE-L5 -- Before any operations Virtual Memory usage (VmSize): 10252 kB
+ Resident Set Size (RSS): 6272 kB
+[KEM BIKE-L5 -- Key generation] Execution time: 0.001605 seconds
+KEM BIKE-L5 -- After key generation Virtual Memory usage (VmSize): 10252 kB
+ Resident Set Size (RSS): 6272 kB
+[KEM BIKE-L5 -- Encapsulation] Execution time: 0.000264 seconds
+KEM BIKE-L5 -- After encapsulation Virtual Memory usage (VmSize): 10252 kB
+ Resident Set Size (RSS): 6272 kB
+[KEM BIKE-L5 -- Decapsulation] Execution time: 0.007133 seconds
+KEM BIKE-L5 -- After decapsulation Virtual Memory usage (VmSize): 10252 kB
+ Resident Set Size (RSS): 6272 kB
+Shared secrets match.
+[KEM BIKE-L5 -- AES encryption] Execution time: 0.000003 seconds
+KEM BIKE-L5 -- After AES encryption Virtual Memory usage (VmSize): 10252 kB
+ Resident Set Size (RSS): 6272 kB
+[KEM BIKE-L5 -- AES decryption] Execution time: 0.000002 seconds
+KEM BIKE-L5 -- After AES decryption Virtual Memory usage (VmSize): 10252 kB
+ Resident Set Size (RSS): 6272 kB
+Decrypted text matches the original plaintext.
+KEM BIKE-L5 -- After all operations Virtual Memory usage (VmSize): 10252 kB
+ Resident Set Size (RSS): 6272 kB
+-------------------------------------
+
+2nd time:
+Short message
+KEM BIKE-L1 -- Before any operations Virtual Memory usage (VmSize): 9336 kB
+ Resident Set Size (RSS): 2944 kB
+[KEM BIKE-L1 -- Key generation] Execution time: 0.002081 seconds
+KEM BIKE-L1 -- After key generation Virtual Memory usage (VmSize): 9904 kB
+ Resident Set Size (RSS): 5760 kB
+[KEM BIKE-L1 -- Encapsulation] Execution time: 0.000064 seconds
+KEM BIKE-L1 -- After encapsulation Virtual Memory usage (VmSize): 9904 kB
+ Resident Set Size (RSS): 5760 kB
+[KEM BIKE-L1 -- Decapsulation] Execution time: 0.000821 seconds
+KEM BIKE-L1 -- After decapsulation Virtual Memory usage (VmSize): 9904 kB
+ Resident Set Size (RSS): 5760 kB
+Shared secrets match.
+[KEM BIKE-L1 -- AES encryption] Execution time: 0.000003 seconds
+KEM BIKE-L1 -- After AES encryption Virtual Memory usage (VmSize): 9904 kB
+ Resident Set Size (RSS): 5760 kB
+[KEM BIKE-L1 -- AES decryption] Execution time: 0.000003 seconds
+KEM BIKE-L1 -- After AES decryption Virtual Memory usage (VmSize): 9904 kB
+ Resident Set Size (RSS): 5760 kB
+Decrypted text matches the original plaintext.
+KEM BIKE-L1 -- After all operations Virtual Memory usage (VmSize): 9904 kB
+ Resident Set Size (RSS): 5760 kB
+-------------------------------------
+Medium message
+KEM BIKE-L1 -- Before any operations Virtual Memory usage (VmSize): 9904 kB
+ Resident Set Size (RSS): 5760 kB
+[KEM BIKE-L1 -- Key generation] Execution time: 0.000212 seconds
+KEM BIKE-L1 -- After key generation Virtual Memory usage (VmSize): 9904 kB
+ Resident Set Size (RSS): 5760 kB
+[KEM BIKE-L1 -- Encapsulation] Execution time: 0.000056 seconds
+KEM BIKE-L1 -- After encapsulation Virtual Memory usage (VmSize): 9904 kB
+ Resident Set Size (RSS): 5760 kB
+[KEM BIKE-L1 -- Decapsulation] Execution time: 0.000806 seconds
+KEM BIKE-L1 -- After decapsulation Virtual Memory usage (VmSize): 9904 kB
+ Resident Set Size (RSS): 5760 kB
+Shared secrets match.
+[KEM BIKE-L1 -- AES encryption] Execution time: 0.000002 seconds
+KEM BIKE-L1 -- After AES encryption Virtual Memory usage (VmSize): 9904 kB
+ Resident Set Size (RSS): 5760 kB
+[KEM BIKE-L1 -- AES decryption] Execution time: 0.000002 seconds
+KEM BIKE-L1 -- After AES decryption Virtual Memory usage (VmSize): 9904 kB
+ Resident Set Size (RSS): 5760 kB
+Decrypted text matches the original plaintext.
+KEM BIKE-L1 -- After all operations Virtual Memory usage (VmSize): 9904 kB
+ Resident Set Size (RSS): 5760 kB
+-------------------------------------
+Long message
+KEM BIKE-L1 -- Before any operations Virtual Memory usage (VmSize): 9904 kB
+ Resident Set Size (RSS): 5760 kB
+[KEM BIKE-L1 -- Key generation] Execution time: 0.000213 seconds
+KEM BIKE-L1 -- After key generation Virtual Memory usage (VmSize): 9904 kB
+ Resident Set Size (RSS): 5760 kB
+[KEM BIKE-L1 -- Encapsulation] Execution time: 0.000058 seconds
+KEM BIKE-L1 -- After encapsulation Virtual Memory usage (VmSize): 9904 kB
+ Resident Set Size (RSS): 5760 kB
+[KEM BIKE-L1 -- Decapsulation] Execution time: 0.000808 seconds
+KEM BIKE-L1 -- After decapsulation Virtual Memory usage (VmSize): 9904 kB
+ Resident Set Size (RSS): 5760 kB
+Shared secrets match.
+[KEM BIKE-L1 -- AES encryption] Execution time: 0.000002 seconds
+KEM BIKE-L1 -- After AES encryption Virtual Memory usage (VmSize): 9904 kB
+ Resident Set Size (RSS): 5760 kB
+[KEM BIKE-L1 -- AES decryption] Execution time: 0.000001 seconds
+KEM BIKE-L1 -- After AES decryption Virtual Memory usage (VmSize): 9904 kB
+ Resident Set Size (RSS): 5760 kB
+Decrypted text matches the original plaintext.
+KEM BIKE-L1 -- After all operations Virtual Memory usage (VmSize): 9904 kB
+ Resident Set Size (RSS): 5760 kB
+-------------------------------------
+Short message
+KEM BIKE-L3 -- Before any operations Virtual Memory usage (VmSize): 9904 kB
+ Resident Set Size (RSS): 5760 kB
+[KEM BIKE-L3 -- Key generation] Execution time: 0.000707 seconds
+KEM BIKE-L3 -- After key generation Virtual Memory usage (VmSize): 9960 kB
+ Resident Set Size (RSS): 5760 kB
+[KEM BIKE-L3 -- Encapsulation] Execution time: 0.000128 seconds
+KEM BIKE-L3 -- After encapsulation Virtual Memory usage (VmSize): 9960 kB
+ Resident Set Size (RSS): 5760 kB
+[KEM BIKE-L3 -- Decapsulation] Execution time: 0.002658 seconds
+KEM BIKE-L3 -- After decapsulation Virtual Memory usage (VmSize): 9960 kB
+ Resident Set Size (RSS): 5760 kB
+Shared secrets match.
+[KEM BIKE-L3 -- AES encryption] Execution time: 0.000002 seconds
+KEM BIKE-L3 -- After AES encryption Virtual Memory usage (VmSize): 9960 kB
+ Resident Set Size (RSS): 5760 kB
+[KEM BIKE-L3 -- AES decryption] Execution time: 0.000002 seconds
+KEM BIKE-L3 -- After AES decryption Virtual Memory usage (VmSize): 9960 kB
+ Resident Set Size (RSS): 5760 kB
+Decrypted text matches the original plaintext.
+KEM BIKE-L3 -- After all operations Virtual Memory usage (VmSize): 9960 kB
+ Resident Set Size (RSS): 5760 kB
+-------------------------------------
+Medium message
+KEM BIKE-L3 -- Before any operations Virtual Memory usage (VmSize): 9960 kB
+ Resident Set Size (RSS): 5760 kB
+[KEM BIKE-L3 -- Key generation] Execution time: 0.000742 seconds
+KEM BIKE-L3 -- After key generation Virtual Memory usage (VmSize): 9960 kB
+ Resident Set Size (RSS): 5760 kB
+[KEM BIKE-L3 -- Encapsulation] Execution time: 0.000135 seconds
+KEM BIKE-L3 -- After encapsulation Virtual Memory usage (VmSize): 9960 kB
+ Resident Set Size (RSS): 5760 kB
+[KEM BIKE-L3 -- Decapsulation] Execution time: 0.002662 seconds
+KEM BIKE-L3 -- After decapsulation Virtual Memory usage (VmSize): 9960 kB
+ Resident Set Size (RSS): 5760 kB
+Shared secrets match.
+[KEM BIKE-L3 -- AES encryption] Execution time: 0.000001 seconds
+KEM BIKE-L3 -- After AES encryption Virtual Memory usage (VmSize): 9960 kB
+ Resident Set Size (RSS): 5760 kB
+[KEM BIKE-L3 -- AES decryption] Execution time: 0.000001 seconds
+KEM BIKE-L3 -- After AES decryption Virtual Memory usage (VmSize): 9960 kB
+ Resident Set Size (RSS): 5760 kB
+Decrypted text matches the original plaintext.
+KEM BIKE-L3 -- After all operations Virtual Memory usage (VmSize): 9960 kB
+ Resident Set Size (RSS): 5760 kB
+-------------------------------------
+Long message
+KEM BIKE-L3 -- Before any operations Virtual Memory usage (VmSize): 9960 kB
+ Resident Set Size (RSS): 5760 kB
+[KEM BIKE-L3 -- Key generation] Execution time: 0.000693 seconds
+KEM BIKE-L3 -- After key generation Virtual Memory usage (VmSize): 9960 kB
+ Resident Set Size (RSS): 5760 kB
+[KEM BIKE-L3 -- Encapsulation] Execution time: 0.000125 seconds
+KEM BIKE-L3 -- After encapsulation Virtual Memory usage (VmSize): 9960 kB
+ Resident Set Size (RSS): 5760 kB
+[KEM BIKE-L3 -- Decapsulation] Execution time: 0.002677 seconds
+KEM BIKE-L3 -- After decapsulation Virtual Memory usage (VmSize): 9960 kB
+ Resident Set Size (RSS): 5760 kB
+Shared secrets match.
+[KEM BIKE-L3 -- AES encryption] Execution time: 0.000003 seconds
+KEM BIKE-L3 -- After AES encryption Virtual Memory usage (VmSize): 9960 kB
+ Resident Set Size (RSS): 5760 kB
+[KEM BIKE-L3 -- AES decryption] Execution time: 0.000001 seconds
+KEM BIKE-L3 -- After AES decryption Virtual Memory usage (VmSize): 9960 kB
+ Resident Set Size (RSS): 5760 kB
+Decrypted text matches the original plaintext.
+KEM BIKE-L3 -- After all operations Virtual Memory usage (VmSize): 9960 kB
+ Resident Set Size (RSS): 5760 kB
+-------------------------------------
+Short message
+KEM BIKE-L5 -- Before any operations Virtual Memory usage (VmSize): 9960 kB
+ Resident Set Size (RSS): 5760 kB
+[KEM BIKE-L5 -- Key generation] Execution time: 0.001786 seconds
+KEM BIKE-L5 -- After key generation Virtual Memory usage (VmSize): 10256 kB
+ Resident Set Size (RSS): 6272 kB
+[KEM BIKE-L5 -- Encapsulation] Execution time: 0.000264 seconds
+KEM BIKE-L5 -- After encapsulation Virtual Memory usage (VmSize): 10256 kB
+ Resident Set Size (RSS): 6272 kB
+[KEM BIKE-L5 -- Decapsulation] Execution time: 0.007098 seconds
+KEM BIKE-L5 -- After decapsulation Virtual Memory usage (VmSize): 10256 kB
+ Resident Set Size (RSS): 6272 kB
+Shared secrets match.
+[KEM BIKE-L5 -- AES encryption] Execution time: 0.000002 seconds
+KEM BIKE-L5 -- After AES encryption Virtual Memory usage (VmSize): 10256 kB
+ Resident Set Size (RSS): 6272 kB
+[KEM BIKE-L5 -- AES decryption] Execution time: 0.000002 seconds
+KEM BIKE-L5 -- After AES decryption Virtual Memory usage (VmSize): 10256 kB
+ Resident Set Size (RSS): 6272 kB
+Decrypted text matches the original plaintext.
+KEM BIKE-L5 -- After all operations Virtual Memory usage (VmSize): 10256 kB
+ Resident Set Size (RSS): 6272 kB
+-------------------------------------
+Medium message
+KEM BIKE-L5 -- Before any operations Virtual Memory usage (VmSize): 10256 kB
+ Resident Set Size (RSS): 6272 kB
+[KEM BIKE-L5 -- Key generation] Execution time: 0.001589 seconds
+KEM BIKE-L5 -- After key generation Virtual Memory usage (VmSize): 10256 kB
+ Resident Set Size (RSS): 6272 kB
+[KEM BIKE-L5 -- Encapsulation] Execution time: 0.000262 seconds
+KEM BIKE-L5 -- After encapsulation Virtual Memory usage (VmSize): 10256 kB
+ Resident Set Size (RSS): 6272 kB
+[KEM BIKE-L5 -- Decapsulation] Execution time: 0.007140 seconds
+KEM BIKE-L5 -- After decapsulation Virtual Memory usage (VmSize): 10256 kB
+ Resident Set Size (RSS): 6272 kB
+Shared secrets match.
+[KEM BIKE-L5 -- AES encryption] Execution time: 0.000002 seconds
+KEM BIKE-L5 -- After AES encryption Virtual Memory usage (VmSize): 10256 kB
+ Resident Set Size (RSS): 6272 kB
+[KEM BIKE-L5 -- AES decryption] Execution time: 0.000002 seconds
+KEM BIKE-L5 -- After AES decryption Virtual Memory usage (VmSize): 10256 kB
+ Resident Set Size (RSS): 6272 kB
+Decrypted text matches the original plaintext.
+KEM BIKE-L5 -- After all operations Virtual Memory usage (VmSize): 10256 kB
+ Resident Set Size (RSS): 6272 kB
+-------------------------------------
+Long message
+KEM BIKE-L5 -- Before any operations Virtual Memory usage (VmSize): 10256 kB
+ Resident Set Size (RSS): 6272 kB
+[KEM BIKE-L5 -- Key generation] Execution time: 0.001586 seconds
+KEM BIKE-L5 -- After key generation Virtual Memory usage (VmSize): 10256 kB
+ Resident Set Size (RSS): 6272 kB
+[KEM BIKE-L5 -- Encapsulation] Execution time: 0.000264 seconds
+KEM BIKE-L5 -- After encapsulation Virtual Memory usage (VmSize): 10256 kB
+ Resident Set Size (RSS): 6272 kB
+[KEM BIKE-L5 -- Decapsulation] Execution time: 0.007139 seconds
+KEM BIKE-L5 -- After decapsulation Virtual Memory usage (VmSize): 10256 kB
+ Resident Set Size (RSS): 6272 kB
+Shared secrets match.
+[KEM BIKE-L5 -- AES encryption] Execution time: 0.000002 seconds
+KEM BIKE-L5 -- After AES encryption Virtual Memory usage (VmSize): 10256 kB
+ Resident Set Size (RSS): 6272 kB
+[KEM BIKE-L5 -- AES decryption] Execution time: 0.000002 seconds
+KEM BIKE-L5 -- After AES decryption Virtual Memory usage (VmSize): 10256 kB
+ Resident Set Size (RSS): 6272 kB
+Decrypted text matches the original plaintext.
+KEM BIKE-L5 -- After all operations Virtual Memory usage (VmSize): 10256 kB
+ Resident Set Size (RSS): 6272 kB
+-------------------------------------
+
+3rd time:
+Short message
+KEM BIKE-L1 -- Before any operations Virtual Memory usage (VmSize): 9336 kB
+ Resident Set Size (RSS): 2944 kB
+[KEM BIKE-L1 -- Key generation] Execution time: 0.002069 seconds
+KEM BIKE-L1 -- After key generation Virtual Memory usage (VmSize): 9904 kB
+ Resident Set Size (RSS): 5760 kB
+[KEM BIKE-L1 -- Encapsulation] Execution time: 0.000059 seconds
+KEM BIKE-L1 -- After encapsulation Virtual Memory usage (VmSize): 9904 kB
+ Resident Set Size (RSS): 5760 kB
+[KEM BIKE-L1 -- Decapsulation] Execution time: 0.000825 seconds
+KEM BIKE-L1 -- After decapsulation Virtual Memory usage (VmSize): 9904 kB
+ Resident Set Size (RSS): 5888 kB
+Shared secrets match.
+[KEM BIKE-L1 -- AES encryption] Execution time: 0.000003 seconds
+KEM BIKE-L1 -- After AES encryption Virtual Memory usage (VmSize): 9904 kB
+ Resident Set Size (RSS): 5888 kB
+[KEM BIKE-L1 -- AES decryption] Execution time: 0.000003 seconds
+KEM BIKE-L1 -- After AES decryption Virtual Memory usage (VmSize): 9904 kB
+ Resident Set Size (RSS): 5888 kB
+Decrypted text matches the original plaintext.
+KEM BIKE-L1 -- After all operations Virtual Memory usage (VmSize): 9904 kB
+ Resident Set Size (RSS): 5888 kB
+-------------------------------------
+Medium message
+KEM BIKE-L1 -- Before any operations Virtual Memory usage (VmSize): 9904 kB
+ Resident Set Size (RSS): 5888 kB
+[KEM BIKE-L1 -- Key generation] Execution time: 0.000213 seconds
+KEM BIKE-L1 -- After key generation Virtual Memory usage (VmSize): 9904 kB
+ Resident Set Size (RSS): 5888 kB
+[KEM BIKE-L1 -- Encapsulation] Execution time: 0.000057 seconds
+KEM BIKE-L1 -- After encapsulation Virtual Memory usage (VmSize): 9904 kB
+ Resident Set Size (RSS): 5888 kB
+[KEM BIKE-L1 -- Decapsulation] Execution time: 0.000806 seconds
+KEM BIKE-L1 -- After decapsulation Virtual Memory usage (VmSize): 9904 kB
+ Resident Set Size (RSS): 5888 kB
+Shared secrets match.
+[KEM BIKE-L1 -- AES encryption] Execution time: 0.000002 seconds
+KEM BIKE-L1 -- After AES encryption Virtual Memory usage (VmSize): 9904 kB
+ Resident Set Size (RSS): 5888 kB
+[KEM BIKE-L1 -- AES decryption] Execution time: 0.000002 seconds
+KEM BIKE-L1 -- After AES decryption Virtual Memory usage (VmSize): 9904 kB
+ Resident Set Size (RSS): 5888 kB
+Decrypted text matches the original plaintext.
+KEM BIKE-L1 -- After all operations Virtual Memory usage (VmSize): 9904 kB
+ Resident Set Size (RSS): 5888 kB
+-------------------------------------
+Long message
+KEM BIKE-L1 -- Before any operations Virtual Memory usage (VmSize): 9904 kB
+ Resident Set Size (RSS): 5888 kB
+[KEM BIKE-L1 -- Key generation] Execution time: 0.000219 seconds
+KEM BIKE-L1 -- After key generation Virtual Memory usage (VmSize): 9904 kB
+ Resident Set Size (RSS): 5888 kB
+[KEM BIKE-L1 -- Encapsulation] Execution time: 0.000058 seconds
+KEM BIKE-L1 -- After encapsulation Virtual Memory usage (VmSize): 9904 kB
+ Resident Set Size (RSS): 5888 kB
+[KEM BIKE-L1 -- Decapsulation] Execution time: 0.000806 seconds
+KEM BIKE-L1 -- After decapsulation Virtual Memory usage (VmSize): 9904 kB
+ Resident Set Size (RSS): 5888 kB
+Shared secrets match.
+[KEM BIKE-L1 -- AES encryption] Execution time: 0.000002 seconds
+KEM BIKE-L1 -- After AES encryption Virtual Memory usage (VmSize): 9904 kB
+ Resident Set Size (RSS): 5888 kB
+[KEM BIKE-L1 -- AES decryption] Execution time: 0.000002 seconds
+KEM BIKE-L1 -- After AES decryption Virtual Memory usage (VmSize): 9904 kB
+ Resident Set Size (RSS): 5888 kB
+Decrypted text matches the original plaintext.
+KEM BIKE-L1 -- After all operations Virtual Memory usage (VmSize): 9904 kB
+ Resident Set Size (RSS): 5888 kB
+-------------------------------------
+Short message
+KEM BIKE-L3 -- Before any operations Virtual Memory usage (VmSize): 9904 kB
+ Resident Set Size (RSS): 5888 kB
+[KEM BIKE-L3 -- Key generation] Execution time: 0.000688 seconds
+KEM BIKE-L3 -- After key generation Virtual Memory usage (VmSize): 9960 kB
+ Resident Set Size (RSS): 5888 kB
+[KEM BIKE-L3 -- Encapsulation] Execution time: 0.000127 seconds
+KEM BIKE-L3 -- After encapsulation Virtual Memory usage (VmSize): 9960 kB
+ Resident Set Size (RSS): 5888 kB
+[KEM BIKE-L3 -- Decapsulation] Execution time: 0.002655 seconds
+KEM BIKE-L3 -- After decapsulation Virtual Memory usage (VmSize): 9960 kB
+ Resident Set Size (RSS): 5888 kB
+Shared secrets match.
+[KEM BIKE-L3 -- AES encryption] Execution time: 0.000001 seconds
+KEM BIKE-L3 -- After AES encryption Virtual Memory usage (VmSize): 9960 kB
+ Resident Set Size (RSS): 5888 kB
+[KEM BIKE-L3 -- AES decryption] Execution time: 0.000001 seconds
+KEM BIKE-L3 -- After AES decryption Virtual Memory usage (VmSize): 9960 kB
+ Resident Set Size (RSS): 5888 kB
+Decrypted text matches the original plaintext.
+KEM BIKE-L3 -- After all operations Virtual Memory usage (VmSize): 9960 kB
+ Resident Set Size (RSS): 5888 kB
+-------------------------------------
+Medium message
+KEM BIKE-L3 -- Before any operations Virtual Memory usage (VmSize): 9960 kB
+ Resident Set Size (RSS): 5888 kB
+[KEM BIKE-L3 -- Key generation] Execution time: 0.000643 seconds
+KEM BIKE-L3 -- After key generation Virtual Memory usage (VmSize): 9960 kB
+ Resident Set Size (RSS): 5888 kB
+[KEM BIKE-L3 -- Encapsulation] Execution time: 0.000125 seconds
+KEM BIKE-L3 -- After encapsulation Virtual Memory usage (VmSize): 9960 kB
+ Resident Set Size (RSS): 5888 kB
+[KEM BIKE-L3 -- Decapsulation] Execution time: 0.002665 seconds
+KEM BIKE-L3 -- After decapsulation Virtual Memory usage (VmSize): 9960 kB
+ Resident Set Size (RSS): 5888 kB
+Shared secrets match.
+[KEM BIKE-L3 -- AES encryption] Execution time: 0.000002 seconds
+KEM BIKE-L3 -- After AES encryption Virtual Memory usage (VmSize): 9960 kB
+ Resident Set Size (RSS): 5888 kB
+[KEM BIKE-L3 -- AES decryption] Execution time: 0.000002 seconds
+KEM BIKE-L3 -- After AES decryption Virtual Memory usage (VmSize): 9960 kB
+ Resident Set Size (RSS): 5888 kB
+Decrypted text matches the original plaintext.
+KEM BIKE-L3 -- After all operations Virtual Memory usage (VmSize): 9960 kB
+ Resident Set Size (RSS): 5888 kB
+-------------------------------------
+Long message
+KEM BIKE-L3 -- Before any operations Virtual Memory usage (VmSize): 9960 kB
+ Resident Set Size (RSS): 5888 kB
+[KEM BIKE-L3 -- Key generation] Execution time: 0.000669 seconds
+KEM BIKE-L3 -- After key generation Virtual Memory usage (VmSize): 9960 kB
+ Resident Set Size (RSS): 5888 kB
+[KEM BIKE-L3 -- Encapsulation] Execution time: 0.000125 seconds
+KEM BIKE-L3 -- After encapsulation Virtual Memory usage (VmSize): 9960 kB
+ Resident Set Size (RSS): 5888 kB
+[KEM BIKE-L3 -- Decapsulation] Execution time: 0.002658 seconds
+KEM BIKE-L3 -- After decapsulation Virtual Memory usage (VmSize): 9960 kB
+ Resident Set Size (RSS): 5888 kB
+Shared secrets match.
+[KEM BIKE-L3 -- AES encryption] Execution time: 0.000002 seconds
+KEM BIKE-L3 -- After AES encryption Virtual Memory usage (VmSize): 9960 kB
+ Resident Set Size (RSS): 5888 kB
+[KEM BIKE-L3 -- AES decryption] Execution time: 0.000002 seconds
+KEM BIKE-L3 -- After AES decryption Virtual Memory usage (VmSize): 9960 kB
+ Resident Set Size (RSS): 5888 kB
+Decrypted text matches the original plaintext.
+KEM BIKE-L3 -- After all operations Virtual Memory usage (VmSize): 9960 kB
+ Resident Set Size (RSS): 5888 kB
+-------------------------------------
+Short message
+KEM BIKE-L5 -- Before any operations Virtual Memory usage (VmSize): 9960 kB
+ Resident Set Size (RSS): 5888 kB
+[KEM BIKE-L5 -- Key generation] Execution time: 0.001780 seconds
+KEM BIKE-L5 -- After key generation Virtual Memory usage (VmSize): 10256 kB
+ Resident Set Size (RSS): 6272 kB
+[KEM BIKE-L5 -- Encapsulation] Execution time: 0.000263 seconds
+KEM BIKE-L5 -- After encapsulation Virtual Memory usage (VmSize): 10256 kB
+ Resident Set Size (RSS): 6272 kB
+[KEM BIKE-L5 -- Decapsulation] Execution time: 0.007120 seconds
+KEM BIKE-L5 -- After decapsulation Virtual Memory usage (VmSize): 10256 kB
+ Resident Set Size (RSS): 6272 kB
+Shared secrets match.
+[KEM BIKE-L5 -- AES encryption] Execution time: 0.000002 seconds
+KEM BIKE-L5 -- After AES encryption Virtual Memory usage (VmSize): 10256 kB
+ Resident Set Size (RSS): 6272 kB
+[KEM BIKE-L5 -- AES decryption] Execution time: 0.000002 seconds
+KEM BIKE-L5 -- After AES decryption Virtual Memory usage (VmSize): 10256 kB
+ Resident Set Size (RSS): 6272 kB
+Decrypted text matches the original plaintext.
+KEM BIKE-L5 -- After all operations Virtual Memory usage (VmSize): 10256 kB
+ Resident Set Size (RSS): 6272 kB
+-------------------------------------
+Medium message
+KEM BIKE-L5 -- Before any operations Virtual Memory usage (VmSize): 10256 kB
+ Resident Set Size (RSS): 6272 kB
+[KEM BIKE-L5 -- Key generation] Execution time: 0.001591 seconds
+KEM BIKE-L5 -- After key generation Virtual Memory usage (VmSize): 10256 kB
+ Resident Set Size (RSS): 6272 kB
+[KEM BIKE-L5 -- Encapsulation] Execution time: 0.000261 seconds
+KEM BIKE-L5 -- After encapsulation Virtual Memory usage (VmSize): 10256 kB
+ Resident Set Size (RSS): 6272 kB
+[KEM BIKE-L5 -- Decapsulation] Execution time: 0.007148 seconds
+KEM BIKE-L5 -- After decapsulation Virtual Memory usage (VmSize): 10256 kB
+ Resident Set Size (RSS): 6272 kB
+Shared secrets match.
+[KEM BIKE-L5 -- AES encryption] Execution time: 0.000002 seconds
+KEM BIKE-L5 -- After AES encryption Virtual Memory usage (VmSize): 10256 kB
+ Resident Set Size (RSS): 6272 kB
+[KEM BIKE-L5 -- AES decryption] Execution time: 0.000002 seconds
+KEM BIKE-L5 -- After AES decryption Virtual Memory usage (VmSize): 10256 kB
+ Resident Set Size (RSS): 6272 kB
+Decrypted text matches the original plaintext.
+KEM BIKE-L5 -- After all operations Virtual Memory usage (VmSize): 10256 kB
+ Resident Set Size (RSS): 6272 kB
+-------------------------------------
+Long message
+KEM BIKE-L5 -- Before any operations Virtual Memory usage (VmSize): 10256 kB
+ Resident Set Size (RSS): 6272 kB
+[KEM BIKE-L5 -- Key generation] Execution time: 0.001614 seconds
+KEM BIKE-L5 -- After key generation Virtual Memory usage (VmSize): 10256 kB
+ Resident Set Size (RSS): 6272 kB
+[KEM BIKE-L5 -- Encapsulation] Execution time: 0.000262 seconds
+KEM BIKE-L5 -- After encapsulation Virtual Memory usage (VmSize): 10256 kB
+ Resident Set Size (RSS): 6272 kB
+[KEM BIKE-L5 -- Decapsulation] Execution time: 0.007146 seconds
+KEM BIKE-L5 -- After decapsulation Virtual Memory usage (VmSize): 10256 kB
+ Resident Set Size (RSS): 6272 kB
+Shared secrets match.
+[KEM BIKE-L5 -- AES encryption] Execution time: 0.000002 seconds
+KEM BIKE-L5 -- After AES encryption Virtual Memory usage (VmSize): 10256 kB
+ Resident Set Size (RSS): 6272 kB
+[KEM BIKE-L5 -- AES decryption] Execution time: 0.000002 seconds
+KEM BIKE-L5 -- After AES decryption Virtual Memory usage (VmSize): 10256 kB
+ Resident Set Size (RSS): 6272 kB
+Decrypted text matches the original plaintext.
+KEM BIKE-L5 -- After all operations Virtual Memory usage (VmSize): 10256 kB
+ Resident Set Size (RSS): 6272 kB
+-------------------------------------
+
+4th time:
+Short message
+KEM BIKE-L1 -- Before any operations Virtual Memory usage (VmSize): 9336 kB
+ Resident Set Size (RSS): 2944 kB
+[KEM BIKE-L1 -- Key generation] Execution time: 0.003260 seconds
+KEM BIKE-L1 -- After key generation Virtual Memory usage (VmSize): 9904 kB
+ Resident Set Size (RSS): 5760 kB
+[KEM BIKE-L1 -- Encapsulation] Execution time: 0.000140 seconds
+KEM BIKE-L1 -- After encapsulation Virtual Memory usage (VmSize): 9904 kB
+ Resident Set Size (RSS): 5760 kB
+[KEM BIKE-L1 -- Decapsulation] Execution time: 0.002438 seconds
+KEM BIKE-L1 -- After decapsulation Virtual Memory usage (VmSize): 9904 kB
+ Resident Set Size (RSS): 5760 kB
+Shared secrets match.
+[KEM BIKE-L1 -- AES encryption] Execution time: 0.000009 seconds
+KEM BIKE-L1 -- After AES encryption Virtual Memory usage (VmSize): 9904 kB
+ Resident Set Size (RSS): 5760 kB
+[KEM BIKE-L1 -- AES decryption] Execution time: 0.000007 seconds
+KEM BIKE-L1 -- After AES decryption Virtual Memory usage (VmSize): 9904 kB
+ Resident Set Size (RSS): 5760 kB
+Decrypted text matches the original plaintext.
+KEM BIKE-L1 -- After all operations Virtual Memory usage (VmSize): 9904 kB
+ Resident Set Size (RSS): 5760 kB
+-------------------------------------
+Medium message
+KEM BIKE-L1 -- Before any operations Virtual Memory usage (VmSize): 9904 kB
+ Resident Set Size (RSS): 5760 kB
+[KEM BIKE-L1 -- Key generation] Execution time: 0.000475 seconds
+KEM BIKE-L1 -- After key generation Virtual Memory usage (VmSize): 9904 kB
+ Resident Set Size (RSS): 5760 kB
+[KEM BIKE-L1 -- Encapsulation] Execution time: 0.000138 seconds
+KEM BIKE-L1 -- After encapsulation Virtual Memory usage (VmSize): 9904 kB
+ Resident Set Size (RSS): 5760 kB
+[KEM BIKE-L1 -- Decapsulation] Execution time: 0.002418 seconds
+KEM BIKE-L1 -- After decapsulation Virtual Memory usage (VmSize): 9904 kB
+ Resident Set Size (RSS): 5760 kB
+Shared secrets match.
+[KEM BIKE-L1 -- AES encryption] Execution time: 0.000005 seconds
+KEM BIKE-L1 -- After AES encryption Virtual Memory usage (VmSize): 9904 kB
+ Resident Set Size (RSS): 5760 kB
+[KEM BIKE-L1 -- AES decryption] Execution time: 0.000006 seconds
+KEM BIKE-L1 -- After AES decryption Virtual Memory usage (VmSize): 9904 kB
+ Resident Set Size (RSS): 5760 kB
+Decrypted text matches the original plaintext.
+KEM BIKE-L1 -- After all operations Virtual Memory usage (VmSize): 9904 kB
+ Resident Set Size (RSS): 5760 kB
+-------------------------------------
+Long message
+KEM BIKE-L1 -- Before any operations Virtual Memory usage (VmSize): 9904 kB
+ Resident Set Size (RSS): 5760 kB
+[KEM BIKE-L1 -- Key generation] Execution time: 0.000461 seconds
+KEM BIKE-L1 -- After key generation Virtual Memory usage (VmSize): 9904 kB
+ Resident Set Size (RSS): 5760 kB
+[KEM BIKE-L1 -- Encapsulation] Execution time: 0.000142 seconds
+KEM BIKE-L1 -- After encapsulation Virtual Memory usage (VmSize): 9904 kB
+ Resident Set Size (RSS): 5760 kB
+[KEM BIKE-L1 -- Decapsulation] Execution time: 0.002423 seconds
+KEM BIKE-L1 -- After decapsulation Virtual Memory usage (VmSize): 9904 kB
+ Resident Set Size (RSS): 5760 kB
+Shared secrets match.
+[KEM BIKE-L1 -- AES encryption] Execution time: 0.000006 seconds
+KEM BIKE-L1 -- After AES encryption Virtual Memory usage (VmSize): 9904 kB
+ Resident Set Size (RSS): 5760 kB
+[KEM BIKE-L1 -- AES decryption] Execution time: 0.000005 seconds
+KEM BIKE-L1 -- After AES decryption Virtual Memory usage (VmSize): 9904 kB
+ Resident Set Size (RSS): 5760 kB
+Decrypted text matches the original plaintext.
+KEM BIKE-L1 -- After all operations Virtual Memory usage (VmSize): 9904 kB
+ Resident Set Size (RSS): 5760 kB
+-------------------------------------
+Short message
+KEM BIKE-L3 -- Before any operations Virtual Memory usage (VmSize): 9904 kB
+ Resident Set Size (RSS): 5760 kB
+[KEM BIKE-L3 -- Key generation] Execution time: 0.001395 seconds
+KEM BIKE-L3 -- After key generation Virtual Memory usage (VmSize): 9960 kB
+ Resident Set Size (RSS): 5888 kB
+[KEM BIKE-L3 -- Encapsulation] Execution time: 0.000302 seconds
+KEM BIKE-L3 -- After encapsulation Virtual Memory usage (VmSize): 9960 kB
+ Resident Set Size (RSS): 5888 kB
+[KEM BIKE-L3 -- Decapsulation] Execution time: 0.007607 seconds
+KEM BIKE-L3 -- After decapsulation Virtual Memory usage (VmSize): 9960 kB
+ Resident Set Size (RSS): 5888 kB
+Shared secrets match.
+[KEM BIKE-L3 -- AES encryption] Execution time: 0.000005 seconds
+KEM BIKE-L3 -- After AES encryption Virtual Memory usage (VmSize): 9960 kB
+ Resident Set Size (RSS): 5888 kB
+[KEM BIKE-L3 -- AES decryption] Execution time: 0.000005 seconds
+KEM BIKE-L3 -- After AES decryption Virtual Memory usage (VmSize): 9960 kB
+ Resident Set Size (RSS): 5888 kB
+Decrypted text matches the original plaintext.
+KEM BIKE-L3 -- After all operations Virtual Memory usage (VmSize): 9960 kB
+ Resident Set Size (RSS): 5888 kB
+-------------------------------------
+Medium message
+KEM BIKE-L3 -- Before any operations Virtual Memory usage (VmSize): 9960 kB
+ Resident Set Size (RSS): 5888 kB
+[KEM BIKE-L3 -- Key generation] Execution time: 0.001339 seconds
+KEM BIKE-L3 -- After key generation Virtual Memory usage (VmSize): 9960 kB
+ Resident Set Size (RSS): 5888 kB
+[KEM BIKE-L3 -- Encapsulation] Execution time: 0.000303 seconds
+KEM BIKE-L3 -- After encapsulation Virtual Memory usage (VmSize): 9960 kB
+ Resident Set Size (RSS): 5888 kB
+[KEM BIKE-L3 -- Decapsulation] Execution time: 0.007592 seconds
+KEM BIKE-L3 -- After decapsulation Virtual Memory usage (VmSize): 9960 kB
+ Resident Set Size (RSS): 5888 kB
+Shared secrets match.
+[KEM BIKE-L3 -- AES encryption] Execution time: 0.000006 seconds
+KEM BIKE-L3 -- After AES encryption Virtual Memory usage (VmSize): 9960 kB
+ Resident Set Size (RSS): 5888 kB
+[KEM BIKE-L3 -- AES decryption] Execution time: 0.000005 seconds
+KEM BIKE-L3 -- After AES decryption Virtual Memory usage (VmSize): 9960 kB
+ Resident Set Size (RSS): 5888 kB
+Decrypted text matches the original plaintext.
+KEM BIKE-L3 -- After all operations Virtual Memory usage (VmSize): 9960 kB
+ Resident Set Size (RSS): 5888 kB
+-------------------------------------
+Long message
+KEM BIKE-L3 -- Before any operations Virtual Memory usage (VmSize): 9960 kB
+ Resident Set Size (RSS): 5888 kB
+[KEM BIKE-L3 -- Key generation] Execution time: 0.001308 seconds
+KEM BIKE-L3 -- After key generation Virtual Memory usage (VmSize): 9960 kB
+ Resident Set Size (RSS): 5888 kB
+[KEM BIKE-L3 -- Encapsulation] Execution time: 0.000310 seconds
+KEM BIKE-L3 -- After encapsulation Virtual Memory usage (VmSize): 9960 kB
+ Resident Set Size (RSS): 5888 kB
+[KEM BIKE-L3 -- Decapsulation] Execution time: 0.007623 seconds
+KEM BIKE-L3 -- After decapsulation Virtual Memory usage (VmSize): 9960 kB
+ Resident Set Size (RSS): 5888 kB
+Shared secrets match.
+[KEM BIKE-L3 -- AES encryption] Execution time: 0.000007 seconds
+KEM BIKE-L3 -- After AES encryption Virtual Memory usage (VmSize): 9960 kB
+ Resident Set Size (RSS): 5888 kB
+[KEM BIKE-L3 -- AES decryption] Execution time: 0.000006 seconds
+KEM BIKE-L3 -- After AES decryption Virtual Memory usage (VmSize): 9960 kB
+ Resident Set Size (RSS): 5888 kB
+Decrypted text matches the original plaintext.
+KEM BIKE-L3 -- After all operations Virtual Memory usage (VmSize): 9960 kB
+ Resident Set Size (RSS): 5888 kB
+-------------------------------------
+Short message
+KEM BIKE-L5 -- Before any operations Virtual Memory usage (VmSize): 9960 kB
+ Resident Set Size (RSS): 5888 kB
+[KEM BIKE-L5 -- Key generation] Execution time: 0.003557 seconds
+KEM BIKE-L5 -- After key generation Virtual Memory usage (VmSize): 10256 kB
+ Resident Set Size (RSS): 6272 kB
+[KEM BIKE-L5 -- Encapsulation] Execution time: 0.000608 seconds
+KEM BIKE-L5 -- After encapsulation Virtual Memory usage (VmSize): 10256 kB
+ Resident Set Size (RSS): 6272 kB
+[KEM BIKE-L5 -- Decapsulation] Execution time: 0.018131 seconds
+KEM BIKE-L5 -- After decapsulation Virtual Memory usage (VmSize): 10256 kB
+ Resident Set Size (RSS): 6272 kB
+Shared secrets match.
+[KEM BIKE-L5 -- AES encryption] Execution time: 0.000007 seconds
+KEM BIKE-L5 -- After AES encryption Virtual Memory usage (VmSize): 10256 kB
+ Resident Set Size (RSS): 6272 kB
+[KEM BIKE-L5 -- AES decryption] Execution time: 0.000006 seconds
+KEM BIKE-L5 -- After AES decryption Virtual Memory usage (VmSize): 10256 kB
+ Resident Set Size (RSS): 6272 kB
+Decrypted text matches the original plaintext.
+KEM BIKE-L5 -- After all operations Virtual Memory usage (VmSize): 10256 kB
+ Resident Set Size (RSS): 6272 kB
+-------------------------------------
+Medium message
+KEM BIKE-L5 -- Before any operations Virtual Memory usage (VmSize): 10256 kB
+ Resident Set Size (RSS): 6272 kB
+[KEM BIKE-L5 -- Key generation] Execution time: 0.003336 seconds
+KEM BIKE-L5 -- After key generation Virtual Memory usage (VmSize): 10256 kB
+ Resident Set Size (RSS): 6272 kB
+[KEM BIKE-L5 -- Encapsulation] Execution time: 0.000620 seconds
+KEM BIKE-L5 -- After encapsulation Virtual Memory usage (VmSize): 10256 kB
+ Resident Set Size (RSS): 6272 kB
+[KEM BIKE-L5 -- Decapsulation] Execution time: 0.018220 seconds
+KEM BIKE-L5 -- After decapsulation Virtual Memory usage (VmSize): 10256 kB
+ Resident Set Size (RSS): 6272 kB
+Shared secrets match.
+[KEM BIKE-L5 -- AES encryption] Execution time: 0.000010 seconds
+KEM BIKE-L5 -- After AES encryption Virtual Memory usage (VmSize): 10256 kB
+ Resident Set Size (RSS): 6272 kB
+[KEM BIKE-L5 -- AES decryption] Execution time: 0.000007 seconds
+KEM BIKE-L5 -- After AES decryption Virtual Memory usage (VmSize): 10256 kB
+ Resident Set Size (RSS): 6272 kB
+Decrypted text matches the original plaintext.
+KEM BIKE-L5 -- After all operations Virtual Memory usage (VmSize): 10256 kB
+ Resident Set Size (RSS): 6272 kB
+-------------------------------------
+Long message
+KEM BIKE-L5 -- Before any operations Virtual Memory usage (VmSize): 10256 kB
+ Resident Set Size (RSS): 6272 kB
+[KEM BIKE-L5 -- Key generation] Execution time: 0.003315 seconds
+KEM BIKE-L5 -- After key generation Virtual Memory usage (VmSize): 10256 kB
+ Resident Set Size (RSS): 6272 kB
+[KEM BIKE-L5 -- Encapsulation] Execution time: 0.000606 seconds
+KEM BIKE-L5 -- After encapsulation Virtual Memory usage (VmSize): 10256 kB
+ Resident Set Size (RSS): 6272 kB
+[KEM BIKE-L5 -- Decapsulation] Execution time: 0.018154 seconds
+KEM BIKE-L5 -- After decapsulation Virtual Memory usage (VmSize): 10256 kB
+ Resident Set Size (RSS): 6272 kB
+Shared secrets match.
+[KEM BIKE-L5 -- AES encryption] Execution time: 0.000009 seconds
+KEM BIKE-L5 -- After AES encryption Virtual Memory usage (VmSize): 10256 kB
+ Resident Set Size (RSS): 6272 kB
+[KEM BIKE-L5 -- AES decryption] Execution time: 0.000006 seconds
+KEM BIKE-L5 -- After AES decryption Virtual Memory usage (VmSize): 10256 kB
+ Resident Set Size (RSS): 6272 kB
+Decrypted text matches the original plaintext.
+KEM BIKE-L5 -- After all operations Virtual Memory usage (VmSize): 10256 kB
+ Resident Set Size (RSS): 6272 kB
+-------------------------------------
+
+5th time:
+Short message
+KEM BIKE-L1 -- Before any operations Virtual Memory usage (VmSize): 9336 kB
+ Resident Set Size (RSS): 2944 kB
+[KEM BIKE-L1 -- Key generation] Execution time: 0.002074 seconds
+KEM BIKE-L1 -- After key generation Virtual Memory usage (VmSize): 9904 kB
+ Resident Set Size (RSS): 5760 kB
+[KEM BIKE-L1 -- Encapsulation] Execution time: 0.000059 seconds
+KEM BIKE-L1 -- After encapsulation Virtual Memory usage (VmSize): 9904 kB
+ Resident Set Size (RSS): 5760 kB
+[KEM BIKE-L1 -- Decapsulation] Execution time: 0.000822 seconds
+KEM BIKE-L1 -- After decapsulation Virtual Memory usage (VmSize): 9904 kB
+ Resident Set Size (RSS): 5888 kB
+Shared secrets match.
+[KEM BIKE-L1 -- AES encryption] Execution time: 0.000004 seconds
+KEM BIKE-L1 -- After AES encryption Virtual Memory usage (VmSize): 9904 kB
+ Resident Set Size (RSS): 5888 kB
+[KEM BIKE-L1 -- AES decryption] Execution time: 0.000003 seconds
+KEM BIKE-L1 -- After AES decryption Virtual Memory usage (VmSize): 9904 kB
+ Resident Set Size (RSS): 5888 kB
+Decrypted text matches the original plaintext.
+KEM BIKE-L1 -- After all operations Virtual Memory usage (VmSize): 9904 kB
+ Resident Set Size (RSS): 5888 kB
+-------------------------------------
+Medium message
+KEM BIKE-L1 -- Before any operations Virtual Memory usage (VmSize): 9904 kB
+ Resident Set Size (RSS): 5888 kB
+[KEM BIKE-L1 -- Key generation] Execution time: 0.000213 seconds
+KEM BIKE-L1 -- After key generation Virtual Memory usage (VmSize): 9904 kB
+ Resident Set Size (RSS): 5888 kB
+[KEM BIKE-L1 -- Encapsulation] Execution time: 0.000055 seconds
+KEM BIKE-L1 -- After encapsulation Virtual Memory usage (VmSize): 9904 kB
+ Resident Set Size (RSS): 5888 kB
+[KEM BIKE-L1 -- Decapsulation] Execution time: 0.000808 seconds
+KEM BIKE-L1 -- After decapsulation Virtual Memory usage (VmSize): 9904 kB
+ Resident Set Size (RSS): 5888 kB
+Shared secrets match.
+[KEM BIKE-L1 -- AES encryption] Execution time: 0.000002 seconds
+KEM BIKE-L1 -- After AES encryption Virtual Memory usage (VmSize): 9904 kB
+ Resident Set Size (RSS): 5888 kB
+[KEM BIKE-L1 -- AES decryption] Execution time: 0.000002 seconds
+KEM BIKE-L1 -- After AES decryption Virtual Memory usage (VmSize): 9904 kB
+ Resident Set Size (RSS): 5888 kB
+Decrypted text matches the original plaintext.
+KEM BIKE-L1 -- After all operations Virtual Memory usage (VmSize): 9904 kB
+ Resident Set Size (RSS): 5888 kB
+-------------------------------------
+Long message
+KEM BIKE-L1 -- Before any operations Virtual Memory usage (VmSize): 9904 kB
+ Resident Set Size (RSS): 5888 kB
+[KEM BIKE-L1 -- Key generation] Execution time: 0.000214 seconds
+KEM BIKE-L1 -- After key generation Virtual Memory usage (VmSize): 9904 kB
+ Resident Set Size (RSS): 5888 kB
+[KEM BIKE-L1 -- Encapsulation] Execution time: 0.000058 seconds
+KEM BIKE-L1 -- After encapsulation Virtual Memory usage (VmSize): 9904 kB
+ Resident Set Size (RSS): 5888 kB
+[KEM BIKE-L1 -- Decapsulation] Execution time: 0.000801 seconds
+KEM BIKE-L1 -- After decapsulation Virtual Memory usage (VmSize): 9904 kB
+ Resident Set Size (RSS): 5888 kB
+Shared secrets match.
+[KEM BIKE-L1 -- AES encryption] Execution time: 0.000002 seconds
+KEM BIKE-L1 -- After AES encryption Virtual Memory usage (VmSize): 9904 kB
+ Resident Set Size (RSS): 5888 kB
+[KEM BIKE-L1 -- AES decryption] Execution time: 0.000001 seconds
+KEM BIKE-L1 -- After AES decryption Virtual Memory usage (VmSize): 9904 kB
+ Resident Set Size (RSS): 5888 kB
+Decrypted text matches the original plaintext.
+KEM BIKE-L1 -- After all operations Virtual Memory usage (VmSize): 9904 kB
+ Resident Set Size (RSS): 5888 kB
+-------------------------------------
+Short message
+KEM BIKE-L3 -- Before any operations Virtual Memory usage (VmSize): 9904 kB
+ Resident Set Size (RSS): 5888 kB
+[KEM BIKE-L3 -- Key generation] Execution time: 0.000693 seconds
+KEM BIKE-L3 -- After key generation Virtual Memory usage (VmSize): 9952 kB
+ Resident Set Size (RSS): 5888 kB
+[KEM BIKE-L3 -- Encapsulation] Execution time: 0.000128 seconds
+KEM BIKE-L3 -- After encapsulation Virtual Memory usage (VmSize): 9952 kB
+ Resident Set Size (RSS): 5888 kB
+[KEM BIKE-L3 -- Decapsulation] Execution time: 0.002642 seconds
+KEM BIKE-L3 -- After decapsulation Virtual Memory usage (VmSize): 9952 kB
+ Resident Set Size (RSS): 5888 kB
+Shared secrets match.
+[KEM BIKE-L3 -- AES encryption] Execution time: 0.000002 seconds
+KEM BIKE-L3 -- After AES encryption Virtual Memory usage (VmSize): 9952 kB
+ Resident Set Size (RSS): 5888 kB
+[KEM BIKE-L3 -- AES decryption] Execution time: 0.000002 seconds
+KEM BIKE-L3 -- After AES decryption Virtual Memory usage (VmSize): 9952 kB
+ Resident Set Size (RSS): 5888 kB
+Decrypted text matches the original plaintext.
+KEM BIKE-L3 -- After all operations Virtual Memory usage (VmSize): 9952 kB
+ Resident Set Size (RSS): 5888 kB
+-------------------------------------
+Medium message
+KEM BIKE-L3 -- Before any operations Virtual Memory usage (VmSize): 9952 kB
+ Resident Set Size (RSS): 5888 kB
+[KEM BIKE-L3 -- Key generation] Execution time: 0.000698 seconds
+KEM BIKE-L3 -- After key generation Virtual Memory usage (VmSize): 9952 kB
+ Resident Set Size (RSS): 5888 kB
+[KEM BIKE-L3 -- Encapsulation] Execution time: 0.000126 seconds
+KEM BIKE-L3 -- After encapsulation Virtual Memory usage (VmSize): 9952 kB
+ Resident Set Size (RSS): 5888 kB
+[KEM BIKE-L3 -- Decapsulation] Execution time: 0.002689 seconds
+KEM BIKE-L3 -- After decapsulation Virtual Memory usage (VmSize): 9952 kB
+ Resident Set Size (RSS): 5888 kB
+Shared secrets match.
+[KEM BIKE-L3 -- AES encryption] Execution time: 0.000003 seconds
+KEM BIKE-L3 -- After AES encryption Virtual Memory usage (VmSize): 9952 kB
+ Resident Set Size (RSS): 5888 kB
+[KEM BIKE-L3 -- AES decryption] Execution time: 0.000002 seconds
+KEM BIKE-L3 -- After AES decryption Virtual Memory usage (VmSize): 9952 kB
+ Resident Set Size (RSS): 5888 kB
+Decrypted text matches the original plaintext.
+KEM BIKE-L3 -- After all operations Virtual Memory usage (VmSize): 9952 kB
+ Resident Set Size (RSS): 5888 kB
+-------------------------------------
+Long message
+KEM BIKE-L3 -- Before any operations Virtual Memory usage (VmSize): 9952 kB
+ Resident Set Size (RSS): 5888 kB
+[KEM BIKE-L3 -- Key generation] Execution time: 0.000651 seconds
+KEM BIKE-L3 -- After key generation Virtual Memory usage (VmSize): 9952 kB
+ Resident Set Size (RSS): 5888 kB
+[KEM BIKE-L3 -- Encapsulation] Execution time: 0.000126 seconds
+KEM BIKE-L3 -- After encapsulation Virtual Memory usage (VmSize): 9952 kB
+ Resident Set Size (RSS): 5888 kB
+[KEM BIKE-L3 -- Decapsulation] Execution time: 0.002662 seconds
+KEM BIKE-L3 -- After decapsulation Virtual Memory usage (VmSize): 9952 kB
+ Resident Set Size (RSS): 5888 kB
+Shared secrets match.
+[KEM BIKE-L3 -- AES encryption] Execution time: 0.000002 seconds
+KEM BIKE-L3 -- After AES encryption Virtual Memory usage (VmSize): 9952 kB
+ Resident Set Size (RSS): 5888 kB
+[KEM BIKE-L3 -- AES decryption] Execution time: 0.000001 seconds
+KEM BIKE-L3 -- After AES decryption Virtual Memory usage (VmSize): 9952 kB
+ Resident Set Size (RSS): 5888 kB
+Decrypted text matches the original plaintext.
+KEM BIKE-L3 -- After all operations Virtual Memory usage (VmSize): 9952 kB
+ Resident Set Size (RSS): 5888 kB
+-------------------------------------
+Short message
+KEM BIKE-L5 -- Before any operations Virtual Memory usage (VmSize): 9952 kB
+ Resident Set Size (RSS): 5888 kB
+[KEM BIKE-L5 -- Key generation] Execution time: 0.001783 seconds
+KEM BIKE-L5 -- After key generation Virtual Memory usage (VmSize): 10252 kB
+ Resident Set Size (RSS): 6272 kB
+[KEM BIKE-L5 -- Encapsulation] Execution time: 0.000266 seconds
+KEM BIKE-L5 -- After encapsulation Virtual Memory usage (VmSize): 10252 kB
+ Resident Set Size (RSS): 6272 kB
+[KEM BIKE-L5 -- Decapsulation] Execution time: 0.007140 seconds
+KEM BIKE-L5 -- After decapsulation Virtual Memory usage (VmSize): 10252 kB
+ Resident Set Size (RSS): 6272 kB
+Shared secrets match.
+[KEM BIKE-L5 -- AES encryption] Execution time: 0.000003 seconds
+KEM BIKE-L5 -- After AES encryption Virtual Memory usage (VmSize): 10252 kB
+ Resident Set Size (RSS): 6272 kB
+[KEM BIKE-L5 -- AES decryption] Execution time: 0.000002 seconds
+KEM BIKE-L5 -- After AES decryption Virtual Memory usage (VmSize): 10252 kB
+ Resident Set Size (RSS): 6272 kB
+Decrypted text matches the original plaintext.
+KEM BIKE-L5 -- After all operations Virtual Memory usage (VmSize): 10252 kB
+ Resident Set Size (RSS): 6272 kB
+-------------------------------------
+Medium message
+KEM BIKE-L5 -- Before any operations Virtual Memory usage (VmSize): 10252 kB
+ Resident Set Size (RSS): 6272 kB
+[KEM BIKE-L5 -- Key generation] Execution time: 0.001601 seconds
+KEM BIKE-L5 -- After key generation Virtual Memory usage (VmSize): 10252 kB
+ Resident Set Size (RSS): 6272 kB
+[KEM BIKE-L5 -- Encapsulation] Execution time: 0.000263 seconds
+KEM BIKE-L5 -- After encapsulation Virtual Memory usage (VmSize): 10252 kB
+ Resident Set Size (RSS): 6272 kB
+[KEM BIKE-L5 -- Decapsulation] Execution time: 0.007112 seconds
+KEM BIKE-L5 -- After decapsulation Virtual Memory usage (VmSize): 10252 kB
+ Resident Set Size (RSS): 6272 kB
+Shared secrets match.
+[KEM BIKE-L5 -- AES encryption] Execution time: 0.000002 seconds
+KEM BIKE-L5 -- After AES encryption Virtual Memory usage (VmSize): 10252 kB
+ Resident Set Size (RSS): 6272 kB
+[KEM BIKE-L5 -- AES decryption] Execution time: 0.000002 seconds
+KEM BIKE-L5 -- After AES decryption Virtual Memory usage (VmSize): 10252 kB
+ Resident Set Size (RSS): 6272 kB
+Decrypted text matches the original plaintext.
+KEM BIKE-L5 -- After all operations Virtual Memory usage (VmSize): 10252 kB
+ Resident Set Size (RSS): 6272 kB
+-------------------------------------
+Long message
+KEM BIKE-L5 -- Before any operations Virtual Memory usage (VmSize): 10252 kB
+ Resident Set Size (RSS): 6272 kB
+[KEM BIKE-L5 -- Key generation] Execution time: 0.001595 seconds
+KEM BIKE-L5 -- After key generation Virtual Memory usage (VmSize): 10252 kB
+ Resident Set Size (RSS): 6272 kB
+[KEM BIKE-L5 -- Encapsulation] Execution time: 0.000262 seconds
+KEM BIKE-L5 -- After encapsulation Virtual Memory usage (VmSize): 10252 kB
+ Resident Set Size (RSS): 6272 kB
+[KEM BIKE-L5 -- Decapsulation] Execution time: 0.007095 seconds
+KEM BIKE-L5 -- After decapsulation Virtual Memory usage (VmSize): 10252 kB
+ Resident Set Size (RSS): 6272 kB
+Shared secrets match.
+[KEM BIKE-L5 -- AES encryption] Execution time: 0.000002 seconds
+KEM BIKE-L5 -- After AES encryption Virtual Memory usage (VmSize): 10252 kB
+ Resident Set Size (RSS): 6272 kB
+[KEM BIKE-L5 -- AES decryption] Execution time: 0.000002 seconds
+KEM BIKE-L5 -- After AES decryption Virtual Memory usage (VmSize): 10252 kB
+ Resident Set Size (RSS): 6272 kB
+Decrypted text matches the original plaintext.
+KEM BIKE-L5 -- After all operations Virtual Memory usage (VmSize): 10252 kB
+ Resident Set Size (RSS): 6272 kB
+-------------------------------------

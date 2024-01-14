@@ -1,0 +1,5 @@
+curve_name, key_generation_time, signature_creation_time, signature_verification_time, resident_set_size_memory, virtual_memory
+NID_secp224r1, 0.000045, 0.000057, 0.000119, 6143, 7932
+NID_X9_62_prime256v1, 0.000028, 0.000036, 0.000106, 6144, 7932
+NID_secp384r1, 0.000864, 0.000892, 0.000759, 6144, 7932
+NID_secp521r1, 0.000206, 0.000324, 0.000655, 6144, 7932

@@ -1,0 +1,350 @@
+1st time:
+Short message
+KEM sntrup761 -- Before any operations Virtual Memory usage (VmSize): 9336 kB
+ Resident Set Size (RSS): 2944 kB
+[KEM sntrup761 -- Key generation] Execution time: 0.002336 seconds
+KEM sntrup761 -- After key generation Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 5888 kB
+[KEM sntrup761 -- Encapsulation] Execution time: 0.000024 seconds
+KEM sntrup761 -- After encapsulation Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 5888 kB
+[KEM sntrup761 -- Decapsulation] Execution time: 0.000024 seconds
+KEM sntrup761 -- After decapsulation Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 5888 kB
+Shared secrets match.
+[KEM sntrup761 -- AES encryption] Execution time: 0.000004 seconds
+KEM sntrup761 -- After AES encryption Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 5888 kB
+[KEM sntrup761 -- AES decryption] Execution time: 0.000003 seconds
+KEM sntrup761 -- After AES decryption Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 5888 kB
+Decrypted text matches the original plaintext.
+KEM sntrup761 -- After all operations Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 5888 kB
+-------------------------------------
+Medium message
+KEM sntrup761 -- Before any operations Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 5888 kB
+[KEM sntrup761 -- Key generation] Execution time: 0.000331 seconds
+KEM sntrup761 -- After key generation Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 5888 kB
+[KEM sntrup761 -- Encapsulation] Execution time: 0.000020 seconds
+KEM sntrup761 -- After encapsulation Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 5888 kB
+[KEM sntrup761 -- Decapsulation] Execution time: 0.000023 seconds
+KEM sntrup761 -- After decapsulation Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 5888 kB
+Shared secrets match.
+[KEM sntrup761 -- AES encryption] Execution time: 0.000002 seconds
+KEM sntrup761 -- After AES encryption Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 5888 kB
+[KEM sntrup761 -- AES decryption] Execution time: 0.000002 seconds
+KEM sntrup761 -- After AES decryption Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 5888 kB
+Decrypted text matches the original plaintext.
+KEM sntrup761 -- After all operations Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 5888 kB
+-------------------------------------
+Long message
+KEM sntrup761 -- Before any operations Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 5888 kB
+[KEM sntrup761 -- Key generation] Execution time: 0.000329 seconds
+KEM sntrup761 -- After key generation Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 5888 kB
+[KEM sntrup761 -- Encapsulation] Execution time: 0.000020 seconds
+KEM sntrup761 -- After encapsulation Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 5888 kB
+[KEM sntrup761 -- Decapsulation] Execution time: 0.000022 seconds
+KEM sntrup761 -- After decapsulation Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 5888 kB
+Shared secrets match.
+[KEM sntrup761 -- AES encryption] Execution time: 0.000002 seconds
+KEM sntrup761 -- After AES encryption Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6016 kB
+[KEM sntrup761 -- AES decryption] Execution time: 0.000002 seconds
+KEM sntrup761 -- After AES decryption Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6016 kB
+Decrypted text matches the original plaintext.
+KEM sntrup761 -- After all operations Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6016 kB
+-------------------------------------
+2nd time:
+Short message
+KEM sntrup761 -- Before any operations Virtual Memory usage (VmSize): 9336 kB
+ Resident Set Size (RSS): 2944 kB
+[KEM sntrup761 -- Key generation] Execution time: 0.002359 seconds
+KEM sntrup761 -- After key generation Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 5888 kB
+[KEM sntrup761 -- Encapsulation] Execution time: 0.000023 seconds
+KEM sntrup761 -- After encapsulation Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 5888 kB
+[KEM sntrup761 -- Decapsulation] Execution time: 0.000026 seconds
+KEM sntrup761 -- After decapsulation Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 5888 kB
+Shared secrets match.
+[KEM sntrup761 -- AES encryption] Execution time: 0.000003 seconds
+KEM sntrup761 -- After AES encryption Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 5888 kB
+[KEM sntrup761 -- AES decryption] Execution time: 0.000003 seconds
+KEM sntrup761 -- After AES decryption Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 5888 kB
+Decrypted text matches the original plaintext.
+KEM sntrup761 -- After all operations Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 5888 kB
+-------------------------------------
+Medium message
+KEM sntrup761 -- Before any operations Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 5888 kB
+[KEM sntrup761 -- Key generation] Execution time: 0.000331 seconds
+KEM sntrup761 -- After key generation Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 5888 kB
+[KEM sntrup761 -- Encapsulation] Execution time: 0.000020 seconds
+KEM sntrup761 -- After encapsulation Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 5888 kB
+[KEM sntrup761 -- Decapsulation] Execution time: 0.000022 seconds
+KEM sntrup761 -- After decapsulation Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 5888 kB
+Shared secrets match.
+[KEM sntrup761 -- AES encryption] Execution time: 0.000002 seconds
+KEM sntrup761 -- After AES encryption Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 5888 kB
+[KEM sntrup761 -- AES decryption] Execution time: 0.000002 seconds
+KEM sntrup761 -- After AES decryption Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 5888 kB
+Decrypted text matches the original plaintext.
+KEM sntrup761 -- After all operations Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 5888 kB
+-------------------------------------
+Long message
+KEM sntrup761 -- Before any operations Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 5888 kB
+[KEM sntrup761 -- Key generation] Execution time: 0.000329 seconds
+KEM sntrup761 -- After key generation Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 5888 kB
+[KEM sntrup761 -- Encapsulation] Execution time: 0.000020 seconds
+KEM sntrup761 -- After encapsulation Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 5888 kB
+[KEM sntrup761 -- Decapsulation] Execution time: 0.000022 seconds
+KEM sntrup761 -- After decapsulation Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 5888 kB
+Shared secrets match.
+[KEM sntrup761 -- AES encryption] Execution time: 0.000002 seconds
+KEM sntrup761 -- After AES encryption Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 5888 kB
+[KEM sntrup761 -- AES decryption] Execution time: 0.000002 seconds
+KEM sntrup761 -- After AES decryption Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 5888 kB
+Decrypted text matches the original plaintext.
+KEM sntrup761 -- After all operations Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 5888 kB
+-------------------------------------
+3rd time:
+Short message
+KEM sntrup761 -- Before any operations Virtual Memory usage (VmSize): 9336 kB
+ Resident Set Size (RSS): 2944 kB
+[KEM sntrup761 -- Key generation] Execution time: 0.004596 seconds
+KEM sntrup761 -- After key generation Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6016 kB
+[KEM sntrup761 -- Encapsulation] Execution time: 0.000058 seconds
+KEM sntrup761 -- After encapsulation Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6016 kB
+[KEM sntrup761 -- Decapsulation] Execution time: 0.000068 seconds
+KEM sntrup761 -- After decapsulation Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6016 kB
+Shared secrets match.
+[KEM sntrup761 -- AES encryption] Execution time: 0.000008 seconds
+KEM sntrup761 -- After AES encryption Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6016 kB
+[KEM sntrup761 -- AES decryption] Execution time: 0.000007 seconds
+KEM sntrup761 -- After AES decryption Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6016 kB
+Decrypted text matches the original plaintext.
+KEM sntrup761 -- After all operations Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6016 kB
+-------------------------------------
+Medium message
+KEM sntrup761 -- Before any operations Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6016 kB
+[KEM sntrup761 -- Key generation] Execution time: 0.001646 seconds
+KEM sntrup761 -- After key generation Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6016 kB
+[KEM sntrup761 -- Encapsulation] Execution time: 0.000050 seconds
+KEM sntrup761 -- After encapsulation Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6016 kB
+[KEM sntrup761 -- Decapsulation] Execution time: 0.000066 seconds
+KEM sntrup761 -- After decapsulation Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6016 kB
+Shared secrets match.
+[KEM sntrup761 -- AES encryption] Execution time: 0.000005 seconds
+KEM sntrup761 -- After AES encryption Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6016 kB
+[KEM sntrup761 -- AES decryption] Execution time: 0.000006 seconds
+KEM sntrup761 -- After AES decryption Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6016 kB
+Decrypted text matches the original plaintext.
+KEM sntrup761 -- After all operations Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6016 kB
+-------------------------------------
+Long message
+KEM sntrup761 -- Before any operations Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6016 kB
+[KEM sntrup761 -- Key generation] Execution time: 0.001648 seconds
+KEM sntrup761 -- After key generation Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6016 kB
+[KEM sntrup761 -- Encapsulation] Execution time: 0.000049 seconds
+KEM sntrup761 -- After encapsulation Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6016 kB
+[KEM sntrup761 -- Decapsulation] Execution time: 0.000065 seconds
+KEM sntrup761 -- After decapsulation Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6016 kB
+Shared secrets match.
+[KEM sntrup761 -- AES encryption] Execution time: 0.000005 seconds
+KEM sntrup761 -- After AES encryption Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6016 kB
+[KEM sntrup761 -- AES decryption] Execution time: 0.000006 seconds
+KEM sntrup761 -- After AES decryption Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6016 kB
+Decrypted text matches the original plaintext.
+KEM sntrup761 -- After all operations Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6016 kB
+-------------------------------------
+4th time:
+Short message
+KEM sntrup761 -- Before any operations Virtual Memory usage (VmSize): 9336 kB
+ Resident Set Size (RSS): 2944 kB
+[KEM sntrup761 -- Key generation] Execution time: 0.004602 seconds
+KEM sntrup761 -- After key generation Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 5888 kB
+[KEM sntrup761 -- Encapsulation] Execution time: 0.000059 seconds
+KEM sntrup761 -- After encapsulation Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 5888 kB
+[KEM sntrup761 -- Decapsulation] Execution time: 0.000069 seconds
+KEM sntrup761 -- After decapsulation Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 5888 kB
+Shared secrets match.
+[KEM sntrup761 -- AES encryption] Execution time: 0.000009 seconds
+KEM sntrup761 -- After AES encryption Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 5888 kB
+[KEM sntrup761 -- AES decryption] Execution time: 0.000007 seconds
+KEM sntrup761 -- After AES decryption Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 5888 kB
+Decrypted text matches the original plaintext.
+KEM sntrup761 -- After all operations Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 5888 kB
+-------------------------------------
+Medium message
+KEM sntrup761 -- Before any operations Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 5888 kB
+[KEM sntrup761 -- Key generation] Execution time: 0.001624 seconds
+KEM sntrup761 -- After key generation Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 5888 kB
+[KEM sntrup761 -- Encapsulation] Execution time: 0.000051 seconds
+KEM sntrup761 -- After encapsulation Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 5888 kB
+[KEM sntrup761 -- Decapsulation] Execution time: 0.000067 seconds
+KEM sntrup761 -- After decapsulation Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 5888 kB
+Shared secrets match.
+[KEM sntrup761 -- AES encryption] Execution time: 0.000005 seconds
+KEM sntrup761 -- After AES encryption Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 5888 kB
+[KEM sntrup761 -- AES decryption] Execution time: 0.000006 seconds
+KEM sntrup761 -- After AES decryption Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 5888 kB
+Decrypted text matches the original plaintext.
+KEM sntrup761 -- After all operations Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 5888 kB
+-------------------------------------
+Long message
+KEM sntrup761 -- Before any operations Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 5888 kB
+[KEM sntrup761 -- Key generation] Execution time: 0.001597 seconds
+KEM sntrup761 -- After key generation Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 5888 kB
+[KEM sntrup761 -- Encapsulation] Execution time: 0.000049 seconds
+KEM sntrup761 -- After encapsulation Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 5888 kB
+[KEM sntrup761 -- Decapsulation] Execution time: 0.000066 seconds
+KEM sntrup761 -- After decapsulation Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 5888 kB
+Shared secrets match.
+[KEM sntrup761 -- AES encryption] Execution time: 0.000005 seconds
+KEM sntrup761 -- After AES encryption Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 5888 kB
+[KEM sntrup761 -- AES decryption] Execution time: 0.000005 seconds
+KEM sntrup761 -- After AES decryption Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 5888 kB
+Decrypted text matches the original plaintext.
+KEM sntrup761 -- After all operations Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 5888 kB
+-------------------------------------
+5th time:
+Short message
+KEM sntrup761 -- Before any operations Virtual Memory usage (VmSize): 9336 kB
+ Resident Set Size (RSS): 2944 kB
+[KEM sntrup761 -- Key generation] Execution time: 0.004577 seconds
+KEM sntrup761 -- After key generation Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6016 kB
+[KEM sntrup761 -- Encapsulation] Execution time: 0.000058 seconds
+KEM sntrup761 -- After encapsulation Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6016 kB
+[KEM sntrup761 -- Decapsulation] Execution time: 0.000068 seconds
+KEM sntrup761 -- After decapsulation Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6016 kB
+Shared secrets match.
+[KEM sntrup761 -- AES encryption] Execution time: 0.000007 seconds
+KEM sntrup761 -- After AES encryption Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6016 kB
+[KEM sntrup761 -- AES decryption] Execution time: 0.000007 seconds
+KEM sntrup761 -- After AES decryption Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6016 kB
+Decrypted text matches the original plaintext.
+KEM sntrup761 -- After all operations Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6016 kB
+-------------------------------------
+Medium message
+KEM sntrup761 -- Before any operations Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6016 kB
+[KEM sntrup761 -- Key generation] Execution time: 0.001641 seconds
+KEM sntrup761 -- After key generation Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6016 kB
+[KEM sntrup761 -- Encapsulation] Execution time: 0.000051 seconds
+KEM sntrup761 -- After encapsulation Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6016 kB
+[KEM sntrup761 -- Decapsulation] Execution time: 0.000066 seconds
+KEM sntrup761 -- After decapsulation Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6016 kB
+Shared secrets match.
+[KEM sntrup761 -- AES encryption] Execution time: 0.000005 seconds
+KEM sntrup761 -- After AES encryption Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6016 kB
+[KEM sntrup761 -- AES decryption] Execution time: 0.000006 seconds
+KEM sntrup761 -- After AES decryption Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6016 kB
+Decrypted text matches the original plaintext.
+KEM sntrup761 -- After all operations Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6016 kB
+-------------------------------------
+Long message
+KEM sntrup761 -- Before any operations Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6016 kB
+[KEM sntrup761 -- Key generation] Execution time: 0.001639 seconds
+KEM sntrup761 -- After key generation Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6016 kB
+[KEM sntrup761 -- Encapsulation] Execution time: 0.000050 seconds
+KEM sntrup761 -- After encapsulation Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6016 kB
+[KEM sntrup761 -- Decapsulation] Execution time: 0.000065 seconds
+KEM sntrup761 -- After decapsulation Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6016 kB
+Shared secrets match.
+[KEM sntrup761 -- AES encryption] Execution time: 0.000006 seconds
+KEM sntrup761 -- After AES encryption Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6016 kB
+[KEM sntrup761 -- AES decryption] Execution time: 0.000005 seconds
+KEM sntrup761 -- After AES decryption Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6016 kB
+Decrypted text matches the original plaintext.
+KEM sntrup761 -- After all operations Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6016 kB
+-------------------------------------

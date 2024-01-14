@@ -1,0 +1,4 @@
+KEM variant,Key generation time,Encapsulation time,Decapsulation time,Encryption time,Decryption time,Resident set size before any operations (kB),Virtual memory before any operations (kB),Resident set size after key generation (kB),Virtual memory after key generation (kB),Resident set size after encapsulation (kB),Virtual memory after encapsulation (kB),Resident set size after decapsulation (kB),Virtual memory after decapsulation (kB),Resident set size after all operations (kB),Virtual memory after all operations (kB)
+Kyber512,0.001827,0.000034,0.000018,0.000004,0.000003,2944,9336,5888,9900,5888,9900,5888,9900,5888,9900
+Kyber768,0.000035,0.000029,0.000020,0.000002,0.000001,5888,9900,6016,9900,6016,9900,6016,9900,6016,9900
+Kyber1024,0.000030,0.000037,0.000026,0.000002,0.000002,6016,9900,6016,9900,6016,9900,6016,9900,6016,9900

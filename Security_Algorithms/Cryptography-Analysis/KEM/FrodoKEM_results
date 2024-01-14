@@ -1,0 +1,2079 @@
+1st time:
+Short message
+KEM FrodoKEM-640-AES -- Before any operations Virtual Memory usage (VmSize): 9336 kB
+ Resident Set Size (RSS): 2944 kB
+[KEM FrodoKEM-640-AES -- Key generation] Execution time: 0.003727 seconds
+KEM FrodoKEM-640-AES -- After key generation Virtual Memory usage (VmSize): 9884 kB
+ Resident Set Size (RSS): 5760 kB
+[KEM FrodoKEM-640-AES -- Encapsulation] Execution time: 0.001405 seconds
+KEM FrodoKEM-640-AES -- After encapsulation Virtual Memory usage (VmSize): 9884 kB
+ Resident Set Size (RSS): 5888 kB
+[KEM FrodoKEM-640-AES -- Decapsulation] Execution time: 0.001308 seconds
+KEM FrodoKEM-640-AES -- After decapsulation Virtual Memory usage (VmSize): 9884 kB
+ Resident Set Size (RSS): 5888 kB
+Shared secrets match.
+[KEM FrodoKEM-640-AES -- AES encryption] Execution time: 0.000014 seconds
+KEM FrodoKEM-640-AES -- After AES encryption Virtual Memory usage (VmSize): 9884 kB
+ Resident Set Size (RSS): 5888 kB
+[KEM FrodoKEM-640-AES -- AES decryption] Execution time: 0.000006 seconds
+KEM FrodoKEM-640-AES -- After AES decryption Virtual Memory usage (VmSize): 9884 kB
+ Resident Set Size (RSS): 5888 kB
+Decrypted text matches the original plaintext.
+KEM FrodoKEM-640-AES -- After all operations Virtual Memory usage (VmSize): 9884 kB
+ Resident Set Size (RSS): 5888 kB
+-------------------------------------
+Medium message
+KEM FrodoKEM-640-AES -- Before any operations Virtual Memory usage (VmSize): 9884 kB
+ Resident Set Size (RSS): 5888 kB
+[KEM FrodoKEM-640-AES -- Key generation] Execution time: 0.000944 seconds
+KEM FrodoKEM-640-AES -- After key generation Virtual Memory usage (VmSize): 9884 kB
+ Resident Set Size (RSS): 5888 kB
+[KEM FrodoKEM-640-AES -- Encapsulation] Execution time: 0.001384 seconds
+KEM FrodoKEM-640-AES -- After encapsulation Virtual Memory usage (VmSize): 9884 kB
+ Resident Set Size (RSS): 5888 kB
+[KEM FrodoKEM-640-AES -- Decapsulation] Execution time: 0.001295 seconds
+KEM FrodoKEM-640-AES -- After decapsulation Virtual Memory usage (VmSize): 9884 kB
+ Resident Set Size (RSS): 5888 kB
+Shared secrets match.
+[KEM FrodoKEM-640-AES -- AES encryption] Execution time: 0.000005 seconds
+KEM FrodoKEM-640-AES -- After AES encryption Virtual Memory usage (VmSize): 9884 kB
+ Resident Set Size (RSS): 5888 kB
+[KEM FrodoKEM-640-AES -- AES decryption] Execution time: 0.000006 seconds
+KEM FrodoKEM-640-AES -- After AES decryption Virtual Memory usage (VmSize): 9884 kB
+ Resident Set Size (RSS): 5888 kB
+Decrypted text matches the original plaintext.
+KEM FrodoKEM-640-AES -- After all operations Virtual Memory usage (VmSize): 9884 kB
+ Resident Set Size (RSS): 5888 kB
+-------------------------------------
+Long message
+KEM FrodoKEM-640-AES -- Before any operations Virtual Memory usage (VmSize): 9884 kB
+ Resident Set Size (RSS): 5888 kB
+[KEM FrodoKEM-640-AES -- Key generation] Execution time: 0.000937 seconds
+KEM FrodoKEM-640-AES -- After key generation Virtual Memory usage (VmSize): 9884 kB
+ Resident Set Size (RSS): 5888 kB
+[KEM FrodoKEM-640-AES -- Encapsulation] Execution time: 0.001375 seconds
+KEM FrodoKEM-640-AES -- After encapsulation Virtual Memory usage (VmSize): 9884 kB
+ Resident Set Size (RSS): 5888 kB
+[KEM FrodoKEM-640-AES -- Decapsulation] Execution time: 0.001296 seconds
+KEM FrodoKEM-640-AES -- After decapsulation Virtual Memory usage (VmSize): 9884 kB
+ Resident Set Size (RSS): 5888 kB
+Shared secrets match.
+[KEM FrodoKEM-640-AES -- AES encryption] Execution time: 0.000005 seconds
+KEM FrodoKEM-640-AES -- After AES encryption Virtual Memory usage (VmSize): 9884 kB
+ Resident Set Size (RSS): 5888 kB
+[KEM FrodoKEM-640-AES -- AES decryption] Execution time: 0.000005 seconds
+KEM FrodoKEM-640-AES -- After AES decryption Virtual Memory usage (VmSize): 9884 kB
+ Resident Set Size (RSS): 5888 kB
+Decrypted text matches the original plaintext.
+KEM FrodoKEM-640-AES -- After all operations Virtual Memory usage (VmSize): 9884 kB
+ Resident Set Size (RSS): 5888 kB
+-------------------------------------
+Short message
+KEM FrodoKEM-640-SHAKE -- Before any operations Virtual Memory usage (VmSize): 9884 kB
+ Resident Set Size (RSS): 5888 kB
+[KEM FrodoKEM-640-SHAKE -- Key generation] Execution time: 0.003328 seconds
+KEM FrodoKEM-640-SHAKE -- After key generation Virtual Memory usage (VmSize): 9884 kB
+ Resident Set Size (RSS): 5888 kB
+[KEM FrodoKEM-640-SHAKE -- Encapsulation] Execution time: 0.003572 seconds
+KEM FrodoKEM-640-SHAKE -- After encapsulation Virtual Memory usage (VmSize): 9884 kB
+ Resident Set Size (RSS): 5888 kB
+[KEM FrodoKEM-640-SHAKE -- Decapsulation] Execution time: 0.003562 seconds
+KEM FrodoKEM-640-SHAKE -- After decapsulation Virtual Memory usage (VmSize): 9884 kB
+ Resident Set Size (RSS): 5888 kB
+Shared secrets match.
+[KEM FrodoKEM-640-SHAKE -- AES encryption] Execution time: 0.000005 seconds
+KEM FrodoKEM-640-SHAKE -- After AES encryption Virtual Memory usage (VmSize): 9884 kB
+ Resident Set Size (RSS): 5888 kB
+[KEM FrodoKEM-640-SHAKE -- AES decryption] Execution time: 0.000006 seconds
+KEM FrodoKEM-640-SHAKE -- After AES decryption Virtual Memory usage (VmSize): 9884 kB
+ Resident Set Size (RSS): 5888 kB
+Decrypted text matches the original plaintext.
+KEM FrodoKEM-640-SHAKE -- After all operations Virtual Memory usage (VmSize): 9884 kB
+ Resident Set Size (RSS): 5888 kB
+-------------------------------------
+Medium message
+KEM FrodoKEM-640-SHAKE -- Before any operations Virtual Memory usage (VmSize): 9884 kB
+ Resident Set Size (RSS): 5888 kB
+[KEM FrodoKEM-640-SHAKE -- Key generation] Execution time: 0.003288 seconds
+KEM FrodoKEM-640-SHAKE -- After key generation Virtual Memory usage (VmSize): 9884 kB
+ Resident Set Size (RSS): 5888 kB
+[KEM FrodoKEM-640-SHAKE -- Encapsulation] Execution time: 0.003564 seconds
+KEM FrodoKEM-640-SHAKE -- After encapsulation Virtual Memory usage (VmSize): 9884 kB
+ Resident Set Size (RSS): 5888 kB
+[KEM FrodoKEM-640-SHAKE -- Decapsulation] Execution time: 0.003498 seconds
+KEM FrodoKEM-640-SHAKE -- After decapsulation Virtual Memory usage (VmSize): 9884 kB
+ Resident Set Size (RSS): 5888 kB
+Shared secrets match.
+[KEM FrodoKEM-640-SHAKE -- AES encryption] Execution time: 0.000008 seconds
+KEM FrodoKEM-640-SHAKE -- After AES encryption Virtual Memory usage (VmSize): 9884 kB
+ Resident Set Size (RSS): 5888 kB
+[KEM FrodoKEM-640-SHAKE -- AES decryption] Execution time: 0.000006 seconds
+KEM FrodoKEM-640-SHAKE -- After AES decryption Virtual Memory usage (VmSize): 9884 kB
+ Resident Set Size (RSS): 5888 kB
+Decrypted text matches the original plaintext.
+KEM FrodoKEM-640-SHAKE -- After all operations Virtual Memory usage (VmSize): 9884 kB
+ Resident Set Size (RSS): 5888 kB
+-------------------------------------
+Long message
+KEM FrodoKEM-640-SHAKE -- Before any operations Virtual Memory usage (VmSize): 9884 kB
+ Resident Set Size (RSS): 5888 kB
+[KEM FrodoKEM-640-SHAKE -- Key generation] Execution time: 0.003283 seconds
+KEM FrodoKEM-640-SHAKE -- After key generation Virtual Memory usage (VmSize): 9884 kB
+ Resident Set Size (RSS): 5888 kB
+[KEM FrodoKEM-640-SHAKE -- Encapsulation] Execution time: 0.003566 seconds
+KEM FrodoKEM-640-SHAKE -- After encapsulation Virtual Memory usage (VmSize): 9884 kB
+ Resident Set Size (RSS): 5888 kB
+[KEM FrodoKEM-640-SHAKE -- Decapsulation] Execution time: 0.003486 seconds
+KEM FrodoKEM-640-SHAKE -- After decapsulation Virtual Memory usage (VmSize): 9884 kB
+ Resident Set Size (RSS): 5888 kB
+Shared secrets match.
+[KEM FrodoKEM-640-SHAKE -- AES encryption] Execution time: 0.000009 seconds
+KEM FrodoKEM-640-SHAKE -- After AES encryption Virtual Memory usage (VmSize): 9884 kB
+ Resident Set Size (RSS): 5888 kB
+[KEM FrodoKEM-640-SHAKE -- AES decryption] Execution time: 0.000006 seconds
+KEM FrodoKEM-640-SHAKE -- After AES decryption Virtual Memory usage (VmSize): 9884 kB
+ Resident Set Size (RSS): 5888 kB
+Decrypted text matches the original plaintext.
+KEM FrodoKEM-640-SHAKE -- After all operations Virtual Memory usage (VmSize): 9884 kB
+ Resident Set Size (RSS): 5888 kB
+-------------------------------------
+Short message
+KEM FrodoKEM-976-AES -- Before any operations Virtual Memory usage (VmSize): 9884 kB
+ Resident Set Size (RSS): 5888 kB
+[KEM FrodoKEM-976-AES -- Key generation] Execution time: 0.001755 seconds
+KEM FrodoKEM-976-AES -- After key generation Virtual Memory usage (VmSize): 10016 kB
+ Resident Set Size (RSS): 5888 kB
+[KEM FrodoKEM-976-AES -- Encapsulation] Execution time: 0.002627 seconds
+KEM FrodoKEM-976-AES -- After encapsulation Virtual Memory usage (VmSize): 10016 kB
+ Resident Set Size (RSS): 6016 kB
+[KEM FrodoKEM-976-AES -- Decapsulation] Execution time: 0.002495 seconds
+KEM FrodoKEM-976-AES -- After decapsulation Virtual Memory usage (VmSize): 10044 kB
+ Resident Set Size (RSS): 6016 kB
+Shared secrets match.
+[KEM FrodoKEM-976-AES -- AES encryption] Execution time: 0.000009 seconds
+KEM FrodoKEM-976-AES -- After AES encryption Virtual Memory usage (VmSize): 10044 kB
+ Resident Set Size (RSS): 6016 kB
+[KEM FrodoKEM-976-AES -- AES decryption] Execution time: 0.000005 seconds
+KEM FrodoKEM-976-AES -- After AES decryption Virtual Memory usage (VmSize): 10044 kB
+ Resident Set Size (RSS): 6016 kB
+Decrypted text matches the original plaintext.
+KEM FrodoKEM-976-AES -- After all operations Virtual Memory usage (VmSize): 10044 kB
+ Resident Set Size (RSS): 6016 kB
+-------------------------------------
+Medium message
+KEM FrodoKEM-976-AES -- Before any operations Virtual Memory usage (VmSize): 10012 kB
+ Resident Set Size (RSS): 6016 kB
+[KEM FrodoKEM-976-AES -- Key generation] Execution time: 0.001749 seconds
+KEM FrodoKEM-976-AES -- After key generation Virtual Memory usage (VmSize): 10012 kB
+ Resident Set Size (RSS): 6016 kB
+[KEM FrodoKEM-976-AES -- Encapsulation] Execution time: 0.002613 seconds
+KEM FrodoKEM-976-AES -- After encapsulation Virtual Memory usage (VmSize): 10012 kB
+ Resident Set Size (RSS): 6016 kB
+[KEM FrodoKEM-976-AES -- Decapsulation] Execution time: 0.002450 seconds
+KEM FrodoKEM-976-AES -- After decapsulation Virtual Memory usage (VmSize): 10012 kB
+ Resident Set Size (RSS): 6016 kB
+Shared secrets match.
+[KEM FrodoKEM-976-AES -- AES encryption] Execution time: 0.000007 seconds
+KEM FrodoKEM-976-AES -- After AES encryption Virtual Memory usage (VmSize): 10012 kB
+ Resident Set Size (RSS): 6016 kB
+[KEM FrodoKEM-976-AES -- AES decryption] Execution time: 0.000006 seconds
+KEM FrodoKEM-976-AES -- After AES decryption Virtual Memory usage (VmSize): 10012 kB
+ Resident Set Size (RSS): 6016 kB
+Decrypted text matches the original plaintext.
+KEM FrodoKEM-976-AES -- After all operations Virtual Memory usage (VmSize): 10012 kB
+ Resident Set Size (RSS): 6016 kB
+-------------------------------------
+Long message
+KEM FrodoKEM-976-AES -- Before any operations Virtual Memory usage (VmSize): 10012 kB
+ Resident Set Size (RSS): 6016 kB
+[KEM FrodoKEM-976-AES -- Key generation] Execution time: 0.001744 seconds
+KEM FrodoKEM-976-AES -- After key generation Virtual Memory usage (VmSize): 10012 kB
+ Resident Set Size (RSS): 6016 kB
+[KEM FrodoKEM-976-AES -- Encapsulation] Execution time: 0.002609 seconds
+KEM FrodoKEM-976-AES -- After encapsulation Virtual Memory usage (VmSize): 10012 kB
+ Resident Set Size (RSS): 6016 kB
+[KEM FrodoKEM-976-AES -- Decapsulation] Execution time: 0.002445 seconds
+KEM FrodoKEM-976-AES -- After decapsulation Virtual Memory usage (VmSize): 10012 kB
+ Resident Set Size (RSS): 6016 kB
+Shared secrets match.
+[KEM FrodoKEM-976-AES -- AES encryption] Execution time: 0.000005 seconds
+KEM FrodoKEM-976-AES -- After AES encryption Virtual Memory usage (VmSize): 10012 kB
+ Resident Set Size (RSS): 6016 kB
+[KEM FrodoKEM-976-AES -- AES decryption] Execution time: 0.000006 seconds
+KEM FrodoKEM-976-AES -- After AES decryption Virtual Memory usage (VmSize): 10012 kB
+ Resident Set Size (RSS): 6016 kB
+Decrypted text matches the original plaintext.
+KEM FrodoKEM-976-AES -- After all operations Virtual Memory usage (VmSize): 10012 kB
+ Resident Set Size (RSS): 6016 kB
+-------------------------------------
+Short message
+KEM FrodoKEM-976-SHAKE -- Before any operations Virtual Memory usage (VmSize): 10012 kB
+ Resident Set Size (RSS): 6016 kB
+[KEM FrodoKEM-976-SHAKE -- Key generation] Execution time: 0.007164 seconds
+KEM FrodoKEM-976-SHAKE -- After key generation Virtual Memory usage (VmSize): 10012 kB
+ Resident Set Size (RSS): 6144 kB
+[KEM FrodoKEM-976-SHAKE -- Encapsulation] Execution time: 0.007589 seconds
+KEM FrodoKEM-976-SHAKE -- After encapsulation Virtual Memory usage (VmSize): 10012 kB
+ Resident Set Size (RSS): 6144 kB
+[KEM FrodoKEM-976-SHAKE -- Decapsulation] Execution time: 0.007489 seconds
+KEM FrodoKEM-976-SHAKE -- After decapsulation Virtual Memory usage (VmSize): 10012 kB
+ Resident Set Size (RSS): 6144 kB
+Shared secrets match.
+[KEM FrodoKEM-976-SHAKE -- AES encryption] Execution time: 0.000007 seconds
+KEM FrodoKEM-976-SHAKE -- After AES encryption Virtual Memory usage (VmSize): 10012 kB
+ Resident Set Size (RSS): 6144 kB
+[KEM FrodoKEM-976-SHAKE -- AES decryption] Execution time: 0.000005 seconds
+KEM FrodoKEM-976-SHAKE -- After AES decryption Virtual Memory usage (VmSize): 10012 kB
+ Resident Set Size (RSS): 6144 kB
+Decrypted text matches the original plaintext.
+KEM FrodoKEM-976-SHAKE -- After all operations Virtual Memory usage (VmSize): 10012 kB
+ Resident Set Size (RSS): 6144 kB
+-------------------------------------
+Medium message
+KEM FrodoKEM-976-SHAKE -- Before any operations Virtual Memory usage (VmSize): 10012 kB
+ Resident Set Size (RSS): 6144 kB
+[KEM FrodoKEM-976-SHAKE -- Key generation] Execution time: 0.007105 seconds
+KEM FrodoKEM-976-SHAKE -- After key generation Virtual Memory usage (VmSize): 10012 kB
+ Resident Set Size (RSS): 6144 kB
+[KEM FrodoKEM-976-SHAKE -- Encapsulation] Execution time: 0.007609 seconds
+KEM FrodoKEM-976-SHAKE -- After encapsulation Virtual Memory usage (VmSize): 10012 kB
+ Resident Set Size (RSS): 6144 kB
+[KEM FrodoKEM-976-SHAKE -- Decapsulation] Execution time: 0.007472 seconds
+KEM FrodoKEM-976-SHAKE -- After decapsulation Virtual Memory usage (VmSize): 10012 kB
+ Resident Set Size (RSS): 6144 kB
+Shared secrets match.
+[KEM FrodoKEM-976-SHAKE -- AES encryption] Execution time: 0.000007 seconds
+KEM FrodoKEM-976-SHAKE -- After AES encryption Virtual Memory usage (VmSize): 10012 kB
+ Resident Set Size (RSS): 6144 kB
+[KEM FrodoKEM-976-SHAKE -- AES decryption] Execution time: 0.000005 seconds
+KEM FrodoKEM-976-SHAKE -- After AES decryption Virtual Memory usage (VmSize): 10012 kB
+ Resident Set Size (RSS): 6144 kB
+Decrypted text matches the original plaintext.
+KEM FrodoKEM-976-SHAKE -- After all operations Virtual Memory usage (VmSize): 10012 kB
+ Resident Set Size (RSS): 6144 kB
+-------------------------------------
+Long message
+KEM FrodoKEM-976-SHAKE -- Before any operations Virtual Memory usage (VmSize): 10012 kB
+ Resident Set Size (RSS): 6144 kB
+[KEM FrodoKEM-976-SHAKE -- Key generation] Execution time: 0.007115 seconds
+KEM FrodoKEM-976-SHAKE -- After key generation Virtual Memory usage (VmSize): 10012 kB
+ Resident Set Size (RSS): 6144 kB
+[KEM FrodoKEM-976-SHAKE -- Encapsulation] Execution time: 0.007567 seconds
+KEM FrodoKEM-976-SHAKE -- After encapsulation Virtual Memory usage (VmSize): 10012 kB
+ Resident Set Size (RSS): 6144 kB
+[KEM FrodoKEM-976-SHAKE -- Decapsulation] Execution time: 0.007474 seconds
+KEM FrodoKEM-976-SHAKE -- After decapsulation Virtual Memory usage (VmSize): 10012 kB
+ Resident Set Size (RSS): 6144 kB
+Shared secrets match.
+[KEM FrodoKEM-976-SHAKE -- AES encryption] Execution time: 0.000007 seconds
+KEM FrodoKEM-976-SHAKE -- After AES encryption Virtual Memory usage (VmSize): 10012 kB
+ Resident Set Size (RSS): 6144 kB
+[KEM FrodoKEM-976-SHAKE -- AES decryption] Execution time: 0.000005 seconds
+KEM FrodoKEM-976-SHAKE -- After AES decryption Virtual Memory usage (VmSize): 10012 kB
+ Resident Set Size (RSS): 6144 kB
+Decrypted text matches the original plaintext.
+KEM FrodoKEM-976-SHAKE -- After all operations Virtual Memory usage (VmSize): 10012 kB
+ Resident Set Size (RSS): 6144 kB
+-------------------------------------
+Short message
+KEM FrodoKEM-1344-AES -- Before any operations Virtual Memory usage (VmSize): 10012 kB
+ Resident Set Size (RSS): 6144 kB
+[KEM FrodoKEM-1344-AES -- Key generation] Execution time: 0.003066 seconds
+KEM FrodoKEM-1344-AES -- After key generation Virtual Memory usage (VmSize): 10012 kB
+ Resident Set Size (RSS): 6144 kB
+[KEM FrodoKEM-1344-AES -- Encapsulation] Execution time: 0.004509 seconds
+KEM FrodoKEM-1344-AES -- After encapsulation Virtual Memory usage (VmSize): 10028 kB
+ Resident Set Size (RSS): 6144 kB
+[KEM FrodoKEM-1344-AES -- Decapsulation] Execution time: 0.004281 seconds
+KEM FrodoKEM-1344-AES -- After decapsulation Virtual Memory usage (VmSize): 10068 kB
+ Resident Set Size (RSS): 6144 kB
+Shared secrets match.
+[KEM FrodoKEM-1344-AES -- AES encryption] Execution time: 0.000005 seconds
+KEM FrodoKEM-1344-AES -- After AES encryption Virtual Memory usage (VmSize): 10068 kB
+ Resident Set Size (RSS): 6144 kB
+[KEM FrodoKEM-1344-AES -- AES decryption] Execution time: 0.000005 seconds
+KEM FrodoKEM-1344-AES -- After AES decryption Virtual Memory usage (VmSize): 10068 kB
+ Resident Set Size (RSS): 6144 kB
+Decrypted text matches the original plaintext.
+KEM FrodoKEM-1344-AES -- After all operations Virtual Memory usage (VmSize): 10068 kB
+ Resident Set Size (RSS): 6144 kB
+-------------------------------------
+Medium message
+KEM FrodoKEM-1344-AES -- Before any operations Virtual Memory usage (VmSize): 10068 kB
+ Resident Set Size (RSS): 6144 kB
+[KEM FrodoKEM-1344-AES -- Key generation] Execution time: 0.003040 seconds
+KEM FrodoKEM-1344-AES -- After key generation Virtual Memory usage (VmSize): 10068 kB
+ Resident Set Size (RSS): 6144 kB
+[KEM FrodoKEM-1344-AES -- Encapsulation] Execution time: 0.004475 seconds
+KEM FrodoKEM-1344-AES -- After encapsulation Virtual Memory usage (VmSize): 10068 kB
+ Resident Set Size (RSS): 6144 kB
+[KEM FrodoKEM-1344-AES -- Decapsulation] Execution time: 0.004237 seconds
+KEM FrodoKEM-1344-AES -- After decapsulation Virtual Memory usage (VmSize): 10068 kB
+ Resident Set Size (RSS): 6144 kB
+Shared secrets match.
+[KEM FrodoKEM-1344-AES -- AES encryption] Execution time: 0.000005 seconds
+KEM FrodoKEM-1344-AES -- After AES encryption Virtual Memory usage (VmSize): 10068 kB
+ Resident Set Size (RSS): 6144 kB
+[KEM FrodoKEM-1344-AES -- AES decryption] Execution time: 0.000005 seconds
+KEM FrodoKEM-1344-AES -- After AES decryption Virtual Memory usage (VmSize): 10068 kB
+ Resident Set Size (RSS): 6144 kB
+Decrypted text matches the original plaintext.
+KEM FrodoKEM-1344-AES -- After all operations Virtual Memory usage (VmSize): 10068 kB
+ Resident Set Size (RSS): 6144 kB
+-------------------------------------
+Long message
+KEM FrodoKEM-1344-AES -- Before any operations Virtual Memory usage (VmSize): 10068 kB
+ Resident Set Size (RSS): 6144 kB
+[KEM FrodoKEM-1344-AES -- Key generation] Execution time: 0.003052 seconds
+KEM FrodoKEM-1344-AES -- After key generation Virtual Memory usage (VmSize): 10068 kB
+ Resident Set Size (RSS): 6144 kB
+[KEM FrodoKEM-1344-AES -- Encapsulation] Execution time: 0.004467 seconds
+KEM FrodoKEM-1344-AES -- After encapsulation Virtual Memory usage (VmSize): 10068 kB
+ Resident Set Size (RSS): 6144 kB
+[KEM FrodoKEM-1344-AES -- Decapsulation] Execution time: 0.004238 seconds
+KEM FrodoKEM-1344-AES -- After decapsulation Virtual Memory usage (VmSize): 10068 kB
+ Resident Set Size (RSS): 6144 kB
+Shared secrets match.
+[KEM FrodoKEM-1344-AES -- AES encryption] Execution time: 0.000005 seconds
+KEM FrodoKEM-1344-AES -- After AES encryption Virtual Memory usage (VmSize): 10068 kB
+ Resident Set Size (RSS): 6144 kB
+[KEM FrodoKEM-1344-AES -- AES decryption] Execution time: 0.000005 seconds
+KEM FrodoKEM-1344-AES -- After AES decryption Virtual Memory usage (VmSize): 10068 kB
+ Resident Set Size (RSS): 6144 kB
+Decrypted text matches the original plaintext.
+KEM FrodoKEM-1344-AES -- After all operations Virtual Memory usage (VmSize): 10068 kB
+ Resident Set Size (RSS): 6144 kB
+-------------------------------------
+Short message
+KEM FrodoKEM-1344-SHAKE -- Before any operations Virtual Memory usage (VmSize): 10068 kB
+ Resident Set Size (RSS): 6144 kB
+[KEM FrodoKEM-1344-SHAKE -- Key generation] Execution time: 0.012725 seconds
+KEM FrodoKEM-1344-SHAKE -- After key generation Virtual Memory usage (VmSize): 10068 kB
+ Resident Set Size (RSS): 6144 kB
+[KEM FrodoKEM-1344-SHAKE -- Encapsulation] Execution time: 0.013472 seconds
+KEM FrodoKEM-1344-SHAKE -- After encapsulation Virtual Memory usage (VmSize): 10068 kB
+ Resident Set Size (RSS): 6144 kB
+[KEM FrodoKEM-1344-SHAKE -- Decapsulation] Execution time: 0.013228 seconds
+KEM FrodoKEM-1344-SHAKE -- After decapsulation Virtual Memory usage (VmSize): 10068 kB
+ Resident Set Size (RSS): 6144 kB
+Shared secrets match.
+[KEM FrodoKEM-1344-SHAKE -- AES encryption] Execution time: 0.000007 seconds
+KEM FrodoKEM-1344-SHAKE -- After AES encryption Virtual Memory usage (VmSize): 10068 kB
+ Resident Set Size (RSS): 6144 kB
+[KEM FrodoKEM-1344-SHAKE -- AES decryption] Execution time: 0.000005 seconds
+KEM FrodoKEM-1344-SHAKE -- After AES decryption Virtual Memory usage (VmSize): 10068 kB
+ Resident Set Size (RSS): 6144 kB
+Decrypted text matches the original plaintext.
+KEM FrodoKEM-1344-SHAKE -- After all operations Virtual Memory usage (VmSize): 10068 kB
+ Resident Set Size (RSS): 6144 kB
+-------------------------------------
+Medium message
+KEM FrodoKEM-1344-SHAKE -- Before any operations Virtual Memory usage (VmSize): 10068 kB
+ Resident Set Size (RSS): 6144 kB
+[KEM FrodoKEM-1344-SHAKE -- Key generation] Execution time: 0.012729 seconds
+KEM FrodoKEM-1344-SHAKE -- After key generation Virtual Memory usage (VmSize): 10068 kB
+ Resident Set Size (RSS): 6144 kB
+[KEM FrodoKEM-1344-SHAKE -- Encapsulation] Execution time: 0.013514 seconds
+KEM FrodoKEM-1344-SHAKE -- After encapsulation Virtual Memory usage (VmSize): 10068 kB
+ Resident Set Size (RSS): 6144 kB
+[KEM FrodoKEM-1344-SHAKE -- Decapsulation] Execution time: 0.013288 seconds
+KEM FrodoKEM-1344-SHAKE -- After decapsulation Virtual Memory usage (VmSize): 10068 kB
+ Resident Set Size (RSS): 6144 kB
+Shared secrets match.
+[KEM FrodoKEM-1344-SHAKE -- AES encryption] Execution time: 0.000011 seconds
+KEM FrodoKEM-1344-SHAKE -- After AES encryption Virtual Memory usage (VmSize): 10068 kB
+ Resident Set Size (RSS): 6144 kB
+[KEM FrodoKEM-1344-SHAKE -- AES decryption] Execution time: 0.000006 seconds
+KEM FrodoKEM-1344-SHAKE -- After AES decryption Virtual Memory usage (VmSize): 10068 kB
+ Resident Set Size (RSS): 6144 kB
+Decrypted text matches the original plaintext.
+KEM FrodoKEM-1344-SHAKE -- After all operations Virtual Memory usage (VmSize): 10068 kB
+ Resident Set Size (RSS): 6144 kB
+-------------------------------------
+Long message
+KEM FrodoKEM-1344-SHAKE -- Before any operations Virtual Memory usage (VmSize): 10068 kB
+ Resident Set Size (RSS): 6144 kB
+[KEM FrodoKEM-1344-SHAKE -- Key generation] Execution time: 0.012808 seconds
+KEM FrodoKEM-1344-SHAKE -- After key generation Virtual Memory usage (VmSize): 10068 kB
+ Resident Set Size (RSS): 6144 kB
+[KEM FrodoKEM-1344-SHAKE -- Encapsulation] Execution time: 0.013548 seconds
+KEM FrodoKEM-1344-SHAKE -- After encapsulation Virtual Memory usage (VmSize): 10068 kB
+ Resident Set Size (RSS): 6144 kB
+[KEM FrodoKEM-1344-SHAKE -- Decapsulation] Execution time: 0.013307 seconds
+KEM FrodoKEM-1344-SHAKE -- After decapsulation Virtual Memory usage (VmSize): 10068 kB
+ Resident Set Size (RSS): 6144 kB
+Shared secrets match.
+[KEM FrodoKEM-1344-SHAKE -- AES encryption] Execution time: 0.000011 seconds
+KEM FrodoKEM-1344-SHAKE -- After AES encryption Virtual Memory usage (VmSize): 10068 kB
+ Resident Set Size (RSS): 6144 kB
+[KEM FrodoKEM-1344-SHAKE -- AES decryption] Execution time: 0.000007 seconds
+KEM FrodoKEM-1344-SHAKE -- After AES decryption Virtual Memory usage (VmSize): 10068 kB
+ Resident Set Size (RSS): 6144 kB
+Decrypted text matches the original plaintext.
+KEM FrodoKEM-1344-SHAKE -- After all operations Virtual Memory usage (VmSize): 10068 kB
+ Resident Set Size (RSS): 6144 kB
+-------------------------------------
+
+2nd time:
+Short message
+KEM FrodoKEM-640-AES -- Before any operations Virtual Memory usage (VmSize): 9336 kB
+ Resident Set Size (RSS): 2944 kB
+[KEM FrodoKEM-640-AES -- Key generation] Execution time: 0.003792 seconds
+KEM FrodoKEM-640-AES -- After key generation Virtual Memory usage (VmSize): 9884 kB
+ Resident Set Size (RSS): 5760 kB
+[KEM FrodoKEM-640-AES -- Encapsulation] Execution time: 0.001408 seconds
+KEM FrodoKEM-640-AES -- After encapsulation Virtual Memory usage (VmSize): 9884 kB
+ Resident Set Size (RSS): 5888 kB
+[KEM FrodoKEM-640-AES -- Decapsulation] Execution time: 0.001313 seconds
+KEM FrodoKEM-640-AES -- After decapsulation Virtual Memory usage (VmSize): 9884 kB
+ Resident Set Size (RSS): 5888 kB
+Shared secrets match.
+[KEM FrodoKEM-640-AES -- AES encryption] Execution time: 0.000017 seconds
+KEM FrodoKEM-640-AES -- After AES encryption Virtual Memory usage (VmSize): 9884 kB
+ Resident Set Size (RSS): 5888 kB
+[KEM FrodoKEM-640-AES -- AES decryption] Execution time: 0.000007 seconds
+KEM FrodoKEM-640-AES -- After AES decryption Virtual Memory usage (VmSize): 9884 kB
+ Resident Set Size (RSS): 5888 kB
+Decrypted text matches the original plaintext.
+KEM FrodoKEM-640-AES -- After all operations Virtual Memory usage (VmSize): 9884 kB
+ Resident Set Size (RSS): 5888 kB
+-------------------------------------
+Medium message
+KEM FrodoKEM-640-AES -- Before any operations Virtual Memory usage (VmSize): 9884 kB
+ Resident Set Size (RSS): 5888 kB
+[KEM FrodoKEM-640-AES -- Key generation] Execution time: 0.000937 seconds
+KEM FrodoKEM-640-AES -- After key generation Virtual Memory usage (VmSize): 9884 kB
+ Resident Set Size (RSS): 5888 kB
+[KEM FrodoKEM-640-AES -- Encapsulation] Execution time: 0.001386 seconds
+KEM FrodoKEM-640-AES -- After encapsulation Virtual Memory usage (VmSize): 9884 kB
+ Resident Set Size (RSS): 5888 kB
+[KEM FrodoKEM-640-AES -- Decapsulation] Execution time: 0.001284 seconds
+KEM FrodoKEM-640-AES -- After decapsulation Virtual Memory usage (VmSize): 9884 kB
+ Resident Set Size (RSS): 5888 kB
+Shared secrets match.
+[KEM FrodoKEM-640-AES -- AES encryption] Execution time: 0.000006 seconds
+KEM FrodoKEM-640-AES -- After AES encryption Virtual Memory usage (VmSize): 9884 kB
+ Resident Set Size (RSS): 5888 kB
+[KEM FrodoKEM-640-AES -- AES decryption] Execution time: 0.000006 seconds
+KEM FrodoKEM-640-AES -- After AES decryption Virtual Memory usage (VmSize): 9884 kB
+ Resident Set Size (RSS): 5888 kB
+Decrypted text matches the original plaintext.
+KEM FrodoKEM-640-AES -- After all operations Virtual Memory usage (VmSize): 9884 kB
+ Resident Set Size (RSS): 5888 kB
+-------------------------------------
+Long message
+KEM FrodoKEM-640-AES -- Before any operations Virtual Memory usage (VmSize): 9884 kB
+ Resident Set Size (RSS): 5888 kB
+[KEM FrodoKEM-640-AES -- Key generation] Execution time: 0.000941 seconds
+KEM FrodoKEM-640-AES -- After key generation Virtual Memory usage (VmSize): 9884 kB
+ Resident Set Size (RSS): 5888 kB
+[KEM FrodoKEM-640-AES -- Encapsulation] Execution time: 0.001390 seconds
+KEM FrodoKEM-640-AES -- After encapsulation Virtual Memory usage (VmSize): 9884 kB
+ Resident Set Size (RSS): 5888 kB
+[KEM FrodoKEM-640-AES -- Decapsulation] Execution time: 0.001299 seconds
+KEM FrodoKEM-640-AES -- After decapsulation Virtual Memory usage (VmSize): 9884 kB
+ Resident Set Size (RSS): 5888 kB
+Shared secrets match.
+[KEM FrodoKEM-640-AES -- AES encryption] Execution time: 0.000006 seconds
+KEM FrodoKEM-640-AES -- After AES encryption Virtual Memory usage (VmSize): 9884 kB
+ Resident Set Size (RSS): 5888 kB
+[KEM FrodoKEM-640-AES -- AES decryption] Execution time: 0.000006 seconds
+KEM FrodoKEM-640-AES -- After AES decryption Virtual Memory usage (VmSize): 9884 kB
+ Resident Set Size (RSS): 5888 kB
+Decrypted text matches the original plaintext.
+KEM FrodoKEM-640-AES -- After all operations Virtual Memory usage (VmSize): 9884 kB
+ Resident Set Size (RSS): 5888 kB
+-------------------------------------
+Short message
+KEM FrodoKEM-640-SHAKE -- Before any operations Virtual Memory usage (VmSize): 9884 kB
+ Resident Set Size (RSS): 5888 kB
+[KEM FrodoKEM-640-SHAKE -- Key generation] Execution time: 0.003349 seconds
+KEM FrodoKEM-640-SHAKE -- After key generation Virtual Memory usage (VmSize): 9884 kB
+ Resident Set Size (RSS): 6016 kB
+[KEM FrodoKEM-640-SHAKE -- Encapsulation] Execution time: 0.003595 seconds
+KEM FrodoKEM-640-SHAKE -- After encapsulation Virtual Memory usage (VmSize): 9884 kB
+ Resident Set Size (RSS): 6016 kB
+[KEM FrodoKEM-640-SHAKE -- Decapsulation] Execution time: 0.003517 seconds
+KEM FrodoKEM-640-SHAKE -- After decapsulation Virtual Memory usage (VmSize): 9884 kB
+ Resident Set Size (RSS): 6016 kB
+Shared secrets match.
+[KEM FrodoKEM-640-SHAKE -- AES encryption] Execution time: 0.000009 seconds
+KEM FrodoKEM-640-SHAKE -- After AES encryption Virtual Memory usage (VmSize): 9884 kB
+ Resident Set Size (RSS): 6016 kB
+[KEM FrodoKEM-640-SHAKE -- AES decryption] Execution time: 0.000006 seconds
+KEM FrodoKEM-640-SHAKE -- After AES decryption Virtual Memory usage (VmSize): 9884 kB
+ Resident Set Size (RSS): 6016 kB
+Decrypted text matches the original plaintext.
+KEM FrodoKEM-640-SHAKE -- After all operations Virtual Memory usage (VmSize): 9884 kB
+ Resident Set Size (RSS): 6016 kB
+-------------------------------------
+Medium message
+KEM FrodoKEM-640-SHAKE -- Before any operations Virtual Memory usage (VmSize): 9884 kB
+ Resident Set Size (RSS): 6016 kB
+[KEM FrodoKEM-640-SHAKE -- Key generation] Execution time: 0.003291 seconds
+KEM FrodoKEM-640-SHAKE -- After key generation Virtual Memory usage (VmSize): 9884 kB
+ Resident Set Size (RSS): 6016 kB
+[KEM FrodoKEM-640-SHAKE -- Encapsulation] Execution time: 0.003567 seconds
+KEM FrodoKEM-640-SHAKE -- After encapsulation Virtual Memory usage (VmSize): 9884 kB
+ Resident Set Size (RSS): 6016 kB
+[KEM FrodoKEM-640-SHAKE -- Decapsulation] Execution time: 0.003511 seconds
+KEM FrodoKEM-640-SHAKE -- After decapsulation Virtual Memory usage (VmSize): 9884 kB
+ Resident Set Size (RSS): 6016 kB
+Shared secrets match.
+[KEM FrodoKEM-640-SHAKE -- AES encryption] Execution time: 0.000008 seconds
+KEM FrodoKEM-640-SHAKE -- After AES encryption Virtual Memory usage (VmSize): 9884 kB
+ Resident Set Size (RSS): 6016 kB
+[KEM FrodoKEM-640-SHAKE -- AES decryption] Execution time: 0.000007 seconds
+KEM FrodoKEM-640-SHAKE -- After AES decryption Virtual Memory usage (VmSize): 9884 kB
+ Resident Set Size (RSS): 6016 kB
+Decrypted text matches the original plaintext.
+KEM FrodoKEM-640-SHAKE -- After all operations Virtual Memory usage (VmSize): 9884 kB
+ Resident Set Size (RSS): 6016 kB
+-------------------------------------
+Long message
+KEM FrodoKEM-640-SHAKE -- Before any operations Virtual Memory usage (VmSize): 9884 kB
+ Resident Set Size (RSS): 6016 kB
+[KEM FrodoKEM-640-SHAKE -- Key generation] Execution time: 0.003333 seconds
+KEM FrodoKEM-640-SHAKE -- After key generation Virtual Memory usage (VmSize): 9884 kB
+ Resident Set Size (RSS): 6016 kB
+[KEM FrodoKEM-640-SHAKE -- Encapsulation] Execution time: 0.003570 seconds
+KEM FrodoKEM-640-SHAKE -- After encapsulation Virtual Memory usage (VmSize): 9884 kB
+ Resident Set Size (RSS): 6016 kB
+[KEM FrodoKEM-640-SHAKE -- Decapsulation] Execution time: 0.003516 seconds
+KEM FrodoKEM-640-SHAKE -- After decapsulation Virtual Memory usage (VmSize): 9884 kB
+ Resident Set Size (RSS): 6016 kB
+Shared secrets match.
+[KEM FrodoKEM-640-SHAKE -- AES encryption] Execution time: 0.000009 seconds
+KEM FrodoKEM-640-SHAKE -- After AES encryption Virtual Memory usage (VmSize): 9884 kB
+ Resident Set Size (RSS): 6016 kB
+[KEM FrodoKEM-640-SHAKE -- AES decryption] Execution time: 0.000006 seconds
+KEM FrodoKEM-640-SHAKE -- After AES decryption Virtual Memory usage (VmSize): 9884 kB
+ Resident Set Size (RSS): 6016 kB
+Decrypted text matches the original plaintext.
+KEM FrodoKEM-640-SHAKE -- After all operations Virtual Memory usage (VmSize): 9884 kB
+ Resident Set Size (RSS): 6016 kB
+-------------------------------------
+Short message
+KEM FrodoKEM-976-AES -- Before any operations Virtual Memory usage (VmSize): 9884 kB
+ Resident Set Size (RSS): 6016 kB
+[KEM FrodoKEM-976-AES -- Key generation] Execution time: 0.001757 seconds
+KEM FrodoKEM-976-AES -- After key generation Virtual Memory usage (VmSize): 10016 kB
+ Resident Set Size (RSS): 6016 kB
+[KEM FrodoKEM-976-AES -- Encapsulation] Execution time: 0.002639 seconds
+KEM FrodoKEM-976-AES -- After encapsulation Virtual Memory usage (VmSize): 10016 kB
+ Resident Set Size (RSS): 6144 kB
+[KEM FrodoKEM-976-AES -- Decapsulation] Execution time: 0.002483 seconds
+KEM FrodoKEM-976-AES -- After decapsulation Virtual Memory usage (VmSize): 10044 kB
+ Resident Set Size (RSS): 6144 kB
+Shared secrets match.
+[KEM FrodoKEM-976-AES -- AES encryption] Execution time: 0.000005 seconds
+KEM FrodoKEM-976-AES -- After AES encryption Virtual Memory usage (VmSize): 10044 kB
+ Resident Set Size (RSS): 6144 kB
+[KEM FrodoKEM-976-AES -- AES decryption] Execution time: 0.000005 seconds
+KEM FrodoKEM-976-AES -- After AES decryption Virtual Memory usage (VmSize): 10044 kB
+ Resident Set Size (RSS): 6144 kB
+Decrypted text matches the original plaintext.
+KEM FrodoKEM-976-AES -- After all operations Virtual Memory usage (VmSize): 10044 kB
+ Resident Set Size (RSS): 6144 kB
+-------------------------------------
+Medium message
+KEM FrodoKEM-976-AES -- Before any operations Virtual Memory usage (VmSize): 10012 kB
+ Resident Set Size (RSS): 6144 kB
+[KEM FrodoKEM-976-AES -- Key generation] Execution time: 0.001738 seconds
+KEM FrodoKEM-976-AES -- After key generation Virtual Memory usage (VmSize): 10012 kB
+ Resident Set Size (RSS): 6144 kB
+[KEM FrodoKEM-976-AES -- Encapsulation] Execution time: 0.002616 seconds
+KEM FrodoKEM-976-AES -- After encapsulation Virtual Memory usage (VmSize): 10012 kB
+ Resident Set Size (RSS): 6144 kB
+[KEM FrodoKEM-976-AES -- Decapsulation] Execution time: 0.002442 seconds
+KEM FrodoKEM-976-AES -- After decapsulation Virtual Memory usage (VmSize): 10012 kB
+ Resident Set Size (RSS): 6144 kB
+Shared secrets match.
+[KEM FrodoKEM-976-AES -- AES encryption] Execution time: 0.000006 seconds
+KEM FrodoKEM-976-AES -- After AES encryption Virtual Memory usage (VmSize): 10012 kB
+ Resident Set Size (RSS): 6144 kB
+[KEM FrodoKEM-976-AES -- AES decryption] Execution time: 0.000006 seconds
+KEM FrodoKEM-976-AES -- After AES decryption Virtual Memory usage (VmSize): 10012 kB
+ Resident Set Size (RSS): 6144 kB
+Decrypted text matches the original plaintext.
+KEM FrodoKEM-976-AES -- After all operations Virtual Memory usage (VmSize): 10012 kB
+ Resident Set Size (RSS): 6144 kB
+-------------------------------------
+Long message
+KEM FrodoKEM-976-AES -- Before any operations Virtual Memory usage (VmSize): 10012 kB
+ Resident Set Size (RSS): 6144 kB
+[KEM FrodoKEM-976-AES -- Key generation] Execution time: 0.001736 seconds
+KEM FrodoKEM-976-AES -- After key generation Virtual Memory usage (VmSize): 10012 kB
+ Resident Set Size (RSS): 6144 kB
+[KEM FrodoKEM-976-AES -- Encapsulation] Execution time: 0.002605 seconds
+KEM FrodoKEM-976-AES -- After encapsulation Virtual Memory usage (VmSize): 10012 kB
+ Resident Set Size (RSS): 6144 kB
+[KEM FrodoKEM-976-AES -- Decapsulation] Execution time: 0.002431 seconds
+KEM FrodoKEM-976-AES -- After decapsulation Virtual Memory usage (VmSize): 10012 kB
+ Resident Set Size (RSS): 6144 kB
+Shared secrets match.
+[KEM FrodoKEM-976-AES -- AES encryption] Execution time: 0.000006 seconds
+KEM FrodoKEM-976-AES -- After AES encryption Virtual Memory usage (VmSize): 10012 kB
+ Resident Set Size (RSS): 6144 kB
+[KEM FrodoKEM-976-AES -- AES decryption] Execution time: 0.000004 seconds
+KEM FrodoKEM-976-AES -- After AES decryption Virtual Memory usage (VmSize): 10012 kB
+ Resident Set Size (RSS): 6144 kB
+Decrypted text matches the original plaintext.
+KEM FrodoKEM-976-AES -- After all operations Virtual Memory usage (VmSize): 10012 kB
+ Resident Set Size (RSS): 6144 kB
+-------------------------------------
+Short message
+KEM FrodoKEM-976-SHAKE -- Before any operations Virtual Memory usage (VmSize): 10012 kB
+ Resident Set Size (RSS): 6144 kB
+[KEM FrodoKEM-976-SHAKE -- Key generation] Execution time: 0.007149 seconds
+KEM FrodoKEM-976-SHAKE -- After key generation Virtual Memory usage (VmSize): 10012 kB
+ Resident Set Size (RSS): 6272 kB
+[KEM FrodoKEM-976-SHAKE -- Encapsulation] Execution time: 0.007586 seconds
+KEM FrodoKEM-976-SHAKE -- After encapsulation Virtual Memory usage (VmSize): 10012 kB
+ Resident Set Size (RSS): 6272 kB
+[KEM FrodoKEM-976-SHAKE -- Decapsulation] Execution time: 0.007459 seconds
+KEM FrodoKEM-976-SHAKE -- After decapsulation Virtual Memory usage (VmSize): 10012 kB
+ Resident Set Size (RSS): 6272 kB
+Shared secrets match.
+[KEM FrodoKEM-976-SHAKE -- AES encryption] Execution time: 0.000008 seconds
+KEM FrodoKEM-976-SHAKE -- After AES encryption Virtual Memory usage (VmSize): 10012 kB
+ Resident Set Size (RSS): 6272 kB
+[KEM FrodoKEM-976-SHAKE -- AES decryption] Execution time: 0.000005 seconds
+KEM FrodoKEM-976-SHAKE -- After AES decryption Virtual Memory usage (VmSize): 10012 kB
+ Resident Set Size (RSS): 6272 kB
+Decrypted text matches the original plaintext.
+KEM FrodoKEM-976-SHAKE -- After all operations Virtual Memory usage (VmSize): 10012 kB
+ Resident Set Size (RSS): 6272 kB
+-------------------------------------
+Medium message
+KEM FrodoKEM-976-SHAKE -- Before any operations Virtual Memory usage (VmSize): 10012 kB
+ Resident Set Size (RSS): 6272 kB
+[KEM FrodoKEM-976-SHAKE -- Key generation] Execution time: 0.007116 seconds
+KEM FrodoKEM-976-SHAKE -- After key generation Virtual Memory usage (VmSize): 10012 kB
+ Resident Set Size (RSS): 6272 kB
+[KEM FrodoKEM-976-SHAKE -- Encapsulation] Execution time: 0.007586 seconds
+KEM FrodoKEM-976-SHAKE -- After encapsulation Virtual Memory usage (VmSize): 10012 kB
+ Resident Set Size (RSS): 6272 kB
+[KEM FrodoKEM-976-SHAKE -- Decapsulation] Execution time: 0.007428 seconds
+KEM FrodoKEM-976-SHAKE -- After decapsulation Virtual Memory usage (VmSize): 10012 kB
+ Resident Set Size (RSS): 6272 kB
+Shared secrets match.
+[KEM FrodoKEM-976-SHAKE -- AES encryption] Execution time: 0.000007 seconds
+KEM FrodoKEM-976-SHAKE -- After AES encryption Virtual Memory usage (VmSize): 10012 kB
+ Resident Set Size (RSS): 6272 kB
+[KEM FrodoKEM-976-SHAKE -- AES decryption] Execution time: 0.000006 seconds
+KEM FrodoKEM-976-SHAKE -- After AES decryption Virtual Memory usage (VmSize): 10012 kB
+ Resident Set Size (RSS): 6272 kB
+Decrypted text matches the original plaintext.
+KEM FrodoKEM-976-SHAKE -- After all operations Virtual Memory usage (VmSize): 10012 kB
+ Resident Set Size (RSS): 6272 kB
+-------------------------------------
+Long message
+KEM FrodoKEM-976-SHAKE -- Before any operations Virtual Memory usage (VmSize): 10012 kB
+ Resident Set Size (RSS): 6272 kB
+[KEM FrodoKEM-976-SHAKE -- Key generation] Execution time: 0.007071 seconds
+KEM FrodoKEM-976-SHAKE -- After key generation Virtual Memory usage (VmSize): 10012 kB
+ Resident Set Size (RSS): 6272 kB
+[KEM FrodoKEM-976-SHAKE -- Encapsulation] Execution time: 0.007555 seconds
+KEM FrodoKEM-976-SHAKE -- After encapsulation Virtual Memory usage (VmSize): 10012 kB
+ Resident Set Size (RSS): 6272 kB
+[KEM FrodoKEM-976-SHAKE -- Decapsulation] Execution time: 0.007432 seconds
+KEM FrodoKEM-976-SHAKE -- After decapsulation Virtual Memory usage (VmSize): 10012 kB
+ Resident Set Size (RSS): 6272 kB
+Shared secrets match.
+[KEM FrodoKEM-976-SHAKE -- AES encryption] Execution time: 0.000008 seconds
+KEM FrodoKEM-976-SHAKE -- After AES encryption Virtual Memory usage (VmSize): 10012 kB
+ Resident Set Size (RSS): 6272 kB
+[KEM FrodoKEM-976-SHAKE -- AES decryption] Execution time: 0.000006 seconds
+KEM FrodoKEM-976-SHAKE -- After AES decryption Virtual Memory usage (VmSize): 10012 kB
+ Resident Set Size (RSS): 6272 kB
+Decrypted text matches the original plaintext.
+KEM FrodoKEM-976-SHAKE -- After all operations Virtual Memory usage (VmSize): 10012 kB
+ Resident Set Size (RSS): 6272 kB
+-------------------------------------
+Short message
+KEM FrodoKEM-1344-AES -- Before any operations Virtual Memory usage (VmSize): 10012 kB
+ Resident Set Size (RSS): 6272 kB
+[KEM FrodoKEM-1344-AES -- Key generation] Execution time: 0.003076 seconds
+KEM FrodoKEM-1344-AES -- After key generation Virtual Memory usage (VmSize): 10012 kB
+ Resident Set Size (RSS): 6272 kB
+[KEM FrodoKEM-1344-AES -- Encapsulation] Execution time: 0.004537 seconds
+KEM FrodoKEM-1344-AES -- After encapsulation Virtual Memory usage (VmSize): 10028 kB
+ Resident Set Size (RSS): 6272 kB
+[KEM FrodoKEM-1344-AES -- Decapsulation] Execution time: 0.004300 seconds
+KEM FrodoKEM-1344-AES -- After decapsulation Virtual Memory usage (VmSize): 10068 kB
+ Resident Set Size (RSS): 6272 kB
+Shared secrets match.
+[KEM FrodoKEM-1344-AES -- AES encryption] Execution time: 0.000008 seconds
+KEM FrodoKEM-1344-AES -- After AES encryption Virtual Memory usage (VmSize): 10068 kB
+ Resident Set Size (RSS): 6272 kB
+[KEM FrodoKEM-1344-AES -- AES decryption] Execution time: 0.000005 seconds
+KEM FrodoKEM-1344-AES -- After AES decryption Virtual Memory usage (VmSize): 10068 kB
+ Resident Set Size (RSS): 6272 kB
+Decrypted text matches the original plaintext.
+KEM FrodoKEM-1344-AES -- After all operations Virtual Memory usage (VmSize): 10068 kB
+ Resident Set Size (RSS): 6272 kB
+-------------------------------------
+Medium message
+KEM FrodoKEM-1344-AES -- Before any operations Virtual Memory usage (VmSize): 10068 kB
+ Resident Set Size (RSS): 6272 kB
+[KEM FrodoKEM-1344-AES -- Key generation] Execution time: 0.003056 seconds
+KEM FrodoKEM-1344-AES -- After key generation Virtual Memory usage (VmSize): 10068 kB
+ Resident Set Size (RSS): 6272 kB
+[KEM FrodoKEM-1344-AES -- Encapsulation] Execution time: 0.004480 seconds
+KEM FrodoKEM-1344-AES -- After encapsulation Virtual Memory usage (VmSize): 10068 kB
+ Resident Set Size (RSS): 6272 kB
+[KEM FrodoKEM-1344-AES -- Decapsulation] Execution time: 0.004250 seconds
+KEM FrodoKEM-1344-AES -- After decapsulation Virtual Memory usage (VmSize): 10068 kB
+ Resident Set Size (RSS): 6272 kB
+Shared secrets match.
+[KEM FrodoKEM-1344-AES -- AES encryption] Execution time: 0.000007 seconds
+KEM FrodoKEM-1344-AES -- After AES encryption Virtual Memory usage (VmSize): 10068 kB
+ Resident Set Size (RSS): 6272 kB
+[KEM FrodoKEM-1344-AES -- AES decryption] Execution time: 0.000005 seconds
+KEM FrodoKEM-1344-AES -- After AES decryption Virtual Memory usage (VmSize): 10068 kB
+ Resident Set Size (RSS): 6272 kB
+Decrypted text matches the original plaintext.
+KEM FrodoKEM-1344-AES -- After all operations Virtual Memory usage (VmSize): 10068 kB
+ Resident Set Size (RSS): 6272 kB
+-------------------------------------
+Long message
+KEM FrodoKEM-1344-AES -- Before any operations Virtual Memory usage (VmSize): 10068 kB
+ Resident Set Size (RSS): 6272 kB
+[KEM FrodoKEM-1344-AES -- Key generation] Execution time: 0.003059 seconds
+KEM FrodoKEM-1344-AES -- After key generation Virtual Memory usage (VmSize): 10068 kB
+ Resident Set Size (RSS): 6272 kB
+[KEM FrodoKEM-1344-AES -- Encapsulation] Execution time: 0.004488 seconds
+KEM FrodoKEM-1344-AES -- After encapsulation Virtual Memory usage (VmSize): 10068 kB
+ Resident Set Size (RSS): 6272 kB
+[KEM FrodoKEM-1344-AES -- Decapsulation] Execution time: 0.004268 seconds
+KEM FrodoKEM-1344-AES -- After decapsulation Virtual Memory usage (VmSize): 10068 kB
+ Resident Set Size (RSS): 6272 kB
+Shared secrets match.
+[KEM FrodoKEM-1344-AES -- AES encryption] Execution time: 0.000008 seconds
+KEM FrodoKEM-1344-AES -- After AES encryption Virtual Memory usage (VmSize): 10068 kB
+ Resident Set Size (RSS): 6272 kB
+[KEM FrodoKEM-1344-AES -- AES decryption] Execution time: 0.000005 seconds
+KEM FrodoKEM-1344-AES -- After AES decryption Virtual Memory usage (VmSize): 10068 kB
+ Resident Set Size (RSS): 6272 kB
+Decrypted text matches the original plaintext.
+KEM FrodoKEM-1344-AES -- After all operations Virtual Memory usage (VmSize): 10068 kB
+ Resident Set Size (RSS): 6272 kB
+-------------------------------------
+Short message
+KEM FrodoKEM-1344-SHAKE -- Before any operations Virtual Memory usage (VmSize): 10068 kB
+ Resident Set Size (RSS): 6272 kB
+[KEM FrodoKEM-1344-SHAKE -- Key generation] Execution time: 0.012756 seconds
+KEM FrodoKEM-1344-SHAKE -- After key generation Virtual Memory usage (VmSize): 10068 kB
+ Resident Set Size (RSS): 6272 kB
+[KEM FrodoKEM-1344-SHAKE -- Encapsulation] Execution time: 0.013531 seconds
+KEM FrodoKEM-1344-SHAKE -- After encapsulation Virtual Memory usage (VmSize): 10068 kB
+ Resident Set Size (RSS): 6272 kB
+[KEM FrodoKEM-1344-SHAKE -- Decapsulation] Execution time: 0.013259 seconds
+KEM FrodoKEM-1344-SHAKE -- After decapsulation Virtual Memory usage (VmSize): 10068 kB
+ Resident Set Size (RSS): 6272 kB
+Shared secrets match.
+[KEM FrodoKEM-1344-SHAKE -- AES encryption] Execution time: 0.000009 seconds
+KEM FrodoKEM-1344-SHAKE -- After AES encryption Virtual Memory usage (VmSize): 10068 kB
+ Resident Set Size (RSS): 6272 kB
+[KEM FrodoKEM-1344-SHAKE -- AES decryption] Execution time: 0.000006 seconds
+KEM FrodoKEM-1344-SHAKE -- After AES decryption Virtual Memory usage (VmSize): 10068 kB
+ Resident Set Size (RSS): 6272 kB
+Decrypted text matches the original plaintext.
+KEM FrodoKEM-1344-SHAKE -- After all operations Virtual Memory usage (VmSize): 10068 kB
+ Resident Set Size (RSS): 6272 kB
+-------------------------------------
+Medium message
+KEM FrodoKEM-1344-SHAKE -- Before any operations Virtual Memory usage (VmSize): 10068 kB
+ Resident Set Size (RSS): 6272 kB
+[KEM FrodoKEM-1344-SHAKE -- Key generation] Execution time: 0.012782 seconds
+KEM FrodoKEM-1344-SHAKE -- After key generation Virtual Memory usage (VmSize): 10068 kB
+ Resident Set Size (RSS): 6272 kB
+[KEM FrodoKEM-1344-SHAKE -- Encapsulation] Execution time: 0.013498 seconds
+KEM FrodoKEM-1344-SHAKE -- After encapsulation Virtual Memory usage (VmSize): 10068 kB
+ Resident Set Size (RSS): 6272 kB
+[KEM FrodoKEM-1344-SHAKE -- Decapsulation] Execution time: 0.013278 seconds
+KEM FrodoKEM-1344-SHAKE -- After decapsulation Virtual Memory usage (VmSize): 10068 kB
+ Resident Set Size (RSS): 6272 kB
+Shared secrets match.
+[KEM FrodoKEM-1344-SHAKE -- AES encryption] Execution time: 0.000010 seconds
+KEM FrodoKEM-1344-SHAKE -- After AES encryption Virtual Memory usage (VmSize): 10068 kB
+ Resident Set Size (RSS): 6272 kB
+[KEM FrodoKEM-1344-SHAKE -- AES decryption] Execution time: 0.000006 seconds
+KEM FrodoKEM-1344-SHAKE -- After AES decryption Virtual Memory usage (VmSize): 10068 kB
+ Resident Set Size (RSS): 6272 kB
+Decrypted text matches the original plaintext.
+KEM FrodoKEM-1344-SHAKE -- After all operations Virtual Memory usage (VmSize): 10068 kB
+ Resident Set Size (RSS): 6272 kB
+-------------------------------------
+Long message
+KEM FrodoKEM-1344-SHAKE -- Before any operations Virtual Memory usage (VmSize): 10068 kB
+ Resident Set Size (RSS): 6272 kB
+[KEM FrodoKEM-1344-SHAKE -- Key generation] Execution time: 0.012771 seconds
+KEM FrodoKEM-1344-SHAKE -- After key generation Virtual Memory usage (VmSize): 10068 kB
+ Resident Set Size (RSS): 6272 kB
+[KEM FrodoKEM-1344-SHAKE -- Encapsulation] Execution time: 0.013515 seconds
+KEM FrodoKEM-1344-SHAKE -- After encapsulation Virtual Memory usage (VmSize): 10068 kB
+ Resident Set Size (RSS): 6272 kB
+[KEM FrodoKEM-1344-SHAKE -- Decapsulation] Execution time: 0.013294 seconds
+KEM FrodoKEM-1344-SHAKE -- After decapsulation Virtual Memory usage (VmSize): 10068 kB
+ Resident Set Size (RSS): 6272 kB
+Shared secrets match.
+[KEM FrodoKEM-1344-SHAKE -- AES encryption] Execution time: 0.000010 seconds
+KEM FrodoKEM-1344-SHAKE -- After AES encryption Virtual Memory usage (VmSize): 10068 kB
+ Resident Set Size (RSS): 6272 kB
+[KEM FrodoKEM-1344-SHAKE -- AES decryption] Execution time: 0.000006 seconds
+KEM FrodoKEM-1344-SHAKE -- After AES decryption Virtual Memory usage (VmSize): 10068 kB
+ Resident Set Size (RSS): 6272 kB
+Decrypted text matches the original plaintext.
+KEM FrodoKEM-1344-SHAKE -- After all operations Virtual Memory usage (VmSize): 10068 kB
+ Resident Set Size (RSS): 6272 kB
+-------------------------------------
+
+3rd time:
+Short message
+KEM FrodoKEM-640-AES -- Before any operations Virtual Memory usage (VmSize): 9336 kB
+ Resident Set Size (RSS): 2944 kB
+[KEM FrodoKEM-640-AES -- Key generation] Execution time: 0.003726 seconds
+KEM FrodoKEM-640-AES -- After key generation Virtual Memory usage (VmSize): 9884 kB
+ Resident Set Size (RSS): 5632 kB
+[KEM FrodoKEM-640-AES -- Encapsulation] Execution time: 0.001407 seconds
+KEM FrodoKEM-640-AES -- After encapsulation Virtual Memory usage (VmSize): 9884 kB
+ Resident Set Size (RSS): 5760 kB
+[KEM FrodoKEM-640-AES -- Decapsulation] Execution time: 0.001308 seconds
+KEM FrodoKEM-640-AES -- After decapsulation Virtual Memory usage (VmSize): 9884 kB
+ Resident Set Size (RSS): 5760 kB
+Shared secrets match.
+[KEM FrodoKEM-640-AES -- AES encryption] Execution time: 0.000014 seconds
+KEM FrodoKEM-640-AES -- After AES encryption Virtual Memory usage (VmSize): 9884 kB
+ Resident Set Size (RSS): 5760 kB
+[KEM FrodoKEM-640-AES -- AES decryption] Execution time: 0.000007 seconds
+KEM FrodoKEM-640-AES -- After AES decryption Virtual Memory usage (VmSize): 9884 kB
+ Resident Set Size (RSS): 5760 kB
+Decrypted text matches the original plaintext.
+KEM FrodoKEM-640-AES -- After all operations Virtual Memory usage (VmSize): 9884 kB
+ Resident Set Size (RSS): 5760 kB
+-------------------------------------
+Medium message
+KEM FrodoKEM-640-AES -- Before any operations Virtual Memory usage (VmSize): 9884 kB
+ Resident Set Size (RSS): 5760 kB
+[KEM FrodoKEM-640-AES -- Key generation] Execution time: 0.000936 seconds
+KEM FrodoKEM-640-AES -- After key generation Virtual Memory usage (VmSize): 9884 kB
+ Resident Set Size (RSS): 5760 kB
+[KEM FrodoKEM-640-AES -- Encapsulation] Execution time: 0.001374 seconds
+KEM FrodoKEM-640-AES -- After encapsulation Virtual Memory usage (VmSize): 9884 kB
+ Resident Set Size (RSS): 5760 kB
+[KEM FrodoKEM-640-AES -- Decapsulation] Execution time: 0.001285 seconds
+KEM FrodoKEM-640-AES -- After decapsulation Virtual Memory usage (VmSize): 9884 kB
+ Resident Set Size (RSS): 5760 kB
+Shared secrets match.
+[KEM FrodoKEM-640-AES -- AES encryption] Execution time: 0.000005 seconds
+KEM FrodoKEM-640-AES -- After AES encryption Virtual Memory usage (VmSize): 9884 kB
+ Resident Set Size (RSS): 5760 kB
+[KEM FrodoKEM-640-AES -- AES decryption] Execution time: 0.000007 seconds
+KEM FrodoKEM-640-AES -- After AES decryption Virtual Memory usage (VmSize): 9884 kB
+ Resident Set Size (RSS): 5760 kB
+Decrypted text matches the original plaintext.
+KEM FrodoKEM-640-AES -- After all operations Virtual Memory usage (VmSize): 9884 kB
+ Resident Set Size (RSS): 5760 kB
+-------------------------------------
+Long message
+KEM FrodoKEM-640-AES -- Before any operations Virtual Memory usage (VmSize): 9884 kB
+ Resident Set Size (RSS): 5760 kB
+[KEM FrodoKEM-640-AES -- Key generation] Execution time: 0.000945 seconds
+KEM FrodoKEM-640-AES -- After key generation Virtual Memory usage (VmSize): 9884 kB
+ Resident Set Size (RSS): 5760 kB
+[KEM FrodoKEM-640-AES -- Encapsulation] Execution time: 0.001375 seconds
+KEM FrodoKEM-640-AES -- After encapsulation Virtual Memory usage (VmSize): 9884 kB
+ Resident Set Size (RSS): 5760 kB
+[KEM FrodoKEM-640-AES -- Decapsulation] Execution time: 0.001291 seconds
+KEM FrodoKEM-640-AES -- After decapsulation Virtual Memory usage (VmSize): 9884 kB
+ Resident Set Size (RSS): 5760 kB
+Shared secrets match.
+[KEM FrodoKEM-640-AES -- AES encryption] Execution time: 0.000009 seconds
+KEM FrodoKEM-640-AES -- After AES encryption Virtual Memory usage (VmSize): 9884 kB
+ Resident Set Size (RSS): 5760 kB
+[KEM FrodoKEM-640-AES -- AES decryption] Execution time: 0.000006 seconds
+KEM FrodoKEM-640-AES -- After AES decryption Virtual Memory usage (VmSize): 9884 kB
+ Resident Set Size (RSS): 5760 kB
+Decrypted text matches the original plaintext.
+KEM FrodoKEM-640-AES -- After all operations Virtual Memory usage (VmSize): 9884 kB
+ Resident Set Size (RSS): 5760 kB
+-------------------------------------
+Short message
+KEM FrodoKEM-640-SHAKE -- Before any operations Virtual Memory usage (VmSize): 9884 kB
+ Resident Set Size (RSS): 5760 kB
+[KEM FrodoKEM-640-SHAKE -- Key generation] Execution time: 0.003335 seconds
+KEM FrodoKEM-640-SHAKE -- After key generation Virtual Memory usage (VmSize): 9884 kB
+ Resident Set Size (RSS): 5888 kB
+[KEM FrodoKEM-640-SHAKE -- Encapsulation] Execution time: 0.003583 seconds
+KEM FrodoKEM-640-SHAKE -- After encapsulation Virtual Memory usage (VmSize): 9884 kB
+ Resident Set Size (RSS): 5888 kB
+[KEM FrodoKEM-640-SHAKE -- Decapsulation] Execution time: 0.003549 seconds
+KEM FrodoKEM-640-SHAKE -- After decapsulation Virtual Memory usage (VmSize): 9884 kB
+ Resident Set Size (RSS): 5888 kB
+Shared secrets match.
+[KEM FrodoKEM-640-SHAKE -- AES encryption] Execution time: 0.000005 seconds
+KEM FrodoKEM-640-SHAKE -- After AES encryption Virtual Memory usage (VmSize): 9884 kB
+ Resident Set Size (RSS): 5888 kB
+[KEM FrodoKEM-640-SHAKE -- AES decryption] Execution time: 0.000006 seconds
+KEM FrodoKEM-640-SHAKE -- After AES decryption Virtual Memory usage (VmSize): 9884 kB
+ Resident Set Size (RSS): 5888 kB
+Decrypted text matches the original plaintext.
+KEM FrodoKEM-640-SHAKE -- After all operations Virtual Memory usage (VmSize): 9884 kB
+ Resident Set Size (RSS): 5888 kB
+-------------------------------------
+Medium message
+KEM FrodoKEM-640-SHAKE -- Before any operations Virtual Memory usage (VmSize): 9884 kB
+ Resident Set Size (RSS): 5888 kB
+[KEM FrodoKEM-640-SHAKE -- Key generation] Execution time: 0.003321 seconds
+KEM FrodoKEM-640-SHAKE -- After key generation Virtual Memory usage (VmSize): 9884 kB
+ Resident Set Size (RSS): 5888 kB
+[KEM FrodoKEM-640-SHAKE -- Encapsulation] Execution time: 0.003580 seconds
+KEM FrodoKEM-640-SHAKE -- After encapsulation Virtual Memory usage (VmSize): 9884 kB
+ Resident Set Size (RSS): 5888 kB
+[KEM FrodoKEM-640-SHAKE -- Decapsulation] Execution time: 0.003508 seconds
+KEM FrodoKEM-640-SHAKE -- After decapsulation Virtual Memory usage (VmSize): 9884 kB
+ Resident Set Size (RSS): 5888 kB
+Shared secrets match.
+[KEM FrodoKEM-640-SHAKE -- AES encryption] Execution time: 0.000006 seconds
+KEM FrodoKEM-640-SHAKE -- After AES encryption Virtual Memory usage (VmSize): 9884 kB
+ Resident Set Size (RSS): 5888 kB
+[KEM FrodoKEM-640-SHAKE -- AES decryption] Execution time: 0.000005 seconds
+KEM FrodoKEM-640-SHAKE -- After AES decryption Virtual Memory usage (VmSize): 9884 kB
+ Resident Set Size (RSS): 5888 kB
+Decrypted text matches the original plaintext.
+KEM FrodoKEM-640-SHAKE -- After all operations Virtual Memory usage (VmSize): 9884 kB
+ Resident Set Size (RSS): 5888 kB
+-------------------------------------
+Long message
+KEM FrodoKEM-640-SHAKE -- Before any operations Virtual Memory usage (VmSize): 9884 kB
+ Resident Set Size (RSS): 5888 kB
+[KEM FrodoKEM-640-SHAKE -- Key generation] Execution time: 0.003293 seconds
+KEM FrodoKEM-640-SHAKE -- After key generation Virtual Memory usage (VmSize): 9884 kB
+ Resident Set Size (RSS): 5888 kB
+[KEM FrodoKEM-640-SHAKE -- Encapsulation] Execution time: 0.003593 seconds
+KEM FrodoKEM-640-SHAKE -- After encapsulation Virtual Memory usage (VmSize): 9884 kB
+ Resident Set Size (RSS): 5888 kB
+[KEM FrodoKEM-640-SHAKE -- Decapsulation] Execution time: 0.003501 seconds
+KEM FrodoKEM-640-SHAKE -- After decapsulation Virtual Memory usage (VmSize): 9884 kB
+ Resident Set Size (RSS): 5888 kB
+Shared secrets match.
+[KEM FrodoKEM-640-SHAKE -- AES encryption] Execution time: 0.000006 seconds
+KEM FrodoKEM-640-SHAKE -- After AES encryption Virtual Memory usage (VmSize): 9884 kB
+ Resident Set Size (RSS): 5888 kB
+[KEM FrodoKEM-640-SHAKE -- AES decryption] Execution time: 0.000006 seconds
+KEM FrodoKEM-640-SHAKE -- After AES decryption Virtual Memory usage (VmSize): 9884 kB
+ Resident Set Size (RSS): 5888 kB
+Decrypted text matches the original plaintext.
+KEM FrodoKEM-640-SHAKE -- After all operations Virtual Memory usage (VmSize): 9884 kB
+ Resident Set Size (RSS): 5888 kB
+-------------------------------------
+Short message
+KEM FrodoKEM-976-AES -- Before any operations Virtual Memory usage (VmSize): 9884 kB
+ Resident Set Size (RSS): 5888 kB
+[KEM FrodoKEM-976-AES -- Key generation] Execution time: 0.001755 seconds
+KEM FrodoKEM-976-AES -- After key generation Virtual Memory usage (VmSize): 10016 kB
+ Resident Set Size (RSS): 5888 kB
+[KEM FrodoKEM-976-AES -- Encapsulation] Execution time: 0.002664 seconds
+KEM FrodoKEM-976-AES -- After encapsulation Virtual Memory usage (VmSize): 10016 kB
+ Resident Set Size (RSS): 6016 kB
+[KEM FrodoKEM-976-AES -- Decapsulation] Execution time: 0.002484 seconds
+KEM FrodoKEM-976-AES -- After decapsulation Virtual Memory usage (VmSize): 10044 kB
+ Resident Set Size (RSS): 6016 kB
+Shared secrets match.
+[KEM FrodoKEM-976-AES -- AES encryption] Execution time: 0.000005 seconds
+KEM FrodoKEM-976-AES -- After AES encryption Virtual Memory usage (VmSize): 10044 kB
+ Resident Set Size (RSS): 6016 kB
+[KEM FrodoKEM-976-AES -- AES decryption] Execution time: 0.000005 seconds
+KEM FrodoKEM-976-AES -- After AES decryption Virtual Memory usage (VmSize): 10044 kB
+ Resident Set Size (RSS): 6016 kB
+Decrypted text matches the original plaintext.
+KEM FrodoKEM-976-AES -- After all operations Virtual Memory usage (VmSize): 10044 kB
+ Resident Set Size (RSS): 6016 kB
+-------------------------------------
+Medium message
+KEM FrodoKEM-976-AES -- Before any operations Virtual Memory usage (VmSize): 10012 kB
+ Resident Set Size (RSS): 6016 kB
+[KEM FrodoKEM-976-AES -- Key generation] Execution time: 0.001751 seconds
+KEM FrodoKEM-976-AES -- After key generation Virtual Memory usage (VmSize): 10012 kB
+ Resident Set Size (RSS): 6016 kB
+[KEM FrodoKEM-976-AES -- Encapsulation] Execution time: 0.002624 seconds
+KEM FrodoKEM-976-AES -- After encapsulation Virtual Memory usage (VmSize): 10012 kB
+ Resident Set Size (RSS): 6016 kB
+[KEM FrodoKEM-976-AES -- Decapsulation] Execution time: 0.002467 seconds
+KEM FrodoKEM-976-AES -- After decapsulation Virtual Memory usage (VmSize): 10012 kB
+ Resident Set Size (RSS): 6016 kB
+Shared secrets match.
+[KEM FrodoKEM-976-AES -- AES encryption] Execution time: 0.000006 seconds
+KEM FrodoKEM-976-AES -- After AES encryption Virtual Memory usage (VmSize): 10012 kB
+ Resident Set Size (RSS): 6016 kB
+[KEM FrodoKEM-976-AES -- AES decryption] Execution time: 0.000005 seconds
+KEM FrodoKEM-976-AES -- After AES decryption Virtual Memory usage (VmSize): 10012 kB
+ Resident Set Size (RSS): 6016 kB
+Decrypted text matches the original plaintext.
+KEM FrodoKEM-976-AES -- After all operations Virtual Memory usage (VmSize): 10012 kB
+ Resident Set Size (RSS): 6016 kB
+-------------------------------------
+Long message
+KEM FrodoKEM-976-AES -- Before any operations Virtual Memory usage (VmSize): 10012 kB
+ Resident Set Size (RSS): 6016 kB
+[KEM FrodoKEM-976-AES -- Key generation] Execution time: 0.001749 seconds
+KEM FrodoKEM-976-AES -- After key generation Virtual Memory usage (VmSize): 10012 kB
+ Resident Set Size (RSS): 6016 kB
+[KEM FrodoKEM-976-AES -- Encapsulation] Execution time: 0.002615 seconds
+KEM FrodoKEM-976-AES -- After encapsulation Virtual Memory usage (VmSize): 10012 kB
+ Resident Set Size (RSS): 6016 kB
+[KEM FrodoKEM-976-AES -- Decapsulation] Execution time: 0.002460 seconds
+KEM FrodoKEM-976-AES -- After decapsulation Virtual Memory usage (VmSize): 10012 kB
+ Resident Set Size (RSS): 6016 kB
+Shared secrets match.
+[KEM FrodoKEM-976-AES -- AES encryption] Execution time: 0.000006 seconds
+KEM FrodoKEM-976-AES -- After AES encryption Virtual Memory usage (VmSize): 10012 kB
+ Resident Set Size (RSS): 6016 kB
+[KEM FrodoKEM-976-AES -- AES decryption] Execution time: 0.000005 seconds
+KEM FrodoKEM-976-AES -- After AES decryption Virtual Memory usage (VmSize): 10012 kB
+ Resident Set Size (RSS): 6016 kB
+Decrypted text matches the original plaintext.
+KEM FrodoKEM-976-AES -- After all operations Virtual Memory usage (VmSize): 10012 kB
+ Resident Set Size (RSS): 6016 kB
+-------------------------------------
+Short message
+KEM FrodoKEM-976-SHAKE -- Before any operations Virtual Memory usage (VmSize): 10012 kB
+ Resident Set Size (RSS): 6016 kB
+[KEM FrodoKEM-976-SHAKE -- Key generation] Execution time: 0.007179 seconds
+KEM FrodoKEM-976-SHAKE -- After key generation Virtual Memory usage (VmSize): 10012 kB
+ Resident Set Size (RSS): 6144 kB
+[KEM FrodoKEM-976-SHAKE -- Encapsulation] Execution time: 0.007624 seconds
+KEM FrodoKEM-976-SHAKE -- After encapsulation Virtual Memory usage (VmSize): 10012 kB
+ Resident Set Size (RSS): 6144 kB
+[KEM FrodoKEM-976-SHAKE -- Decapsulation] Execution time: 0.007461 seconds
+KEM FrodoKEM-976-SHAKE -- After decapsulation Virtual Memory usage (VmSize): 10012 kB
+ Resident Set Size (RSS): 6144 kB
+Shared secrets match.
+[KEM FrodoKEM-976-SHAKE -- AES encryption] Execution time: 0.000009 seconds
+KEM FrodoKEM-976-SHAKE -- After AES encryption Virtual Memory usage (VmSize): 10012 kB
+ Resident Set Size (RSS): 6144 kB
+[KEM FrodoKEM-976-SHAKE -- AES decryption] Execution time: 0.000005 seconds
+KEM FrodoKEM-976-SHAKE -- After AES decryption Virtual Memory usage (VmSize): 10012 kB
+ Resident Set Size (RSS): 6144 kB
+Decrypted text matches the original plaintext.
+KEM FrodoKEM-976-SHAKE -- After all operations Virtual Memory usage (VmSize): 10012 kB
+ Resident Set Size (RSS): 6144 kB
+-------------------------------------
+Medium message
+KEM FrodoKEM-976-SHAKE -- Before any operations Virtual Memory usage (VmSize): 10012 kB
+ Resident Set Size (RSS): 6144 kB
+[KEM FrodoKEM-976-SHAKE -- Key generation] Execution time: 0.007118 seconds
+KEM FrodoKEM-976-SHAKE -- After key generation Virtual Memory usage (VmSize): 10012 kB
+ Resident Set Size (RSS): 6144 kB
+[KEM FrodoKEM-976-SHAKE -- Encapsulation] Execution time: 0.007575 seconds
+KEM FrodoKEM-976-SHAKE -- After encapsulation Virtual Memory usage (VmSize): 10012 kB
+ Resident Set Size (RSS): 6144 kB
+[KEM FrodoKEM-976-SHAKE -- Decapsulation] Execution time: 0.007457 seconds
+KEM FrodoKEM-976-SHAKE -- After decapsulation Virtual Memory usage (VmSize): 10012 kB
+ Resident Set Size (RSS): 6144 kB
+Shared secrets match.
+[KEM FrodoKEM-976-SHAKE -- AES encryption] Execution time: 0.000010 seconds
+KEM FrodoKEM-976-SHAKE -- After AES encryption Virtual Memory usage (VmSize): 10012 kB
+ Resident Set Size (RSS): 6144 kB
+[KEM FrodoKEM-976-SHAKE -- AES decryption] Execution time: 0.000006 seconds
+KEM FrodoKEM-976-SHAKE -- After AES decryption Virtual Memory usage (VmSize): 10012 kB
+ Resident Set Size (RSS): 6144 kB
+Decrypted text matches the original plaintext.
+KEM FrodoKEM-976-SHAKE -- After all operations Virtual Memory usage (VmSize): 10012 kB
+ Resident Set Size (RSS): 6144 kB
+-------------------------------------
+Long message
+KEM FrodoKEM-976-SHAKE -- Before any operations Virtual Memory usage (VmSize): 10012 kB
+ Resident Set Size (RSS): 6144 kB
+[KEM FrodoKEM-976-SHAKE -- Key generation] Execution time: 0.007113 seconds
+KEM FrodoKEM-976-SHAKE -- After key generation Virtual Memory usage (VmSize): 10012 kB
+ Resident Set Size (RSS): 6144 kB
+[KEM FrodoKEM-976-SHAKE -- Encapsulation] Execution time: 0.007569 seconds
+KEM FrodoKEM-976-SHAKE -- After encapsulation Virtual Memory usage (VmSize): 10012 kB
+ Resident Set Size (RSS): 6144 kB
+[KEM FrodoKEM-976-SHAKE -- Decapsulation] Execution time: 0.007469 seconds
+KEM FrodoKEM-976-SHAKE -- After decapsulation Virtual Memory usage (VmSize): 10012 kB
+ Resident Set Size (RSS): 6144 kB
+Shared secrets match.
+[KEM FrodoKEM-976-SHAKE -- AES encryption] Execution time: 0.000009 seconds
+KEM FrodoKEM-976-SHAKE -- After AES encryption Virtual Memory usage (VmSize): 10012 kB
+ Resident Set Size (RSS): 6144 kB
+[KEM FrodoKEM-976-SHAKE -- AES decryption] Execution time: 0.000007 seconds
+KEM FrodoKEM-976-SHAKE -- After AES decryption Virtual Memory usage (VmSize): 10012 kB
+ Resident Set Size (RSS): 6144 kB
+Decrypted text matches the original plaintext.
+KEM FrodoKEM-976-SHAKE -- After all operations Virtual Memory usage (VmSize): 10012 kB
+ Resident Set Size (RSS): 6144 kB
+-------------------------------------
+Short message
+KEM FrodoKEM-1344-AES -- Before any operations Virtual Memory usage (VmSize): 10012 kB
+ Resident Set Size (RSS): 6144 kB
+[KEM FrodoKEM-1344-AES -- Key generation] Execution time: 0.003045 seconds
+KEM FrodoKEM-1344-AES -- After key generation Virtual Memory usage (VmSize): 10012 kB
+ Resident Set Size (RSS): 6144 kB
+[KEM FrodoKEM-1344-AES -- Encapsulation] Execution time: 0.004510 seconds
+KEM FrodoKEM-1344-AES -- After encapsulation Virtual Memory usage (VmSize): 10028 kB
+ Resident Set Size (RSS): 6144 kB
+[KEM FrodoKEM-1344-AES -- Decapsulation] Execution time: 0.004304 seconds
+KEM FrodoKEM-1344-AES -- After decapsulation Virtual Memory usage (VmSize): 10068 kB
+ Resident Set Size (RSS): 6144 kB
+Shared secrets match.
+[KEM FrodoKEM-1344-AES -- AES encryption] Execution time: 0.000009 seconds
+KEM FrodoKEM-1344-AES -- After AES encryption Virtual Memory usage (VmSize): 10068 kB
+ Resident Set Size (RSS): 6144 kB
+[KEM FrodoKEM-1344-AES -- AES decryption] Execution time: 0.000006 seconds
+KEM FrodoKEM-1344-AES -- After AES decryption Virtual Memory usage (VmSize): 10068 kB
+ Resident Set Size (RSS): 6144 kB
+Decrypted text matches the original plaintext.
+KEM FrodoKEM-1344-AES -- After all operations Virtual Memory usage (VmSize): 10068 kB
+ Resident Set Size (RSS): 6144 kB
+-------------------------------------
+Medium message
+KEM FrodoKEM-1344-AES -- Before any operations Virtual Memory usage (VmSize): 10068 kB
+ Resident Set Size (RSS): 6144 kB
+[KEM FrodoKEM-1344-AES -- Key generation] Execution time: 0.003026 seconds
+KEM FrodoKEM-1344-AES -- After key generation Virtual Memory usage (VmSize): 10068 kB
+ Resident Set Size (RSS): 6144 kB
+[KEM FrodoKEM-1344-AES -- Encapsulation] Execution time: 0.004498 seconds
+KEM FrodoKEM-1344-AES -- After encapsulation Virtual Memory usage (VmSize): 10068 kB
+ Resident Set Size (RSS): 6144 kB
+[KEM FrodoKEM-1344-AES -- Decapsulation] Execution time: 0.004247 seconds
+KEM FrodoKEM-1344-AES -- After decapsulation Virtual Memory usage (VmSize): 10068 kB
+ Resident Set Size (RSS): 6144 kB
+Shared secrets match.
+[KEM FrodoKEM-1344-AES -- AES encryption] Execution time: 0.000008 seconds
+KEM FrodoKEM-1344-AES -- After AES encryption Virtual Memory usage (VmSize): 10068 kB
+ Resident Set Size (RSS): 6144 kB
+[KEM FrodoKEM-1344-AES -- AES decryption] Execution time: 0.000005 seconds
+KEM FrodoKEM-1344-AES -- After AES decryption Virtual Memory usage (VmSize): 10068 kB
+ Resident Set Size (RSS): 6144 kB
+Decrypted text matches the original plaintext.
+KEM FrodoKEM-1344-AES -- After all operations Virtual Memory usage (VmSize): 10068 kB
+ Resident Set Size (RSS): 6144 kB
+-------------------------------------
+Long message
+KEM FrodoKEM-1344-AES -- Before any operations Virtual Memory usage (VmSize): 10068 kB
+ Resident Set Size (RSS): 6144 kB
+[KEM FrodoKEM-1344-AES -- Key generation] Execution time: 0.003047 seconds
+KEM FrodoKEM-1344-AES -- After key generation Virtual Memory usage (VmSize): 10068 kB
+ Resident Set Size (RSS): 6144 kB
+[KEM FrodoKEM-1344-AES -- Encapsulation] Execution time: 0.004487 seconds
+KEM FrodoKEM-1344-AES -- After encapsulation Virtual Memory usage (VmSize): 10068 kB
+ Resident Set Size (RSS): 6144 kB
+[KEM FrodoKEM-1344-AES -- Decapsulation] Execution time: 0.004242 seconds
+KEM FrodoKEM-1344-AES -- After decapsulation Virtual Memory usage (VmSize): 10068 kB
+ Resident Set Size (RSS): 6144 kB
+Shared secrets match.
+[KEM FrodoKEM-1344-AES -- AES encryption] Execution time: 0.000008 seconds
+KEM FrodoKEM-1344-AES -- After AES encryption Virtual Memory usage (VmSize): 10068 kB
+ Resident Set Size (RSS): 6144 kB
+[KEM FrodoKEM-1344-AES -- AES decryption] Execution time: 0.000006 seconds
+KEM FrodoKEM-1344-AES -- After AES decryption Virtual Memory usage (VmSize): 10068 kB
+ Resident Set Size (RSS): 6144 kB
+Decrypted text matches the original plaintext.
+KEM FrodoKEM-1344-AES -- After all operations Virtual Memory usage (VmSize): 10068 kB
+ Resident Set Size (RSS): 6144 kB
+-------------------------------------
+Short message
+KEM FrodoKEM-1344-SHAKE -- Before any operations Virtual Memory usage (VmSize): 10068 kB
+ Resident Set Size (RSS): 6144 kB
+[KEM FrodoKEM-1344-SHAKE -- Key generation] Execution time: 0.012761 seconds
+KEM FrodoKEM-1344-SHAKE -- After key generation Virtual Memory usage (VmSize): 10068 kB
+ Resident Set Size (RSS): 6144 kB
+[KEM FrodoKEM-1344-SHAKE -- Encapsulation] Execution time: 0.013502 seconds
+KEM FrodoKEM-1344-SHAKE -- After encapsulation Virtual Memory usage (VmSize): 10068 kB
+ Resident Set Size (RSS): 6144 kB
+[KEM FrodoKEM-1344-SHAKE -- Decapsulation] Execution time: 0.013277 seconds
+KEM FrodoKEM-1344-SHAKE -- After decapsulation Virtual Memory usage (VmSize): 10068 kB
+ Resident Set Size (RSS): 6144 kB
+Shared secrets match.
+[KEM FrodoKEM-1344-SHAKE -- AES encryption] Execution time: 0.000009 seconds
+KEM FrodoKEM-1344-SHAKE -- After AES encryption Virtual Memory usage (VmSize): 10068 kB
+ Resident Set Size (RSS): 6144 kB
+[KEM FrodoKEM-1344-SHAKE -- AES decryption] Execution time: 0.000005 seconds
+KEM FrodoKEM-1344-SHAKE -- After AES decryption Virtual Memory usage (VmSize): 10068 kB
+ Resident Set Size (RSS): 6144 kB
+Decrypted text matches the original plaintext.
+KEM FrodoKEM-1344-SHAKE -- After all operations Virtual Memory usage (VmSize): 10068 kB
+ Resident Set Size (RSS): 6144 kB
+-------------------------------------
+Medium message
+KEM FrodoKEM-1344-SHAKE -- Before any operations Virtual Memory usage (VmSize): 10068 kB
+ Resident Set Size (RSS): 6144 kB
+[KEM FrodoKEM-1344-SHAKE -- Key generation] Execution time: 0.012825 seconds
+KEM FrodoKEM-1344-SHAKE -- After key generation Virtual Memory usage (VmSize): 10068 kB
+ Resident Set Size (RSS): 6144 kB
+[KEM FrodoKEM-1344-SHAKE -- Encapsulation] Execution time: 0.013554 seconds
+KEM FrodoKEM-1344-SHAKE -- After encapsulation Virtual Memory usage (VmSize): 10068 kB
+ Resident Set Size (RSS): 6144 kB
+[KEM FrodoKEM-1344-SHAKE -- Decapsulation] Execution time: 0.013323 seconds
+KEM FrodoKEM-1344-SHAKE -- After decapsulation Virtual Memory usage (VmSize): 10068 kB
+ Resident Set Size (RSS): 6144 kB
+Shared secrets match.
+[KEM FrodoKEM-1344-SHAKE -- AES encryption] Execution time: 0.000012 seconds
+KEM FrodoKEM-1344-SHAKE -- After AES encryption Virtual Memory usage (VmSize): 10068 kB
+ Resident Set Size (RSS): 6144 kB
+[KEM FrodoKEM-1344-SHAKE -- AES decryption] Execution time: 0.000007 seconds
+KEM FrodoKEM-1344-SHAKE -- After AES decryption Virtual Memory usage (VmSize): 10068 kB
+ Resident Set Size (RSS): 6144 kB
+Decrypted text matches the original plaintext.
+KEM FrodoKEM-1344-SHAKE -- After all operations Virtual Memory usage (VmSize): 10068 kB
+ Resident Set Size (RSS): 6144 kB
+-------------------------------------
+Long message
+KEM FrodoKEM-1344-SHAKE -- Before any operations Virtual Memory usage (VmSize): 10068 kB
+ Resident Set Size (RSS): 6144 kB
+[KEM FrodoKEM-1344-SHAKE -- Key generation] Execution time: 0.012807 seconds
+KEM FrodoKEM-1344-SHAKE -- After key generation Virtual Memory usage (VmSize): 10068 kB
+ Resident Set Size (RSS): 6144 kB
+[KEM FrodoKEM-1344-SHAKE -- Encapsulation] Execution time: 0.013471 seconds
+KEM FrodoKEM-1344-SHAKE -- After encapsulation Virtual Memory usage (VmSize): 10068 kB
+ Resident Set Size (RSS): 6144 kB
+[KEM FrodoKEM-1344-SHAKE -- Decapsulation] Execution time: 0.013334 seconds
+KEM FrodoKEM-1344-SHAKE -- After decapsulation Virtual Memory usage (VmSize): 10068 kB
+ Resident Set Size (RSS): 6144 kB
+Shared secrets match.
+[KEM FrodoKEM-1344-SHAKE -- AES encryption] Execution time: 0.000011 seconds
+KEM FrodoKEM-1344-SHAKE -- After AES encryption Virtual Memory usage (VmSize): 10068 kB
+ Resident Set Size (RSS): 6144 kB
+[KEM FrodoKEM-1344-SHAKE -- AES decryption] Execution time: 0.000006 seconds
+KEM FrodoKEM-1344-SHAKE -- After AES decryption Virtual Memory usage (VmSize): 10068 kB
+ Resident Set Size (RSS): 6144 kB
+Decrypted text matches the original plaintext.
+KEM FrodoKEM-1344-SHAKE -- After all operations Virtual Memory usage (VmSize): 10068 kB
+ Resident Set Size (RSS): 6144 kB
+-------------------------------------
+
+4th time:
+Short message
+KEM FrodoKEM-640-AES -- Before any operations Virtual Memory usage (VmSize): 9336 kB
+ Resident Set Size (RSS): 2944 kB
+[KEM FrodoKEM-640-AES -- Key generation] Execution time: 0.002308 seconds
+KEM FrodoKEM-640-AES -- After key generation Virtual Memory usage (VmSize): 9884 kB
+ Resident Set Size (RSS): 5760 kB
+[KEM FrodoKEM-640-AES -- Encapsulation] Execution time: 0.000606 seconds
+KEM FrodoKEM-640-AES -- After encapsulation Virtual Memory usage (VmSize): 9884 kB
+ Resident Set Size (RSS): 5888 kB
+[KEM FrodoKEM-640-AES -- Decapsulation] Execution time: 0.000566 seconds
+KEM FrodoKEM-640-AES -- After decapsulation Virtual Memory usage (VmSize): 9884 kB
+ Resident Set Size (RSS): 5888 kB
+Shared secrets match.
+[KEM FrodoKEM-640-AES -- AES encryption] Execution time: 0.000006 seconds
+KEM FrodoKEM-640-AES -- After AES encryption Virtual Memory usage (VmSize): 9884 kB
+ Resident Set Size (RSS): 5888 kB
+[KEM FrodoKEM-640-AES -- AES decryption] Execution time: 0.000003 seconds
+KEM FrodoKEM-640-AES -- After AES decryption Virtual Memory usage (VmSize): 9884 kB
+ Resident Set Size (RSS): 5888 kB
+Decrypted text matches the original plaintext.
+KEM FrodoKEM-640-AES -- After all operations Virtual Memory usage (VmSize): 9884 kB
+ Resident Set Size (RSS): 5888 kB
+-------------------------------------
+Medium message
+KEM FrodoKEM-640-AES -- Before any operations Virtual Memory usage (VmSize): 9884 kB
+ Resident Set Size (RSS): 5888 kB
+[KEM FrodoKEM-640-AES -- Key generation] Execution time: 0.000415 seconds
+KEM FrodoKEM-640-AES -- After key generation Virtual Memory usage (VmSize): 9884 kB
+ Resident Set Size (RSS): 5888 kB
+[KEM FrodoKEM-640-AES -- Encapsulation] Execution time: 0.000599 seconds
+KEM FrodoKEM-640-AES -- After encapsulation Virtual Memory usage (VmSize): 9884 kB
+ Resident Set Size (RSS): 5888 kB
+[KEM FrodoKEM-640-AES -- Decapsulation] Execution time: 0.000563 seconds
+KEM FrodoKEM-640-AES -- After decapsulation Virtual Memory usage (VmSize): 9884 kB
+ Resident Set Size (RSS): 5888 kB
+Shared secrets match.
+[KEM FrodoKEM-640-AES -- AES encryption] Execution time: 0.000002 seconds
+KEM FrodoKEM-640-AES -- After AES encryption Virtual Memory usage (VmSize): 9884 kB
+ Resident Set Size (RSS): 5888 kB
+[KEM FrodoKEM-640-AES -- AES decryption] Execution time: 0.000002 seconds
+KEM FrodoKEM-640-AES -- After AES decryption Virtual Memory usage (VmSize): 9884 kB
+ Resident Set Size (RSS): 5888 kB
+Decrypted text matches the original plaintext.
+KEM FrodoKEM-640-AES -- After all operations Virtual Memory usage (VmSize): 9884 kB
+ Resident Set Size (RSS): 5888 kB
+-------------------------------------
+Long message
+KEM FrodoKEM-640-AES -- Before any operations Virtual Memory usage (VmSize): 9884 kB
+ Resident Set Size (RSS): 5888 kB
+[KEM FrodoKEM-640-AES -- Key generation] Execution time: 0.000414 seconds
+KEM FrodoKEM-640-AES -- After key generation Virtual Memory usage (VmSize): 9884 kB
+ Resident Set Size (RSS): 5888 kB
+[KEM FrodoKEM-640-AES -- Encapsulation] Execution time: 0.000625 seconds
+KEM FrodoKEM-640-AES -- After encapsulation Virtual Memory usage (VmSize): 9884 kB
+ Resident Set Size (RSS): 5888 kB
+[KEM FrodoKEM-640-AES -- Decapsulation] Execution time: 0.000557 seconds
+KEM FrodoKEM-640-AES -- After decapsulation Virtual Memory usage (VmSize): 9884 kB
+ Resident Set Size (RSS): 5888 kB
+Shared secrets match.
+[KEM FrodoKEM-640-AES -- AES encryption] Execution time: 0.000002 seconds
+KEM FrodoKEM-640-AES -- After AES encryption Virtual Memory usage (VmSize): 9884 kB
+ Resident Set Size (RSS): 5888 kB
+[KEM FrodoKEM-640-AES -- AES decryption] Execution time: 0.000001 seconds
+KEM FrodoKEM-640-AES -- After AES decryption Virtual Memory usage (VmSize): 9884 kB
+ Resident Set Size (RSS): 5888 kB
+Decrypted text matches the original plaintext.
+KEM FrodoKEM-640-AES -- After all operations Virtual Memory usage (VmSize): 9884 kB
+ Resident Set Size (RSS): 5888 kB
+-------------------------------------
+Short message
+KEM FrodoKEM-640-SHAKE -- Before any operations Virtual Memory usage (VmSize): 9884 kB
+ Resident Set Size (RSS): 5888 kB
+[KEM FrodoKEM-640-SHAKE -- Key generation] Execution time: 0.001269 seconds
+KEM FrodoKEM-640-SHAKE -- After key generation Virtual Memory usage (VmSize): 9884 kB
+ Resident Set Size (RSS): 6016 kB
+[KEM FrodoKEM-640-SHAKE -- Encapsulation] Execution time: 0.001354 seconds
+KEM FrodoKEM-640-SHAKE -- After encapsulation Virtual Memory usage (VmSize): 9884 kB
+ Resident Set Size (RSS): 6016 kB
+[KEM FrodoKEM-640-SHAKE -- Decapsulation] Execution time: 0.001318 seconds
+KEM FrodoKEM-640-SHAKE -- After decapsulation Virtual Memory usage (VmSize): 9884 kB
+ Resident Set Size (RSS): 6016 kB
+Shared secrets match.
+[KEM FrodoKEM-640-SHAKE -- AES encryption] Execution time: 0.000001 seconds
+KEM FrodoKEM-640-SHAKE -- After AES encryption Virtual Memory usage (VmSize): 9884 kB
+ Resident Set Size (RSS): 6016 kB
+[KEM FrodoKEM-640-SHAKE -- AES decryption] Execution time: 0.000002 seconds
+KEM FrodoKEM-640-SHAKE -- After AES decryption Virtual Memory usage (VmSize): 9884 kB
+ Resident Set Size (RSS): 6016 kB
+Decrypted text matches the original plaintext.
+KEM FrodoKEM-640-SHAKE -- After all operations Virtual Memory usage (VmSize): 9884 kB
+ Resident Set Size (RSS): 6016 kB
+-------------------------------------
+Medium message
+KEM FrodoKEM-640-SHAKE -- Before any operations Virtual Memory usage (VmSize): 9884 kB
+ Resident Set Size (RSS): 6016 kB
+[KEM FrodoKEM-640-SHAKE -- Key generation] Execution time: 0.001235 seconds
+KEM FrodoKEM-640-SHAKE -- After key generation Virtual Memory usage (VmSize): 9884 kB
+ Resident Set Size (RSS): 6016 kB
+[KEM FrodoKEM-640-SHAKE -- Encapsulation] Execution time: 0.001363 seconds
+KEM FrodoKEM-640-SHAKE -- After encapsulation Virtual Memory usage (VmSize): 9884 kB
+ Resident Set Size (RSS): 6016 kB
+[KEM FrodoKEM-640-SHAKE -- Decapsulation] Execution time: 0.001317 seconds
+KEM FrodoKEM-640-SHAKE -- After decapsulation Virtual Memory usage (VmSize): 9884 kB
+ Resident Set Size (RSS): 6016 kB
+Shared secrets match.
+[KEM FrodoKEM-640-SHAKE -- AES encryption] Execution time: 0.000002 seconds
+KEM FrodoKEM-640-SHAKE -- After AES encryption Virtual Memory usage (VmSize): 9884 kB
+ Resident Set Size (RSS): 6016 kB
+[KEM FrodoKEM-640-SHAKE -- AES decryption] Execution time: 0.000002 seconds
+KEM FrodoKEM-640-SHAKE -- After AES decryption Virtual Memory usage (VmSize): 9884 kB
+ Resident Set Size (RSS): 6016 kB
+Decrypted text matches the original plaintext.
+KEM FrodoKEM-640-SHAKE -- After all operations Virtual Memory usage (VmSize): 9884 kB
+ Resident Set Size (RSS): 6016 kB
+-------------------------------------
+Long message
+KEM FrodoKEM-640-SHAKE -- Before any operations Virtual Memory usage (VmSize): 9884 kB
+ Resident Set Size (RSS): 6016 kB
+[KEM FrodoKEM-640-SHAKE -- Key generation] Execution time: 0.001230 seconds
+KEM FrodoKEM-640-SHAKE -- After key generation Virtual Memory usage (VmSize): 9884 kB
+ Resident Set Size (RSS): 6016 kB
+[KEM FrodoKEM-640-SHAKE -- Encapsulation] Execution time: 0.001349 seconds
+KEM FrodoKEM-640-SHAKE -- After encapsulation Virtual Memory usage (VmSize): 9884 kB
+ Resident Set Size (RSS): 6016 kB
+[KEM FrodoKEM-640-SHAKE -- Decapsulation] Execution time: 0.001331 seconds
+KEM FrodoKEM-640-SHAKE -- After decapsulation Virtual Memory usage (VmSize): 9884 kB
+ Resident Set Size (RSS): 6016 kB
+Shared secrets match.
+[KEM FrodoKEM-640-SHAKE -- AES encryption] Execution time: 0.000002 seconds
+KEM FrodoKEM-640-SHAKE -- After AES encryption Virtual Memory usage (VmSize): 9884 kB
+ Resident Set Size (RSS): 6016 kB
+[KEM FrodoKEM-640-SHAKE -- AES decryption] Execution time: 0.000002 seconds
+KEM FrodoKEM-640-SHAKE -- After AES decryption Virtual Memory usage (VmSize): 9884 kB
+ Resident Set Size (RSS): 6016 kB
+Decrypted text matches the original plaintext.
+KEM FrodoKEM-640-SHAKE -- After all operations Virtual Memory usage (VmSize): 9884 kB
+ Resident Set Size (RSS): 6016 kB
+-------------------------------------
+Short message
+KEM FrodoKEM-976-AES -- Before any operations Virtual Memory usage (VmSize): 9884 kB
+ Resident Set Size (RSS): 6016 kB
+[KEM FrodoKEM-976-AES -- Key generation] Execution time: 0.000745 seconds
+KEM FrodoKEM-976-AES -- After key generation Virtual Memory usage (VmSize): 10016 kB
+ Resident Set Size (RSS): 6016 kB
+[KEM FrodoKEM-976-AES -- Encapsulation] Execution time: 0.001099 seconds
+KEM FrodoKEM-976-AES -- After encapsulation Virtual Memory usage (VmSize): 10020 kB
+ Resident Set Size (RSS): 6144 kB
+[KEM FrodoKEM-976-AES -- Decapsulation] Execution time: 0.001045 seconds
+KEM FrodoKEM-976-AES -- After decapsulation Virtual Memory usage (VmSize): 10048 kB
+ Resident Set Size (RSS): 6144 kB
+Shared secrets match.
+[KEM FrodoKEM-976-AES -- AES encryption] Execution time: 0.000002 seconds
+KEM FrodoKEM-976-AES -- After AES encryption Virtual Memory usage (VmSize): 10048 kB
+ Resident Set Size (RSS): 6144 kB
+[KEM FrodoKEM-976-AES -- AES decryption] Execution time: 0.000001 seconds
+KEM FrodoKEM-976-AES -- After AES decryption Virtual Memory usage (VmSize): 10048 kB
+ Resident Set Size (RSS): 6144 kB
+Decrypted text matches the original plaintext.
+KEM FrodoKEM-976-AES -- After all operations Virtual Memory usage (VmSize): 10048 kB
+ Resident Set Size (RSS): 6144 kB
+-------------------------------------
+Medium message
+KEM FrodoKEM-976-AES -- Before any operations Virtual Memory usage (VmSize): 10016 kB
+ Resident Set Size (RSS): 6144 kB
+[KEM FrodoKEM-976-AES -- Key generation] Execution time: 0.000746 seconds
+KEM FrodoKEM-976-AES -- After key generation Virtual Memory usage (VmSize): 10016 kB
+ Resident Set Size (RSS): 6144 kB
+[KEM FrodoKEM-976-AES -- Encapsulation] Execution time: 0.001083 seconds
+KEM FrodoKEM-976-AES -- After encapsulation Virtual Memory usage (VmSize): 10016 kB
+ Resident Set Size (RSS): 6144 kB
+[KEM FrodoKEM-976-AES -- Decapsulation] Execution time: 0.001041 seconds
+KEM FrodoKEM-976-AES -- After decapsulation Virtual Memory usage (VmSize): 10016 kB
+ Resident Set Size (RSS): 6144 kB
+Shared secrets match.
+[KEM FrodoKEM-976-AES -- AES encryption] Execution time: 0.000002 seconds
+KEM FrodoKEM-976-AES -- After AES encryption Virtual Memory usage (VmSize): 10016 kB
+ Resident Set Size (RSS): 6144 kB
+[KEM FrodoKEM-976-AES -- AES decryption] Execution time: 0.000002 seconds
+KEM FrodoKEM-976-AES -- After AES decryption Virtual Memory usage (VmSize): 10016 kB
+ Resident Set Size (RSS): 6144 kB
+Decrypted text matches the original plaintext.
+KEM FrodoKEM-976-AES -- After all operations Virtual Memory usage (VmSize): 10016 kB
+ Resident Set Size (RSS): 6144 kB
+-------------------------------------
+Long message
+KEM FrodoKEM-976-AES -- Before any operations Virtual Memory usage (VmSize): 10016 kB
+ Resident Set Size (RSS): 6144 kB
+[KEM FrodoKEM-976-AES -- Key generation] Execution time: 0.000751 seconds
+KEM FrodoKEM-976-AES -- After key generation Virtual Memory usage (VmSize): 10016 kB
+ Resident Set Size (RSS): 6144 kB
+[KEM FrodoKEM-976-AES -- Encapsulation] Execution time: 0.001079 seconds
+KEM FrodoKEM-976-AES -- After encapsulation Virtual Memory usage (VmSize): 10016 kB
+ Resident Set Size (RSS): 6144 kB
+[KEM FrodoKEM-976-AES -- Decapsulation] Execution time: 0.001021 seconds
+KEM FrodoKEM-976-AES -- After decapsulation Virtual Memory usage (VmSize): 10016 kB
+ Resident Set Size (RSS): 6144 kB
+Shared secrets match.
+[KEM FrodoKEM-976-AES -- AES encryption] Execution time: 0.000002 seconds
+KEM FrodoKEM-976-AES -- After AES encryption Virtual Memory usage (VmSize): 10016 kB
+ Resident Set Size (RSS): 6144 kB
+[KEM FrodoKEM-976-AES -- AES decryption] Execution time: 0.000002 seconds
+KEM FrodoKEM-976-AES -- After AES decryption Virtual Memory usage (VmSize): 10016 kB
+ Resident Set Size (RSS): 6144 kB
+Decrypted text matches the original plaintext.
+KEM FrodoKEM-976-AES -- After all operations Virtual Memory usage (VmSize): 10016 kB
+ Resident Set Size (RSS): 6144 kB
+-------------------------------------
+Short message
+KEM FrodoKEM-976-SHAKE -- Before any operations Virtual Memory usage (VmSize): 10016 kB
+ Resident Set Size (RSS): 6144 kB
+[KEM FrodoKEM-976-SHAKE -- Key generation] Execution time: 0.002613 seconds
+KEM FrodoKEM-976-SHAKE -- After key generation Virtual Memory usage (VmSize): 10016 kB
+ Resident Set Size (RSS): 6272 kB
+[KEM FrodoKEM-976-SHAKE -- Encapsulation] Execution time: 0.002790 seconds
+KEM FrodoKEM-976-SHAKE -- After encapsulation Virtual Memory usage (VmSize): 10016 kB
+ Resident Set Size (RSS): 6272 kB
+[KEM FrodoKEM-976-SHAKE -- Decapsulation] Execution time: 0.002734 seconds
+KEM FrodoKEM-976-SHAKE -- After decapsulation Virtual Memory usage (VmSize): 10016 kB
+ Resident Set Size (RSS): 6272 kB
+Shared secrets match.
+[KEM FrodoKEM-976-SHAKE -- AES encryption] Execution time: 0.000001 seconds
+KEM FrodoKEM-976-SHAKE -- After AES encryption Virtual Memory usage (VmSize): 10016 kB
+ Resident Set Size (RSS): 6272 kB
+[KEM FrodoKEM-976-SHAKE -- AES decryption] Execution time: 0.000001 seconds
+KEM FrodoKEM-976-SHAKE -- After AES decryption Virtual Memory usage (VmSize): 10016 kB
+ Resident Set Size (RSS): 6272 kB
+Decrypted text matches the original plaintext.
+KEM FrodoKEM-976-SHAKE -- After all operations Virtual Memory usage (VmSize): 10016 kB
+ Resident Set Size (RSS): 6272 kB
+-------------------------------------
+Medium message
+KEM FrodoKEM-976-SHAKE -- Before any operations Virtual Memory usage (VmSize): 10016 kB
+ Resident Set Size (RSS): 6272 kB
+[KEM FrodoKEM-976-SHAKE -- Key generation] Execution time: 0.002572 seconds
+KEM FrodoKEM-976-SHAKE -- After key generation Virtual Memory usage (VmSize): 10016 kB
+ Resident Set Size (RSS): 6272 kB
+[KEM FrodoKEM-976-SHAKE -- Encapsulation] Execution time: 0.002776 seconds
+KEM FrodoKEM-976-SHAKE -- After encapsulation Virtual Memory usage (VmSize): 10016 kB
+ Resident Set Size (RSS): 6272 kB
+[KEM FrodoKEM-976-SHAKE -- Decapsulation] Execution time: 0.002711 seconds
+KEM FrodoKEM-976-SHAKE -- After decapsulation Virtual Memory usage (VmSize): 10016 kB
+ Resident Set Size (RSS): 6272 kB
+Shared secrets match.
+[KEM FrodoKEM-976-SHAKE -- AES encryption] Execution time: 0.000002 seconds
+KEM FrodoKEM-976-SHAKE -- After AES encryption Virtual Memory usage (VmSize): 10016 kB
+ Resident Set Size (RSS): 6272 kB
+[KEM FrodoKEM-976-SHAKE -- AES decryption] Execution time: 0.000002 seconds
+KEM FrodoKEM-976-SHAKE -- After AES decryption Virtual Memory usage (VmSize): 10016 kB
+ Resident Set Size (RSS): 6272 kB
+Decrypted text matches the original plaintext.
+KEM FrodoKEM-976-SHAKE -- After all operations Virtual Memory usage (VmSize): 10016 kB
+ Resident Set Size (RSS): 6272 kB
+-------------------------------------
+Long message
+KEM FrodoKEM-976-SHAKE -- Before any operations Virtual Memory usage (VmSize): 10016 kB
+ Resident Set Size (RSS): 6272 kB
+[KEM FrodoKEM-976-SHAKE -- Key generation] Execution time: 0.002587 seconds
+KEM FrodoKEM-976-SHAKE -- After key generation Virtual Memory usage (VmSize): 10016 kB
+ Resident Set Size (RSS): 6272 kB
+[KEM FrodoKEM-976-SHAKE -- Encapsulation] Execution time: 0.002767 seconds
+KEM FrodoKEM-976-SHAKE -- After encapsulation Virtual Memory usage (VmSize): 10016 kB
+ Resident Set Size (RSS): 6272 kB
+[KEM FrodoKEM-976-SHAKE -- Decapsulation] Execution time: 0.002720 seconds
+KEM FrodoKEM-976-SHAKE -- After decapsulation Virtual Memory usage (VmSize): 10016 kB
+ Resident Set Size (RSS): 6272 kB
+Shared secrets match.
+[KEM FrodoKEM-976-SHAKE -- AES encryption] Execution time: 0.000002 seconds
+KEM FrodoKEM-976-SHAKE -- After AES encryption Virtual Memory usage (VmSize): 10016 kB
+ Resident Set Size (RSS): 6272 kB
+[KEM FrodoKEM-976-SHAKE -- AES decryption] Execution time: 0.000002 seconds
+KEM FrodoKEM-976-SHAKE -- After AES decryption Virtual Memory usage (VmSize): 10016 kB
+ Resident Set Size (RSS): 6272 kB
+Decrypted text matches the original plaintext.
+KEM FrodoKEM-976-SHAKE -- After all operations Virtual Memory usage (VmSize): 10016 kB
+ Resident Set Size (RSS): 6272 kB
+-------------------------------------
+Short message
+KEM FrodoKEM-1344-AES -- Before any operations Virtual Memory usage (VmSize): 10016 kB
+ Resident Set Size (RSS): 6272 kB
+[KEM FrodoKEM-1344-AES -- Key generation] Execution time: 0.001305 seconds
+KEM FrodoKEM-1344-AES -- After key generation Virtual Memory usage (VmSize): 10016 kB
+ Resident Set Size (RSS): 6272 kB
+[KEM FrodoKEM-1344-AES -- Encapsulation] Execution time: 0.001859 seconds
+KEM FrodoKEM-1344-AES -- After encapsulation Virtual Memory usage (VmSize): 10032 kB
+ Resident Set Size (RSS): 6272 kB
+[KEM FrodoKEM-1344-AES -- Decapsulation] Execution time: 0.001787 seconds
+KEM FrodoKEM-1344-AES -- After decapsulation Virtual Memory usage (VmSize): 10076 kB
+ Resident Set Size (RSS): 6272 kB
+Shared secrets match.
+[KEM FrodoKEM-1344-AES -- AES encryption] Execution time: 0.000002 seconds
+KEM FrodoKEM-1344-AES -- After AES encryption Virtual Memory usage (VmSize): 10076 kB
+ Resident Set Size (RSS): 6272 kB
+[KEM FrodoKEM-1344-AES -- AES decryption] Execution time: 0.000001 seconds
+KEM FrodoKEM-1344-AES -- After AES decryption Virtual Memory usage (VmSize): 10076 kB
+ Resident Set Size (RSS): 6272 kB
+Decrypted text matches the original plaintext.
+KEM FrodoKEM-1344-AES -- After all operations Virtual Memory usage (VmSize): 10076 kB
+ Resident Set Size (RSS): 6272 kB
+-------------------------------------
+Medium message
+KEM FrodoKEM-1344-AES -- Before any operations Virtual Memory usage (VmSize): 10076 kB
+ Resident Set Size (RSS): 6272 kB
+[KEM FrodoKEM-1344-AES -- Key generation] Execution time: 0.001332 seconds
+KEM FrodoKEM-1344-AES -- After key generation Virtual Memory usage (VmSize): 10076 kB
+ Resident Set Size (RSS): 6272 kB
+[KEM FrodoKEM-1344-AES -- Encapsulation] Execution time: 0.001832 seconds
+KEM FrodoKEM-1344-AES -- After encapsulation Virtual Memory usage (VmSize): 10076 kB
+ Resident Set Size (RSS): 6272 kB
+[KEM FrodoKEM-1344-AES -- Decapsulation] Execution time: 0.001763 seconds
+KEM FrodoKEM-1344-AES -- After decapsulation Virtual Memory usage (VmSize): 10076 kB
+ Resident Set Size (RSS): 6272 kB
+Shared secrets match.
+[KEM FrodoKEM-1344-AES -- AES encryption] Execution time: 0.000001 seconds
+KEM FrodoKEM-1344-AES -- After AES encryption Virtual Memory usage (VmSize): 10076 kB
+ Resident Set Size (RSS): 6272 kB
+[KEM FrodoKEM-1344-AES -- AES decryption] Execution time: 0.000001 seconds
+KEM FrodoKEM-1344-AES -- After AES decryption Virtual Memory usage (VmSize): 10076 kB
+ Resident Set Size (RSS): 6272 kB
+Decrypted text matches the original plaintext.
+KEM FrodoKEM-1344-AES -- After all operations Virtual Memory usage (VmSize): 10076 kB
+ Resident Set Size (RSS): 6272 kB
+-------------------------------------
+Long message
+KEM FrodoKEM-1344-AES -- Before any operations Virtual Memory usage (VmSize): 10076 kB
+ Resident Set Size (RSS): 6272 kB
+[KEM FrodoKEM-1344-AES -- Key generation] Execution time: 0.001325 seconds
+KEM FrodoKEM-1344-AES -- After key generation Virtual Memory usage (VmSize): 10076 kB
+ Resident Set Size (RSS): 6272 kB
+[KEM FrodoKEM-1344-AES -- Encapsulation] Execution time: 0.001843 seconds
+KEM FrodoKEM-1344-AES -- After encapsulation Virtual Memory usage (VmSize): 10076 kB
+ Resident Set Size (RSS): 6272 kB
+[KEM FrodoKEM-1344-AES -- Decapsulation] Execution time: 0.001764 seconds
+KEM FrodoKEM-1344-AES -- After decapsulation Virtual Memory usage (VmSize): 10076 kB
+ Resident Set Size (RSS): 6272 kB
+Shared secrets match.
+[KEM FrodoKEM-1344-AES -- AES encryption] Execution time: 0.000001 seconds
+KEM FrodoKEM-1344-AES -- After AES encryption Virtual Memory usage (VmSize): 10076 kB
+ Resident Set Size (RSS): 6272 kB
+[KEM FrodoKEM-1344-AES -- AES decryption] Execution time: 0.000001 seconds
+KEM FrodoKEM-1344-AES -- After AES decryption Virtual Memory usage (VmSize): 10076 kB
+ Resident Set Size (RSS): 6272 kB
+Decrypted text matches the original plaintext.
+KEM FrodoKEM-1344-AES -- After all operations Virtual Memory usage (VmSize): 10076 kB
+ Resident Set Size (RSS): 6272 kB
+-------------------------------------
+Short message
+KEM FrodoKEM-1344-SHAKE -- Before any operations Virtual Memory usage (VmSize): 10076 kB
+ Resident Set Size (RSS): 6272 kB
+[KEM FrodoKEM-1344-SHAKE -- Key generation] Execution time: 0.004602 seconds
+KEM FrodoKEM-1344-SHAKE -- After key generation Virtual Memory usage (VmSize): 10076 kB
+ Resident Set Size (RSS): 6272 kB
+[KEM FrodoKEM-1344-SHAKE -- Encapsulation] Execution time: 0.004890 seconds
+KEM FrodoKEM-1344-SHAKE -- After encapsulation Virtual Memory usage (VmSize): 10076 kB
+ Resident Set Size (RSS): 6272 kB
+[KEM FrodoKEM-1344-SHAKE -- Decapsulation] Execution time: 0.004813 seconds
+KEM FrodoKEM-1344-SHAKE -- After decapsulation Virtual Memory usage (VmSize): 10076 kB
+ Resident Set Size (RSS): 6272 kB
+Shared secrets match.
+[KEM FrodoKEM-1344-SHAKE -- AES encryption] Execution time: 0.000001 seconds
+KEM FrodoKEM-1344-SHAKE -- After AES encryption Virtual Memory usage (VmSize): 10076 kB
+ Resident Set Size (RSS): 6272 kB
+[KEM FrodoKEM-1344-SHAKE -- AES decryption] Execution time: 0.000001 seconds
+KEM FrodoKEM-1344-SHAKE -- After AES decryption Virtual Memory usage (VmSize): 10076 kB
+ Resident Set Size (RSS): 6272 kB
+Decrypted text matches the original plaintext.
+KEM FrodoKEM-1344-SHAKE -- After all operations Virtual Memory usage (VmSize): 10076 kB
+ Resident Set Size (RSS): 6272 kB
+-------------------------------------
+Medium message
+KEM FrodoKEM-1344-SHAKE -- Before any operations Virtual Memory usage (VmSize): 10076 kB
+ Resident Set Size (RSS): 6272 kB
+[KEM FrodoKEM-1344-SHAKE -- Key generation] Execution time: 0.004606 seconds
+KEM FrodoKEM-1344-SHAKE -- After key generation Virtual Memory usage (VmSize): 10076 kB
+ Resident Set Size (RSS): 6272 kB
+[KEM FrodoKEM-1344-SHAKE -- Encapsulation] Execution time: 0.004882 seconds
+KEM FrodoKEM-1344-SHAKE -- After encapsulation Virtual Memory usage (VmSize): 10076 kB
+ Resident Set Size (RSS): 6272 kB
+[KEM FrodoKEM-1344-SHAKE -- Decapsulation] Execution time: 0.004812 seconds
+KEM FrodoKEM-1344-SHAKE -- After decapsulation Virtual Memory usage (VmSize): 10076 kB
+ Resident Set Size (RSS): 6272 kB
+Shared secrets match.
+[KEM FrodoKEM-1344-SHAKE -- AES encryption] Execution time: 0.000001 seconds
+KEM FrodoKEM-1344-SHAKE -- After AES encryption Virtual Memory usage (VmSize): 10076 kB
+ Resident Set Size (RSS): 6272 kB
+[KEM FrodoKEM-1344-SHAKE -- AES decryption] Execution time: 0.000002 seconds
+KEM FrodoKEM-1344-SHAKE -- After AES decryption Virtual Memory usage (VmSize): 10076 kB
+ Resident Set Size (RSS): 6272 kB
+Decrypted text matches the original plaintext.
+KEM FrodoKEM-1344-SHAKE -- After all operations Virtual Memory usage (VmSize): 10076 kB
+ Resident Set Size (RSS): 6272 kB
+-------------------------------------
+Long message
+KEM FrodoKEM-1344-SHAKE -- Before any operations Virtual Memory usage (VmSize): 10076 kB
+ Resident Set Size (RSS): 6272 kB
+[KEM FrodoKEM-1344-SHAKE -- Key generation] Execution time: 0.004613 seconds
+KEM FrodoKEM-1344-SHAKE -- After key generation Virtual Memory usage (VmSize): 10076 kB
+ Resident Set Size (RSS): 6272 kB
+[KEM FrodoKEM-1344-SHAKE -- Encapsulation] Execution time: 0.004882 seconds
+KEM FrodoKEM-1344-SHAKE -- After encapsulation Virtual Memory usage (VmSize): 10076 kB
+ Resident Set Size (RSS): 6272 kB
+[KEM FrodoKEM-1344-SHAKE -- Decapsulation] Execution time: 0.004813 seconds
+KEM FrodoKEM-1344-SHAKE -- After decapsulation Virtual Memory usage (VmSize): 10076 kB
+ Resident Set Size (RSS): 6272 kB
+Shared secrets match.
+[KEM FrodoKEM-1344-SHAKE -- AES encryption] Execution time: 0.000002 seconds
+KEM FrodoKEM-1344-SHAKE -- After AES encryption Virtual Memory usage (VmSize): 10076 kB
+ Resident Set Size (RSS): 6272 kB
+[KEM FrodoKEM-1344-SHAKE -- AES decryption] Execution time: 0.000002 seconds
+KEM FrodoKEM-1344-SHAKE -- After AES decryption Virtual Memory usage (VmSize): 10076 kB
+ Resident Set Size (RSS): 6272 kB
+Decrypted text matches the original plaintext.
+KEM FrodoKEM-1344-SHAKE -- After all operations Virtual Memory usage (VmSize): 10076 kB
+ Resident Set Size (RSS): 6272 kB
+-------------------------------------
+
+5th time:
+Short message
+KEM FrodoKEM-640-AES -- Before any operations Virtual Memory usage (VmSize): 9336 kB
+ Resident Set Size (RSS): 2944 kB
+[KEM FrodoKEM-640-AES -- Key generation] Execution time: 0.002303 seconds
+KEM FrodoKEM-640-AES -- After key generation Virtual Memory usage (VmSize): 9884 kB
+ Resident Set Size (RSS): 5632 kB
+[KEM FrodoKEM-640-AES -- Encapsulation] Execution time: 0.000606 seconds
+KEM FrodoKEM-640-AES -- After encapsulation Virtual Memory usage (VmSize): 9884 kB
+ Resident Set Size (RSS): 5760 kB
+[KEM FrodoKEM-640-AES -- Decapsulation] Execution time: 0.000574 seconds
+KEM FrodoKEM-640-AES -- After decapsulation Virtual Memory usage (VmSize): 9884 kB
+ Resident Set Size (RSS): 5760 kB
+Shared secrets match.
+[KEM FrodoKEM-640-AES -- AES encryption] Execution time: 0.000005 seconds
+KEM FrodoKEM-640-AES -- After AES encryption Virtual Memory usage (VmSize): 9884 kB
+ Resident Set Size (RSS): 5760 kB
+[KEM FrodoKEM-640-AES -- AES decryption] Execution time: 0.000003 seconds
+KEM FrodoKEM-640-AES -- After AES decryption Virtual Memory usage (VmSize): 9884 kB
+ Resident Set Size (RSS): 5760 kB
+Decrypted text matches the original plaintext.
+KEM FrodoKEM-640-AES -- After all operations Virtual Memory usage (VmSize): 9884 kB
+ Resident Set Size (RSS): 5760 kB
+-------------------------------------
+Medium message
+KEM FrodoKEM-640-AES -- Before any operations Virtual Memory usage (VmSize): 9884 kB
+ Resident Set Size (RSS): 5760 kB
+[KEM FrodoKEM-640-AES -- Key generation] Execution time: 0.000414 seconds
+KEM FrodoKEM-640-AES -- After key generation Virtual Memory usage (VmSize): 9884 kB
+ Resident Set Size (RSS): 5760 kB
+[KEM FrodoKEM-640-AES -- Encapsulation] Execution time: 0.000590 seconds
+KEM FrodoKEM-640-AES -- After encapsulation Virtual Memory usage (VmSize): 9884 kB
+ Resident Set Size (RSS): 5760 kB
+[KEM FrodoKEM-640-AES -- Decapsulation] Execution time: 0.000555 seconds
+KEM FrodoKEM-640-AES -- After decapsulation Virtual Memory usage (VmSize): 9884 kB
+ Resident Set Size (RSS): 5760 kB
+Shared secrets match.
+[KEM FrodoKEM-640-AES -- AES encryption] Execution time: 0.000001 seconds
+KEM FrodoKEM-640-AES -- After AES encryption Virtual Memory usage (VmSize): 9884 kB
+ Resident Set Size (RSS): 5760 kB
+[KEM FrodoKEM-640-AES -- AES decryption] Execution time: 0.000002 seconds
+KEM FrodoKEM-640-AES -- After AES decryption Virtual Memory usage (VmSize): 9884 kB
+ Resident Set Size (RSS): 5760 kB
+Decrypted text matches the original plaintext.
+KEM FrodoKEM-640-AES -- After all operations Virtual Memory usage (VmSize): 9884 kB
+ Resident Set Size (RSS): 5760 kB
+-------------------------------------
+Long message
+KEM FrodoKEM-640-AES -- Before any operations Virtual Memory usage (VmSize): 9884 kB
+ Resident Set Size (RSS): 5760 kB
+[KEM FrodoKEM-640-AES -- Key generation] Execution time: 0.000419 seconds
+KEM FrodoKEM-640-AES -- After key generation Virtual Memory usage (VmSize): 9884 kB
+ Resident Set Size (RSS): 5760 kB
+[KEM FrodoKEM-640-AES -- Encapsulation] Execution time: 0.000595 seconds
+KEM FrodoKEM-640-AES -- After encapsulation Virtual Memory usage (VmSize): 9884 kB
+ Resident Set Size (RSS): 5760 kB
+[KEM FrodoKEM-640-AES -- Decapsulation] Execution time: 0.000558 seconds
+KEM FrodoKEM-640-AES -- After decapsulation Virtual Memory usage (VmSize): 9884 kB
+ Resident Set Size (RSS): 5760 kB
+Shared secrets match.
+[KEM FrodoKEM-640-AES -- AES encryption] Execution time: 0.000001 seconds
+KEM FrodoKEM-640-AES -- After AES encryption Virtual Memory usage (VmSize): 9884 kB
+ Resident Set Size (RSS): 5760 kB
+[KEM FrodoKEM-640-AES -- AES decryption] Execution time: 0.000002 seconds
+KEM FrodoKEM-640-AES -- After AES decryption Virtual Memory usage (VmSize): 9884 kB
+ Resident Set Size (RSS): 5760 kB
+Decrypted text matches the original plaintext.
+KEM FrodoKEM-640-AES -- After all operations Virtual Memory usage (VmSize): 9884 kB
+ Resident Set Size (RSS): 5760 kB
+-------------------------------------
+Short message
+KEM FrodoKEM-640-SHAKE -- Before any operations Virtual Memory usage (VmSize): 9884 kB
+ Resident Set Size (RSS): 5760 kB
+[KEM FrodoKEM-640-SHAKE -- Key generation] Execution time: 0.001276 seconds
+KEM FrodoKEM-640-SHAKE -- After key generation Virtual Memory usage (VmSize): 9884 kB
+ Resident Set Size (RSS): 5888 kB
+[KEM FrodoKEM-640-SHAKE -- Encapsulation] Execution time: 0.001367 seconds
+KEM FrodoKEM-640-SHAKE -- After encapsulation Virtual Memory usage (VmSize): 9884 kB
+ Resident Set Size (RSS): 5888 kB
+[KEM FrodoKEM-640-SHAKE -- Decapsulation] Execution time: 0.001321 seconds
+KEM FrodoKEM-640-SHAKE -- After decapsulation Virtual Memory usage (VmSize): 9884 kB
+ Resident Set Size (RSS): 5888 kB
+Shared secrets match.
+[KEM FrodoKEM-640-SHAKE -- AES encryption] Execution time: 0.000002 seconds
+KEM FrodoKEM-640-SHAKE -- After AES encryption Virtual Memory usage (VmSize): 9884 kB
+ Resident Set Size (RSS): 5888 kB
+[KEM FrodoKEM-640-SHAKE -- AES decryption] Execution time: 0.000002 seconds
+KEM FrodoKEM-640-SHAKE -- After AES decryption Virtual Memory usage (VmSize): 9884 kB
+ Resident Set Size (RSS): 5888 kB
+Decrypted text matches the original plaintext.
+KEM FrodoKEM-640-SHAKE -- After all operations Virtual Memory usage (VmSize): 9884 kB
+ Resident Set Size (RSS): 5888 kB
+-------------------------------------
+Medium message
+KEM FrodoKEM-640-SHAKE -- Before any operations Virtual Memory usage (VmSize): 9884 kB
+ Resident Set Size (RSS): 5888 kB
+[KEM FrodoKEM-640-SHAKE -- Key generation] Execution time: 0.001253 seconds
+KEM FrodoKEM-640-SHAKE -- After key generation Virtual Memory usage (VmSize): 9884 kB
+ Resident Set Size (RSS): 5888 kB
+[KEM FrodoKEM-640-SHAKE -- Encapsulation] Execution time: 0.001354 seconds
+KEM FrodoKEM-640-SHAKE -- After encapsulation Virtual Memory usage (VmSize): 9884 kB
+ Resident Set Size (RSS): 5888 kB
+[KEM FrodoKEM-640-SHAKE -- Decapsulation] Execution time: 0.001323 seconds
+KEM FrodoKEM-640-SHAKE -- After decapsulation Virtual Memory usage (VmSize): 9884 kB
+ Resident Set Size (RSS): 5888 kB
+Shared secrets match.
+[KEM FrodoKEM-640-SHAKE -- AES encryption] Execution time: 0.000002 seconds
+KEM FrodoKEM-640-SHAKE -- After AES encryption Virtual Memory usage (VmSize): 9884 kB
+ Resident Set Size (RSS): 5888 kB
+[KEM FrodoKEM-640-SHAKE -- AES decryption] Execution time: 0.000002 seconds
+KEM FrodoKEM-640-SHAKE -- After AES decryption Virtual Memory usage (VmSize): 9884 kB
+ Resident Set Size (RSS): 5888 kB
+Decrypted text matches the original plaintext.
+KEM FrodoKEM-640-SHAKE -- After all operations Virtual Memory usage (VmSize): 9884 kB
+ Resident Set Size (RSS): 5888 kB
+-------------------------------------
+Long message
+KEM FrodoKEM-640-SHAKE -- Before any operations Virtual Memory usage (VmSize): 9884 kB
+ Resident Set Size (RSS): 5888 kB
+[KEM FrodoKEM-640-SHAKE -- Key generation] Execution time: 0.001232 seconds
+KEM FrodoKEM-640-SHAKE -- After key generation Virtual Memory usage (VmSize): 9884 kB
+ Resident Set Size (RSS): 5888 kB
+[KEM FrodoKEM-640-SHAKE -- Encapsulation] Execution time: 0.001369 seconds
+KEM FrodoKEM-640-SHAKE -- After encapsulation Virtual Memory usage (VmSize): 9884 kB
+ Resident Set Size (RSS): 5888 kB
+[KEM FrodoKEM-640-SHAKE -- Decapsulation] Execution time: 0.001341 seconds
+KEM FrodoKEM-640-SHAKE -- After decapsulation Virtual Memory usage (VmSize): 9884 kB
+ Resident Set Size (RSS): 5888 kB
+Shared secrets match.
+[KEM FrodoKEM-640-SHAKE -- AES encryption] Execution time: 0.000002 seconds
+KEM FrodoKEM-640-SHAKE -- After AES encryption Virtual Memory usage (VmSize): 9884 kB
+ Resident Set Size (RSS): 5888 kB
+[KEM FrodoKEM-640-SHAKE -- AES decryption] Execution time: 0.000002 seconds
+KEM FrodoKEM-640-SHAKE -- After AES decryption Virtual Memory usage (VmSize): 9884 kB
+ Resident Set Size (RSS): 5888 kB
+Decrypted text matches the original plaintext.
+KEM FrodoKEM-640-SHAKE -- After all operations Virtual Memory usage (VmSize): 9884 kB
+ Resident Set Size (RSS): 5888 kB
+-------------------------------------
+Short message
+KEM FrodoKEM-976-AES -- Before any operations Virtual Memory usage (VmSize): 9884 kB
+ Resident Set Size (RSS): 5888 kB
+[KEM FrodoKEM-976-AES -- Key generation] Execution time: 0.000737 seconds
+KEM FrodoKEM-976-AES -- After key generation Virtual Memory usage (VmSize): 10016 kB
+ Resident Set Size (RSS): 5888 kB
+[KEM FrodoKEM-976-AES -- Encapsulation] Execution time: 0.001091 seconds
+KEM FrodoKEM-976-AES -- After encapsulation Virtual Memory usage (VmSize): 10016 kB
+ Resident Set Size (RSS): 6016 kB
+[KEM FrodoKEM-976-AES -- Decapsulation] Execution time: 0.001061 seconds
+KEM FrodoKEM-976-AES -- After decapsulation Virtual Memory usage (VmSize): 10044 kB
+ Resident Set Size (RSS): 6016 kB
+Shared secrets match.
+[KEM FrodoKEM-976-AES -- AES encryption] Execution time: 0.000001 seconds
+KEM FrodoKEM-976-AES -- After AES encryption Virtual Memory usage (VmSize): 10044 kB
+ Resident Set Size (RSS): 6016 kB
+[KEM FrodoKEM-976-AES -- AES decryption] Execution time: 0.000002 seconds
+KEM FrodoKEM-976-AES -- After AES decryption Virtual Memory usage (VmSize): 10044 kB
+ Resident Set Size (RSS): 6016 kB
+Decrypted text matches the original plaintext.
+KEM FrodoKEM-976-AES -- After all operations Virtual Memory usage (VmSize): 10044 kB
+ Resident Set Size (RSS): 6016 kB
+-------------------------------------
+Medium message
+KEM FrodoKEM-976-AES -- Before any operations Virtual Memory usage (VmSize): 10012 kB
+ Resident Set Size (RSS): 6016 kB
+[KEM FrodoKEM-976-AES -- Key generation] Execution time: 0.000741 seconds
+KEM FrodoKEM-976-AES -- After key generation Virtual Memory usage (VmSize): 10012 kB
+ Resident Set Size (RSS): 6016 kB
+[KEM FrodoKEM-976-AES -- Encapsulation] Execution time: 0.001072 seconds
+KEM FrodoKEM-976-AES -- After encapsulation Virtual Memory usage (VmSize): 10012 kB
+ Resident Set Size (RSS): 6016 kB
+[KEM FrodoKEM-976-AES -- Decapsulation] Execution time: 0.001031 seconds
+KEM FrodoKEM-976-AES -- After decapsulation Virtual Memory usage (VmSize): 10012 kB
+ Resident Set Size (RSS): 6016 kB
+Shared secrets match.
+[KEM FrodoKEM-976-AES -- AES encryption] Execution time: 0.000001 seconds
+KEM FrodoKEM-976-AES -- After AES encryption Virtual Memory usage (VmSize): 10012 kB
+ Resident Set Size (RSS): 6016 kB
+[KEM FrodoKEM-976-AES -- AES decryption] Execution time: 0.000002 seconds
+KEM FrodoKEM-976-AES -- After AES decryption Virtual Memory usage (VmSize): 10012 kB
+ Resident Set Size (RSS): 6016 kB
+Decrypted text matches the original plaintext.
+KEM FrodoKEM-976-AES -- After all operations Virtual Memory usage (VmSize): 10012 kB
+ Resident Set Size (RSS): 6016 kB
+-------------------------------------
+Long message
+KEM FrodoKEM-976-AES -- Before any operations Virtual Memory usage (VmSize): 10012 kB
+ Resident Set Size (RSS): 6016 kB
+[KEM FrodoKEM-976-AES -- Key generation] Execution time: 0.000755 seconds
+KEM FrodoKEM-976-AES -- After key generation Virtual Memory usage (VmSize): 10012 kB
+ Resident Set Size (RSS): 6016 kB
+[KEM FrodoKEM-976-AES -- Encapsulation] Execution time: 0.001076 seconds
+KEM FrodoKEM-976-AES -- After encapsulation Virtual Memory usage (VmSize): 10012 kB
+ Resident Set Size (RSS): 6016 kB
+[KEM FrodoKEM-976-AES -- Decapsulation] Execution time: 0.001021 seconds
+KEM FrodoKEM-976-AES -- After decapsulation Virtual Memory usage (VmSize): 10012 kB
+ Resident Set Size (RSS): 6016 kB
+Shared secrets match.
+[KEM FrodoKEM-976-AES -- AES encryption] Execution time: 0.000002 seconds
+KEM FrodoKEM-976-AES -- After AES encryption Virtual Memory usage (VmSize): 10012 kB
+ Resident Set Size (RSS): 6016 kB
+[KEM FrodoKEM-976-AES -- AES decryption] Execution time: 0.000002 seconds
+KEM FrodoKEM-976-AES -- After AES decryption Virtual Memory usage (VmSize): 10012 kB
+ Resident Set Size (RSS): 6016 kB
+Decrypted text matches the original plaintext.
+KEM FrodoKEM-976-AES -- After all operations Virtual Memory usage (VmSize): 10012 kB
+ Resident Set Size (RSS): 6016 kB
+-------------------------------------
+Short message
+KEM FrodoKEM-976-SHAKE -- Before any operations Virtual Memory usage (VmSize): 10012 kB
+ Resident Set Size (RSS): 6016 kB
+[KEM FrodoKEM-976-SHAKE -- Key generation] Execution time: 0.002610 seconds
+KEM FrodoKEM-976-SHAKE -- After key generation Virtual Memory usage (VmSize): 10012 kB
+ Resident Set Size (RSS): 6144 kB
+[KEM FrodoKEM-976-SHAKE -- Encapsulation] Execution time: 0.002774 seconds
+KEM FrodoKEM-976-SHAKE -- After encapsulation Virtual Memory usage (VmSize): 10012 kB
+ Resident Set Size (RSS): 6144 kB
+[KEM FrodoKEM-976-SHAKE -- Decapsulation] Execution time: 0.002741 seconds
+KEM FrodoKEM-976-SHAKE -- After decapsulation Virtual Memory usage (VmSize): 10012 kB
+ Resident Set Size (RSS): 6144 kB
+Shared secrets match.
+[KEM FrodoKEM-976-SHAKE -- AES encryption] Execution time: 0.000002 seconds
+KEM FrodoKEM-976-SHAKE -- After AES encryption Virtual Memory usage (VmSize): 10012 kB
+ Resident Set Size (RSS): 6144 kB
+[KEM FrodoKEM-976-SHAKE -- AES decryption] Execution time: 0.000001 seconds
+KEM FrodoKEM-976-SHAKE -- After AES decryption Virtual Memory usage (VmSize): 10012 kB
+ Resident Set Size (RSS): 6144 kB
+Decrypted text matches the original plaintext.
+KEM FrodoKEM-976-SHAKE -- After all operations Virtual Memory usage (VmSize): 10012 kB
+ Resident Set Size (RSS): 6144 kB
+-------------------------------------
+Medium message
+KEM FrodoKEM-976-SHAKE -- Before any operations Virtual Memory usage (VmSize): 10012 kB
+ Resident Set Size (RSS): 6144 kB
+[KEM FrodoKEM-976-SHAKE -- Key generation] Execution time: 0.002572 seconds
+KEM FrodoKEM-976-SHAKE -- After key generation Virtual Memory usage (VmSize): 10012 kB
+ Resident Set Size (RSS): 6144 kB
+[KEM FrodoKEM-976-SHAKE -- Encapsulation] Execution time: 0.002766 seconds
+KEM FrodoKEM-976-SHAKE -- After encapsulation Virtual Memory usage (VmSize): 10012 kB
+ Resident Set Size (RSS): 6144 kB
+[KEM FrodoKEM-976-SHAKE -- Decapsulation] Execution time: 0.002712 seconds
+KEM FrodoKEM-976-SHAKE -- After decapsulation Virtual Memory usage (VmSize): 10012 kB
+ Resident Set Size (RSS): 6144 kB
+Shared secrets match.
+[KEM FrodoKEM-976-SHAKE -- AES encryption] Execution time: 0.000002 seconds
+KEM FrodoKEM-976-SHAKE -- After AES encryption Virtual Memory usage (VmSize): 10012 kB
+ Resident Set Size (RSS): 6144 kB
+[KEM FrodoKEM-976-SHAKE -- AES decryption] Execution time: 0.000001 seconds
+KEM FrodoKEM-976-SHAKE -- After AES decryption Virtual Memory usage (VmSize): 10012 kB
+ Resident Set Size (RSS): 6144 kB
+Decrypted text matches the original plaintext.
+KEM FrodoKEM-976-SHAKE -- After all operations Virtual Memory usage (VmSize): 10012 kB
+ Resident Set Size (RSS): 6144 kB
+-------------------------------------
+Long message
+KEM FrodoKEM-976-SHAKE -- Before any operations Virtual Memory usage (VmSize): 10012 kB
+ Resident Set Size (RSS): 6144 kB
+[KEM FrodoKEM-976-SHAKE -- Key generation] Execution time: 0.002579 seconds
+KEM FrodoKEM-976-SHAKE -- After key generation Virtual Memory usage (VmSize): 10012 kB
+ Resident Set Size (RSS): 6144 kB
+[KEM FrodoKEM-976-SHAKE -- Encapsulation] Execution time: 0.002763 seconds
+KEM FrodoKEM-976-SHAKE -- After encapsulation Virtual Memory usage (VmSize): 10012 kB
+ Resident Set Size (RSS): 6144 kB
+[KEM FrodoKEM-976-SHAKE -- Decapsulation] Execution time: 0.002710 seconds
+KEM FrodoKEM-976-SHAKE -- After decapsulation Virtual Memory usage (VmSize): 10012 kB
+ Resident Set Size (RSS): 6144 kB
+Shared secrets match.
+[KEM FrodoKEM-976-SHAKE -- AES encryption] Execution time: 0.000002 seconds
+KEM FrodoKEM-976-SHAKE -- After AES encryption Virtual Memory usage (VmSize): 10012 kB
+ Resident Set Size (RSS): 6144 kB
+[KEM FrodoKEM-976-SHAKE -- AES decryption] Execution time: 0.000002 seconds
+KEM FrodoKEM-976-SHAKE -- After AES decryption Virtual Memory usage (VmSize): 10012 kB
+ Resident Set Size (RSS): 6144 kB
+Decrypted text matches the original plaintext.
+KEM FrodoKEM-976-SHAKE -- After all operations Virtual Memory usage (VmSize): 10012 kB
+ Resident Set Size (RSS): 6144 kB
+-------------------------------------
+Short message
+KEM FrodoKEM-1344-AES -- Before any operations Virtual Memory usage (VmSize): 10012 kB
+ Resident Set Size (RSS): 6144 kB
+[KEM FrodoKEM-1344-AES -- Key generation] Execution time: 0.001315 seconds
+KEM FrodoKEM-1344-AES -- After key generation Virtual Memory usage (VmSize): 10012 kB
+ Resident Set Size (RSS): 6144 kB
+[KEM FrodoKEM-1344-AES -- Encapsulation] Execution time: 0.001858 seconds
+KEM FrodoKEM-1344-AES -- After encapsulation Virtual Memory usage (VmSize): 10028 kB
+ Resident Set Size (RSS): 6144 kB
+[KEM FrodoKEM-1344-AES -- Decapsulation] Execution time: 0.001783 seconds
+KEM FrodoKEM-1344-AES -- After decapsulation Virtual Memory usage (VmSize): 10068 kB
+ Resident Set Size (RSS): 6144 kB
+Shared secrets match.
+[KEM FrodoKEM-1344-AES -- AES encryption] Execution time: 0.000001 seconds
+KEM FrodoKEM-1344-AES -- After AES encryption Virtual Memory usage (VmSize): 10068 kB
+ Resident Set Size (RSS): 6144 kB
+[KEM FrodoKEM-1344-AES -- AES decryption] Execution time: 0.000001 seconds
+KEM FrodoKEM-1344-AES -- After AES decryption Virtual Memory usage (VmSize): 10068 kB
+ Resident Set Size (RSS): 6144 kB
+Decrypted text matches the original plaintext.
+KEM FrodoKEM-1344-AES -- After all operations Virtual Memory usage (VmSize): 10068 kB
+ Resident Set Size (RSS): 6144 kB
+-------------------------------------
+Medium message
+KEM FrodoKEM-1344-AES -- Before any operations Virtual Memory usage (VmSize): 10068 kB
+ Resident Set Size (RSS): 6144 kB
+[KEM FrodoKEM-1344-AES -- Key generation] Execution time: 0.001323 seconds
+KEM FrodoKEM-1344-AES -- After key generation Virtual Memory usage (VmSize): 10068 kB
+ Resident Set Size (RSS): 6144 kB
+[KEM FrodoKEM-1344-AES -- Encapsulation] Execution time: 0.001841 seconds
+KEM FrodoKEM-1344-AES -- After encapsulation Virtual Memory usage (VmSize): 10068 kB
+ Resident Set Size (RSS): 6144 kB
+[KEM FrodoKEM-1344-AES -- Decapsulation] Execution time: 0.001761 seconds
+KEM FrodoKEM-1344-AES -- After decapsulation Virtual Memory usage (VmSize): 10068 kB
+ Resident Set Size (RSS): 6144 kB
+Shared secrets match.
+[KEM FrodoKEM-1344-AES -- AES encryption] Execution time: 0.000001 seconds
+KEM FrodoKEM-1344-AES -- After AES encryption Virtual Memory usage (VmSize): 10068 kB
+ Resident Set Size (RSS): 6144 kB
+[KEM FrodoKEM-1344-AES -- AES decryption] Execution time: 0.000001 seconds
+KEM FrodoKEM-1344-AES -- After AES decryption Virtual Memory usage (VmSize): 10068 kB
+ Resident Set Size (RSS): 6144 kB
+Decrypted text matches the original plaintext.
+KEM FrodoKEM-1344-AES -- After all operations Virtual Memory usage (VmSize): 10068 kB
+ Resident Set Size (RSS): 6144 kB
+-------------------------------------
+Long message
+KEM FrodoKEM-1344-AES -- Before any operations Virtual Memory usage (VmSize): 10068 kB
+ Resident Set Size (RSS): 6144 kB
+[KEM FrodoKEM-1344-AES -- Key generation] Execution time: 0.001315 seconds
+KEM FrodoKEM-1344-AES -- After key generation Virtual Memory usage (VmSize): 10068 kB
+ Resident Set Size (RSS): 6144 kB
+[KEM FrodoKEM-1344-AES -- Encapsulation] Execution time: 0.001848 seconds
+KEM FrodoKEM-1344-AES -- After encapsulation Virtual Memory usage (VmSize): 10068 kB
+ Resident Set Size (RSS): 6144 kB
+[KEM FrodoKEM-1344-AES -- Decapsulation] Execution time: 0.001759 seconds
+KEM FrodoKEM-1344-AES -- After decapsulation Virtual Memory usage (VmSize): 10068 kB
+ Resident Set Size (RSS): 6144 kB
+Shared secrets match.
+[KEM FrodoKEM-1344-AES -- AES encryption] Execution time: 0.000002 seconds
+KEM FrodoKEM-1344-AES -- After AES encryption Virtual Memory usage (VmSize): 10068 kB
+ Resident Set Size (RSS): 6144 kB
+[KEM FrodoKEM-1344-AES -- AES decryption] Execution time: 0.000002 seconds
+KEM FrodoKEM-1344-AES -- After AES decryption Virtual Memory usage (VmSize): 10068 kB
+ Resident Set Size (RSS): 6144 kB
+Decrypted text matches the original plaintext.
+KEM FrodoKEM-1344-AES -- After all operations Virtual Memory usage (VmSize): 10068 kB
+ Resident Set Size (RSS): 6144 kB
+-------------------------------------
+Short message
+KEM FrodoKEM-1344-SHAKE -- Before any operations Virtual Memory usage (VmSize): 10068 kB
+ Resident Set Size (RSS): 6144 kB
+[KEM FrodoKEM-1344-SHAKE -- Key generation] Execution time: 0.004611 seconds
+KEM FrodoKEM-1344-SHAKE -- After key generation Virtual Memory usage (VmSize): 10068 kB
+ Resident Set Size (RSS): 6144 kB
+[KEM FrodoKEM-1344-SHAKE -- Encapsulation] Execution time: 0.004882 seconds
+KEM FrodoKEM-1344-SHAKE -- After encapsulation Virtual Memory usage (VmSize): 10068 kB
+ Resident Set Size (RSS): 6144 kB
+[KEM FrodoKEM-1344-SHAKE -- Decapsulation] Execution time: 0.004823 seconds
+KEM FrodoKEM-1344-SHAKE -- After decapsulation Virtual Memory usage (VmSize): 10068 kB
+ Resident Set Size (RSS): 6144 kB
+Shared secrets match.
+[KEM FrodoKEM-1344-SHAKE -- AES encryption] Execution time: 0.000001 seconds
+KEM FrodoKEM-1344-SHAKE -- After AES encryption Virtual Memory usage (VmSize): 10068 kB
+ Resident Set Size (RSS): 6144 kB
+[KEM FrodoKEM-1344-SHAKE -- AES decryption] Execution time: 0.000001 seconds
+KEM FrodoKEM-1344-SHAKE -- After AES decryption Virtual Memory usage (VmSize): 10068 kB
+ Resident Set Size (RSS): 6144 kB
+Decrypted text matches the original plaintext.
+KEM FrodoKEM-1344-SHAKE -- After all operations Virtual Memory usage (VmSize): 10068 kB
+ Resident Set Size (RSS): 6144 kB
+-------------------------------------
+Medium message
+KEM FrodoKEM-1344-SHAKE -- Before any operations Virtual Memory usage (VmSize): 10068 kB
+ Resident Set Size (RSS): 6144 kB
+[KEM FrodoKEM-1344-SHAKE -- Key generation] Execution time: 0.004594 seconds
+KEM FrodoKEM-1344-SHAKE -- After key generation Virtual Memory usage (VmSize): 10068 kB
+ Resident Set Size (RSS): 6144 kB
+[KEM FrodoKEM-1344-SHAKE -- Encapsulation] Execution time: 0.004877 seconds
+KEM FrodoKEM-1344-SHAKE -- After encapsulation Virtual Memory usage (VmSize): 10068 kB
+ Resident Set Size (RSS): 6144 kB
+[KEM FrodoKEM-1344-SHAKE -- Decapsulation] Execution time: 0.004814 seconds
+KEM FrodoKEM-1344-SHAKE -- After decapsulation Virtual Memory usage (VmSize): 10068 kB
+ Resident Set Size (RSS): 6144 kB
+Shared secrets match.
+[KEM FrodoKEM-1344-SHAKE -- AES encryption] Execution time: 0.000002 seconds
+KEM FrodoKEM-1344-SHAKE -- After AES encryption Virtual Memory usage (VmSize): 10068 kB
+ Resident Set Size (RSS): 6144 kB
+[KEM FrodoKEM-1344-SHAKE -- AES decryption] Execution time: 0.000001 seconds
+KEM FrodoKEM-1344-SHAKE -- After AES decryption Virtual Memory usage (VmSize): 10068 kB
+ Resident Set Size (RSS): 6144 kB
+Decrypted text matches the original plaintext.
+KEM FrodoKEM-1344-SHAKE -- After all operations Virtual Memory usage (VmSize): 10068 kB
+ Resident Set Size (RSS): 6144 kB
+-------------------------------------
+Long message
+KEM FrodoKEM-1344-SHAKE -- Before any operations Virtual Memory usage (VmSize): 10068 kB
+ Resident Set Size (RSS): 6144 kB
+[KEM FrodoKEM-1344-SHAKE -- Key generation] Execution time: 0.004605 seconds
+KEM FrodoKEM-1344-SHAKE -- After key generation Virtual Memory usage (VmSize): 10068 kB
+ Resident Set Size (RSS): 6144 kB
+[KEM FrodoKEM-1344-SHAKE -- Encapsulation] Execution time: 0.004883 seconds
+KEM FrodoKEM-1344-SHAKE -- After encapsulation Virtual Memory usage (VmSize): 10068 kB
+ Resident Set Size (RSS): 6144 kB
+[KEM FrodoKEM-1344-SHAKE -- Decapsulation] Execution time: 0.004813 seconds
+KEM FrodoKEM-1344-SHAKE -- After decapsulation Virtual Memory usage (VmSize): 10068 kB
+ Resident Set Size (RSS): 6144 kB
+Shared secrets match.
+[KEM FrodoKEM-1344-SHAKE -- AES encryption] Execution time: 0.000002 seconds
+KEM FrodoKEM-1344-SHAKE -- After AES encryption Virtual Memory usage (VmSize): 10068 kB
+ Resident Set Size (RSS): 6144 kB
+[KEM FrodoKEM-1344-SHAKE -- AES decryption] Execution time: 0.000002 seconds
+KEM FrodoKEM-1344-SHAKE -- After AES decryption Virtual Memory usage (VmSize): 10068 kB
+ Resident Set Size (RSS): 6144 kB
+Decrypted text matches the original plaintext.
+KEM FrodoKEM-1344-SHAKE -- After all operations Virtual Memory usage (VmSize): 10068 kB
+ Resident Set Size (RSS): 6144 kB
+-------------------------------------

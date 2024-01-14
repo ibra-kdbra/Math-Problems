@@ -1,0 +1,4 @@
+RSA key size, Key generation time,Encryption time,Decryption time,Resident set size before any operations (kB),Virtual memory before any operations (kB),Resident set size after key generation (kB),Virtual memory after key generation (kB),Resident set size after all operations (kB),Virtual memory after all operations (kB)
+2048 bits,0.314792,0.000198,0.001229,2944,7136,5504,7696,5888,7848
+4096 bits,4.820795,0.000141,0.007130,5888,7848,6016,7848,6272,10272
+8192 bits,18.633197,0.000473,0.049380,6016,7848,6016,7944,6016,7944

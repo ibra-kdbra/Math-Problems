@@ -1,0 +1,590 @@
+1st time:
+Short message
+Signature scheme Dilithium2 - Before any operations Virtual Memory usage (VmSize): 8900 kB
+ Resident Set Size (RSS): 2944 kB
+[Signature scheme Dilithium2 - Key generation] Execution time: 0.002827 seconds
+Signature scheme Dilithium2 - After key generation Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 5760 kB
+[Signature scheme Dilithium2 - Signature creation] Execution time: 0.000171 seconds
+Signature scheme Dilithium2 - After signature creation Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 5760 kB
+[Signature scheme Dilithium2 - Signature verification] Execution time: 0.000107 seconds
+Signature scheme Dilithium2 - After signature verification Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 5760 kB
+----------------------------------------
+Medium message
+Signature scheme Dilithium2 - Before any operations Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 5760 kB
+[Signature scheme Dilithium2 - Key generation] Execution time: 0.000104 seconds
+Signature scheme Dilithium2 - After key generation Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 5760 kB
+[Signature scheme Dilithium2 - Signature creation] Execution time: 0.000368 seconds
+Signature scheme Dilithium2 - After signature creation Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 5760 kB
+[Signature scheme Dilithium2 - Signature verification] Execution time: 0.000108 seconds
+Signature scheme Dilithium2 - After signature verification Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 5888 kB
+----------------------------------------
+Long message
+Signature scheme Dilithium2 - Before any operations Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 5888 kB
+[Signature scheme Dilithium2 - Key generation] Execution time: 0.000111 seconds
+Signature scheme Dilithium2 - After key generation Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 5888 kB
+[Signature scheme Dilithium2 - Signature creation] Execution time: 0.000813 seconds
+Signature scheme Dilithium2 - After signature creation Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 5888 kB
+[Signature scheme Dilithium2 - Signature verification] Execution time: 0.000103 seconds
+Signature scheme Dilithium2 - After signature verification Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 5888 kB
+----------------------------------------
+Short message
+Signature scheme Dilithium3 - Before any operations Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 5888 kB
+[Signature scheme Dilithium3 - Key generation] Execution time: 0.000176 seconds
+Signature scheme Dilithium3 - After key generation Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 5888 kB
+[Signature scheme Dilithium3 - Signature creation] Execution time: 0.000224 seconds
+Signature scheme Dilithium3 - After signature creation Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 5888 kB
+[Signature scheme Dilithium3 - Signature verification] Execution time: 0.000168 seconds
+Signature scheme Dilithium3 - After signature verification Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 5888 kB
+----------------------------------------
+Medium message
+Signature scheme Dilithium3 - Before any operations Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 5888 kB
+[Signature scheme Dilithium3 - Key generation] Execution time: 0.000168 seconds
+Signature scheme Dilithium3 - After key generation Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 5888 kB
+[Signature scheme Dilithium3 - Signature creation] Execution time: 0.000277 seconds
+Signature scheme Dilithium3 - After signature creation Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 5888 kB
+[Signature scheme Dilithium3 - Signature verification] Execution time: 0.000162 seconds
+Signature scheme Dilithium3 - After signature verification Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 5888 kB
+----------------------------------------
+Long message
+Signature scheme Dilithium3 - Before any operations Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 5888 kB
+[Signature scheme Dilithium3 - Key generation] Execution time: 0.000161 seconds
+Signature scheme Dilithium3 - After key generation Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 5888 kB
+[Signature scheme Dilithium3 - Signature creation] Execution time: 0.000522 seconds
+Signature scheme Dilithium3 - After signature creation Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 5888 kB
+[Signature scheme Dilithium3 - Signature verification] Execution time: 0.000166 seconds
+Signature scheme Dilithium3 - After signature verification Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 5888 kB
+----------------------------------------
+Short message
+Signature scheme Dilithium5 - Before any operations Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 5888 kB
+[Signature scheme Dilithium5 - Key generation] Execution time: 0.000278 seconds
+Signature scheme Dilithium5 - After key generation Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 6016 kB
+[Signature scheme Dilithium5 - Signature creation] Execution time: 0.000530 seconds
+Signature scheme Dilithium5 - After signature creation Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 6144 kB
+[Signature scheme Dilithium5 - Signature verification] Execution time: 0.000258 seconds
+Signature scheme Dilithium5 - After signature verification Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 6144 kB
+----------------------------------------
+Medium message
+Signature scheme Dilithium5 - Before any operations Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 6144 kB
+[Signature scheme Dilithium5 - Key generation] Execution time: 0.000264 seconds
+Signature scheme Dilithium5 - After key generation Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 6144 kB
+[Signature scheme Dilithium5 - Signature creation] Execution time: 0.000375 seconds
+Signature scheme Dilithium5 - After signature creation Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 6144 kB
+[Signature scheme Dilithium5 - Signature verification] Execution time: 0.000253 seconds
+Signature scheme Dilithium5 - After signature verification Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 6144 kB
+----------------------------------------
+Long message
+Signature scheme Dilithium5 - Before any operations Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 6144 kB
+[Signature scheme Dilithium5 - Key generation] Execution time: 0.000253 seconds
+Signature scheme Dilithium5 - After key generation Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 6144 kB
+[Signature scheme Dilithium5 - Signature creation] Execution time: 0.000385 seconds
+Signature scheme Dilithium5 - After signature creation Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 6144 kB
+[Signature scheme Dilithium5 - Signature verification] Execution time: 0.000254 seconds
+Signature scheme Dilithium5 - After signature verification Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 6144 kB
+----------------------------------------
+2nd time:
+Short message
+Signature scheme Dilithium2 - Before any operations Virtual Memory usage (VmSize): 8900 kB
+ Resident Set Size (RSS): 2944 kB
+[Signature scheme Dilithium2 - Key generation] Execution time: 0.001880 seconds
+Signature scheme Dilithium2 - After key generation Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 5888 kB
+[Signature scheme Dilithium2 - Signature creation] Execution time: 0.000062 seconds
+Signature scheme Dilithium2 - After signature creation Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 5888 kB
+[Signature scheme Dilithium2 - Signature verification] Execution time: 0.000039 seconds
+Signature scheme Dilithium2 - After signature verification Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 5888 kB
+----------------------------------------
+Medium message
+Signature scheme Dilithium2 - Before any operations Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 5888 kB
+[Signature scheme Dilithium2 - Key generation] Execution time: 0.000039 seconds
+Signature scheme Dilithium2 - After key generation Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 5888 kB
+[Signature scheme Dilithium2 - Signature creation] Execution time: 0.000048 seconds
+Signature scheme Dilithium2 - After signature creation Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 5888 kB
+[Signature scheme Dilithium2 - Signature verification] Execution time: 0.000038 seconds
+Signature scheme Dilithium2 - After signature verification Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 5888 kB
+----------------------------------------
+Long message
+Signature scheme Dilithium2 - Before any operations Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 5888 kB
+[Signature scheme Dilithium2 - Key generation] Execution time: 0.000038 seconds
+Signature scheme Dilithium2 - After key generation Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 6016 kB
+[Signature scheme Dilithium2 - Signature creation] Execution time: 0.000064 seconds
+Signature scheme Dilithium2 - After signature creation Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 6016 kB
+[Signature scheme Dilithium2 - Signature verification] Execution time: 0.000038 seconds
+Signature scheme Dilithium2 - After signature verification Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 6016 kB
+----------------------------------------
+Short message
+Signature scheme Dilithium3 - Before any operations Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 6016 kB
+[Signature scheme Dilithium3 - Key generation] Execution time: 0.000073 seconds
+Signature scheme Dilithium3 - After key generation Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 6016 kB
+[Signature scheme Dilithium3 - Signature creation] Execution time: 0.000237 seconds
+Signature scheme Dilithium3 - After signature creation Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 6016 kB
+[Signature scheme Dilithium3 - Signature verification] Execution time: 0.000063 seconds
+Signature scheme Dilithium3 - After signature verification Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 6016 kB
+----------------------------------------
+Medium message
+Signature scheme Dilithium3 - Before any operations Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 6016 kB
+[Signature scheme Dilithium3 - Key generation] Execution time: 0.000064 seconds
+Signature scheme Dilithium3 - After key generation Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 6016 kB
+[Signature scheme Dilithium3 - Signature creation] Execution time: 0.000180 seconds
+Signature scheme Dilithium3 - After signature creation Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 6016 kB
+[Signature scheme Dilithium3 - Signature verification] Execution time: 0.000064 seconds
+Signature scheme Dilithium3 - After signature verification Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 6016 kB
+----------------------------------------
+Long message
+Signature scheme Dilithium3 - Before any operations Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 6016 kB
+[Signature scheme Dilithium3 - Key generation] Execution time: 0.000062 seconds
+Signature scheme Dilithium3 - After key generation Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 6016 kB
+[Signature scheme Dilithium3 - Signature creation] Execution time: 0.000121 seconds
+Signature scheme Dilithium3 - After signature creation Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 6016 kB
+[Signature scheme Dilithium3 - Signature verification] Execution time: 0.000059 seconds
+Signature scheme Dilithium3 - After signature verification Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 6016 kB
+----------------------------------------
+Short message
+Signature scheme Dilithium5 - Before any operations Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 6016 kB
+[Signature scheme Dilithium5 - Key generation] Execution time: 0.000108 seconds
+Signature scheme Dilithium5 - After key generation Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 6144 kB
+[Signature scheme Dilithium5 - Signature creation] Execution time: 0.000179 seconds
+Signature scheme Dilithium5 - After signature creation Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 6272 kB
+[Signature scheme Dilithium5 - Signature verification] Execution time: 0.000094 seconds
+Signature scheme Dilithium5 - After signature verification Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 6272 kB
+----------------------------------------
+Medium message
+Signature scheme Dilithium5 - Before any operations Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 6272 kB
+[Signature scheme Dilithium5 - Key generation] Execution time: 0.000099 seconds
+Signature scheme Dilithium5 - After key generation Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 6272 kB
+[Signature scheme Dilithium5 - Signature creation] Execution time: 0.000112 seconds
+Signature scheme Dilithium5 - After signature creation Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 6272 kB
+[Signature scheme Dilithium5 - Signature verification] Execution time: 0.000093 seconds
+Signature scheme Dilithium5 - After signature verification Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 6272 kB
+----------------------------------------
+Long message
+Signature scheme Dilithium5 - Before any operations Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 6272 kB
+[Signature scheme Dilithium5 - Key generation] Execution time: 0.000096 seconds
+Signature scheme Dilithium5 - After key generation Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 6272 kB
+[Signature scheme Dilithium5 - Signature creation] Execution time: 0.000141 seconds
+Signature scheme Dilithium5 - After signature creation Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 6272 kB
+[Signature scheme Dilithium5 - Signature verification] Execution time: 0.000092 seconds
+Signature scheme Dilithium5 - After signature verification Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 6272 kB
+----------------------------------------
+3rd time:
+Short message
+Signature scheme Dilithium2 - Before any operations Virtual Memory usage (VmSize): 8900 kB
+ Resident Set Size (RSS): 2944 kB
+[Signature scheme Dilithium2 - Key generation] Execution time: 0.002850 seconds
+Signature scheme Dilithium2 - After key generation Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 5760 kB
+[Signature scheme Dilithium2 - Signature creation] Execution time: 0.000256 seconds
+Signature scheme Dilithium2 - After signature creation Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 5760 kB
+[Signature scheme Dilithium2 - Signature verification] Execution time: 0.000105 seconds
+Signature scheme Dilithium2 - After signature verification Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 5760 kB
+----------------------------------------
+Medium message
+Signature scheme Dilithium2 - Before any operations Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 5760 kB
+[Signature scheme Dilithium2 - Key generation] Execution time: 0.000101 seconds
+Signature scheme Dilithium2 - After key generation Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 5760 kB
+[Signature scheme Dilithium2 - Signature creation] Execution time: 0.000381 seconds
+Signature scheme Dilithium2 - After signature creation Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 5888 kB
+[Signature scheme Dilithium2 - Signature verification] Execution time: 0.000103 seconds
+Signature scheme Dilithium2 - After signature verification Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 5888 kB
+----------------------------------------
+Long message
+Signature scheme Dilithium2 - Before any operations Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 5888 kB
+[Signature scheme Dilithium2 - Key generation] Execution time: 0.000098 seconds
+Signature scheme Dilithium2 - After key generation Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 5888 kB
+[Signature scheme Dilithium2 - Signature creation] Execution time: 0.000433 seconds
+Signature scheme Dilithium2 - After signature creation Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 5888 kB
+[Signature scheme Dilithium2 - Signature verification] Execution time: 0.000103 seconds
+Signature scheme Dilithium2 - After signature verification Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 5888 kB
+----------------------------------------
+Short message
+Signature scheme Dilithium3 - Before any operations Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 5888 kB
+[Signature scheme Dilithium3 - Key generation] Execution time: 0.000175 seconds
+Signature scheme Dilithium3 - After key generation Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 5888 kB
+[Signature scheme Dilithium3 - Signature creation] Execution time: 0.000226 seconds
+Signature scheme Dilithium3 - After signature creation Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 5888 kB
+[Signature scheme Dilithium3 - Signature verification] Execution time: 0.000167 seconds
+Signature scheme Dilithium3 - After signature verification Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 5888 kB
+----------------------------------------
+Medium message
+Signature scheme Dilithium3 - Before any operations Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 5888 kB
+[Signature scheme Dilithium3 - Key generation] Execution time: 0.000166 seconds
+Signature scheme Dilithium3 - After key generation Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 5888 kB
+[Signature scheme Dilithium3 - Signature creation] Execution time: 0.000527 seconds
+Signature scheme Dilithium3 - After signature creation Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 5888 kB
+[Signature scheme Dilithium3 - Signature verification] Execution time: 0.000162 seconds
+Signature scheme Dilithium3 - After signature verification Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 5888 kB
+----------------------------------------
+Long message
+Signature scheme Dilithium3 - Before any operations Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 5888 kB
+[Signature scheme Dilithium3 - Key generation] Execution time: 0.000162 seconds
+Signature scheme Dilithium3 - After key generation Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 5888 kB
+[Signature scheme Dilithium3 - Signature creation] Execution time: 0.000377 seconds
+Signature scheme Dilithium3 - After signature creation Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 5888 kB
+[Signature scheme Dilithium3 - Signature verification] Execution time: 0.000162 seconds
+Signature scheme Dilithium3 - After signature verification Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 5888 kB
+----------------------------------------
+Short message
+Signature scheme Dilithium5 - Before any operations Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 5888 kB
+[Signature scheme Dilithium5 - Key generation] Execution time: 0.000273 seconds
+Signature scheme Dilithium5 - After key generation Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 6016 kB
+[Signature scheme Dilithium5 - Signature creation] Execution time: 0.000733 seconds
+Signature scheme Dilithium5 - After signature creation Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 6144 kB
+[Signature scheme Dilithium5 - Signature verification] Execution time: 0.000251 seconds
+Signature scheme Dilithium5 - After signature verification Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 6144 kB
+----------------------------------------
+Medium message
+Signature scheme Dilithium5 - Before any operations Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 6144 kB
+[Signature scheme Dilithium5 - Key generation] Execution time: 0.000258 seconds
+Signature scheme Dilithium5 - After key generation Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 6144 kB
+[Signature scheme Dilithium5 - Signature creation] Execution time: 0.000378 seconds
+Signature scheme Dilithium5 - After signature creation Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 6144 kB
+[Signature scheme Dilithium5 - Signature verification] Execution time: 0.000251 seconds
+Signature scheme Dilithium5 - After signature verification Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 6144 kB
+----------------------------------------
+Long message
+Signature scheme Dilithium5 - Before any operations Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 6144 kB
+[Signature scheme Dilithium5 - Key generation] Execution time: 0.000252 seconds
+Signature scheme Dilithium5 - After key generation Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 6144 kB
+[Signature scheme Dilithium5 - Signature creation] Execution time: 0.001042 seconds
+Signature scheme Dilithium5 - After signature creation Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 6144 kB
+[Signature scheme Dilithium5 - Signature verification] Execution time: 0.000252 seconds
+Signature scheme Dilithium5 - After signature verification Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 6144 kB
+----------------------------------------
+4th time:
+Short message
+Signature scheme Dilithium2 - Before any operations Virtual Memory usage (VmSize): 8900 kB
+ Resident Set Size (RSS): 2944 kB
+[Signature scheme Dilithium2 - Key generation] Execution time: 0.001874 seconds
+Signature scheme Dilithium2 - After key generation Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 5888 kB
+[Signature scheme Dilithium2 - Signature creation] Execution time: 0.000126 seconds
+Signature scheme Dilithium2 - After signature creation Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 5888 kB
+[Signature scheme Dilithium2 - Signature verification] Execution time: 0.000039 seconds
+Signature scheme Dilithium2 - After signature verification Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 5888 kB
+----------------------------------------
+Medium message
+Signature scheme Dilithium2 - Before any operations Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 5888 kB
+[Signature scheme Dilithium2 - Key generation] Execution time: 0.000039 seconds
+Signature scheme Dilithium2 - After key generation Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 5888 kB
+[Signature scheme Dilithium2 - Signature creation] Execution time: 0.000099 seconds
+Signature scheme Dilithium2 - After signature creation Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 6016 kB
+[Signature scheme Dilithium2 - Signature verification] Execution time: 0.000038 seconds
+Signature scheme Dilithium2 - After signature verification Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 6016 kB
+----------------------------------------
+Long message
+Signature scheme Dilithium2 - Before any operations Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 6016 kB
+[Signature scheme Dilithium2 - Key generation] Execution time: 0.000038 seconds
+Signature scheme Dilithium2 - After key generation Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 6016 kB
+[Signature scheme Dilithium2 - Signature creation] Execution time: 0.000136 seconds
+Signature scheme Dilithium2 - After signature creation Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 6016 kB
+[Signature scheme Dilithium2 - Signature verification] Execution time: 0.000038 seconds
+Signature scheme Dilithium2 - After signature verification Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 6016 kB
+----------------------------------------
+Short message
+Signature scheme Dilithium3 - Before any operations Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 6016 kB
+[Signature scheme Dilithium3 - Key generation] Execution time: 0.000078 seconds
+Signature scheme Dilithium3 - After key generation Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 6016 kB
+[Signature scheme Dilithium3 - Signature creation] Execution time: 0.000109 seconds
+Signature scheme Dilithium3 - After signature creation Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 6016 kB
+[Signature scheme Dilithium3 - Signature verification] Execution time: 0.000063 seconds
+Signature scheme Dilithium3 - After signature verification Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 6016 kB
+----------------------------------------
+Medium message
+Signature scheme Dilithium3 - Before any operations Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 6016 kB
+[Signature scheme Dilithium3 - Key generation] Execution time: 0.000064 seconds
+Signature scheme Dilithium3 - After key generation Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 6016 kB
+[Signature scheme Dilithium3 - Signature creation] Execution time: 0.000076 seconds
+Signature scheme Dilithium3 - After signature creation Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 6016 kB
+[Signature scheme Dilithium3 - Signature verification] Execution time: 0.000064 seconds
+Signature scheme Dilithium3 - After signature verification Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 6016 kB
+----------------------------------------
+Long message
+Signature scheme Dilithium3 - Before any operations Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 6016 kB
+[Signature scheme Dilithium3 - Key generation] Execution time: 0.000062 seconds
+Signature scheme Dilithium3 - After key generation Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 6016 kB
+[Signature scheme Dilithium3 - Signature creation] Execution time: 0.000073 seconds
+Signature scheme Dilithium3 - After signature creation Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 6016 kB
+[Signature scheme Dilithium3 - Signature verification] Execution time: 0.000059 seconds
+Signature scheme Dilithium3 - After signature verification Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 6016 kB
+----------------------------------------
+Short message
+Signature scheme Dilithium5 - Before any operations Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 6016 kB
+[Signature scheme Dilithium5 - Key generation] Execution time: 0.000111 seconds
+Signature scheme Dilithium5 - After key generation Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 6144 kB
+[Signature scheme Dilithium5 - Signature creation] Execution time: 0.000229 seconds
+Signature scheme Dilithium5 - After signature creation Virtual Memory usage (VmSize): 9464 kB
+ Resident Set Size (RSS): 6272 kB
+[Signature scheme Dilithium5 - Signature verification] Execution time: 0.000094 seconds
+Signature scheme Dilithium5 - After signature verification Virtual Memory usage (VmSize): 9464 kB
+ Resident Set Size (RSS): 6272 kB
+----------------------------------------
+Medium message
+Signature scheme Dilithium5 - Before any operations Virtual Memory usage (VmSize): 9464 kB
+ Resident Set Size (RSS): 6272 kB
+[Signature scheme Dilithium5 - Key generation] Execution time: 0.000099 seconds
+Signature scheme Dilithium5 - After key generation Virtual Memory usage (VmSize): 9464 kB
+ Resident Set Size (RSS): 6272 kB
+[Signature scheme Dilithium5 - Signature creation] Execution time: 0.000186 seconds
+Signature scheme Dilithium5 - After signature creation Virtual Memory usage (VmSize): 9464 kB
+ Resident Set Size (RSS): 6272 kB
+[Signature scheme Dilithium5 - Signature verification] Execution time: 0.000093 seconds
+Signature scheme Dilithium5 - After signature verification Virtual Memory usage (VmSize): 9464 kB
+ Resident Set Size (RSS): 6272 kB
+----------------------------------------
+Long message
+Signature scheme Dilithium5 - Before any operations Virtual Memory usage (VmSize): 9464 kB
+ Resident Set Size (RSS): 6272 kB
+[Signature scheme Dilithium5 - Key generation] Execution time: 0.000095 seconds
+Signature scheme Dilithium5 - After key generation Virtual Memory usage (VmSize): 9464 kB
+ Resident Set Size (RSS): 6272 kB
+[Signature scheme Dilithium5 - Signature creation] Execution time: 0.000111 seconds
+Signature scheme Dilithium5 - After signature creation Virtual Memory usage (VmSize): 9464 kB
+ Resident Set Size (RSS): 6272 kB
+[Signature scheme Dilithium5 - Signature verification] Execution time: 0.000093 seconds
+Signature scheme Dilithium5 - After signature verification Virtual Memory usage (VmSize): 9464 kB
+ Resident Set Size (RSS): 6272 kB
+----------------------------------------
+5th time:
+Short message
+Signature scheme Dilithium2 - Before any operations Virtual Memory usage (VmSize): 8900 kB
+ Resident Set Size (RSS): 2944 kB
+[Signature scheme Dilithium2 - Key generation] Execution time: 0.002824 seconds
+Signature scheme Dilithium2 - After key generation Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 5888 kB
+[Signature scheme Dilithium2 - Signature creation] Execution time: 0.000418 seconds
+Signature scheme Dilithium2 - After signature creation Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 5888 kB
+[Signature scheme Dilithium2 - Signature verification] Execution time: 0.000105 seconds
+Signature scheme Dilithium2 - After signature verification Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 5888 kB
+----------------------------------------
+Medium message
+Signature scheme Dilithium2 - Before any operations Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 5888 kB
+[Signature scheme Dilithium2 - Key generation] Execution time: 0.000102 seconds
+Signature scheme Dilithium2 - After key generation Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 5888 kB
+[Signature scheme Dilithium2 - Signature creation] Execution time: 0.000486 seconds
+Signature scheme Dilithium2 - After signature creation Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 6016 kB
+[Signature scheme Dilithium2 - Signature verification] Execution time: 0.000105 seconds
+Signature scheme Dilithium2 - After signature verification Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 6016 kB
+----------------------------------------
+Long message
+Signature scheme Dilithium2 - Before any operations Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 6016 kB
+[Signature scheme Dilithium2 - Key generation] Execution time: 0.000099 seconds
+Signature scheme Dilithium2 - After key generation Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 6016 kB
+[Signature scheme Dilithium2 - Signature creation] Execution time: 0.000265 seconds
+Signature scheme Dilithium2 - After signature creation Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 6016 kB
+[Signature scheme Dilithium2 - Signature verification] Execution time: 0.000104 seconds
+Signature scheme Dilithium2 - After signature verification Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 6016 kB
+----------------------------------------
+Short message
+Signature scheme Dilithium3 - Before any operations Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 6016 kB
+[Signature scheme Dilithium3 - Key generation] Execution time: 0.000178 seconds
+Signature scheme Dilithium3 - After key generation Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 6016 kB
+[Signature scheme Dilithium3 - Signature creation] Execution time: 0.000792 seconds
+Signature scheme Dilithium3 - After signature creation Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 6016 kB
+[Signature scheme Dilithium3 - Signature verification] Execution time: 0.000165 seconds
+Signature scheme Dilithium3 - After signature verification Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 6016 kB
+----------------------------------------
+Medium message
+Signature scheme Dilithium3 - Before any operations Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 6016 kB
+[Signature scheme Dilithium3 - Key generation] Execution time: 0.000169 seconds
+Signature scheme Dilithium3 - After key generation Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 6016 kB
+[Signature scheme Dilithium3 - Signature creation] Execution time: 0.000588 seconds
+Signature scheme Dilithium3 - After signature creation Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 6016 kB
+[Signature scheme Dilithium3 - Signature verification] Execution time: 0.000162 seconds
+Signature scheme Dilithium3 - After signature verification Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 6016 kB
+----------------------------------------
+Long message
+Signature scheme Dilithium3 - Before any operations Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 6016 kB
+[Signature scheme Dilithium3 - Key generation] Execution time: 0.000161 seconds
+Signature scheme Dilithium3 - After key generation Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 6016 kB
+[Signature scheme Dilithium3 - Signature creation] Execution time: 0.000334 seconds
+Signature scheme Dilithium3 - After signature creation Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 6016 kB
+[Signature scheme Dilithium3 - Signature verification] Execution time: 0.000170 seconds
+Signature scheme Dilithium3 - After signature verification Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 6016 kB
+----------------------------------------
+Short message
+Signature scheme Dilithium5 - Before any operations Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 6016 kB
+[Signature scheme Dilithium5 - Key generation] Execution time: 0.000273 seconds
+Signature scheme Dilithium5 - After key generation Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 6016 kB
+[Signature scheme Dilithium5 - Signature creation] Execution time: 0.000897 seconds
+Signature scheme Dilithium5 - After signature creation Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 6144 kB
+[Signature scheme Dilithium5 - Signature verification] Execution time: 0.000252 seconds
+Signature scheme Dilithium5 - After signature verification Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 6144 kB
+----------------------------------------
+Medium message
+Signature scheme Dilithium5 - Before any operations Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 6144 kB
+[Signature scheme Dilithium5 - Key generation] Execution time: 0.000258 seconds
+Signature scheme Dilithium5 - After key generation Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 6144 kB
+[Signature scheme Dilithium5 - Signature creation] Execution time: 0.000377 seconds
+Signature scheme Dilithium5 - After signature creation Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 6144 kB
+[Signature scheme Dilithium5 - Signature verification] Execution time: 0.000251 seconds
+Signature scheme Dilithium5 - After signature verification Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 6144 kB
+----------------------------------------
+Long message
+Signature scheme Dilithium5 - Before any operations Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 6144 kB
+[Signature scheme Dilithium5 - Key generation] Execution time: 0.000251 seconds
+Signature scheme Dilithium5 - After key generation Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 6144 kB
+[Signature scheme Dilithium5 - Signature creation] Execution time: 0.001764 seconds
+Signature scheme Dilithium5 - After signature creation Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 6144 kB
+[Signature scheme Dilithium5 - Signature verification] Execution time: 0.000251 seconds
+Signature scheme Dilithium5 - After signature verification Virtual Memory usage (VmSize): 9460 kB
+ Resident Set Size (RSS): 6144 kB
+----------------------------------------

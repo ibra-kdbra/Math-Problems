@@ -1,0 +1,249 @@
+1st time:
+ECC with curve NID_secp224r1 Before any operations Virtual Memory usage (VmSize): 7132 kB
+ Resident Set Size (RSS): 2944 kB
+[Key generation] Execution time: 0.002873 seconds
+ECC with curve NID_secp224r1 After key generation Virtual Memory usage (VmSize): 7696 kB
+ Resident Set Size (RSS): 5504 kB
+[Signature creation] Execution time: 0.000377 seconds
+ECC with curve NID_secp224r1 After signature creation Virtual Memory usage (VmSize): 7696 kB
+ Resident Set Size (RSS): 5632 kB
+[Signature verification] Execution time: 0.000396 seconds
+ECC with curve NID_secp224r1 After signature verification Virtual Memory usage (VmSize): 7696 kB
+ Resident Set Size (RSS): 5632 kB
+----------------------------------------
+ECC with curve NID_X9_62_prime256v1 Before any operations Virtual Memory usage (VmSize): 7696 kB
+ Resident Set Size (RSS): 5632 kB
+[Key generation] Execution time: 0.000089 seconds
+ECC with curve NID_X9_62_prime256v1 After key generation Virtual Memory usage (VmSize): 7696 kB
+ Resident Set Size (RSS): 5760 kB
+[Signature creation] Execution time: 0.000077 seconds
+ECC with curve NID_X9_62_prime256v1 After signature creation Virtual Memory usage (VmSize): 7696 kB
+ Resident Set Size (RSS): 5760 kB
+[Signature verification] Execution time: 0.000210 seconds
+ECC with curve NID_X9_62_prime256v1 After signature verification Virtual Memory usage (VmSize): 7696 kB
+ Resident Set Size (RSS): 5760 kB
+----------------------------------------
+ECC with curve NID_secp384r1 Before any operations Virtual Memory usage (VmSize): 7696 kB
+ Resident Set Size (RSS): 5760 kB
+[Key generation] Execution time: 0.001645 seconds
+ECC with curve NID_secp384r1 After key generation Virtual Memory usage (VmSize): 7696 kB
+ Resident Set Size (RSS): 5760 kB
+[Signature creation] Execution time: 0.001719 seconds
+ECC with curve NID_secp384r1 After signature creation Virtual Memory usage (VmSize): 7696 kB
+ Resident Set Size (RSS): 5760 kB
+[Signature verification] Execution time: 0.001405 seconds
+ECC with curve NID_secp384r1 After signature verification Virtual Memory usage (VmSize): 7696 kB
+ Resident Set Size (RSS): 5760 kB
+----------------------------------------
+ECC with curve NID_secp521r1 Before any operations Virtual Memory usage (VmSize): 7696 kB
+Resident Set Size (RSS): 5760 kB
+[Key generation] Execution time: 0.000406 seconds
+ECC with curve NID_secp521r1 After key generation Virtual Memory usage (VmSize): 7696 kB
+ Resident Set Size (RSS): 5760 kB
+[Signature creation] Execution time: 0.000633 seconds
+ECC with curve NID_secp521r1 After signature creation Virtual Memory usage (VmSize): 7696 kB
+ Resident Set Size (RSS): 5760 kB
+[Signature verification] Execution time: 0.001232 seconds
+ECC with curve NID_secp521r1 After signature verification Virtual Memory usage (VmSize): 7696 kB
+ Resident Set Size (RSS): 5760 kB
+----------------------------------------
+
+2nd time:
+ECC with curve NID_secp224r1 Before any operations Virtual Memory usage (VmSize): 7132 kB
+ Resident Set Size (RSS): 2944 kB
+[Key generation] Execution time: 0.001871 seconds
+ECC with curve NID_secp224r1 After key generation Virtual Memory usage (VmSize): 7696 kB
+ Resident Set Size (RSS): 5504 kB
+[Signature creation] Execution time: 0.000198 seconds
+ECC with curve NID_secp224r1 After signature creation Virtual Memory usage (VmSize): 7696 kB
+ Resident Set Size (RSS): 5632 kB
+[Signature verification] Execution time: 0.000124 seconds
+ECC with curve NID_secp224r1 After signature verification Virtual Memory usage (VmSize): 7696 kB
+ Resident Set Size (RSS): 5632 kB
+----------------------------------------
+ECC with curve NID_X9_62_prime256v1 Before any operations Virtual Memory usage (VmSize): 7696 kB
+ Resident Set Size (RSS): 5632 kB
+[Key generation] Execution time: 0.000054 seconds
+ECC with curve NID_X9_62_prime256v1 After key generation Virtual Memory usage (VmSize): 7696 kB
+ Resident Set Size (RSS): 5760 kB
+[Signature creation] Execution time: 0.000039 seconds
+ECC with curve NID_X9_62_prime256v1 After signature creation Virtual Memory usage (VmSize): 7696 kB
+ Resident Set Size (RSS): 5760 kB
+[Signature verification] Execution time: 0.000101 seconds
+ECC with curve NID_X9_62_prime256v1 After signature verification Virtual Memory usage (VmSize): 7696 kB
+ Resident Set Size (RSS): 5760 kB
+----------------------------------------
+ECC with curve NID_secp384r1 Before any operations Virtual Memory usage (VmSize): 7696 kB
+ Resident Set Size (RSS): 5760 kB
+[Key generation] Execution time: 0.000873 seconds
+ECC with curve NID_secp384r1 After key generation Virtual Memory usage (VmSize): 7696 kB
+ Resident Set Size (RSS): 5760 kB
+[Signature creation] Execution time: 0.000904 seconds
+ECC with curve NID_secp384r1 After signature creation Virtual Memory usage (VmSize): 7696 kB
+ Resident Set Size (RSS): 5760 kB
+[Signature verification] Execution time: 0.000771 seconds
+ECC with curve NID_secp384r1 After signature verification Virtual Memory usage (VmSize): 7696 kB
+ Resident Set Size (RSS): 5760 kB
+----------------------------------------
+ECC with curve NID_secp521r1 Before any operations Virtual Memory usage (VmSize): 7696 kB
+ Resident Set Size (RSS): 5760 kB
+[Key generation] Execution time: 0.000215 seconds
+ECC with curve NID_secp521r1 After key generation Virtual Memory usage (VmSize): 7696 kB
+ Resident Set Size (RSS): 5760 kB
+[Signature creation] Execution time: 0.000336 seconds
+ECC with curve NID_secp521r1 After signature creation Virtual Memory usage (VmSize): 7696 kB
+ Resident Set Size (RSS): 5760 kB
+[Signature verification] Execution time: 0.000646 seconds
+ECC with curve NID_secp521r1 After signature verification Virtual Memory usage (VmSize): 7696 kB
+ Resident Set Size (RSS): 5888 kB
+----------------------------------------
+
+3rd time:
+ECC with curve NID_secp224r1 Before any operations Virtual Memory usage (VmSize): 7132 kB
+ Resident Set Size (RSS): 2944 kB
+[Key generation] Execution time: 0.001890 seconds
+ECC with curve NID_secp224r1 After key generation Virtual Memory usage (VmSize): 7696 kB
+ Resident Set Size (RSS): 5504 kB
+[Signature creation] Execution time: 0.000199 seconds
+ECC with curve NID_secp224r1 After signature creation Virtual Memory usage (VmSize): 7696 kB
+ Resident Set Size (RSS): 5632 kB
+[Signature verification] Execution time: 0.000124 seconds
+ECC with curve NID_secp224r1 After signature verification Virtual Memory usage (VmSize): 7696 kB
+ Resident Set Size (RSS): 5632 kB
+----------------------------------------
+ECC with curve NID_X9_62_prime256v1 Before any operations Virtual Memory usage (VmSize): 7696 kB
+ Resident Set Size (RSS): 5632 kB
+[Key generation] Execution time: 0.000053 seconds
+ECC with curve NID_X9_62_prime256v1 After key generation Virtual Memory usage (VmSize): 7696 kB
+ Resident Set Size (RSS): 5760 kB
+[Signature creation] Execution time: 0.000038 seconds
+ECC with curve NID_X9_62_prime256v1 After signature creation Virtual Memory usage (VmSize): 7696 kB
+ Resident Set Size (RSS): 5760 kB
+[Signature verification] Execution time: 0.000102 seconds
+ECC with curve NID_X9_62_prime256v1 After signature verification Virtual Memory usage (VmSize): 7696 kB
+ Resident Set Size (RSS): 5760 kB
+----------------------------------------
+ECC with curve NID_secp384r1 Before any operations Virtual Memory usage (VmSize): 7696 kB
+ Resident Set Size (RSS): 5760 kB
+[Key generation] Execution time: 0.000869 seconds
+ECC with curve NID_secp384r1 After key generation Virtual Memory usage (VmSize): 7696 kB
+ Resident Set Size (RSS): 5760 kB
+[Signature creation] Execution time: 0.000896 seconds
+ECC with curve NID_secp384r1 After signature creation Virtual Memory usage (VmSize): 7696 kB
+ Resident Set Size (RSS): 5760 kB
+[Signature verification] Execution time: 0.000782 seconds
+ECC with curve NID_secp384r1 After signature verification Virtual Memory usage (VmSize): 7696 kB
+ Resident Set Size (RSS): 5760 kB
+----------------------------------------
+ECC with curve NID_secp521r1 Before any operations Virtual Memory usage (VmSize): 7696 kB
+ Resident Set Size (RSS): 5760 kB
+[Key generation] Execution time: 0.000214 seconds
+ECC with curve NID_secp521r1 After key generation Virtual Memory usage (VmSize): 7696 kB
+ Resident Set Size (RSS): 5760 kB
+[Signature creation] Execution time: 0.000327 seconds
+ECC with curve NID_secp521r1 After signature creation Virtual Memory usage (VmSize): 7696 kB
+ Resident Set Size (RSS): 5760 kB
+[Signature verification] Execution time: 0.000648 seconds
+ECC with curve NID_secp521r1 After signature verification Virtual Memory usage (VmSize): 7696 kB
+ Resident Set Size (RSS): 5760 kB
+----------------------------------------
+
+4th time:
+ECC with curve NID_secp224r1 Before any operations Virtual Memory usage (VmSize): 7132 kB
+ Resident Set Size (RSS): 2944 kB
+[Key generation] Execution time: 0.002915 seconds
+ECC with curve NID_secp224r1 After key generation Virtual Memory usage (VmSize): 7696 kB
+ Resident Set Size (RSS): 5504 kB
+[Signature creation] Execution time: 0.000383 seconds
+ECC with curve NID_secp224r1 After signature creation Virtual Memory usage (VmSize): 7696 kB
+ Resident Set Size (RSS): 5632 kB
+[Signature verification] Execution time: 0.000390 seconds
+ECC with curve NID_secp224r1 After signature verification Virtual Memory usage (VmSize): 7696 kB
+ Resident Set Size (RSS): 5632 kB
+----------------------------------------
+ECC with curve NID_X9_62_prime256v1 Before any operations Virtual Memory usage (VmSize): 7696 kB
+ Resident Set Size (RSS): 5632 kB
+[Key generation] Execution time: 0.000102 seconds
+ECC with curve NID_X9_62_prime256v1 After key generation Virtual Memory usage (VmSize): 7696 kB
+ Resident Set Size (RSS): 5760 kB
+[Signature creation] Execution time: 0.000079 seconds
+ECC with curve NID_X9_62_prime256v1 After signature creation Virtual Memory usage (VmSize): 7696 kB
+ Resident Set Size (RSS): 5760 kB
+[Signature verification] Execution time: 0.000210 seconds
+ECC with curve NID_X9_62_prime256v1 After signature verification Virtual Memory usage (VmSize): 7696 kB
+ Resident Set Size (RSS): 5760 kB
+----------------------------------------
+ECC with curve NID_secp384r1 Before any operations Virtual Memory usage (VmSize): 7696 kB
+ Resident Set Size (RSS): 5760 kB
+[Key generation] Execution time: 0.001647 seconds
+ECC with curve NID_secp384r1 After key generation Virtual Memory usage (VmSize): 7696 kB
+ Resident Set Size (RSS): 5760 kB
+[Signature creation] Execution time: 0.001694 seconds
+ECC with curve NID_secp384r1 After signature creation Virtual Memory usage (VmSize): 7696 kB
+ Resident Set Size (RSS): 5760 kB
+[Signature verification] Execution time: 0.001425 seconds
+ECC with curve NID_secp384r1 After signature verification Virtual Memory usage (VmSize): 7696 kB
+ Resident Set Size (RSS): 5760 kB
+----------------------------------------
+ECC with curve NID_secp521r1 Before any operations Virtual Memory usage (VmSize): 7696 kB
+ Resident Set Size (RSS): 5760 kB
+[Key generation] Execution time: 0.000405 seconds
+ECC with curve NID_secp521r1 After key generation Virtual Memory usage (VmSize): 7696 kB
+ Resident Set Size (RSS): 5760 kB
+[Signature creation] Execution time: 0.000633 seconds
+ECC with curve NID_secp521r1 After signature creation Virtual Memory usage (VmSize): 7696 kB
+ Resident Set Size (RSS): 5760 kB
+[Signature verification] Execution time: 0.001224 seconds
+ECC with curve NID_secp521r1 After signature verification Virtual Memory usage (VmSize): 7696 kB
+ Resident Set Size (RSS): 5888 kB
+----------------------------------------
+
+5th time:
+ECC with curve NID_secp224r1 Before any operations Virtual Memory usage (VmSize): 7132 kB
+ Resident Set Size (RSS): 2944 kB
+[Key generation] Execution time: 0.001866 seconds
+ECC with curve NID_secp224r1 After key generation Virtual Memory usage (VmSize): 7696 kB
+ Resident Set Size (RSS): 5504 kB
+[Signature creation] Execution time: 0.000199 seconds
+ECC with curve NID_secp224r1 After signature creation Virtual Memory usage (VmSize): 7696 kB
+ Resident Set Size (RSS): 5632 kB
+[Signature verification] Execution time: 0.000130 seconds
+ECC with curve NID_secp224r1 After signature verification Virtual Memory usage (VmSize): 7696 kB
+ Resident Set Size (RSS): 5632 kB
+----------------------------------------
+ECC with curve NID_X9_62_prime256v1 Before any operations Virtual Memory usage (VmSize): 7696 kB
+ Resident Set Size (RSS): 5632 kB
+[Key generation] Execution time: 0.000054 seconds
+ECC with curve NID_X9_62_prime256v1 After key generation Virtual Memory usage (VmSize): 7696 kB
+ Resident Set Size (RSS): 5760 kB
+[Signature creation] Execution time: 0.000036 seconds
+ECC with curve NID_X9_62_prime256v1 After signature creation Virtual Memory usage (VmSize): 7696 kB
+ Resident Set Size (RSS): 5760 kB
+[Signature verification] Execution time: 0.000102 seconds
+ECC with curve NID_X9_62_prime256v1 After signature verification Virtual Memory usage (VmSize): 7696 kB
+ Resident Set Size (RSS): 5760 kB
+----------------------------------------
+ECC with curve NID_secp384r1 Before any operations Virtual Memory usage (VmSize): 7696 kB
+ Resident Set Size (RSS): 5760 kB
+[Key generation] Execution time: 0.000867 seconds
+ECC with curve NID_secp384r1 After key generation Virtual Memory usage (VmSize): 7696 kB
+ Resident Set Size (RSS): 5760 kB
+[Signature creation] Execution time: 0.000892 seconds
+ECC with curve NID_secp384r1 After signature creation Virtual Memory usage (VmSize): 7696 kB
+ Resident Set Size (RSS): 5760 kB
+[Signature verification] Execution time: 0.000773 seconds
+ECC with curve NID_secp384r1 After signature verification Virtual Memory usage (VmSize): 7696 kB
+ Resident Set Size (RSS): 5760 kB
+----------------------------------------
+ECC with curve NID_secp521r1 Before any operations Virtual Memory usage (VmSize): 7696 kB
+ Resident Set Size (RSS): 5760 kB
+[Key generation] Execution time: 0.000214 seconds
+ECC with curve NID_secp521r1 After key generation Virtual Memory usage (VmSize): 7696 kB
+ Resident Set Size (RSS): 5760 kB
+[Signature creation] Execution time: 0.000324 seconds
+ECC with curve NID_secp521r1 After signature creation Virtual Memory usage (VmSize): 7696 kB
+ Resident Set Size (RSS): 5760 kB
+[Signature verification] Execution time: 0.000658 seconds
+ECC with curve NID_secp521r1 After signature verification Virtual Memory usage (VmSize): 7696 kB
+ Resident Set Size (RSS): 5760 kB
+----------------------------------------

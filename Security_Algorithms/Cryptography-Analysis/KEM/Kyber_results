@@ -1,0 +1,1042 @@
+1st time:
+Short message
+KEM Kyber512 -- Before any operations Virtual Memory usage (VmSize): 9336 kB
+ Resident Set Size (RSS): 2944 kB
+[KEM Kyber512 -- Key generation] Execution time: 0.001851 seconds
+KEM Kyber512 -- After key generation Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6144 kB
+[KEM Kyber512 -- Encapsulation] Execution time: 0.000023 seconds
+KEM Kyber512 -- After encapsulation Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6144 kB
+[KEM Kyber512 -- Decapsulation] Execution time: 0.000018 seconds
+KEM Kyber512 -- After decapsulation Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6144 kB
+Shared secrets match.
+[KEM Kyber512 -- AES encryption] Execution time: 0.000004 seconds
+KEM Kyber512 -- After AES encryption Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6144 kB
+[KEM Kyber512 -- AES decryption] Execution time: 0.000004 seconds
+KEM Kyber512 -- After AES decryption Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6144 kB
+Decrypted text matches the original plaintext.
+KEM Kyber512 -- After all operations Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6144 kB
+-------------------------------------
+Medium message
+KEM Kyber512 -- Before any operations Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6144 kB
+[KEM Kyber512 -- Key generation] Execution time: 0.000015 seconds
+KEM Kyber512 -- After key generation Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6144 kB
+[KEM Kyber512 -- Encapsulation] Execution time: 0.000019 seconds
+KEM Kyber512 -- After encapsulation Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6144 kB
+[KEM Kyber512 -- Decapsulation] Execution time: 0.000012 seconds
+KEM Kyber512 -- After decapsulation Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6144 kB
+Shared secrets match.
+[KEM Kyber512 -- AES encryption] Execution time: 0.000002 seconds
+KEM Kyber512 -- After AES encryption Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6144 kB
+[KEM Kyber512 -- AES decryption] Execution time: 0.000003 seconds
+KEM Kyber512 -- After AES decryption Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6144 kB
+Decrypted text matches the original plaintext.
+KEM Kyber512 -- After all operations Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6144 kB
+-------------------------------------
+Long message
+KEM Kyber512 -- Before any operations Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6144 kB
+[KEM Kyber512 -- Key generation] Execution time: 0.000015 seconds
+KEM Kyber512 -- After key generation Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6144 kB
+[KEM Kyber512 -- Encapsulation] Execution time: 0.000017 seconds
+KEM Kyber512 -- After encapsulation Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6144 kB
+[KEM Kyber512 -- Decapsulation] Execution time: 0.000014 seconds
+KEM Kyber512 -- After decapsulation Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6144 kB
+Shared secrets match.
+[KEM Kyber512 -- AES encryption] Execution time: 0.000002 seconds
+KEM Kyber512 -- After AES encryption Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6144 kB
+[KEM Kyber512 -- AES decryption] Execution time: 0.000002 seconds
+KEM Kyber512 -- After AES decryption Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6144 kB
+Decrypted text matches the original plaintext.
+KEM Kyber512 -- After all operations Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6144 kB
+-------------------------------------
+Short message
+KEM Kyber768 -- Before any operations Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6144 kB
+[KEM Kyber768 -- Key generation] Execution time: 0.000025 seconds
+KEM Kyber768 -- After key generation Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6144 kB
+[KEM Kyber768 -- Encapsulation] Execution time: 0.000029 seconds
+KEM Kyber768 -- After encapsulation Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6144 kB
+[KEM Kyber768 -- Decapsulation] Execution time: 0.000019 seconds
+KEM Kyber768 -- After decapsulation Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6144 kB
+Shared secrets match.
+[KEM Kyber768 -- AES encryption] Execution time: 0.000001 seconds
+KEM Kyber768 -- After AES encryption Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6144 kB
+[KEM Kyber768 -- AES decryption] Execution time: 0.000002 seconds
+KEM Kyber768 -- After AES decryption Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6144 kB
+Decrypted text matches the original plaintext.
+KEM Kyber768 -- After all operations Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6144 kB
+-------------------------------------
+Medium message
+KEM Kyber768 -- Before any operations Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6144 kB
+[KEM Kyber768 -- Key generation] Execution time: 0.000021 seconds
+KEM Kyber768 -- After key generation Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6144 kB
+[KEM Kyber768 -- Encapsulation] Execution time: 0.000024 seconds
+KEM Kyber768 -- After encapsulation Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6144 kB
+[KEM Kyber768 -- Decapsulation] Execution time: 0.000018 seconds
+KEM Kyber768 -- After decapsulation Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6144 kB
+Shared secrets match.
+[KEM Kyber768 -- AES encryption] Execution time: 0.000001 seconds
+KEM Kyber768 -- After AES encryption Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6144 kB
+[KEM Kyber768 -- AES decryption] Execution time: 0.000001 seconds
+KEM Kyber768 -- After AES decryption Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6144 kB
+Decrypted text matches the original plaintext.
+KEM Kyber768 -- After all operations Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6144 kB
+-------------------------------------
+Long message
+KEM Kyber768 -- Before any operations Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6144 kB
+[KEM Kyber768 -- Key generation] Execution time: 0.000020 seconds
+KEM Kyber768 -- After key generation Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6144 kB
+[KEM Kyber768 -- Encapsulation] Execution time: 0.000025 seconds
+KEM Kyber768 -- After encapsulation Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6144 kB
+[KEM Kyber768 -- Decapsulation] Execution time: 0.000018 seconds
+KEM Kyber768 -- After decapsulation Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6144 kB
+Shared secrets match.
+[KEM Kyber768 -- AES encryption] Execution time: 0.000002 seconds
+KEM Kyber768 -- After AES encryption Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6144 kB
+[KEM Kyber768 -- AES decryption] Execution time: 0.000002 seconds
+KEM Kyber768 -- After AES decryption Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6144 kB
+Decrypted text matches the original plaintext.
+KEM Kyber768 -- After all operations Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6144 kB
+-------------------------------------
+Short message
+KEM Kyber1024 -- Before any operations Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6144 kB
+[KEM Kyber1024 -- Key generation] Execution time: 0.000035 seconds
+KEM Kyber1024 -- After key generation Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6144 kB
+[KEM Kyber1024 -- Encapsulation] Execution time: 0.000037 seconds
+KEM Kyber1024 -- After encapsulation Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6144 kB
+[KEM Kyber1024 -- Decapsulation] Execution time: 0.000026 seconds
+KEM Kyber1024 -- After decapsulation Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6144 kB
+Shared secrets match.
+[KEM Kyber1024 -- AES encryption] Execution time: 0.000001 seconds
+KEM Kyber1024 -- After AES encryption Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6144 kB
+[KEM Kyber1024 -- AES decryption] Execution time: 0.000001 seconds
+KEM Kyber1024 -- After AES decryption Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6144 kB
+Decrypted text matches the original plaintext.
+KEM Kyber1024 -- After all operations Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6144 kB
+-------------------------------------
+Medium message
+KEM Kyber1024 -- Before any operations Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6144 kB
+[KEM Kyber1024 -- Key generation] Execution time: 0.000027 seconds
+KEM Kyber1024 -- After key generation Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6144 kB
+[KEM Kyber1024 -- Encapsulation] Execution time: 0.000033 seconds
+KEM Kyber1024 -- After encapsulation Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6144 kB
+[KEM Kyber1024 -- Decapsulation] Execution time: 0.000025 seconds
+KEM Kyber1024 -- After decapsulation Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6144 kB
+Shared secrets match.
+[KEM Kyber1024 -- AES encryption] Execution time: 0.000001 seconds
+KEM Kyber1024 -- After AES encryption Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6144 kB
+[KEM Kyber1024 -- AES decryption] Execution time: 0.000001 seconds
+KEM Kyber1024 -- After AES decryption Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6144 kB
+Decrypted text matches the original plaintext.
+KEM Kyber1024 -- After all operations Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6144 kB
+-------------------------------------
+Long message
+KEM Kyber1024 -- Before any operations Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6144 kB
+[KEM Kyber1024 -- Key generation] Execution time: 0.000026 seconds
+KEM Kyber1024 -- After key generation Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6144 kB
+[KEM Kyber1024 -- Encapsulation] Execution time: 0.000033 seconds
+KEM Kyber1024 -- After encapsulation Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6144 kB
+[KEM Kyber1024 -- Decapsulation] Execution time: 0.000027 seconds
+KEM Kyber1024 -- After decapsulation Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6144 kB
+Shared secrets match.
+[KEM Kyber1024 -- AES encryption] Execution time: 0.000002 seconds
+KEM Kyber1024 -- After AES encryption Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6144 kB
+[KEM Kyber1024 -- AES decryption] Execution time: 0.000001 seconds
+KEM Kyber1024 -- After AES decryption Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6144 kB
+Decrypted text matches the original plaintext.
+KEM Kyber1024 -- After all operations Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6144 kB
+-------------------------------------
+2nd time:
+Short message
+KEM Kyber512 -- Before any operations Virtual Memory usage (VmSize): 9336 kB
+ Resident Set Size (RSS): 2944 kB
+[KEM Kyber512 -- Key generation] Execution time: 0.002767 seconds
+KEM Kyber512 -- After key generation Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6016 kB
+[KEM Kyber512 -- Encapsulation] Execution time: 0.000067 seconds
+KEM Kyber512 -- After encapsulation Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6016 kB
+[KEM Kyber512 -- Decapsulation] Execution time: 0.000040 seconds
+KEM Kyber512 -- After decapsulation Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6016 kB
+Shared secrets match.
+[KEM Kyber512 -- AES encryption] Execution time: 0.000008 seconds
+KEM Kyber512 -- After AES encryption Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6016 kB
+[KEM Kyber512 -- AES decryption] Execution time: 0.000006 seconds
+KEM Kyber512 -- After AES decryption Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6016 kB
+Decrypted text matches the original plaintext.
+KEM Kyber512 -- After all operations Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6016 kB
+-------------------------------------
+Medium message
+KEM Kyber512 -- Before any operations Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6016 kB
+[KEM Kyber512 -- Key generation] Execution time: 0.000040 seconds
+KEM Kyber512 -- After key generation Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6016 kB
+[KEM Kyber512 -- Encapsulation] Execution time: 0.000050 seconds
+KEM Kyber512 -- After encapsulation Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6016 kB
+[KEM Kyber512 -- Decapsulation] Execution time: 0.000032 seconds
+KEM Kyber512 -- After decapsulation Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6016 kB
+Shared secrets match.
+[KEM Kyber512 -- AES encryption] Execution time: 0.000005 seconds
+KEM Kyber512 -- After AES encryption Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6016 kB
+[KEM Kyber512 -- AES decryption] Execution time: 0.000006 seconds
+KEM Kyber512 -- After AES decryption Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6016 kB
+Decrypted text matches the original plaintext.
+KEM Kyber512 -- After all operations Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6016 kB
+-------------------------------------
+Long message
+KEM Kyber512 -- Before any operations Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6016 kB
+[KEM Kyber512 -- Key generation] Execution time: 0.000040 seconds
+KEM Kyber512 -- After key generation Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6016 kB
+[KEM Kyber512 -- Encapsulation] Execution time: 0.000047 seconds
+KEM Kyber512 -- After encapsulation Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6016 kB
+[KEM Kyber512 -- Decapsulation] Execution time: 0.000037 seconds
+KEM Kyber512 -- After decapsulation Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6016 kB
+Shared secrets match.
+[KEM Kyber512 -- AES encryption] Execution time: 0.000005 seconds
+KEM Kyber512 -- After AES encryption Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6016 kB
+[KEM Kyber512 -- AES decryption] Execution time: 0.000005 seconds
+KEM Kyber512 -- After AES decryption Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6016 kB
+Decrypted text matches the original plaintext.
+KEM Kyber512 -- After all operations Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6016 kB
+-------------------------------------
+Short message
+KEM Kyber768 -- Before any operations Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6016 kB
+[KEM Kyber768 -- Key generation] Execution time: 0.000059 seconds
+KEM Kyber768 -- After key generation Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6016 kB
+[KEM Kyber768 -- Encapsulation] Execution time: 0.000073 seconds
+KEM Kyber768 -- After encapsulation Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6016 kB
+[KEM Kyber768 -- Decapsulation] Execution time: 0.000054 seconds
+KEM Kyber768 -- After decapsulation Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6016 kB
+Shared secrets match.
+[KEM Kyber768 -- AES encryption] Execution time: 0.000005 seconds
+KEM Kyber768 -- After AES encryption Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6016 kB
+[KEM Kyber768 -- AES decryption] Execution time: 0.000005 seconds
+KEM Kyber768 -- After AES decryption Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6016 kB
+Decrypted text matches the original plaintext.
+KEM Kyber768 -- After all operations Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6016 kB
+-------------------------------------
+Medium message
+KEM Kyber768 -- Before any operations Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6016 kB
+[KEM Kyber768 -- Key generation] Execution time: 0.000055 seconds
+KEM Kyber768 -- After key generation Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6016 kB
+[KEM Kyber768 -- Encapsulation] Execution time: 0.000068 seconds
+KEM Kyber768 -- After encapsulation Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6016 kB
+[KEM Kyber768 -- Decapsulation] Execution time: 0.000051 seconds
+KEM Kyber768 -- After decapsulation Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6016 kB
+Shared secrets match.
+[KEM Kyber768 -- AES encryption] Execution time: 0.000005 seconds
+KEM Kyber768 -- After AES encryption Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6016 kB
+[KEM Kyber768 -- AES decryption] Execution time: 0.000005 seconds
+KEM Kyber768 -- After AES decryption Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6016 kB
+Decrypted text matches the original plaintext.
+KEM Kyber768 -- After all operations Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6016 kB
+-------------------------------------
+Long message
+KEM Kyber768 -- Before any operations Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6016 kB
+[KEM Kyber768 -- Key generation] Execution time: 0.000054 seconds
+KEM Kyber768 -- After key generation Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6016 kB
+[KEM Kyber768 -- Encapsulation] Execution time: 0.000068 seconds
+KEM Kyber768 -- After encapsulation Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6016 kB
+[KEM Kyber768 -- Decapsulation] Execution time: 0.000051 seconds
+KEM Kyber768 -- After decapsulation Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6016 kB
+Shared secrets match.
+[KEM Kyber768 -- AES encryption] Execution time: 0.000006 seconds
+KEM Kyber768 -- After AES encryption Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6016 kB
+[KEM Kyber768 -- AES decryption] Execution time: 0.000005 seconds
+KEM Kyber768 -- After AES decryption Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6016 kB
+Decrypted text matches the original plaintext.
+KEM Kyber768 -- After all operations Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6016 kB
+-------------------------------------
+Short message
+KEM Kyber1024 -- Before any operations Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6016 kB
+[KEM Kyber1024 -- Key generation] Execution time: 0.000082 seconds
+KEM Kyber1024 -- After key generation Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6144 kB
+[KEM Kyber1024 -- Encapsulation] Execution time: 0.000098 seconds
+KEM Kyber1024 -- After encapsulation Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6144 kB
+[KEM Kyber1024 -- Decapsulation] Execution time: 0.000072 seconds
+KEM Kyber1024 -- After decapsulation Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6144 kB
+Shared secrets match.
+[KEM Kyber1024 -- AES encryption] Execution time: 0.000005 seconds
+KEM Kyber1024 -- After AES encryption Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6144 kB
+[KEM Kyber1024 -- AES decryption] Execution time: 0.000004 seconds
+KEM Kyber1024 -- After AES decryption Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6144 kB
+Decrypted text matches the original plaintext.
+KEM Kyber1024 -- After all operations Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6144 kB
+-------------------------------------
+Medium message
+KEM Kyber1024 -- Before any operations Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6144 kB
+[KEM Kyber1024 -- Key generation] Execution time: 0.000071 seconds
+KEM Kyber1024 -- After key generation Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6144 kB
+[KEM Kyber1024 -- Encapsulation] Execution time: 0.000092 seconds
+KEM Kyber1024 -- After encapsulation Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6144 kB
+[KEM Kyber1024 -- Decapsulation] Execution time: 0.000070 seconds
+KEM Kyber1024 -- After decapsulation Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6144 kB
+Shared secrets match.
+[KEM Kyber1024 -- AES encryption] Execution time: 0.000005 seconds
+KEM Kyber1024 -- After AES encryption Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6144 kB
+[KEM Kyber1024 -- AES decryption] Execution time: 0.000004 seconds
+KEM Kyber1024 -- After AES decryption Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6144 kB
+Decrypted text matches the original plaintext.
+KEM Kyber1024 -- After all operations Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6144 kB
+-------------------------------------
+Long message
+KEM Kyber1024 -- Before any operations Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6144 kB
+[KEM Kyber1024 -- Key generation] Execution time: 0.000071 seconds
+KEM Kyber1024 -- After key generation Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6144 kB
+[KEM Kyber1024 -- Encapsulation] Execution time: 0.000092 seconds
+KEM Kyber1024 -- After encapsulation Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6144 kB
+[KEM Kyber1024 -- Decapsulation] Execution time: 0.000073 seconds
+KEM Kyber1024 -- After decapsulation Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6144 kB
+Shared secrets match.
+[KEM Kyber1024 -- AES encryption] Execution time: 0.000005 seconds
+KEM Kyber1024 -- After AES encryption Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6144 kB
+[KEM Kyber1024 -- AES decryption] Execution time: 0.000005 seconds
+KEM Kyber1024 -- After AES decryption Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6144 kB
+Decrypted text matches the original plaintext.
+KEM Kyber1024 -- After all operations Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6144 kB
+-------------------------------------
+3rd time:
+Short message
+KEM Kyber512 -- Before any operations Virtual Memory usage (VmSize): 9336 kB
+ Resident Set Size (RSS): 2944 kB
+[KEM Kyber512 -- Key generation] Execution time: 0.001869 seconds
+KEM Kyber512 -- After key generation Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6016 kB
+[KEM Kyber512 -- Encapsulation] Execution time: 0.000024 seconds
+KEM Kyber512 -- After encapsulation Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6016 kB
+[KEM Kyber512 -- Decapsulation] Execution time: 0.000017 seconds
+KEM Kyber512 -- After decapsulation Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6016 kB
+Shared secrets match.
+[KEM Kyber512 -- AES encryption] Execution time: 0.000004 seconds
+KEM Kyber512 -- After AES encryption Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6016 kB
+[KEM Kyber512 -- AES decryption] Execution time: 0.000004 seconds
+KEM Kyber512 -- After AES decryption Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6016 kB
+Decrypted text matches the original plaintext.
+KEM Kyber512 -- After all operations Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6016 kB
+-------------------------------------
+Medium message
+KEM Kyber512 -- Before any operations Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6016 kB
+[KEM Kyber512 -- Key generation] Execution time: 0.000019 seconds
+KEM Kyber512 -- After key generation Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6016 kB
+[KEM Kyber512 -- Encapsulation] Execution time: 0.000022 seconds
+KEM Kyber512 -- After encapsulation Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6016 kB
+[KEM Kyber512 -- Decapsulation] Execution time: 0.000013 seconds
+KEM Kyber512 -- After decapsulation Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6016 kB
+Shared secrets match.
+[KEM Kyber512 -- AES encryption] Execution time: 0.000002 seconds
+KEM Kyber512 -- After AES encryption Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6016 kB
+[KEM Kyber512 -- AES decryption] Execution time: 0.000002 seconds
+KEM Kyber512 -- After AES decryption Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6016 kB
+Decrypted text matches the original plaintext.
+KEM Kyber512 -- After all operations Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6016 kB
+-------------------------------------
+Long message
+KEM Kyber512 -- Before any operations Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6016 kB
+[KEM Kyber512 -- Key generation] Execution time: 0.000016 seconds
+KEM Kyber512 -- After key generation Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6016 kB
+[KEM Kyber512 -- Encapsulation] Execution time: 0.000017 seconds
+KEM Kyber512 -- After encapsulation Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6016 kB
+[KEM Kyber512 -- Decapsulation] Execution time: 0.000014 seconds
+KEM Kyber512 -- After decapsulation Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6016 kB
+Shared secrets match.
+[KEM Kyber512 -- AES encryption] Execution time: 0.000002 seconds
+KEM Kyber512 -- After AES encryption Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6016 kB
+[KEM Kyber512 -- AES decryption] Execution time: 0.000002 seconds
+KEM Kyber512 -- After AES decryption Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6016 kB
+Decrypted text matches the original plaintext.
+KEM Kyber512 -- After all operations Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6016 kB
+-------------------------------------
+Short message
+KEM Kyber768 -- Before any operations Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6016 kB
+[KEM Kyber768 -- Key generation] Execution time: 0.000025 seconds
+KEM Kyber768 -- After key generation Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6016 kB
+[KEM Kyber768 -- Encapsulation] Execution time: 0.000029 seconds
+KEM Kyber768 -- After encapsulation Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6016 kB
+[KEM Kyber768 -- Decapsulation] Execution time: 0.000019 seconds
+KEM Kyber768 -- After decapsulation Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6016 kB
+Shared secrets match.
+[KEM Kyber768 -- AES encryption] Execution time: 0.000001 seconds
+KEM Kyber768 -- After AES encryption Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6016 kB
+[KEM Kyber768 -- AES decryption] Execution time: 0.000001 seconds
+KEM Kyber768 -- After AES decryption Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6016 kB
+Decrypted text matches the original plaintext.
+KEM Kyber768 -- After all operations Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6016 kB
+-------------------------------------
+Medium message
+KEM Kyber768 -- Before any operations Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6016 kB
+[KEM Kyber768 -- Key generation] Execution time: 0.000020 seconds
+KEM Kyber768 -- After key generation Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6016 kB
+[KEM Kyber768 -- Encapsulation] Execution time: 0.000024 seconds
+KEM Kyber768 -- After encapsulation Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6016 kB
+[KEM Kyber768 -- Decapsulation] Execution time: 0.000018 seconds
+KEM Kyber768 -- After decapsulation Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6016 kB
+Shared secrets match.
+[KEM Kyber768 -- AES encryption] Execution time: 0.000001 seconds
+KEM Kyber768 -- After AES encryption Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6016 kB
+[KEM Kyber768 -- AES decryption] Execution time: 0.000001 seconds
+KEM Kyber768 -- After AES decryption Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6016 kB
+Decrypted text matches the original plaintext.
+KEM Kyber768 -- After all operations Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6016 kB
+-------------------------------------
+Long message
+KEM Kyber768 -- Before any operations Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6016 kB
+[KEM Kyber768 -- Key generation] Execution time: 0.000021 seconds
+KEM Kyber768 -- After key generation Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6016 kB
+[KEM Kyber768 -- Encapsulation] Execution time: 0.000025 seconds
+KEM Kyber768 -- After encapsulation Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6016 kB
+[KEM Kyber768 -- Decapsulation] Execution time: 0.000018 seconds
+KEM Kyber768 -- After decapsulation Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6016 kB
+Shared secrets match.
+[KEM Kyber768 -- AES encryption] Execution time: 0.000002 seconds
+KEM Kyber768 -- After AES encryption Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6016 kB
+[KEM Kyber768 -- AES decryption] Execution time: 0.000002 seconds
+KEM Kyber768 -- After AES decryption Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6016 kB
+Decrypted text matches the original plaintext.
+KEM Kyber768 -- After all operations Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6016 kB
+-------------------------------------
+Short message
+KEM Kyber1024 -- Before any operations Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6016 kB
+[KEM Kyber1024 -- Key generation] Execution time: 0.000037 seconds
+KEM Kyber1024 -- After key generation Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6144 kB
+[KEM Kyber1024 -- Encapsulation] Execution time: 0.000036 seconds
+KEM Kyber1024 -- After encapsulation Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6144 kB
+[KEM Kyber1024 -- Decapsulation] Execution time: 0.000026 seconds
+KEM Kyber1024 -- After decapsulation Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6144 kB
+Shared secrets match.
+[KEM Kyber1024 -- AES encryption] Execution time: 0.000001 seconds
+KEM Kyber1024 -- After AES encryption Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6144 kB
+[KEM Kyber1024 -- AES decryption] Execution time: 0.000001 seconds
+KEM Kyber1024 -- After AES decryption Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6144 kB
+Decrypted text matches the original plaintext.
+KEM Kyber1024 -- After all operations Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6144 kB
+-------------------------------------
+Medium message
+KEM Kyber1024 -- Before any operations Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6144 kB
+[KEM Kyber1024 -- Key generation] Execution time: 0.000027 seconds
+KEM Kyber1024 -- After key generation Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6144 kB
+[KEM Kyber1024 -- Encapsulation] Execution time: 0.000033 seconds
+KEM Kyber1024 -- After encapsulation Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6144 kB
+[KEM Kyber1024 -- Decapsulation] Execution time: 0.000025 seconds
+KEM Kyber1024 -- After decapsulation Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6144 kB
+Shared secrets match.
+[KEM Kyber1024 -- AES encryption] Execution time: 0.000001 seconds
+KEM Kyber1024 -- After AES encryption Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6144 kB
+[KEM Kyber1024 -- AES decryption] Execution time: 0.000001 seconds
+KEM Kyber1024 -- After AES decryption Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6144 kB
+Decrypted text matches the original plaintext.
+KEM Kyber1024 -- After all operations Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6144 kB
+-------------------------------------
+Long message
+KEM Kyber1024 -- Before any operations Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6144 kB
+[KEM Kyber1024 -- Key generation] Execution time: 0.000027 seconds
+KEM Kyber1024 -- After key generation Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6144 kB
+[KEM Kyber1024 -- Encapsulation] Execution time: 0.000034 seconds
+KEM Kyber1024 -- After encapsulation Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6144 kB
+[KEM Kyber1024 -- Decapsulation] Execution time: 0.000027 seconds
+KEM Kyber1024 -- After decapsulation Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6144 kB
+Shared secrets match.
+[KEM Kyber1024 -- AES encryption] Execution time: 0.000002 seconds
+KEM Kyber1024 -- After AES encryption Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6144 kB
+[KEM Kyber1024 -- AES decryption] Execution time: 0.000002 seconds
+KEM Kyber1024 -- After AES decryption Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6144 kB
+Decrypted text matches the original plaintext.
+KEM Kyber1024 -- After all operations Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6144 kB
+-------------------------------------
+
+4th time:
+Short message
+KEM Kyber512 -- Before any operations Virtual Memory usage (VmSize): 9336 kB
+ Resident Set Size (RSS): 2944 kB
+[KEM Kyber512 -- Key generation] Execution time: 0.001848 seconds
+KEM Kyber512 -- After key generation Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6016 kB
+[KEM Kyber512 -- Encapsulation] Execution time: 0.000026 seconds
+KEM Kyber512 -- After encapsulation Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6016 kB
+[KEM Kyber512 -- Decapsulation] Execution time: 0.000017 seconds
+KEM Kyber512 -- After decapsulation Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6016 kB
+Shared secrets match.
+[KEM Kyber512 -- AES encryption] Execution time: 0.000005 seconds
+KEM Kyber512 -- After AES encryption Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6016 kB
+[KEM Kyber512 -- AES decryption] Execution time: 0.000004 seconds
+KEM Kyber512 -- After AES decryption Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6016 kB
+Decrypted text matches the original plaintext.
+KEM Kyber512 -- After all operations Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6016 kB
+-------------------------------------
+Medium message
+KEM Kyber512 -- Before any operations Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6016 kB
+[KEM Kyber512 -- Key generation] Execution time: 0.000015 seconds
+KEM Kyber512 -- After key generation Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6016 kB
+[KEM Kyber512 -- Encapsulation] Execution time: 0.000018 seconds
+KEM Kyber512 -- After encapsulation Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6016 kB
+[KEM Kyber512 -- Decapsulation] Execution time: 0.000011 seconds
+KEM Kyber512 -- After decapsulation Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6016 kB
+Shared secrets match.
+[KEM Kyber512 -- AES encryption] Execution time: 0.000002 seconds
+KEM Kyber512 -- After AES encryption Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6016 kB
+[KEM Kyber512 -- AES decryption] Execution time: 0.000002 seconds
+KEM Kyber512 -- After AES decryption Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6016 kB
+Decrypted text matches the original plaintext.
+KEM Kyber512 -- After all operations Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6016 kB
+-------------------------------------
+Long message
+KEM Kyber512 -- Before any operations Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6016 kB
+[KEM Kyber512 -- Key generation] Execution time: 0.000015 seconds
+KEM Kyber512 -- After key generation Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6016 kB
+[KEM Kyber512 -- Encapsulation] Execution time: 0.000017 seconds
+KEM Kyber512 -- After encapsulation Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6016 kB
+[KEM Kyber512 -- Decapsulation] Execution time: 0.000014 seconds
+KEM Kyber512 -- After decapsulation Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6016 kB
+Shared secrets match.
+[KEM Kyber512 -- AES encryption] Execution time: 0.000002 seconds
+KEM Kyber512 -- After AES encryption Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6016 kB
+[KEM Kyber512 -- AES decryption] Execution time: 0.000002 seconds
+KEM Kyber512 -- After AES decryption Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6016 kB
+Decrypted text matches the original plaintext.
+KEM Kyber512 -- After all operations Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6016 kB
+-------------------------------------
+Short message
+KEM Kyber768 -- Before any operations Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6016 kB
+[KEM Kyber768 -- Key generation] Execution time: 0.000029 seconds
+KEM Kyber768 -- After key generation Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6016 kB
+[KEM Kyber768 -- Encapsulation] Execution time: 0.000029 seconds
+KEM Kyber768 -- After encapsulation Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6016 kB
+[KEM Kyber768 -- Decapsulation] Execution time: 0.000018 seconds
+KEM Kyber768 -- After decapsulation Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6016 kB
+Shared secrets match.
+[KEM Kyber768 -- AES encryption] Execution time: 0.000002 seconds
+KEM Kyber768 -- After AES encryption Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6016 kB
+[KEM Kyber768 -- AES decryption] Execution time: 0.000002 seconds
+KEM Kyber768 -- After AES decryption Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6016 kB
+Decrypted text matches the original plaintext.
+KEM Kyber768 -- After all operations Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6016 kB
+-------------------------------------
+Medium message
+KEM Kyber768 -- Before any operations Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6016 kB
+[KEM Kyber768 -- Key generation] Execution time: 0.000021 seconds
+KEM Kyber768 -- After key generation Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6016 kB
+[KEM Kyber768 -- Encapsulation] Execution time: 0.000025 seconds
+KEM Kyber768 -- After encapsulation Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6016 kB
+[KEM Kyber768 -- Decapsulation] Execution time: 0.000018 seconds
+KEM Kyber768 -- After decapsulation Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6016 kB
+Shared secrets match.
+[KEM Kyber768 -- AES encryption] Execution time: 0.000002 seconds
+KEM Kyber768 -- After AES encryption Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6016 kB
+[KEM Kyber768 -- AES decryption] Execution time: 0.000002 seconds
+KEM Kyber768 -- After AES decryption Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6016 kB
+Decrypted text matches the original plaintext.
+KEM Kyber768 -- After all operations Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6016 kB
+-------------------------------------
+Long message
+KEM Kyber768 -- Before any operations Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6016 kB
+[KEM Kyber768 -- Key generation] Execution time: 0.000022 seconds
+KEM Kyber768 -- After key generation Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6016 kB
+[KEM Kyber768 -- Encapsulation] Execution time: 0.000026 seconds
+KEM Kyber768 -- After encapsulation Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6016 kB
+[KEM Kyber768 -- Decapsulation] Execution time: 0.000019 seconds
+KEM Kyber768 -- After decapsulation Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6016 kB
+Shared secrets match.
+[KEM Kyber768 -- AES encryption] Execution time: 0.000002 seconds
+KEM Kyber768 -- After AES encryption Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6016 kB
+[KEM Kyber768 -- AES decryption] Execution time: 0.000001 seconds
+KEM Kyber768 -- After AES decryption Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6016 kB
+Decrypted text matches the original plaintext.
+KEM Kyber768 -- After all operations Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6016 kB
+-------------------------------------
+Short message
+KEM Kyber1024 -- Before any operations Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6016 kB
+[KEM Kyber1024 -- Key generation] Execution time: 0.000035 seconds
+KEM Kyber1024 -- After key generation Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6144 kB
+[KEM Kyber1024 -- Encapsulation] Execution time: 0.000037 seconds
+KEM Kyber1024 -- After encapsulation Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6144 kB
+[KEM Kyber1024 -- Decapsulation] Execution time: 0.000028 seconds
+KEM Kyber1024 -- After decapsulation Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6144 kB
+Shared secrets match.
+[KEM Kyber1024 -- AES encryption] Execution time: 0.000002 seconds
+KEM Kyber1024 -- After AES encryption Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6144 kB
+[KEM Kyber1024 -- AES decryption] Execution time: 0.000002 seconds
+KEM Kyber1024 -- After AES decryption Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6144 kB
+Decrypted text matches the original plaintext.
+KEM Kyber1024 -- After all operations Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6144 kB
+-------------------------------------
+Medium message
+KEM Kyber1024 -- Before any operations Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6144 kB
+[KEM Kyber1024 -- Key generation] Execution time: 0.000027 seconds
+KEM Kyber1024 -- After key generation Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6144 kB
+[KEM Kyber1024 -- Encapsulation] Execution time: 0.000033 seconds
+KEM Kyber1024 -- After encapsulation Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6144 kB
+[KEM Kyber1024 -- Decapsulation] Execution time: 0.000026 seconds
+KEM Kyber1024 -- After decapsulation Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6144 kB
+Shared secrets match.
+[KEM Kyber1024 -- AES encryption] Execution time: 0.000001 seconds
+KEM Kyber1024 -- After AES encryption Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6144 kB
+[KEM Kyber1024 -- AES decryption] Execution time: 0.000002 seconds
+KEM Kyber1024 -- After AES decryption Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6144 kB
+Decrypted text matches the original plaintext.
+KEM Kyber1024 -- After all operations Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6144 kB
+-------------------------------------
+Long message
+KEM Kyber1024 -- Before any operations Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6144 kB
+[KEM Kyber1024 -- Key generation] Execution time: 0.000028 seconds
+KEM Kyber1024 -- After key generation Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6144 kB
+[KEM Kyber1024 -- Encapsulation] Execution time: 0.000034 seconds
+KEM Kyber1024 -- After encapsulation Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6144 kB
+[KEM Kyber1024 -- Decapsulation] Execution time: 0.000027 seconds
+KEM Kyber1024 -- After decapsulation Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6144 kB
+Shared secrets match.
+[KEM Kyber1024 -- AES encryption] Execution time: 0.000002 seconds
+KEM Kyber1024 -- After AES encryption Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6144 kB
+[KEM Kyber1024 -- AES decryption] Execution time: 0.000001 seconds
+KEM Kyber1024 -- After AES decryption Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6144 kB
+Decrypted text matches the original plaintext.
+KEM Kyber1024 -- After all operations Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6144 kB
+-------------------------------------
+
+5th time:
+Short message
+KEM Kyber512 -- Before any operations Virtual Memory usage (VmSize): 9336 kB
+ Resident Set Size (RSS): 2944 kB
+[KEM Kyber512 -- Key generation] Execution time: 0.002792 seconds
+KEM Kyber512 -- After key generation Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6016 kB
+[KEM Kyber512 -- Encapsulation] Execution time: 0.000057 seconds
+KEM Kyber512 -- After encapsulation Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6016 kB
+[KEM Kyber512 -- Decapsulation] Execution time: 0.000037 seconds
+KEM Kyber512 -- After decapsulation Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6016 kB
+Shared secrets match.
+[KEM Kyber512 -- AES encryption] Execution time: 0.000009 seconds
+KEM Kyber512 -- After AES encryption Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6016 kB
+[KEM Kyber512 -- AES decryption] Execution time: 0.000006 seconds
+KEM Kyber512 -- After AES decryption Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6016 kB
+Decrypted text matches the original plaintext.
+KEM Kyber512 -- After all operations Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6016 kB
+-------------------------------------
+Medium message
+KEM Kyber512 -- Before any operations Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6016 kB
+[KEM Kyber512 -- Key generation] Execution time: 0.000042 seconds
+KEM Kyber512 -- After key generation Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6016 kB
+[KEM Kyber512 -- Encapsulation] Execution time: 0.000050 seconds
+KEM Kyber512 -- After encapsulation Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6016 kB
+[KEM Kyber512 -- Decapsulation] Execution time: 0.000033 seconds
+KEM Kyber512 -- After decapsulation Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6016 kB
+Shared secrets match.
+[KEM Kyber512 -- AES encryption] Execution time: 0.000006 seconds
+KEM Kyber512 -- After AES encryption Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6016 kB
+[KEM Kyber512 -- AES decryption] Execution time: 0.000006 seconds
+KEM Kyber512 -- After AES decryption Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6016 kB
+Decrypted text matches the original plaintext.
+KEM Kyber512 -- After all operations Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6016 kB
+-------------------------------------
+Long message
+KEM Kyber512 -- Before any operations Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6016 kB
+[KEM Kyber512 -- Key generation] Execution time: 0.000040 seconds
+KEM Kyber512 -- After key generation Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6016 kB
+[KEM Kyber512 -- Encapsulation] Execution time: 0.000046 seconds
+KEM Kyber512 -- After encapsulation Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6016 kB
+[KEM Kyber512 -- Decapsulation] Execution time: 0.000037 seconds
+KEM Kyber512 -- After decapsulation Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6016 kB
+Shared secrets match.
+[KEM Kyber512 -- AES encryption] Execution time: 0.000005 seconds
+KEM Kyber512 -- After AES encryption Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6016 kB
+[KEM Kyber512 -- AES decryption] Execution time: 0.000005 seconds
+KEM Kyber512 -- After AES decryption Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6016 kB
+Decrypted text matches the original plaintext.
+KEM Kyber512 -- After all operations Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6016 kB
+-------------------------------------
+Short message
+KEM Kyber768 -- Before any operations Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6016 kB
+[KEM Kyber768 -- Key generation] Execution time: 0.000067 seconds
+KEM Kyber768 -- After key generation Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6016 kB
+[KEM Kyber768 -- Encapsulation] Execution time: 0.000075 seconds
+KEM Kyber768 -- After encapsulation Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6016 kB
+[KEM Kyber768 -- Decapsulation] Execution time: 0.000052 seconds
+KEM Kyber768 -- After decapsulation Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6016 kB
+Shared secrets match.
+[KEM Kyber768 -- AES encryption] Execution time: 0.000005 seconds
+KEM Kyber768 -- After AES encryption Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6016 kB
+[KEM Kyber768 -- AES decryption] Execution time: 0.000005 seconds
+KEM Kyber768 -- After AES decryption Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6016 kB
+Decrypted text matches the original plaintext.
+KEM Kyber768 -- After all operations Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6016 kB
+-------------------------------------
+Medium message
+KEM Kyber768 -- Before any operations Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6016 kB
+[KEM Kyber768 -- Key generation] Execution time: 0.000055 seconds
+KEM Kyber768 -- After key generation Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6016 kB
+[KEM Kyber768 -- Encapsulation] Execution time: 0.000068 seconds
+KEM Kyber768 -- After encapsulation Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6016 kB
+[KEM Kyber768 -- Decapsulation] Execution time: 0.000051 seconds
+KEM Kyber768 -- After decapsulation Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6016 kB
+Shared secrets match.
+[KEM Kyber768 -- AES encryption] Execution time: 0.000005 seconds
+KEM Kyber768 -- After AES encryption Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6016 kB
+[KEM Kyber768 -- AES decryption] Execution time: 0.000005 seconds
+KEM Kyber768 -- After AES decryption Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6016 kB
+Decrypted text matches the original plaintext.
+KEM Kyber768 -- After all operations Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6016 kB
+-------------------------------------
+Long message
+KEM Kyber768 -- Before any operations Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6016 kB
+[KEM Kyber768 -- Key generation] Execution time: 0.000055 seconds
+KEM Kyber768 -- After key generation Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6016 kB
+[KEM Kyber768 -- Encapsulation] Execution time: 0.000068 seconds
+KEM Kyber768 -- After encapsulation Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6016 kB
+[KEM Kyber768 -- Decapsulation] Execution time: 0.000051 seconds
+KEM Kyber768 -- After decapsulation Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6016 kB
+Shared secrets match.
+[KEM Kyber768 -- AES encryption] Execution time: 0.000006 seconds
+KEM Kyber768 -- After AES encryption Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6016 kB
+[KEM Kyber768 -- AES decryption] Execution time: 0.000005 seconds
+KEM Kyber768 -- After AES decryption Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6016 kB
+Decrypted text matches the original plaintext.
+KEM Kyber768 -- After all operations Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6016 kB
+-------------------------------------
+Short message
+KEM Kyber1024 -- Before any operations Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6016 kB
+[KEM Kyber1024 -- Key generation] Execution time: 0.000082 seconds
+KEM Kyber1024 -- After key generation Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6144 kB
+[KEM Kyber1024 -- Encapsulation] Execution time: 0.000097 seconds
+KEM Kyber1024 -- After encapsulation Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6144 kB
+[KEM Kyber1024 -- Decapsulation] Execution time: 0.000074 seconds
+KEM Kyber1024 -- After decapsulation Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6144 kB
+Shared secrets match.
+[KEM Kyber1024 -- AES encryption] Execution time: 0.000004 seconds
+KEM Kyber1024 -- After AES encryption Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6144 kB
+[KEM Kyber1024 -- AES decryption] Execution time: 0.000005 seconds
+KEM Kyber1024 -- After AES decryption Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6144 kB
+Decrypted text matches the original plaintext.
+KEM Kyber1024 -- After all operations Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6144 kB
+-------------------------------------
+Medium message
+KEM Kyber1024 -- Before any operations Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6144 kB
+[KEM Kyber1024 -- Key generation] Execution time: 0.000071 seconds
+KEM Kyber1024 -- After key generation Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6144 kB
+[KEM Kyber1024 -- Encapsulation] Execution time: 0.000091 seconds
+KEM Kyber1024 -- After encapsulation Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6144 kB
+[KEM Kyber1024 -- Decapsulation] Execution time: 0.000070 seconds
+KEM Kyber1024 -- After decapsulation Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6144 kB
+Shared secrets match.
+[KEM Kyber1024 -- AES encryption] Execution time: 0.000005 seconds
+KEM Kyber1024 -- After AES encryption Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6144 kB
+[KEM Kyber1024 -- AES decryption] Execution time: 0.000004 seconds
+KEM Kyber1024 -- After AES decryption Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6144 kB
+Decrypted text matches the original plaintext.
+KEM Kyber1024 -- After all operations Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6144 kB
+-------------------------------------
+Long message
+KEM Kyber1024 -- Before any operations Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6144 kB
+[KEM Kyber1024 -- Key generation] Execution time: 0.000071 seconds
+KEM Kyber1024 -- After key generation Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6144 kB
+[KEM Kyber1024 -- Encapsulation] Execution time: 0.000091 seconds
+KEM Kyber1024 -- After encapsulation Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6144 kB
+[KEM Kyber1024 -- Decapsulation] Execution time: 0.000082 seconds
+KEM Kyber1024 -- After decapsulation Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6144 kB
+Shared secrets match.
+[KEM Kyber1024 -- AES encryption] Execution time: 0.000006 seconds
+KEM Kyber1024 -- After AES encryption Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6144 kB
+[KEM Kyber1024 -- AES decryption] Execution time: 0.000005 seconds
+KEM Kyber1024 -- After AES decryption Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6144 kB
+Decrypted text matches the original plaintext.
+KEM Kyber1024 -- After all operations Virtual Memory usage (VmSize): 9900 kB
+ Resident Set Size (RSS): 6144 kB
+-------------------------------------

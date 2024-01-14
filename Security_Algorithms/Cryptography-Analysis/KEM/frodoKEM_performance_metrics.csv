@@ -1,0 +1,7 @@
+KEM variant,Key generation time,Encapsulation time,Decapsulation time,Encryption time,Decryption time,Resident set size before any operations (kB),Virtual memory before any operations (kB),Resident set size after key generation (kB),Virtual memory after key generation (kB),Resident set size after encapsulation (kB),Virtual memory after encapsulation (kB),Resident set size after decapsulation (kB),Virtual memory after decapsulation (kB),Resident set size after all operations (kB),Virtual memory after all operations (kB)
+FrodoKEM-640-AES,0.003658,0.001403,0.001306,0.000011,0.000007,2944,9336,5632,9884,5760,9884,5760,9884,5760,9884
+FrodoKEM-640-SHAKE,0.003319,0.003563,0.003477,0.000005,0.000005,5760,9884,5888,9884,5888,9884,5888,9884,5888,9884
+FrodoKEM-976-AES,0.001747,0.002643,0.002472,0.000005,0.000006,5888,9884,5888,9884,6016,10020,6016,10052,6016,10052
+FrodoKEM-976-SHAKE,0.007117,0.007551,0.007390,0.000008,0.000005,6016,10004,6016,10004,6016,10004,6016,10004,6016,10004
+FrodoKEM-1344-AES,0.003060,0.004483,0.004290,0.000005,0.000005,6016,10004,6016,10004,6144,10016,6144,10060,6144,10060
+FrodoKEM-1344-SHAKE,0.012686,0.013448,0.013212,0.000007,0.000006,6144,10060,6144,10060,6144,10060,6144,10060,6144,10060
