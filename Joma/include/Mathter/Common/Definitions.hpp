@@ -1,6 +1,6 @@
 ﻿// L=============================================================================
 // L This software is distributed under the MIT license.
-// L Copyright 2021 Péter Kardos
+// L Copyright 2022 ibra-kdbra
 // L=============================================================================
 
 #pragma once
