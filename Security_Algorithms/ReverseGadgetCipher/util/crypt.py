@@ -1,5 +1,3 @@
-#!/usr/bin/env python
-# -*- encoding: utf-8 -*-
 '''
 @File    :   crypt.py    
 @License :   (C)Copyright 2023, ibra-kdbra
