@@ -1,7 +1,6 @@
 # MIT License
 #
-# Copyright (c) 2021 Yansong Li
-#
+# Copyright (c) 2024 ibra-kdbra
 # Permission is hereby granted, free of charge, to any person obtaining a copy
 # of this software and associated documentation files (the "Software"), to deal
 # in the Software without restriction, including without limitation the rights
@@ -23,13 +22,10 @@
 
 This script contains log helper which will be used for print all kinds of log.
 """
-"""日志打印模块
+"""Log printing module
 
-打印提示、错误以及调试日志。
+Print prompts, errors, and debug logs.
 """
-
-#!/usr/bin/env python
-# -*- encoding: utf-8 -*-
 
 class Log():
     def __init__(self):
