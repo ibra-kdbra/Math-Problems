@@ -24,7 +24,7 @@ class Ui_PecheckerWindow(object):
         self.groupBox = QtWidgets.QGroupBox(PecheckerWindow)
         self.groupBox.setMaximumSize(QtCore.QSize(16777215, 60))
         font = QtGui.QFont()
-        font.setFamily("微软雅黑")
+        font.setFamily("Microsoft Yahei")
         self.groupBox.setFont(font)
         self.groupBox.setStyleSheet("QGroupBox{\n"
 "    border:0px\n"
@@ -55,7 +55,7 @@ class Ui_PecheckerWindow(object):
         self.gridLayout.setObjectName("gridLayout")
         self.openButton = QtWidgets.QPushButton(self.groupBox)
         font = QtGui.QFont()
-        font.setFamily("微软雅黑")
+        font.setFamily("Microsoft Yahei")
         font.setUnderline(False)
         font.setStrikeOut(False)
         self.openButton.setFont(font)
@@ -64,7 +64,7 @@ class Ui_PecheckerWindow(object):
         self.textEdit = QtWidgets.QTextEdit(self.groupBox)
         self.textEdit.setMaximumSize(QtCore.QSize(16777215, 30))
         font = QtGui.QFont()
-        font.setFamily("微软雅黑")
+        font.setFamily("Microsoft Yahei")
         self.textEdit.setFont(font)
         self.textEdit.setStyleSheet("QTextEdit{\n"
 "    border-radius: 4px;\n"
@@ -75,7 +75,7 @@ class Ui_PecheckerWindow(object):
         self.gridLayout.addWidget(self.textEdit, 0, 1, 1, 1)
         self.checkButton = QtWidgets.QPushButton(self.groupBox)
         font = QtGui.QFont()
-        font.setFamily("微软雅黑")
+        font.setFamily("Microsoft Yahei")
         font.setUnderline(False)
         font.setStrikeOut(False)
         self.checkButton.setFont(font)
@@ -85,7 +85,7 @@ class Ui_PecheckerWindow(object):
         self.gridLayout_2.addWidget(self.groupBox, 0, 0, 1, 1)
         self.textBrowser = QtWidgets.QTextBrowser(PecheckerWindow)
         font = QtGui.QFont()
-        font.setFamily("微软雅黑")
+        font.setFamily("Microsoft Yahei")
         self.textBrowser.setFont(font)
         self.textBrowser.setStyleSheet("QTextEdit{\n"
 "    border-radius: 4px;\n"
