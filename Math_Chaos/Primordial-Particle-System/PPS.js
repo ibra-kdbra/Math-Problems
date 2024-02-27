@@ -112,3 +112,32 @@ function initialize() {
     document.getElementById("rate").innerHTML=f;
   }
   
+  // Begin new simulation
+  function refresh(rd) {
+    if (!paused) playPause();
+    if (rd!==undefined) dist=rd;
+    count=0, elapsed=0;
+    scale(); setvr(); sliders();
+    if (n>10000) p=new Array(eval(n));
+    else p=new Array(10000);
+    for (i=0; i<p.length; i++) p[i]=new Particle();
+    playPause();
+  }
+  
+  // Play/pause simulation
+  function playPause() {
+    if (paused) {
+      // Play simulation
+      paused=false;
+      time=new Date().getTime();
+      document.getElementById("controls").style.right='-44vh';
+      run=setInterval(step,1000/f);
+    } else {
+      // Pause simulation
+      paused=true;
+      elapsed+=(new Date().getTime()-time);
+      document.getElementById("controls").style.right='0';
+      window.clearTimeout(run);
+    }
+  }
+  
