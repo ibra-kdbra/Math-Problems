@@ -89,3 +89,11 @@ function initialize() {
     // Update user interface
     showabg(); sliders();
   }
+
+    // Display current settings
+    function showabg() {
+      document.getElementById("info").innerHTML='<h1>'+caption+'</h1>';
+      let sHTML='α&thinsp;'+Math.round((a/pi)*1800)/10+'°&emsp;β&thinsp;'+Math.round((b/pi)*1800)/10+'°&emsp;γ&thinsp;'+Math.round(g*1000)/1000;
+      document.getElementById("settings").innerHTML=sHTML;
+    }
+  
