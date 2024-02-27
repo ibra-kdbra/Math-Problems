@@ -46,3 +46,20 @@ var preset=[[180,17,0.134,n,d,s,o,15,0,'Cell-like behaviour'],
   [0,13,0.2,2000,10,0.075,0.2,f,0,'Exchanging particles'],
   [139,-28,0.1,100,2,0.05,0.1,100,1,'Silly string']];
   
+  // Run simulation
+function initialize() {
+  // Load values of alpha, beta and gamma
+  let url=window.location.search.substring(1).split(",");                           // Check URL for settings
+  if (!url[0]) species(0);                                                          // Default species
+  else if (url.length==1) { demo=url; species(url); }                               // Load species presets
+  else if (url.length>=3) species(url[0],url[1],url[2]);                            // Set species parameters
+  if (url.length>3) n=url[3], d=url[4], s=url[5], o=url[6], f=url[7], dist=url[8];  // Environmental controls
+  
+  // Setup HTML canvas
+  canvas=document.getElementById("canvas");
+  context=canvas.getContext("2d");
+  refresh();
+  
+  // Enable keyboard inputs
+  document.addEventListener('keydown',keyboard);
+}
