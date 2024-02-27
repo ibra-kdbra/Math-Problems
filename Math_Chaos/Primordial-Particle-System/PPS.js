@@ -96,4 +96,19 @@ function initialize() {
       let sHTML='α&thinsp;'+Math.round((a/pi)*1800)/10+'°&emsp;β&thinsp;'+Math.round((b/pi)*1800)/10+'°&emsp;γ&thinsp;'+Math.round(g*1000)/1000;
       document.getElementById("settings").innerHTML=sHTML;
     }
+
+      // Apply settings to control sliders
+  function sliders() {
+    document.getElementById("alpha").value=Math.round((a/pi)*1800)/10;
+    document.getElementById("beta").value=Math.round((b/pi)*1800)/10;
+    document.getElementById("gamma").value=g;
+    document.getElementById("number").value=n;
+    document.getElementById("num").innerHTML=n;
+    document.getElementById("density").value=d;
+    document.getElementById("den").innerHTML=Math.round(d*z*z*100)/100;
+    document.getElementById("size").value=s;
+    document.getElementById("trails").value=1-o;
+    document.getElementById("framerate").value=f;
+    document.getElementById("rate").innerHTML=f;
+  }
   
