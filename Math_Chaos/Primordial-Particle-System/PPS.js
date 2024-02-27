@@ -63,3 +63,29 @@ function initialize() {
   // Enable keyboard inputs
   document.addEventListener('keydown',keyboard);
 }
+
+  // Set values of alpha, beta and gamma
+  function species(abg) {
+    caption='&emsp;';
+    if (arguments.length==0) {
+      // Randomize values (3600 × 1800 × 500 = 3.24 billion possible values!)
+      a=Math.round(Math.random()*3600)/10-180;  // Alpha (-180.0° to +180.0°)
+      b=Math.round(Math.random()*1800)/10-90;   // Beta (-90.0° to +90.0°)
+      g=Math.ceil(Math.random()*500)/1000;      // Gamma (0.001 to 0.500)
+    } else if (arguments.length==1) {
+      // Use preset values
+      let pre=preset[abg];
+      a=pre[0], b=pre[1], g=pre[2];
+      n=pre[3], d=pre[4], s=pre[5], o=pre[6], f=pre[7];
+      dist=pre[8], caption=pre[9];
+    } else {
+      // Use selected values
+      a=arguments[0], b=arguments[1], g=arguments[2];
+    }
+    
+    // Convert values to radians!
+    a=(a/360)*tau, b=(b/360)*tau;
+    
+    // Update user interface
+    showabg(); sliders();
+  }
