@@ -111,7 +111,7 @@ function initialize() {
     document.getElementById("framerate").value=f;
     document.getElementById("rate").innerHTML=f;
   }
-  
+
   // Begin new simulation
   function refresh(rd) {
     if (!paused) playPause();
@@ -139,5 +139,25 @@ function initialize() {
       document.getElementById("controls").style.right='0';
       window.clearTimeout(run);
     }
+  }
+  
+  // Create particle
+  function Particle() {
+    if (dist==0) {
+      // Uniform distribution
+      this.x=Math.random()*vw;
+      this.y=Math.random()*vh;
+    } else if (dist==1) {
+      // Centre-weighted distribution
+      let mx=Math.max(0,(vw-vh)/2), my=Math.max(0,(vh-vw)/2), min=Math.min(vw,vh);
+      this.x=mx+((Math.random()+Math.random()+Math.random())/3)*min;
+      this.y=my+((Math.random()+Math.random()+Math.random())/3)*min;
+    }
+    this.phi=Math.random()*tau;    // Set random orientation
+    this.pSin=Math.sin(this.phi);  // Sine of phi
+    this.pCos=Math.cos(this.phi);  // Cosine of phi
+    this.N=0;                      // Number of neighbours
+    this.L=0;                      // Neighbours on left
+    this.R=0;                      // Neighbours on right
   }
   
