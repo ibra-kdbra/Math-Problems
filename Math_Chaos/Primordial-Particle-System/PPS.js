@@ -330,3 +330,26 @@ function initialize() {
       histogram();
     }
   }
+
+    // Ensure values are between 0 and max
+    function scope(val,max) {
+      val%=max;
+      if (val<0) val+=max;
+      return val;
+    }
+    
+    // Select hue based on number of neighbours and colour scheme
+    function hue(num) {
+      if (hues[cs]===undefined) hues[cs]=new Array();
+      if (hues[cs][num]===undefined) {
+        // Build look-up tables
+        if (cs==0) hues[cs][num]=90;                                                      // 0: Monochrome (green screen)
+        else if (cs==1) hues[cs][num]=scope((num*7.2)+90,360);                            // 1: Short scale (wraps at N=50, N=100, N=150.. )
+        else if (cs==2) hues[cs][num]=scope((num*2)+90,360);                              // 2: Medium scale (wraps at N=180, N=360, N=540...)
+        else if (cs==3) hues[cs][num]=scope(num+90,360);                                  // 3: Long scale (wraps at N=360, N=720, N=1080...)
+        else if (cs==4) hues[cs][num]=scope((Math.max(Math.log(num),-5)*156.34)+90,360);  // 4: Log scale (wraps at N=1, N=10, N=100, N=1000...)
+        else if (cs==5) hues[cs][num]=scope((num*60/d)+90,360);                           // 5: Scales with density
+        else if (cs==6) hues[cs][num]=scope((num*b*180/pi)+240,360);                      // 6: Scales with beta
+      }
+      return hues[cs][num];
+    }
