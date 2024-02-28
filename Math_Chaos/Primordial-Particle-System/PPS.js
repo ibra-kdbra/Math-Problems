@@ -160,4 +160,26 @@ function initialize() {
     this.L=0;                      // Neighbours on left
     this.R=0;                      // Neighbours on right
   }
-  
+
+  // Set scale of viewport, canvas and particles
+  function scale() {
+    // Screen dimensions
+    vw=window.innerWidth, vw2=vw/2;                  // Viewport width (CSS pixels)
+    vh=window.innerHeight, vh2=vh/2;                 // Viewport height (CSS pixels)
+    z=Math.round(((window.outerWidth-8)/vw)*20)/20;  // Browser zoom level (desktop)
+    dpr=Math.round(window.devicePixelRatio*20)/20;   // Device Pixel Ratio (mobile)
+    cw=(vw*dpr), ch=(vh*dpr);                        // HTML canvas dimensions
+    
+    // Set display size (CSS pixels)
+    canvas.style.width=vw+'px';
+    canvas.style.height=vh+'px';
+    
+    // Set actual size in memory (scaled to DPR)
+    canvas.width=cw;
+    canvas.height=ch;
+    
+    // Normalize coordinate system to use CSS pixels
+    context.scale(dpr,dpr);
+    
+    console.log('Viewport: vw='+vw+' vh='+vh+'\nScaling: z='+z+' dpr='+dpr+'\nCanvas: cw='+cw+' ch='+ch);
+  }
