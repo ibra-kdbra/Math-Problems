@@ -183,3 +183,12 @@ function initialize() {
     
     console.log('Viewport: vw='+vw+' vh='+vh+'\nScaling: z='+z+' dpr='+dpr+'\nCanvas: cw='+cw+' ch='+ch);
   }
+
+    // Calculate r and v based on viewport dimensions, density and gamma
+    function setvr() {
+      r=Math.sqrt((vw*vh*z*z*d)/(n*pi)), r2=r*r;                                   // Radius of neighbourhoods (r)
+      v=g*r;                                                                       // Speed of particles
+      sr=s*r, sr2=sr*2, sr4=sr*4, vwsr4=(sr*4)+vw, vhsr4=(sr*4)+vh, srdpr=sr*dpr;  // Scale visible size of particles
+      console.log('r='+r+'\nv='+v+'\ns='+sr+'\ng='+g);                             // Display values in the console
+    }
+  
