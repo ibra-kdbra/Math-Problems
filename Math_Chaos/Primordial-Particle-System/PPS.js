@@ -531,3 +531,15 @@ function initialize() {
     }
     else { showabg(); sliders(); if (paused) step(); }
   }
+
+    // Open a new page using current settings
+    function link(env) {
+      let href=window.location;
+      href=href.protocol+href.pathname+href.hostname+'?';
+      if (caption!='&emsp;') href+=demo;
+      else {
+        href+=Math.round((a/pi)*1800)/10+','+Math.round((b/pi)*1800)/10+','+g;
+        if (env) href+=','+n+','+d+','+s+','+o+','+f+','+dist;
+      }
+      window.open(href,'_self');
+    }
