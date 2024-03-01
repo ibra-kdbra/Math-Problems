@@ -458,3 +458,9 @@ function initialize() {
     context.restore();
   }
   
+  // Cycle through species presets
+  function next() {
+    demo=scope(demo+1,preset.length);
+    species(demo);
+  }
+  
