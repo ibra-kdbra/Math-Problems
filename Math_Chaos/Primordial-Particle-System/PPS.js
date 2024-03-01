@@ -353,3 +353,10 @@ function initialize() {
       }
       return hues[cs][num];
     }
+
+      // Log frame rate in console
+  function framesPerSecond() {
+    let ms=elapsed+(new Date().getTime()-time);
+    let fps=Math.round(((count*1000)/ms)*10)/10;
+    console.log(count+' cycles, '+ms+'ms ('+fps+'fps)');
+  }
