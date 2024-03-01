@@ -479,4 +479,55 @@ function initialize() {
       if (paused) step();
       else if (id=='framerate') { window.clearTimeout(run); run=setInterval(step,1000/f); }
     }
-  
+
+    
+  // Keyboard inputs
+  function keyboard() {
+    let key=event.key, code=event.keyCode, valid=true;
+    if (key==' ') playPause();                                             // Space:  Play/pause
+    else if (code===13) { species(); refresh(); }                          // Return: Random species
+    else if (key=='[') { a=Math.max(a-pi/1800,-pi); caption='&emsp;'; }    // [:      Decrease alpha
+    else if (key==']') { a=Math.min(a+pi/1800,pi); caption='&emsp;'; }     // ]:      Increase alpha
+    else if (key==';') { b=Math.max(b-pi/1800,-pi/2); caption='&emsp;'; }  // ;:      Decrease beta
+    else if (key=='\'') { b=Math.min(b+pi/1800,pi/2); caption='&emsp;'; }  // ':      Increase beta
+    else if (key==',') { if (g>0.001) g-=0.001, caption='&emsp;'; }        // ,:      Decrease gamma
+    else if (key=='.') { if (g<0.5) g+=0.001, caption='&emsp;'; }          // .:      Increase gamma
+    else if (key=='-') { if (n>100) { n-=100; setvr(); }}                  // -:      Less particles
+    else if (key=='+') { if (n<10000) { n+=100; setvr(); }}                // +:      More particles
+    else if (key=='/') { if (d>1) { d-=1; setvr(); }}                      // /:      Decrease density
+    else if (key=='*') { if (d<100) { d+=1; setvr(); }}                    // *:      Increase density
+    else if (key=='r') refresh(0);                                         // R:      Redistribute (random)
+    else if (key=='c') refresh(1);                                         // C:      Redistribute (centre)
+    else if (key=='d') { next(); refresh(); }                              // D:      Next demo
+    else if (key=='a') { if (analyse) analyse=false; else analyse=true; }  // A:      Analyse (histograms) on/off
+    else if (key=='p') { if (ps==0) ps=1; else ps=0; }                     // P:      Particle style (spots or arrows)
+    else if (key=='0') cs=0;                                               // 0:      Colour scheme 0
+    else if (key=='1') cs=1;                                               // 1:      Colour scheme 1
+    else if (key=='2') cs=2;                                               // 2:      Colour scheme 2
+    else if (key=='3') cs=3;                                               // 3:      Colour scheme 3
+    else if (key=='4') cs=4;                                               // 4:      Colour scheme 4
+    else if (key=='5') cs=5;                                               // 5:      Colour scheme 5
+    else if (key=='6') cs=6;                                               // 6:      Colour scheme 6
+    else valid=false;
+    if (!valid) {
+      if (document.getElementById("info").innerHTML.startsWith('<h1>Keyboard shortcuts:</h1>')) showabg();
+      else {
+        // Display keyboard shortcuts
+        let shortcuts='<b>Space</b> .. Pause/play<br />';
+        shortcuts+='<b>Enter</b> .... Randomize species<br />';
+        shortcuts+='<b>[&ensp;]</b>&thinsp; ......... Decrease/increase alpha<br />';
+        shortcuts+='<b>;&ensp;\'</b> .......... Decrease/increase beta<br />';
+        shortcuts+='<b>,&ensp;.</b> .......... Decrease/increase gamma<br />';
+        shortcuts+='<b>-&ensp;+</b> ........ Less/more particles<br />';
+        shortcuts+='<b>/&ensp;*</b> ........ Decrease/increase density<br />';
+        shortcuts+='<b>R</b> ........... Redistribute (random)<br />';
+        shortcuts+='<b>C</b> ........... Redistribute (centre)<br />';
+        shortcuts+='<b>D</b> ........... Next demo<br />';
+        shortcuts+='<b>A</b> ........... Analysis on/off<br />';
+        shortcuts+='<b>P</b> ........... Particle style<br />';
+        shortcuts+='<b>0-6</b> ........ Colour scheme';
+        document.getElementById("info").innerHTML='<h1>Keyboard shortcuts:</h1><br /><p>'+shortcuts+'</p>';
+      }
+    }
+    else { showabg(); sliders(); if (paused) step(); }
+  }
