@@ -411,3 +411,50 @@ function initialize() {
     context.restore();
   }
  
+  // Display orbital diagram
+  function orbitals() {
+    let size=Math.min(vw,vh);
+    context.save();
+    if (vw>vh) {
+      context.translate(0,size);
+      context.rotate(pi*1.5);
+    }
+    for (i=-200; i<200; i++) {
+      let ophi=0, ox=(size/2)+(size*0.125*g), oy=size/2;
+      context.strokeStyle='hsla('+hue(Math.abs(i))+',100%,50%,25%)';
+      if (i==0) context.strokeStyle='hsla(0,0%,100%,50%)';
+      if (((i==0) && (a!=0)) || ((i!=0) && (b!=0))) {
+        let os=Math.min(Math.floor(Math.abs(tau/(a+(b*i)))),1000);
+        if (os>1) for (j=0; j<os; j++) {
+          context.beginPath();
+          context.moveTo(ox,oy);
+          ophi+=a+(b*i);
+          ox+=size*0.25*g*Math.cos(ophi);
+          oy+=size*0.25*g*Math.sin(ophi);
+          context.lineTo(ox,oy);
+          context.stroke();
+          context.closePath();
+        }
+      } else if ((a+(b*i))==0) {
+        context.beginPath();
+        context.moveTo(0,oy);
+        context.lineTo(size,oy);
+        context.stroke();
+        context.closePath();
+      }
+    }
+    // Draw particle
+    context.beginPath();
+    context.arc(size/2,size/2,size*s*0.25,0,tau);
+    context.fillStyle='rgba(255,255,255,0.5)';
+    context.fill();
+    context.closePath();
+    // Draw radius
+    context.beginPath();
+    context.arc(size/2,size/2,size*0.25,0,tau);
+    context.strokeStyle='rgba(255,255,255,0.5)';
+    context.stroke();
+    context.closePath();
+    context.restore();
+  }
+  
