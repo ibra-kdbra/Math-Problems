@@ -464,3 +464,19 @@ function initialize() {
     species(demo);
   }
   
+    // Apply control panel settings (user inputs)
+    function change(id,value) {
+      value=eval(value);
+      if (id=='alpha') a=(value/180)*pi;
+      else if (id=='beta') b=(value/180)*pi;
+      else if (id=='gamma') { g=value, v=g*r; }
+      else if (id=='number') { n=value; setvr(); sliders(); }
+      else if (id=='density') { d=value; scale; setvr(); sliders(); }
+      else if (id=='trails') o=1-value;
+      else if (id=='size') { s=value; setvr(); }
+      else if (id=='framerate') { f=value; sliders(); }
+      if ((id=='alpha') || (id=='beta') || (id=='gamma')) { caption='&emsp;'; showabg(); }
+      if (paused) step();
+      else if (id=='framerate') { window.clearTimeout(run); run=setInterval(step,1000/f); }
+    }
+  
