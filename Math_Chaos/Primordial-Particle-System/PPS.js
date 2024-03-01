@@ -360,3 +360,54 @@ function initialize() {
     let fps=Math.round(((count*1000)/ms)*10)/10;
     console.log(count+' cycles, '+ms+'ms ('+fps+'fps)');
   }
+
+   // Display histograms
+   function histogram() {
+    ave=0; context.save();
+    if (eval(hist[0].length)>hl) hl=hist[0].length;
+    if (vw>vh) {
+      context.translate(0,vh);
+      context.rotate(pi*1.5);
+      var col=vw/hl, bh=vh2;
+    } else {
+      var col=vh/hl, bh=vw2;
+    }
+    for (i=0; i<hl; i++) {
+      let N=hist[0][i], L=hist[1][i], R=hist[2][i];
+      let barN=Math.sqrt(N/n)*bh, barL=Math.sqrt(L/n)*bh, barR=Math.sqrt(R/n)*bh;
+      // Draw Ngram
+      context.fillStyle='hsla('+hue(i)+',100%,25%,75%)';
+      context.fillRect(0,i*col,barN,col);
+      if ((hist[0][i]>hist[0][i-1]) && (hist[0][i]>hist[0][i+1]) && (col>4)) {
+        // Label peak values
+        context.font=(col*2)+'px Roboto';
+        context.fillStyle='hsla('+hue(i)+',50%,50%,50%)';
+        context.fillText(i,barN+(col*0.1),(i+1.2)*col);
+      }
+      // Draw Rgram
+      context.fillStyle='rgba(128,0,0,0.25)';
+      context.fillRect(bh/2,i*col,barR,col);
+      // Draw Lgram
+      context.fillStyle='rgba(0,128,128,0.25)';
+      context.fillRect(bh/2,i*col,barL,col);
+      
+      // Draw scissor scale
+      L=a+(b*i), R=a-(b*i);
+      L=scope(L+pi,tau)*(bh/(2*tau));
+      R=scope(R+pi,tau)*(bh/(2*tau));
+      context.beginPath();
+      context.moveTo(L,i*col);
+      context.lineTo(L,(i+1)*col);
+      context.strokeStyle='#4AA';
+      context.stroke();
+      context.closePath();
+      context.beginPath();
+      context.moveTo(R,i*col);
+      context.lineTo(R,(i+1)*col);
+      context.strokeStyle='#A44';
+      context.stroke();
+      context.closePath();
+    }
+    context.restore();
+  }
+ 
