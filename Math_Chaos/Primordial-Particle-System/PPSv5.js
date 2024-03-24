@@ -118,3 +118,486 @@ function Species(alpha, beta, gamma, radius) {
     showUI();
   }
   
+
+// Generate particles
+function createParticles() {
+    particle=new Array(Math.max(number, 10000));
+    for (let i=0; i<particle.length; i++) particle[i]=new Particle(i);
+  }
+  
+  // Define particle parameters
+  function Particle(i) {
+    if (distribution==0) {
+      // Uniform distribution
+      this.x=Math.random()*cw;
+      this.y=Math.random()*ch;
+    } else if (distribution==1) {
+      // Centre-weighted distribution
+      let mx=Math.max(0,(cw-ch)/2), my=Math.max(0,(ch-cw)/2), min=Math.min(cw,ch);
+      this.x=mx+((Math.random()+Math.random()+Math.random())/3)*min;
+      this.y=my+((Math.random()+Math.random()+Math.random())/3)*min;
+    } else if (distribution==2) {
+      // Striped
+      if (species.length==1) {
+        let stripe=cw/2;
+        this.x=(Math.random()*cw/2)+(cw/4);
+        this.y=Math.random()*ch;
+      } else {
+        this.x=(Math.random()*cw/species.length)+((i%species.length)*cw/species.length);
+        this.y=Math.random()*ch;
+      }
+    }
+    this.phi=Math.random()*tau;      // Set random orientation (radians)
+    this.phiSin=Math.sin(this.phi);  // Sine of phi
+    this.phiCos=Math.cos(this.phi);  // Cosine of phi
+    this.L=0;                        // Neighbours on left
+    this.R=0;                        // Neighbours on right
+    this.N=0;                        // Number of neighbours
+  }
+  
+  // The user interface is generated dynamically using the following functions
+  
+  // Update user interface
+  function showUI() {
+    showSpeciesParameters();
+    showExperimentalSetup();
+    showGraphicsSettings();
+    showPresets();
+    addEventListeners();
+  }
+  
+  // Show species parameters
+  function showSpeciesParameters() {
+    let speciesHTML='<hr><div class="collapsible collapsed"><h2>Species parameters</h2><p>Particle behavior is defined using 3 parameters: Alpha is the angle the particles turn at each step, Beta is the angle turned for each neighbour, ';
+    if (species.length==1) speciesHTML+='and Gamma is the distance travelled at each step.</p></div>';
+    else speciesHTML+='Gamma is the distance travelled at each step, and Radius is the size of the neighbourhood.</p></div>';
+    for (let i=0; i<species.length; i++) {
+      speciesHTML+=showSlider('Alpha <sub>(intrinsic turning angle)</sub>',species[i].alpha,'alpha'+i,-180,180,0.1,'degrees');
+      speciesHTML+=showSlider('Beta <sub>(reactive turning angle)</sub>',species[i].beta,'beta'+i,-90,90,0.1,'degrees');
+      speciesHTML+=showSlider('Gamma <sub>(step size)</sub>',species[i].gamma,'gamma'+i,0.1,50,0.1,'percent');
+      if (species.length>1) speciesHTML+=showSlider('Radius',species[i].radius,'radius'+i,1,100,1);
+      speciesHTML+='<p>Settings</p>'+showButtons(['Randomize','randomizeSpecies('+i+');','Remove species','removeSpecies('+i+');']);
+    }
+    speciesHTML+=showButtons(['Save to URL','saveSettings();','Add species','newSpecies();']);
+    document.getElementById('speciesparameters').innerHTML=speciesHTML;
+  }
+  
+  // Show experimental setup
+  function showExperimentalSetup() {
+    let experimentHTML='<hr><div class="collapsible collapsed"><h2>Experimental setup</h2><p>Here you can alter the total number of particles while maintaining overall particle density and/or alter the particle density to your liking, and the simultion will scale automatically.</p></div>';
+    experimentHTML+=showSlider('Number of particles',number,'number',100,10000,100);
+    experimentHTML+=showSlider('Average density',density,'density',1,100,1);
+    experimentHTML+='<p>Redistribute</p>'+showButtons(['Random','refresh(0);','Centre','refresh(1);','Striped','refresh(2);']);
+    document.getElementById('experimentalsetup').innerHTML=experimentHTML;
+  }
+          
+  // Show graphics settings
+  function showGraphicsSettings() {
+    let graphicsHTML='<hr><div class="collapsible collapsed"><h2>Graphics settings</h2><p>Altering these settings will have no effect on particle behaviour, but may increase processor load.</p></div>';
+    graphicsHTML+=showSlider('Particle size',size,'size',1,50,1,'percent');
+    graphicsHTML+=showSlider('Particle trails',trails,'trails',0,10,1);
+    graphicsHTML+=showSlider('Frame rate',framerate,'framerate',5,250,5,'fps');
+    graphicsHTML+=showSlider('Strobe <sub>(show every nth frame)</sub>',strobe,'strobe',1,10,1);
+    graphicsHTML+=showSlider('Tint',tint,'tint',-360,360,10);
+    graphicsHTML+='<p>Colour scheme</p>'+showButtons(['Short scale','setColours(1);','Medium scale','setColours(2);','Long scale','setColours(3);']);
+    graphicsHTML+=showButtons(['Auto scale','setColours(4);','Colour by species','setColours(5);','Monochrome','setColours(0);']);
+    document.getElementById('graphicssettings').innerHTML=graphicsHTML;
+  }
+  
+  // Returns formatted slider HTML
+  function showSlider(label,value,id,min,max,step,units) {
+    let sliderHTML='<p>'+label+'<span class="right';
+    if (units) sliderHTML+=' '+units;
+    sliderHTML+='">'+value+'</span></p><div class="slider"><button>&#9664;</button><input id="'+id+'" value="'+value+'" type="range" min="'+min+'" max="'+max+'" step="'+step+'" /><button>&#9654;</button></div>'
+    return sliderHTML;
+  }
+  
+  // Returns formatted buttons HTML
+  function showButtons(params) {
+    let buttonsHTML='<div class="buttons">';
+    for (let i=0; i<params.length; i+=2) buttonsHTML+='<input type="button" value="'+params[i]+'" onClick="'+params[i+1]+'" />';
+    buttonsHTML+='</div>';
+    return buttonsHTML;
+  }
+  
+  // Show presets
+  function showPresets() {
+    let presetsHTML='<h2>';
+    if (demoactive) {
+      document.getElementById("overlay").innerHTML=presets[demo][0];
+      presetsHTML+=presets[demo][0]+'</h2>';
+    } else presetsHTML+='Presets</h2>';
+    for (let i=0; i<presets.length; i++) {
+      presetsHTML+='<div class="preset';
+      if ((demo==i) && (demoactive)) presetsHTML+=' active';
+      presetsHTML+='" onClick="loadPreset('+i+')"><img src="data:image/png;base64,'+presets[i][presets[i].length-1]+'" />'+presets[i][0]+'<br />';
+      presetsHTML+='<sub>α'+presets[i][1]+'°&ensp;β'+presets[i][2]+'°&ensp;γ'+presets[i][3]+'%</sub></div>';
+    }
+    document.getElementById("presets").innerHTML=presetsHTML;
+  }
+  
+  // Load preset parameters
+  function loadPreset(i) {
+    loadParameters(i);
+    lut=new Array();
+    scaleRadii();
+    refresh();
+  }
+  
+  // Add functionality to the user interface
+  function addEventListeners() {
+    window.addEventListener("scroll", function() { popOut(); });
+    simulation.addEventListener('fullscreenchange', function() { simulation.classList.toggle("fullscreen"); });
+    let collapsibles=document.getElementsByClassName("collapsible");
+    for (let i=0; i<collapsibles.length; i++) {
+      collapsibles[i].firstChild.addEventListener("click", function() {
+        collapsibles[i].classList.toggle('collapsed'); });
+    }
+    let sliders=document.getElementsByClassName("slider");
+    for (let i=0; i<sliders.length; i++) {
+      let slider=sliders[i].childNodes[1];
+      sliders[i].firstChild.addEventListener("click", function() {
+        slider.value=eval(slider.value)-eval(slider.step);
+        update(slider); });
+      sliders[i].lastChild.addEventListener("click", function() { 
+        slider.value=eval(slider.value)+eval(slider.step);
+        update(slider); });
+      slider.addEventListener("input", function() { update(slider) });
+    }
+  }
+  
+  // Pop out the simulation when it scrolls offscreen
+  function popOut() {
+    if ((document.documentElement.scrollTop>(document.getElementById("presets").offsetTop-document.getElementById("title").offsetHeight)) && (window.innerWidth>=686) && (window.innerWidth>=window.innerHeight)) {
+      if (!simulation.classList.contains("popout")) { simulation.classList.add("popout"); scaleCanvas(); }
+    } else {
+      if (simulation.classList.contains("popout")) { simulation.classList.remove("popout"); scaleCanvas(); }
+    }
+  }
+  
+  // Show/hide overlay
+  function toggleOverlay() {
+    overlay.classList.toggle("visible");
+    mediacontrols.classList.toggle("visible");
+  }
+  
+  // Toggle full screen mode
+  function toggleFullScreen() {
+    if (((document.fullScreenElement && document.fullScreenElement !== null) || (!document.mozFullScreen && !document.webkitIsFullScreen)) && (window.screen.width>window.screen.height)) {
+      if (simulation.requestFullscreen) simulation.requestFullscreen();
+      else if (simulation.mozRequestFullScreen) simulation.mozRequestFullScreen();
+      else if (simulation.webkitRequestFullscreen) simulation.webkitRequestFullscreen();
+      else if (simulation.msRequestFullscreen) simulation.msRequestFullscreen();
+      mediacontrols.lastElementChild.innerHTML='fullscreen_exit';
+    } else {
+      if (document.exitFullscreen) document.exitFullscreen();
+      else if (document.mozCancelFullScreen) document.mozCancelFullScreen();
+      else if (document.webkitExitFullscreen) document.webkitExitFullscreen();
+      else if (document.msExitFullscreen) document.msExitFullscreen();
+      mediacontrols.lastElementChild.innerHTML='fullscreen';
+    }
+  }
+  
+  // Apply user settings
+  function update(slider) {
+    let val=eval(slider.value);
+    slider.parentNode.previousElementSibling.lastChild.innerHTML=val;
+    if (slider.id.substr(0,5)=='alpha') {
+      species[slider.id.substr(5,1)].alpha=val;
+      species[slider.id.substr(5,1)].alphaRadians=(val/180)*pi;
+      deactivate();
+      lut[5]=new Array();
+      if (paused) { countNeighbours(); drawParticles(); }
+    } else if (slider.id.substr(0,4)=='beta') {
+      species[slider.id.substr(4,1)].beta=val;
+      species[slider.id.substr(4,1)].betaRadians=(val/180)*pi;
+      deactivate();
+    } else if (slider.id.substr(0,5)=='gamma') {
+      species[slider.id.substr(5,1)].gamma=val;
+      species[slider.id.substr(5,1)].gammaRadians=val/100;
+      scaleRadii();
+      deactivate();
+    } else if (slider.id.substr(0,6)=='radius') {
+      species[slider.id.substr(6,1)].radius=val;
+      scaleRadii();
+      deactivate();
+    } else if (slider.id=='number') {
+      number=val;
+      scaleRadii();
+    } else if (slider.id=='density') {
+      density=val;
+      scaleRadii();
+      deactivate();
+    } else if (slider.id=='size') {
+      size=val;
+      scaleRadii();    
+    } else if (slider.id=='trails') {
+      trails=val;
+    } else if (slider.id=='framerate') {
+      framerate=val;
+    } else if (slider.id=='strobe') {
+      strobe=val;
+    } else if (slider.id=='tint') {
+      tint=val;
+      lut=new Array();
+      if (paused) { 
+        countNeighbours();
+        drawParticles();
+      }
+    }
+  }
+  
+  // Indicate that demo is no longer active
+  function deactivate() {
+    if (demoactive) {
+      document.getElementsByClassName("active")[0].classList.remove("active");
+      document.getElementById("presets").firstElementChild.innerHTML='Presets';
+      overlay.innerHTML='';
+      demoactive=false;
+    }
+  }
+  
+  // Scale canvas size in memory to size on screen
+  function scaleCanvas() {
+    let onscreenWidth=canvas.clientWidth*window.devicePixelRatio;
+    let onscreenHeight=canvas.clientHeight*window.devicePixelRatio;
+    let aspectRatio=Math.max(window.screen.width/window.screen.height, window.screen.height/window.screen.width);
+    if ((Math.abs(cw-onscreenWidth)<1) && (Math.abs(ch-onscreenHeight)<1)) return;
+    // Pause simulation and prepare to scale canvas
+    let wasPlaying=false;
+    if (!paused) { playPause(); wasPlaying=true; }
+    // Scale canvas size
+    canvas.width=onscreenWidth;
+    canvas.height=canvas.width/aspectRatio;
+    canvas.height=canvas.clientHeight*window.devicePixelRatio;
+    // Scale particle positions and radii
+    let scaleX=canvas.width/cw, scaleY=canvas.height/ch;
+    for (let i=0; i<particle.length; i++) { particle[i].x*=scaleX; particle[i].y*=scaleY; }
+    cw=canvas.width, cw2=cw/2, ch=canvas.height, ch2=ch/2;
+    scaleRadii();
+    if (wasPlaying) playPause();
+  }
+  
+  // Convert unitless values to pixels based on particle density
+  function scaleRadii() {
+    let area=0;
+    for (let i=0; i<species.length; i++) area+=(pi*species[i].radius*species[i].radius);  // Area covered by each particle
+    area=(area*number)/(species.length*density);                                          // Total area required
+    let scale=Math.sqrt(cw*ch/area);                                                      // Scaled to area available
+    rMax=0;
+    for (let i=0; i<species.length; i++) {
+      species[i].r=species[i].radius*scale;                   // Radius in pixels
+      species[i].r2=species[i].r*species[i].r;                // Radius squared
+      species[i].v=species[i].r*species[i].gamma/100;         // Step size in pixels
+      species[i].s=species[i].r*size/100;                     // Particle size (circles)
+      species[i].s2=species[i].s*1.618;                       // Particle size (squares)
+      species[i].opacity=Math.min(1, cw/(160*species[i].s));  // Bokeh effect for large particles
+      rMax=Math.max(rMax, species[i].r);                      // Radius of largest species (minimum size of grid cells)
+    }
+    if ((rMax*size/100)>3) shape='circles'; else shape='squares';
+    if (paused) { countNeighbours(); drawParticles(); }
+  }
+  
+  // Restart simulation, reload current preset or load previous preset
+  function back() {
+    if (elapsed>2000) refresh(distribution);
+    else if (demoactive==false) loadPreset(demo);
+    else loadPreset(scope(demo-1, presets.length));
+    playPause();
+  }
+  
+  // Load next preset
+  function next() {
+    loadPreset(scope(demo+1, presets.length));
+    playPause();
+  }
+  
+  // Play/pause simulation
+  function playPause() {
+    if (paused) {
+      // Play simulation
+      paused=false;
+      time=new Date().getTime();
+      step();
+    } else {
+      // Pause simulation
+      window.clearTimeout(run);
+      paused=true;
+      elapsed+=(new Date().getTime()-time);
+      console.log(count+' frames, '+(elapsed/1000)+' seconds ('+Math.round(count*10000/elapsed)/10+' fps)');
+    }
+    toggleOverlay();
+  }
+  
+  // Begin new simulation
+  function refresh(rd) {
+    if (!paused) playPause();
+    if (rd!==undefined) distribution=rd;
+    createParticles();
+    context.fillStyle='#000';
+    context.fillRect(0, 0, cw, ch);
+    count=0, elapsed=0;
+    playPause();
+  }
+  
+  // Advance simulation by one step (this function is called multiple times per second)
+  function step() {
+    let ms=new Date().getTime();
+    count++;
+    moveParticles();
+    countNeighbours();
+    if (count%strobe==0) drawParticles();
+    ms=(1000/framerate)+ms-new Date().getTime();
+    if (!paused) run=setTimeout(step, ms);
+  }
+  
+  // Count neighbours (L, R and N values) for each particle
+  function countNeighbours() {
+    // Create new grid
+    let xCells=Math.floor(cw/rMax), xSize=cw/xCells;
+    let yCells=Math.floor(ch/rMax), ySize=ch/yCells;
+    let grid=new Array(xCells);
+    for (let gx=0; gx<xCells; gx++) {
+      grid[gx]=new Array(yCells);
+      for (let gy=0; gy<yCells; gy++) {
+        grid[gx][gy]=new Array();
+      }
+    }
+    
+    // Assign each particle to a grid cell
+    for (let i=0; i<number; i++) {
+      grid[Math.floor(particle[i].x/xSize)][Math.floor(particle[i].y/ySize)].push(i);  // Append particle index to a grid cell array
+      particle[i].L=0, particle[i].R=0, particle[i].N=0;                               // Reset values of L, R and N
+    }
+    
+    // Let's get counting!
+    for (let gx=0; gx<xCells; gx++) {							                                           // Step through the grid cells (left to right)
+      for (let gy=0; gy<yCells; gy++) {                                                      // Step through the grid cells (top to bottom)
+        for (let gp=0; gp<grid[gx][gy].length; gp++) {		                                   // Step through the particles in each grid cell
+          let i=grid[gx][gy][gp];                                                            // Now we have a particle index and we're in the right cell
+          for (let cx=gx-1; cx<=gx+1; cx++) {                                                // Iterate through the 9 neighbouring cells (left to right)
+            for (let cy=gy-1; cy<=gy+1; cy++) {                                              // Iterate through the 9 neighbouring cells (top to bottom)
+              let sx=scope(cx, xCells), sy=scope(cy, yCells);                                // Wrap screen edges, Pac-Man style
+              for (let sp=0; sp<grid[sx][sy].length; sp++) {                                 // Iterate through the particles in each cell			
+                let j=grid[sx][sy][sp];                                                      // Finally we have both particle indices
+                if (i<j) {                                                                   // No need to check twice
+                  let sepX=scope(particle[j].x-particle[i].x+cw2, cw)-cw2;                   // Calculate x-axis separation
+                  let sepY=scope(particle[j].y-particle[i].y+ch2, ch)-ch2;                   // Calculate y-axis separation
+                  let sepD=(sepX*sepX)+(sepY*sepY);                                          // Calculate the square of the separation distance
+                  if (sepD<=species[i%species.length].r2) {                                  // If separation distance is less than particle i radius
+                    if (sepX*particle[i].phiSin-sepY*particle[i].phiCos>0) particle[i].L++;  // Particle j is to the left of i
+                    else particle[i].R++;                                                    // Particle j is to the right of i
+                    particle[i].N++;                                                         // Increase total neighbour count for particle i
+                  }
+                  if (sepD<=species[j%species.length].r2) {                                  // If separation distance is less than particle j radius
+                    if (sepX*particle[j].phiSin-sepY*particle[j].phiCos<0) particle[j].L++;  // Particle i is to the left of j
+                    else particle[j].R++;                                                    // Particle i is to the right of j
+                    particle[j].N++;                                                         // Increase total neighbour count for particle j
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  
+  // Advance particles by one step
+  function moveParticles() {
+    for (let i=0; i<number; i++) {
+      let ps=species[i%species.length];
+      let alpha=ps.alphaRadians;
+      let beta=ps.betaRadians;
+      let v=ps.v;
+  
+      // Apply changes in orientation
+      let deltaphi=alpha+(beta*particle[i].N*sign(particle[i].R-particle[i].L));  // deltaphi = alpha + beta × N × sign(R - L)
+      particle[i].phi=scope(particle[i].phi+deltaphi, tau);                       // Turn clockwise deltaphi
+      particle[i].phiSin=Math.sin(particle[i].phi);
+      particle[i].phiCos=Math.cos(particle[i].phi);
+      
+      // Move forward v and wrap screen edges, Pac-Man style
+      particle[i].x=scope(particle[i].x+(v*particle[i].phiCos), cw);
+      particle[i].y=scope(particle[i].y+(v*particle[i].phiSin), ch);
+    }
+  }
+  
+  // Ensure values are between 0 and max
+  function scope(val, max) {
+    val%=max;
+    if (val<0) val+=max;
+    return val;
+  }
+  
+  // Sign function
+  function sign(x) {
+    return x ? x < 0 ? -1 : 1 : 0;
+  }
+  
+  // Draw particles on canvas
+  function drawParticles() {
+    // Clear canvas (or leave trails)
+    if (trails==0) context.fillStyle='#000';
+    else context.fillStyle='rgba(0,0,0,'+(1-(trails/11))+')';
+    context.fillRect(0, 0, cw, ch);
+    
+    // Group particles by species and number of neighbours
+    let group=new Array();
+    for (let i=0; i<species.length; i++) {
+      group[i]=new Array();
+      for (let j=i; j<number; j+=species.length) {
+        if (group[i][particle[j].N]===undefined) group[i][particle[j].N]=new Array();
+        group[i][particle[j].N].push(j);
+      }
+    }
+    
+    // Draw particle groups
+    for (let i=0; i<species.length; i++) {
+      for (let j=0; j<group[i].length; j++) {
+        if (group[i][j]!==undefined) {
+          context.beginPath();
+          for (let k=0; k<group[i][j].length; k++) {
+            let ip=particle[group[i][j][k]];
+            if (shape=='circles') {
+              // Draw a circle
+              context.moveTo(ip.x, ip.y);
+              context.arc(ip.x, ip.y, species[i].s, 0, tau);
+            } else {
+              // Draw a small square
+              context.rect(ip.x-species[i].s, ip.y-species[i].s, species[i].s2, species[i].s2);
+            }
+          }
+          context.fillStyle='hsla('+hsl(i,j)+','+species[i].opacity+')';
+          context.fill();
+        }
+      }
+    }
+  }
+  
+  // Select hue, saturation and lightness based on colour scheme, species and number of neighbours
+  function hsl(ps,pn) {
+    if (lut[colours]===undefined) lut[colours]=new Array();
+    if (lut[colours][ps]===undefined) lut[colours][ps]=new Array();
+    if (lut[colours][ps][pn]===undefined) {
+      // Build look-up tables
+      if (tint==null) tint=90;
+      let st=sign(tint);
+      if (st==0) st=1;
+      if (colours==0) lut[colours][ps][pn]=tint+',80%,80%';                     // 0: Monochrome
+      else if (colours==1) lut[colours][ps][pn]=(pn*7.2*st)+tint+',100%,50%';   // 1: Short scale (wraps at N=50, N=100...)
+      else if (colours==2) lut[colours][ps][pn]=(pn*3.6*st)+tint+',100%,50%';   // 2: Medium scale (wraps at N=100, N=200...)
+      else if (colours==3) lut[colours][ps][pn]=(pn*1.8*st)+tint+',100%,50%';   // 3: Long scale (wraps at N=200, N=400...)
+      else if (colours==4) lut[colours][ps][pn]=(pn*1.8)+tint+',100%,50%';      // 4: Auto scale
+      else if (colours==5) lut[colours][ps][pn]=species[ps].alpha+',100%,50%';  // 5: Colour by species
+    }
+    return lut[colours][ps][pn];
+  }
+  
+  // Set colour scheme
+  function setColours(scheme) {
+    colours=scheme;
+    if (paused) drawParticles();
+  }
+  
+  
