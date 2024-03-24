@@ -48,4 +48,28 @@ function initialize() {
     scaleCanvas();
     refresh();
   }
+
+  
+// Load parameters
+function loadParameters(params) {
+    if (params==eval(params)) {
+      demo=params, demoactive=true;
+      params=presets[demo].slice(1,presets[demo].length-1);  
+    } else params=params.split(',');
+    species=new Array();
+    let len=params.length-9;
+    for (let i=0; i<len/4; i++) species[i]=new Species(params[i*4],params[(i*4)+1],params[(i*4)+2],params[(i*4)+3]);                           // Species parameters
+    number=params[len], density=params[len+1], distribution=params[len+2];                                                                     // Experimental setup
+    size=params[len+3], trails=params[len+4], framerate=params[len+5], strobe=params[len+6], tint=eval(params[len+7]), colours=params[len+8];  // Graphics settings
+    createParticles();                                                                                                                         // Generate particles
+    showUI();                                                                                                                                  // Update user interface
+  }
+  
+  function saveSettings() {
+    if (demoactive) return;
+    let params='?';
+    for (let i=0; i<species.length; i++) params+=species[i].alpha+','+species[i].beta+','+species[i].gamma+','+species[i].radius+',';
+    params+=number+','+density+','+distribution+','+size+','+trails+','+framerate+','+strobe+','+tint+','+colours;
+    window.location.href=window.location.href.split('?')[0]+params;
+  }
   
