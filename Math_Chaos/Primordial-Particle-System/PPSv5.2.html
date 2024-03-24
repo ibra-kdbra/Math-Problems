@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Primordial Particle System (v5.2)</title>
+<meta name="author" content="ibra-kdbra" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+<meta name="theme-color" content="#000" />
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400|Material+Icons" rel="stylesheet" />
+<link rel="stylesheet" href="style.css">
+
+<script src="PPSv5.js">
+</script>
+
+
+</head>
+<body onLoad="initialize();" onResize="popOut();">
+  <h1 id="title"><span onclick="window.location.href=window.location.href.split('?')[0];">Primordial Particle System</span></h1>
+  <div id="simulation" onclick="playPause();">
+    <canvas id="canvas"></canvas>
+    <div id="overlay" class="visible"></div>
+    <div id="mediacontrols" class="visible"><!--
+    --><button class="material-icons" onclick="back();">skip_previous</button><!--
+    --><button class="material-icons" >play_arrow</button><!--
+    --><button class="material-icons" onclick="next();">skip_next</button><!--
+    --><button class="material-icons right" onclick="toggleFullScreen();">fullscreen</button>
+    </div>
+  </div>
+  <div id="settings">
+    <div id="margins">
+      <div id="presets" class="collapsible collapsed"></div>
+      <div id="controls">
+        <p>Based on the Primordial Particle System originally created by Thomas Schmickl and Martin Stefanec at the University of Graz in Austria.</p>
+        <div id="speciesparameters"></div>
+        <div id="experimentalsetup"></div>
+        <div id="graphicssettings"></div>
+      </div>
+    </div>
+    <div id="footer"><a href="https://github.com/ibra-kdbra/Math-Problems/tree/main/Math_Chaos/Primordial-Particle-System" target="github">An open project by ibra-kdbra</a></div>
+  </div>
+</body>
+</html>
