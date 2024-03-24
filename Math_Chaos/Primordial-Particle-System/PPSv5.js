@@ -73,3 +73,48 @@ function loadParameters(params) {
     window.location.href=window.location.href.split('?')[0]+params;
   }
   
+  // Set species parameters (or assign random values)
+function Species(alpha, beta, gamma, radius) {
+    if (alpha || beta || gamma || radius) {
+      this.alpha=alpha;
+      this.beta=beta;
+      this.gamma=gamma;
+      this.radius=radius;
+    } else {
+      this.alpha=Math.round((Math.random()*3600)-1800)/10;                       // -180.0° to +180.0°
+      this.beta=Math.round((Math.random()*1800)-900)/10;                         // -90.0° to +90.0°
+      this.gamma=Math.ceil(Math.random()*500)/10;                                // 0.1% to 50.0%
+      this.radius=Math.ceil((Math.random()+Math.random()+Math.random())*33.33);  // 1 to 100 (centre-weighted)
+    }
+    // Pre-process values
+    this.alphaRadians=(this.alpha/180)*pi;
+    this.betaRadians=(this.beta/180)*pi;
+    this.r=this.radius;
+    this.v=this.r*this.gamma/100;
+    this.s=this.r*size/100;
+    this.s2=this.s*1.618;
+    this.opacity=1;
+  }
+  
+  function randomizeSpecies(i) {
+    demoactive=false;
+    species[i]=new Species();
+    scaleRadii();
+    showUI();
+  }
+  
+  function removeSpecies(i) {
+    if (species.length==1) return;
+    species.splice(i, 1);
+    scaleRadii();
+    showUI();
+  }
+  
+  function newSpecies() {
+    demoactive=false;
+    let i=species.length-1;
+    species[i+1]=new Species(species[i].alpha,species[i].beta,species[i].gamma,species[i].radius);
+    scaleRadii();
+    showUI();
+  }
+  
