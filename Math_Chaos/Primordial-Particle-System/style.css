@@ -1,0 +1,396 @@
+* {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  vertical-align: baseline;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+*:focus {
+  outline: none;
+}
+html {
+  background: #f9f9f9;
+  font-size: 3.333vw;
+  font-weight: 300;
+  font-family: "Roboto", sans-serif;
+  line-height: 1;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+h1 {
+  padding: 1.125rem 1rem;
+  width: 100%;
+  background: #32322c;
+  font-size: 1.75rem;
+  font-weight: 300;
+  color: #f9f9f9;
+  text-align: center;
+  text-shadow: 0 0.05rem 0.25rem #000;
+  flex: none;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+h1 span {
+  cursor: pointer;
+}
+h2 {
+  padding: 1.25rem 1rem;
+  width: 100%;
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+p {
+  padding: 0 1rem 1rem 1rem;
+  font-size: 1.25rem;
+  color: rgba(0, 0, 0, 0.6);
+  line-height: 1.25;
+}
+a {
+  color: #323291;
+  font-weight: 300;
+  text-decoration: none;
+}
+b {
+  font-weight: 400;
+  color: #000;
+}
+sub {
+  font-size: 83.33%;
+  font-weight: 300;
+  color: rgba(0, 0, 0, 0.6);
+}
+hr {
+  border-bottom: 1px Solid rgba(0, 0, 0, 0.15);
+}
+
+#simulation {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1024px;
+  line-height: 0;
+  background: #000;
+  position: sticky;
+  top: 4rem;
+  flex: none;
+}
+#canvas {
+  width: 100%;
+  min-height: 100%;
+}
+#overlay {
+  width: 100%;
+  height: 100%;
+  padding: 0.714em 1em;
+  font-size: 1.75rem;
+  color: rgba(0, 0, 0, 0);
+  line-height: 1.25;
+  background: linear-gradient(
+    rgba(0, 0, 0, 0.8),
+    transparent 25%,
+    transparent 75%,
+    rgba(0, 0, 0, 0.8)
+  );
+  position: absolute;
+  top: 0;
+  display: none;
+}
+#mediacontrols {
+  padding: 0 1rem;
+  width: 100%;
+  height: 1.5em;
+  font-size: 13.33vmin;
+  text-align: center;
+  position: absolute;
+  bottom: calc(50% - 0.75em);
+  display: none;
+}
+#mediacontrols button {
+  margin: 0 0.25em;
+  width: 1.5em;
+  height: 1.5em;
+  font-size: 1em;
+  color: #fff;
+  background: transparent;
+  cursor: pointer;
+}
+#mediacontrols .right {
+  display: none;
+}
+.visible {
+  display: block !important;
+}
+.popout {
+  transform-origin: top right;
+  transform: scale(0.47);
+  position: sticky !important;
+  top: 4rem !important;
+}
+.popout #mediacontrols {
+  font-size: 5.32rem;
+}
+.fullscreen #overlay {
+  color: #fff;
+}
+.fullscreen #mediacontrols {
+  font-size: 3.25rem !important;
+}
+
+#margins {
+  margin: 0 auto;
+  max-width: 1024px;
+}
+
+#presets {
+  background-color: rgba(0, 0, 0, 0.15);
+}
+.preset {
+  padding: 0.5rem 1rem;
+  width: 100%;
+  font-size: 1.25rem;
+  font-weight: 400;
+  line-height: 1.25;
+  display: inline-block;
+  cursor: pointer;
+}
+.preset:nth-child(even) {
+  background: linear-gradient(
+    to right,
+    transparent,
+    transparent 25%,
+    rgba(0, 0, 0, 0.05)
+  );
+}
+.preset img {
+  margin-right: 1rem;
+  height: 3rem;
+  float: left;
+}
+.active {
+  background: rgba(0, 0, 0, 0.15) !important;
+}
+
+#controls {
+  padding: 1em 0 0 0;
+}
+.collapsible {
+  cursor: pointer;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+.collapsible h2::after {
+  margin-top: 0.25rem;
+  font-size: 1rem;
+  vertical-align: middle;
+  color: transparent;
+  text-shadow: 0 0 #000;
+  background: transparent;
+  opacity: 0.15;
+  float: right;
+  content: "\25B6";
+  transform: rotate(-90deg);
+  -webkit-transition: transform 0.1s;
+  transition: transform 0.1s;
+}
+.collapsed {
+  max-height: calc(4rem - 0.25px);
+  overflow: hidden;
+}
+.collapsed h2::after {
+  transform: rotate(90deg);
+}
+
+.right {
+  float: right;
+}
+.degrees::after {
+  content: "°";
+}
+.percent::after {
+  content: "%";
+}
+.fps::after {
+  margin-left: 0.05rem;
+  font-size: 83.33%;
+  content: "fps";
+}
+
+.slider {
+  margin-top: -1rem;
+  width: 100%;
+  display: flex;
+}
+.slider button {
+  margin: -0.125rem 0;
+  height: 3rem;
+  width: 3rem;
+  font-size: 1rem;
+  color: transparent;
+  text-shadow: 0 0 #000;
+  background: transparent;
+  opacity: 0.15;
+  cursor: pointer;
+  flex: none;
+}
+input[type="range"] {
+  margin: 0.875rem 0;
+  width: 100%;
+  height: 1rem;
+  cursor: pointer;
+  pointer-events: none;
+}
+input[type="range"]::-webkit-slider-thumb {
+  pointer-events: auto;
+}
+input[type="range"]::-moz-range-thumb {
+  pointer-events: auto;
+}
+input[type="range"]::-ms-thumb {
+  pointer-events: auto;
+}
+
+.buttons {
+  padding: 0 0.5rem;
+  display: flex;
+}
+input[type="button"] {
+  margin: 0rem 0.5rem 1rem 0.5rem;
+  width: 100%;
+  height: 2.5rem;
+  font-size: 1rem;
+  font-weight: 300;
+  color: rgba(0, 0, 0, 0.6);
+  background: rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+}
+
+#footer {
+  padding: 1.375rem 1rem;
+  width: 100%;
+  background: #32322c;
+  font-size: 1.25rem;
+  text-align: center;
+  text-shadow: 0 0.05rem 0.25rem #000;
+  clear: both;
+  box-shadow: 0 100vh 0 100vh #32322c;
+}
+#footer a {
+  font-weight: 300;
+  text-decoration: none;
+  color: #ddd;
+}
+
+/* CSS media queries -------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+/* Rotate to full screen on mobile devices */
+@media screen and (orientation: landscape) and (max-device-width: 1024px) {
+  body {
+    overflow: hidden;
+  }
+  #title,
+  #settings {
+    display: none;
+  }
+  #simulation {
+    top: 0;
+  }
+  #canvas {
+    height: 100vh;
+  }
+  #overlay {
+    font-size: 20px;
+    color: #fff;
+  }
+  #mediacontrols {
+    font-size: 16.66vmin;
+  }
+  #mediacontrols button {
+    margin: 0 calc(13vw - 13vh);
+  }
+}
+
+/* Display two columns on tablets and desktops */
+@media screen and (orientation: portrait) and (min-width: 415px) and (max-device-width: 768px),
+  screen and (min-width: 686px) {
+  html {
+    font-size: 1.8vw;
+  }
+  #presets {
+    width: 47%;
+    float: right;
+    max-height: unset !important;
+    cursor: unset;
+  }
+  #presets h2::after {
+    content: "";
+  }
+  #controls {
+    width: 53%;
+  }
+}
+
+/* Unsticky simulation on large tablets and desktops */
+@media screen and (min-aspect-ratio: 1/1) {
+  #simulation {
+    position: relative;
+    top: unset;
+  }
+}
+
+/* Desktop font sizes */
+@media screen and (min-width: 360px) and (min-device-width: 768px) {
+  html {
+    font-size: 12px;
+  }
+  .collapsible h2::after {
+    margin-top: 0.125rem;
+    font-size: 1.25rem;
+  }
+  .slider button {
+    font-size: 1.25rem;
+  }
+}
+
+/* Desktop media controls and thumbnail size */
+@media screen and (min-width: 686px) and (min-device-width: 1025px) {
+  #mediacontrols {
+    font-size: 2.5rem;
+    text-align: left;
+    bottom: 0;
+  }
+  #mediacontrols button {
+    margin: 0;
+  }
+  #mediacontrols .right {
+    display: block;
+  }
+  .preset img {
+    height: 4.5rem;
+  }
+}
+
+/* Adjust margins for larger screens */
+@media screen and (min-width: 1050px) {
+  h2,
+  p,
+  a {
+    padding-left: 0;
+    padding-right: 1.5rem;
+  }
+  #presets h2,
+  .preset {
+    padding-left: 1.5rem;
+  }
+  .slider {
+    width: calc(100% + 0.5rem);
+    margin-left: -1rem;
+  }
+  .buttons {
+    margin-left: -1rem;
+    margin-right: 0.5rem;
+  }
+}
