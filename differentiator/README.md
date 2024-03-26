@@ -1,6 +1,9 @@
 # Equation differentiator & article generator
+
 ## Description & Purpose
+
 The program differentiates given equation and exports the result as a scientific article.
+
 ## Building
 
 Install necessary packages (ubuntu) *(will install espeak and graphviz)*:
