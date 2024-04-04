@@ -1,7 +1,18 @@
 package com.particle_life.app.utils;
 
+/**
+ * A utility class for mathematical operations.
+ */
 public final class MathUtils {
 
+    /**
+     * Constrains an integer value within a specified range.
+     *
+     * @param value the value to constrain
+     * @param min the minimum value
+     * @param max the maximum value
+     * @return the constrained value
+     */
     public static int constrain(int value, int min, int max) {
         if (value < min) {
             return min;
@@ -12,6 +23,14 @@ public final class MathUtils {
         }
     }
 
+    /**
+     * Constrains a double value within a specified range.
+     *
+     * @param value the value to constrain
+     * @param min the minimum value
+     * @param max the maximum value
+     * @return the constrained value
+     */
     public static double constrain(double value, double min, double max) {
         if (value < min) {
             return min;
@@ -22,6 +41,13 @@ public final class MathUtils {
         }
     }
 
+    /**
+     * Calculates the modulo of two integers.
+     *
+     * @param a the dividend
+     * @param b the divisor
+     * @return the modulo result
+     */
     public static int modulo(int a, int b) {
         if (a < 0) {
             do {
@@ -37,6 +63,14 @@ public final class MathUtils {
         return a;
     }
 
+    /**
+     * Performs linear interpolation between two double values.
+     *
+     * @param a the start value
+     * @param b the end value
+     * @param f the interpolation factor
+     * @return the interpolated value
+     */
     public static double lerp(double a, double b, double f) {
         return a + (b - a) * f;
     }
@@ -45,9 +79,9 @@ public final class MathUtils {
      * Returns <code>Math.round(value)</code> instead of <code>Math.floor(value)</code>
      * if <code>value</code> is closer to the next integer than <code>threshold</code>.
      *
-     * @param value
+     * @param value the value to adjust
      * @param threshold some positive value like 0.001
-     * @return an integer
+     * @return the adjusted value
      */
     public static double tolerantFloor(double value, double threshold) {
         double x = Math.round(value);
@@ -58,9 +92,12 @@ public final class MathUtils {
     }
 
     /**
-     * See comment on {@link #tolerantFloor(double, double)}.
+     * Returns <code>Math.round(value)</code> instead of <code>Math.ceil(value)</code>
+     * if <code>value</code> is closer to the previous integer than <code>threshold</code>.
      *
-     * @param value
+     * @param value the value to adjust
+     * @param threshold a positive value like 0.001
+     * @return the adjusted value
      * @param threshold
      * @return
      */
@@ -70,3 +107,4 @@ public final class MathUtils {
         return Math.ceil(value);
     }
 }
+
