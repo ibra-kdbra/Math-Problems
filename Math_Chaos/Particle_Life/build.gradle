@@ -1,0 +1,154 @@
+import org.gradle.internal.os.OperatingSystem
+
+plugins {
+    id "java"
+    id "application"                                     // for "run" task
+    id 'edu.sc.seis.launch4j' version '2.5.1'            // for generating .exe
+    id 'org.beryx.runtime' version '1.12.7'              // for generating JRE
+    id 'com.github.johnrengelman.shadow' version '7.1.2' // only needed to make linux build
+}
+
+application {
+    mainClass = "com.particle_life.app.Main"  // required for "run" task
+
+    if (OperatingSystem.current() == OperatingSystem.MAC_OS) {
+        applicationDefaultJvmArgs = ["-XstartOnFirstThread"]
+    }
+}
+
+run {
+    classpath = layout.files(
+
+            // We need to include the "runtimeClasspath" here,
+            // because we are explicitly setting the "classpath" property.
+            // Otherwise, this would be included automatically.
+            sourceSets.main.runtimeClasspath,
+
+            // We need to explicitly include "resources" here,
+            // because we are excluding "resources" in the "jar" task.
+            "src/main/resources"
+    )
+}
+
+launch4j {
+    icon = "${projectDir}/favicon.ico"
+    mainClassName = 'com.particle_life.app.Main'
+    dontWrapJar = true
+    bundledJre64Bit = true
+    bundledJrePath = "jre"
+    classpath = [
+            // We need to include the "lib/*" folder here,
+            // because we are explicitly setting the "classpath" property.
+            // Otherwise, this would be included automatically.
+            "lib/*",
+
+            // We need to explicitly include "resources" here,
+            // because we are excluding "resources" in the "jar" task.
+            "resources/*"
+    ]
+}
+
+// creates folder "jre"
+runtime {
+    options = ["--compress", "2"]
+    modules = [
+            "jdk.zipfs"  // needed for "jar" FileSystemProvider (ZipFileSystemProvider), not detected automatically by plugin
+    ]
+    additive = true
+}
+
+tasks.register('copyJre', Copy) {
+    dependsOn tasks.runtime
+
+    from layout.buildDirectory.dir("jre")
+    into layout.buildDirectory.dir("app/jre")
+}
+
+// copy resources to
+tasks.register("copyResources", Copy) {
+    from layout.projectDirectory.dir("src/main/resources")
+    into layout.buildDirectory.dir("app/resources")
+}
+
+tasks.register('copyLaunch4j', Copy) {
+    dependsOn tasks.createExe
+
+    from layout.buildDirectory.dir("launch4j")
+    into layout.buildDirectory.dir("app")
+}
+
+tasks.register('assembleApp') {
+    dependsOn tasks.copyLaunch4j, tasks.copyResources, tasks.copyJre
+}
+
+tasks.register('zipApp', Zip) {
+    dependsOn tasks.assembleApp
+    from layout.buildDirectory.dir("app")
+    destinationDirectory = layout.buildDirectory.dir("zipApp")
+    archiveFileName = "particle-life-app.zip"
+}
+
+group 'com.particle.life.app'
+
+ext {
+    lwjglVersion = '3.3.0'
+    imguiVersion = '1.86.2'
+}
+
+jar {
+    // This ignores all resource files when bundling the JAR.
+    // Reason: ToWe don't want our "resources" files to be included
+    // in the JAR, but instead in a separate directory (which we
+    // place next to the executable in the "assembleApp" task).
+    processResources.exclude('*')
+}
+
+project.ext.lwjglVersion = "3.3.0"
+
+switch (OperatingSystem.current()) {
+    case OperatingSystem.LINUX:
+        def osArch = System.getProperty("os.arch")
+        project.ext.natives = osArch.startsWith("arm") || osArch.startsWith("aarch64")
+                ? "linux-${osArch.contains("64") || osArch.startsWith("armv8") ? "arm64" : "arm32"}"
+                : "linux"
+        break
+    case OperatingSystem.MAC_OS:
+        project.ext.natives = "macos"
+        break
+    case OperatingSystem.WINDOWS:
+        def osArch = System.getProperty("os.arch")
+        project.ext.natives = osArch.contains("64")
+                ? "windows${osArch.startsWith("aarch64") ? "-arm64" : ""}"
+                : "windows-x86"
+        break
+}
+
+repositories {
+    mavenCentral()
+    mavenLocal()
+
+    // JitPack allows to easily add dependencies on GitHub repos
+    // (e.g. implementation 'com.github.User:Repo:Tag')
+    maven { url "https://jitpack.io" }  // this line should be at the end of the repositories
+}
+
+dependencies {
+
+    implementation "com.github.tom-mohr:particle-life:v0.2.0"
+
+    // YamlBeans for parsing YAML files conveniently
+    implementation 'com.esotericsoftware.yamlbeans:yamlbeans:1.15'
+
+    // JOML
+    implementation 'org.joml:joml:1.10.1'
+
+    // imGui
+    implementation "io.github.spair:imgui-java-binding:$imguiVersion"
+    implementation "io.github.spair:imgui-java-natives-$natives:$imguiVersion"
+
+    // LWJGL
+    // see https://www.lwjgl.org/customize for a list of all available contents
+    [".lwjgl", ".glfw", ".opengl"].each {
+        implementation "org.lwjgl.osgi:org.lwjgl$it:$lwjglVersion"
+    }
+}
