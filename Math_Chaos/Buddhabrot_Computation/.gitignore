@@ -1,0 +1,5 @@
+.DS_Store
+worker
+*.swp
+bin/*
+images/*
