@@ -1,0 +1,48 @@
+# Research Notes
+
+# General bug/improvement notes:
+- The graph is still updating at the same rate regardless of the speed of the simulation or even when away from the simulation.
+
+Trial 1:
+- Parameters as set for the **speciation** pool
+
+So far up to timestep 125k and so far so good in terms of what it should be doing. Only one species evolved so far. It will take a while until the second one diverges and evolves the ability to eat the other color foodbit. Some have actually already evolved to want to eat the other color foodbit but they are not able to digest it yet, so sporadic browsing of the blue.
+
+At 400k timestep now both foodbits are being eaten successfully but by what appears to be the same species that is probably interbreeding. The question is, will those two different ecotypes eventually diverge into separate species? There needs to be a gene-flow barrier of some sort. *Maybe something as simple as preventing the food bits from regenerating next to each other?*
+
+For example, when green foodbit regenerates, it can't regenerate anywhere within X distance of any other blue foodbit. If it has no where to regenerate at all, then ignore that rule. And the X can be a user-set parameter. By keeping the foodbits spatially a bit more separated, you can also keep reproduction a bit more separated, reducing geneflow between the two ecotypes and increasing the chance for divergence to occur.
+
+### What are the common paths to speciation in GenePool? It could happen two different ways. Simply put, speciation will happen as long as two populations are kept from interbreeding with each other for long enough that mutations accumulate and the two populations can no longer interbreed. That barrier to interbreeding or gene-flow barrier can be physical, such as the barrier, or distance between food bit types, or it can be reproductive, such as by having the two populations be different colors and then not attract each other.
+
+So there are two different paths I've observed with speciation in GenePool:
+
+1) At the begining of the simulation, by chance alone, two different morphotypes (different colors, etc) survive on the two different color foodbits and since they start as different colors they never interbreed. 
+
+2) Or, only one morphotype survives the starting population and eventually it branches out to have two different ecotypes--one for each foodbit color. Eventually, by chance alone, the two ecotypes will be separated in the pool long enough that they differentiate and become incompatible.
+
+However, that is likely to be impossible if the amount of time necessary for the gene-flow barrier is longer than the amount of time those two ecotypes would be separated for.
+
+One solution is what I mentioned above in which the regenerating foodbits have to stay physically distanced from the opposite color to create a bit of a spatial barrier.
+
+**By the way, I love the new note about what type of food they like and can digest. Helps a lot with the testing!**
+
+Or maybe it is as simple as reducing the spawning distance of the foodbits so that they spawn near their own color. THat should create some spatial heterogeneity between the two colors? I'll try that now:
+
+## Changed foodspread to 1000 right at timestep 480k... We'll see what happens from here.
+Ohhh, but the problem is that the foodbits don't keep true to their color when they respawn nearby. In other words, if foodspread is very low then a new foodbit that spawns near a green bit might come up as green or blue.
+
+But after running genepool lab I got a tree that showed quite a few speciation events happening. So that means that despite a lot of geneflow, there is still some speciation happening. All of those species have gone extinct though, probably because they were not great swimmers, but eventually we may have a new one that sticks around on the new color. But it would just be by chance alone. Not sure what that probability actually looks like.
+
+UPDATE. So after more than 2 million time points, I ran the lab and found that indeed around the 400k timestep there was a divergence that lead to 2 different species coexisting. However, those species are not visually distinguishable in the simulation. The reason is that once two species evolve, there is no selective pressure to make them different from each other (other than different food preferences, but that doesn't change them visually). The only factor that would eventually lead to different looking species is just genetic drift. But since both species already came from a highly refined swimmer, it's probably going to take a long time for drift to change each one into something significantly distinct from the other. At most, maybe color would change, but that might take a long time.
+
+The gene-flow barrier is sufficient to cause an eventual divergence in species, but not enough to create two morphologically distinct species (unless they arrise from the start of the simulation)
+So what are possible solutions?
+- make differences between the foodbits that require physical differences between the swimmers. One example might be if one food-bit moves while the other doesn't. Or maybe one foodbit is bigger than the other and can only be eaten by swimbots above a certain size/length. Or maybe foodbits are different shapes (one the dot and one is a short segment) and one of those foodbits requires swimbots to have a minimum number of apendages to eat it (this could be explained by saying that the swimbots needs the extra apendages to open up the fruit or something like that). Another really cool idea is to have one of the foodbits get "scared" of very hyper swimbots. You have a way of measuring size, hyper, straight, and length, so what if being too hyper makes the foodbit push away from the swimbot when it gets near it? Or if easier to program, the foodbit just can't be eaten by a swimbot that is too hyper, straignt, long, etc. and you just have some sort of visual queue in the foodbit such as a change in color when the swimbot gets near, a growth in size (demonstrating its protective shell), etc.
+- Another method would be to change the environment surrounding the two different food bits. For example, one foodbit is only found inside "fruits" (hard circles) that have a hard shell except for a small opening that only small swimbots can fit through. Maybe it's as simple as a small "U" shaped structure with the foodbit inside. Or maybe some foodbits are more likely to spawn in a part of the pool where the viscocity is different, or there are more obstacles in the way (making it easier for a small swimbot to navigate it).
+
+Bottom line is that for there to be a clear morphologically distinct divergence in species, there needs to be some sort of selective pressure for different morphological strategies in the pool. Something different between the two food niches that requires slighly different physical adaptations in the pool. Currently there is still only one spectrum of success in the pool—who is the fastest, most accurate swimmer? But with only one spectrum, there will still be only one solution in the end--the fastest, most accurate swimmer.
+
+The only reason we got the results we were looking for before is because that divergence in morphology started at the begining of the simulation from the garden of eden where we already had very distinct morphologies as a starting point. The key will be to allow a single lineage of swimbots to diverge into morphologically distinct species. And for that there needs to be *some sort* of physical difference between the niches. Something that forces the two swimbots to evololve different strategies: Big vs. small, many arms vs simple, calm vs hyper, long vs short. What differences can be applied to the foodbits to encourage at least one of these differences between the swimbots?
+
+
+

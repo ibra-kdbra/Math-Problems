@@ -1,0 +1,1372 @@
+/* ------------------------------------------------------------------------ */
+/*                                                                          */
+/*    This file is part of GenePool Swimbots.                               */
+/*    Copyright (c) 2021 by Jeffrey Ventrella - All Rights Reserved.        */
+/*                                                                          */
+/*    See the README file or go to swimbots.com for full license details.   */
+/*    You may use, distribute, and modify this code only under the terms    */
+/*    of the "Commons Clause" license (commonsclause.com).                  */
+/*                                                                          */
+/*    This software is intended for education, game design, and research.   */
+/*                                                                          */
+/* ------------------------------------------------------------------------ */
+
+body 
+{
+    background-color: #889088;
+    /*background-color: #dddddb;*/
+}
+
+/* -------------------------------------------- */
+/* classes                                      */
+/* -------------------------------------------- */
+.basicPanel
+{ 
+    position:               absolute; 
+    background-color:       #caccc2;
+    border-color:           #666659;       
+    border-style:           solid;
+    border-radius:          4px;
+    border-width:           1px; 
+    border-bottom-width:    4px;
+    color:                  #505050; 
+    font-family:            "Arial";
+    font-size:              12px;
+}
+
+.menuPanel
+{ 
+    position: absolute; 
+    left:   10px;
+    top:    10px;
+    width:  340px;
+    height: 430px;
+    border-width: 0px;
+    visibility: hidden; 
+
+    /* for debugging */
+    /*background-color: #9999ff;*/
+}
+
+
+.basicButton
+{
+    position:               absolute; 
+    width:                  71px; 
+    height:                 30px;
+    background-color:       #dcdcd0;
+    /*border-color:           #666659;*/   
+    border-color:           #7f7f77;       
+    border-style:           solid;
+    border-radius:          4px;
+    border-width:           1px; 
+    border-bottom-width:    4px;
+    z-index:                1;
+    color:                  #556050; 
+    font-size:              12px;
+    font-family:            "Arial black";
+}
+
+.basicButton:hover 
+{
+	background-color:    #eeeedd;
+    //border-bottom-width: 3px;
+}
+.basicButton:active 
+{
+	background-color:    #ffffee;
+    //border-bottom-width: 1px;
+}
+
+.basicTitle
+{
+    color: #556050; 
+    font-family: "Arial";
+    font-size: 16;
+    width: 200;
+}
+
+.navigationButton
+{
+    position: absolute; 
+    width:  30; 
+    height: 30;      
+    border-radius: 0px;
+    border-width: 0;
+    background-size: 30px 30px;
+    background-color: transparent;
+    
+    /* for debugging */
+    /*background-color: #dd5555;*/
+}
+
+
+.EcoSliderLabelDisplay
+{
+    position: absolute; 
+    left: 0; 
+    width: 120;
+    
+    /* for debugging */
+    /*background-color: #9999ff;*/
+}
+
+.EcoSlider
+{
+    position: absolute; 
+    left: 120; 
+    height: 20;
+    width: 100;
+    z-index: 2;
+
+    /* for debugging */
+    /*background-color: #ffff99;*/
+}
+
+.EcoSliderValueDisplay
+{
+    position: absolute; 
+    left: 270; 
+    width: 60;
+    height: 20;
+
+    /* for debugging */
+    /*background-color: #ccbbcc;*/
+}
+
+.geneTweakerValue
+{
+    position: absolute; 
+    left: 20;     
+}
+
+.geneTweakerSlider
+{
+    position: absolute; 
+    left: 50;     
+
+    width: 100;
+    height: 30;
+
+    /* for debugging */
+    background-color: #ff0000;
+
+}
+
+.geneTweakerName
+{
+    position: absolute; 
+    left: 220;     
+    width: 150;     
+}
+
+
+
+/* -------------------------------------------- */
+/* id's                                         */
+/* -------------------------------------------- */
+#Canvas
+{
+    position: absolute; 
+}
+
+#masterPanel
+{
+    position:           absolute; 
+    right:              10px;
+    width:              370px; 
+    height:             700px;
+
+    /* for debugging */
+    /*background-color:   #ddffff;*/
+}
+
+#mainTitle
+{
+    position: absolute; 
+    width: 370; 
+    height: 30;
+    color: #112211; 
+    font-family: "Arial black";
+
+    /* for debugging */
+    /*background-color: #ffffff;*/
+}
+
+#swimbots_url
+{
+    position: absolute; 
+    left:   100px; 
+    top:    5px;
+    width:  100px; 
+    height: 20px;    
+    font-size:  12px;   
+    font-family: "Arial black";
+
+    /* for debugging */
+    /*background-color: #ffffff;*/
+}
+
+
+
+/* -------------------------------------------- */
+/* view panel                                   */
+/* -------------------------------------------- */
+
+#viewPanel
+{
+    position: absolute; 
+    left: 0; 
+    top: 30; 
+    width: 365;
+    height: 155;
+    background-color: #9daeae;
+    border-color:     #646870;       
+
+    /* for debugging */
+    /*background-color: #ffaaaa;*/
+}
+
+#viewNavPanel
+{
+    border-color:     #666677;       
+    border-width:     2;           
+    position: absolute; 
+    left:   10;
+    width:  130;
+    height: 120;
+
+    /* for debugging */
+    /*background-color: #99aaaa;*/
+}
+
+#leftNav
+{
+    left:   25; 
+    top:    30;
+    background-image: url( "../images/left.png" );
+}
+#leftNav:hover  { background-image: url( "../images/left-hovered.png" ); }
+#leftNav:active { background-image: url( "../images/left-pressed.png" ); }
+
+#rightNav
+{
+    left:   75; 
+    top:    30;
+    background-image: url( "../images/right.png" );
+}
+#rightNav:hover  { background-image: url( "../images/right-hovered.png" ); }
+#rightNav:active { background-image: url( "../images/right-pressed.png" ); }
+
+#upNav
+{
+    left:   50; 
+    top:    5;
+    background-image: url( "../images/up.png" );
+}
+#upNav:hover  { background-image: url( "../images/up-hovered.png" ); }
+#upNav:active { background-image: url( "../images/up-pressed.png" ); }
+
+#downNav
+{
+    left:   50; 
+    top:    55; 
+    background-image: url( "../images/down.png" );
+}
+#downNav:hover  { background-image: url( "../images/down-hovered.png" ); }
+#downNav:active { background-image: url( "../images/down-pressed.png" ); }
+
+#inNav
+{
+    left:   25; 
+    top:    80; 
+    background-image: url( "../images/in.png" );
+}
+#inNav:hover  { background-image: url( "../images/in-hovered.png" ); }
+#inNav:active { background-image: url( "../images/in-pressed.png" ); }
+
+#outNav
+{
+    left:   75; 
+    top:    80;
+    background-image: url( "../images/out.png" );
+}
+#outNav:hover  { background-image: url( "../images/out-hovered.png" ); }
+#outNav:active { background-image: url( "../images/out-pressed.png" ); }
+
+#viewTrackingPanel
+{
+    position: absolute; 
+    left: 145; 
+    width: 215;
+    height: 120;
+
+    /* for debugging */
+    /*background-color: #99aaaa;*/
+}
+
+#viewWholePoolButton
+{
+    left:       10px; 
+    top:        8px;
+    width:      95px;
+    height:     23px;
+    font-size:  10px;   
+}
+
+#viewAutoTrackButton
+{
+    left:       107px; 
+    top:        8px;
+    width:      95px;
+    height:     23px;
+    font-size:  10px;   
+}
+#viewSelectedButton
+{
+    left:       10px; 
+    top:        33px;
+    width:      95px;
+    height:     23px;
+    font-size:  10px;   
+}
+#viewMutualButton
+{
+    left:       107px; 
+    top:        33px;
+    width:      95px;
+    height:     23px;
+    font-size:  10px;   
+}
+#viewProlificButton
+{
+    left:       10px; 
+    top:        58px;
+    width:      95px;
+    height:     25px;
+    font-size:  10px;   
+}
+#viewEfficientButton
+{
+    left:       107px; 
+    top:        58px;
+    width:      95px;
+    height:     25px;
+    font-size:  10px;   
+}
+#viewVirginButton
+{
+    left:       10px; 
+    top:        85px;
+    width:      95px;
+    height:     25px;
+    font-size:  10px;   
+}
+#viewGluttonButton
+{
+    left:       107px; 
+    top:        85px;
+    width:      95px;
+    height:     25px;
+    font-size:  10px;   
+}
+
+
+
+#viewOptionsPanel
+{
+    position:   absolute; 
+    left:       0px; 
+    top:        120px;
+    width:      360px;
+    height:     30px;
+
+    /* for debugging */
+    /*background-color: #99aaaa;*/
+}
+
+
+#viewGoalButton
+{
+    left:       10px; 
+    top:        2px;
+    width:      100px;
+    height:     25px;
+    font-size:  10px;   
+}
+
+#noRenderButton
+{ 
+    left:   113;
+    top:    2;
+    width:  110; 
+    height: 25px;
+    font-size:  10px;   
+}
+
+#fastButton
+{ 
+    left:   226;
+    top:    2;
+    width:  60; 
+    height: 25px;
+    font-size:  10px;   
+}
+
+#freezeButton
+{ 
+    left:   289;
+    top:    2;
+    width:  60; 
+    height: 25px;
+    font-size:  10px;   
+}
+
+
+
+
+
+
+/* -------------------------------------------- */
+/* menu buttonpanel                             */
+/* -------------------------------------------- */
+#menuButtonPanel
+{
+    position: absolute; 
+    left: 0; 
+    top: 200;
+    height: 30px;
+    width: 365px;
+
+    /* for debugging */
+    /*background-color: #ccccff;*/
+}
+
+#menuPoolButton
+{
+    left: 0;
+}
+#menuSwimbotButton
+{
+    left: 74;
+}
+#menuTweakButton
+{
+    left: 148;
+}
+#menuGraphButton
+{
+    left: 222;
+}
+#menuInfoButton
+{
+    left: 296;
+}
+
+
+
+/* -------------------------------------------- */
+/* main panel                                   */
+/* -------------------------------------------- */
+#mainPanel
+{
+    left:   0px; 
+    top:    229px; 
+    width:  365px; 
+    height: 450px;
+}
+
+
+/* -------------------------------------------- */
+/*  pool panel                                  */
+/* -------------------------------------------- */
+#poolPanel
+{
+/* inherits from menuPanel*/
+}
+
+#poolSettingsTitle
+{
+    position: absolute; 
+    left: 0;
+    top: 0;
+}
+
+#startPoolTitle
+{
+    position: absolute; 
+    left: 0;
+    top: 0;
+    width: 300;
+
+    /* for debugging */
+    /*background-color: #ccccff;*/
+}
+
+#pool1Button
+{
+    position: absolute; 
+    left: 0;
+    top:  20;
+    width: 150;
+}
+
+#pool2Button
+{
+    position: absolute; 
+    left: 160;
+    top:  20;
+    width: 150;
+}
+
+#pool3Button
+{
+    position: absolute; 
+    left: 0;
+    top:  55;
+    width: 150;
+}
+#pool4Button
+{
+    position: absolute; 
+    left: 160;
+    top:  55;
+    width: 150;
+}
+#pool5Button
+{
+    position: absolute; 
+    left: 0;
+    top:  90;
+    width: 150;
+}
+
+#pool6Button
+{
+    position: absolute; 
+    left: 160;
+    top:  90;
+    width: 150;
+}
+
+#pool7Button
+{
+    position: absolute; 
+    left: 0;
+    top:  125;
+    width: 150;
+}
+
+#pool8Button
+{
+    position: absolute; 
+    left: 160;
+    top:  125;
+    width: 150;
+}
+
+
+
+#saveLoadPanel
+{
+    position: absolute; 
+    left: 0;
+    top:  170;
+    border-radius: 4px;
+    width: 280;
+    height: 110;
+    
+    /* for debugging */
+    /*background-color: #ffffdd;*/
+}
+
+#saveLoadTitle
+{
+    position: absolute; 
+    left: 0;
+    top:  10;
+    width: 300;
+}
+
+#tweakTitle
+{
+    position: absolute; 
+    left: 0;
+    top:  0;
+}
+
+
+#fileInput
+{
+    visibility: hidden;   
+    position: absolute; 
+    right: 100; 
+    top:   100;
+    width: 200; 
+    height: 100;    
+        
+    /* for debugging */
+    /*background-color: #ffff00; */
+}
+
+
+#saveButton
+{
+    position: absolute; 
+    left: 0;
+    top:  30;
+    width: 100; 
+}
+#loadButton
+{
+    position: absolute; 
+    left: 125;
+    top: 30;
+    width: 100; 
+}
+
+#familyTreeButton
+{
+    position: absolute; 
+    left: 0;
+    bottom: 10;
+    width: 200; 
+}
+
+
+/* -------------------------------------------- */
+/*  graph panel                                 */
+/* -------------------------------------------- */
+#graphPanel
+{
+/* inherits from menuPanel*/
+}
+
+
+#graphTitle
+{
+    position: absolute; 
+    left: 0;
+    top:  0;
+}
+
+#graphData
+{
+    position: absolute; 
+    left: 10;
+    top:  340;
+    width: 200;
+    color: #000000; 
+    font-family: "Arial";
+    font-size: 14;
+
+    /* for debugging */
+    /*background-color: #55ff44; */
+}
+
+
+/* -------------------------------------------- */
+/*  graph canvas                                */
+/* -------------------------------------------- */
+#graphCanvas
+{
+    position: absolute; 
+    left: -5;
+    width: 375; 
+    height: 480;
+}
+
+
+
+/* -------------------------------------------- */
+/*  swimbot panel                               */
+/* -------------------------------------------- */
+#swimbotPanel
+{   
+/* inherits from menuPanel*/
+}
+
+#noSelectedSwimbotPanel
+{
+    position: absolute; 
+    left: 10;
+    top: 10;
+    width: 300;
+    height: 400px;
+    font-family: "Arial";
+    font-size: 14;
+
+    /* for debugging */
+    /*background-color: #ccccff;*/
+}
+
+#selectedSwimbotPanel
+{
+    position: absolute; 
+    left: 10;
+    top: 10;
+    width:  300px;
+    height: 400px;
+    font-family: "Arial";
+    font-size: 14;
+    background-color: #efeedd;
+
+    /* for debugging */
+    /*background-color: #ee3333;*/
+}
+
+#swimbotDataPanel
+{
+    position:   absolute; 
+    left:       10;
+    top:        10;
+    width:      220; 
+    height:     220;
+    font-family: "Arial";
+    font-size: 13;
+    color: #000000; 
+
+    /* for debugging */
+    /*background-color: #ffffdd;*/
+}
+
+
+
+
+#zapSwimbotButton
+{
+    left:       10px;
+    top:        240px;
+    width:      100px;
+}
+#randomizeSwimbotButton
+{
+    left:       120px;
+    top:        240px;
+    width:      100px;
+}
+#cloneSwimbotButton
+{
+    left:       10px;
+    top:        275px;
+    width:      100px;
+}
+#killSwimbotButton
+{
+    left:       120px;
+    top:        275px;
+    width:      100px;
+}
+#swimbotControlsTitle
+{
+    left:       10px;
+    top:        340px;
+    width:      100px;
+}
+
+#tweakGenesButton
+{
+    left:       10px;
+    top:        310px;
+    width:      150px;
+}
+
+#showGenesButton
+{
+    left:       10px;
+    top:        345px;
+    width:      150px;
+}
+
+/*
+#saveGenesButton
+{
+    left:       10px;
+    top:        330px;
+    width:      150px;
+}
+*/
+
+
+
+
+
+/* -------------------------------------------- */
+/*  tweak genes panel                           */
+/* -------------------------------------------- */
+#tweakGenesPanel
+{
+    visibility: hidden;       
+    right: 10; 
+    top: 10;
+    width: 370; 
+    height: 730;     
+    font-size: 12;       
+    z-index: 2;
+    box-shadow: 8px 8px 16px #000010;
+ 
+ 
+ 
+ 
+ 
+ 
+    /* 	
+    font-family: "Arial";
+    font-size: 12;
+    visibility: hidden;       
+    position: absolute; 
+    right: 10; 
+    top: 10;
+    width: 360; 
+    height: 750;    
+    background-color: #bbb8b4; 
+    box-shadow: 8px 8px 40px #000000;
+	border-radius: 4px;
+	*/
+	
+}
+
+#closeTweakGenesPanel
+{
+    visibility: hidden;       
+    /*position: absolute; */
+    right: 15; 
+    top: 15;
+    width: 30; 
+    height: 30;    
+    z-index: 3;
+    
+    /* for debugging */
+    /*background-color: #bbb8b4;*/
+}
+
+
+#tweakGenesTitle
+{
+    position: absolute; 
+    left:  20; 
+    top:  30; 
+    font-family: "Arial";
+    font-size: 14;
+}
+
+#tweakGenesCategoryNote
+{
+    position: absolute; 
+    left:  20; 
+    top:  120; 
+}
+
+#category1 { position: absolute; left:  20; top: 140; }
+#category2 { position: absolute; left:  70; top: 140; }
+#category3 { position: absolute; left: 120; top: 140; }
+#category4 { position: absolute; left: 170; top: 140; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#createRandomSwimbotButton
+{
+    position:   absolute; 
+    left:       0px;
+    top:        70px;
+    width:      150px;
+}
+#loadSwimbotButton
+{
+    position: absolute; 
+    left: 0;
+    top:  135;
+    width:  150;
+}
+
+#presetSwimbot1Button
+{
+    position: absolute; 
+    left: 0;
+    top:  230;
+}
+#presetSwimbot2Button
+{
+    position: absolute; 
+    left: 0;
+    top:  265;
+}
+#presetSwimbot3Button
+{
+    position: absolute; 
+    left: 0;
+    top:  300;
+}
+#presetSwimbot4Button
+{
+    position: absolute; 
+    left: 0;
+    top:  335;
+}
+#presetSwimbot5Button
+{
+    position: absolute; 
+    left: 80;
+    top:  230;
+}
+#presetSwimbot6Button
+{
+    position: absolute; 
+    left: 80;
+    top:  265;
+}
+#presetSwimbot7Button
+{
+    position: absolute; 
+    left: 80;
+    top:  300;
+}
+#presetSwimbot8Button
+{
+    position: absolute; 
+    left: 80;
+    top:  335;
+}
+
+
+
+/* -------------------------------------------- */
+/* tweak panel                                  */
+/* -------------------------------------------- */
+#tweakPanel
+{
+    /* inherits from menuPanel*/
+
+    /* for debugging */
+    /*background-color: #7777ff;*/
+}
+
+
+#ecosystemPanel
+{
+    position:   absolute; 
+    left:       0px; 
+    top:        0px; 
+    width:      340px; 
+    height:     160px;
+
+    /* for debugging */
+    background-color: #999933;
+}
+
+#foodGrowthDelayLabel,  #foodGrowthDelayValue   { top:  10; }
+#foodSpreadLabel,       #foodSpreadValue        { top:  30; }
+#foodBitEnergyLabel,    #foodBitEnergyValue     { top:  50; }
+#hungerThresholdLabel,  #hungerThresholdValue   { top:  70; }
+#energyToOffspringLabel,#energyToOffspringValue { top:  90; }
+#maxAgeLabel,           #maxAgeValue            { top: 110; }
+#mutationRateLabel,     #mutationRateValue      { top: 130; }
+
+#foodGrowthDelaySlider  { top:   6; }
+#foodSpreadSlider       { top:  26; }
+#foodBitEnergySlider    { top:  46; }
+#hungerThresholdSlider  { top:  66; }
+#energyToOffspringSlider{ top:  86; }
+#maxAgeSlider           { top: 106; }
+#mutationRateSlider     { top: 126; }
+
+#tweakDefaultButton
+{
+    width: 130; 
+    height: 25;    
+    left: 120; 
+    top: 160;
+    font-size: 12;       
+}
+
+
+/* ------------------------------------------------------------------------------------------------ */
+/* attraction                                                                                       */
+/* ------------------------------------------------------------------------------------------------ */
+
+#attractionPanel
+{
+    position:   absolute; 
+    left:       0px; 
+    top:        220px;
+    width:      500px
+    height:     200px;
+    
+    /* for debugging */
+    /*background-color: #99ffff; */
+}
+
+
+
+/* ---------------------------------------------------------------------------- */
+/* radio buttons for attraction                                                 */
+/* ---------------------------------------------------------------------------- */
+#radioColorful, #radioBig, #radioHyper, #radioLong, #radioStraight, #radioClosest, #radioRandom
+{
+    position: absolute; 
+    left: 0; 
+    z-index: 2;
+}
+#radioNoColor, #radioSmall, #radioStill, #radioShort, #radioCrooked
+{
+    position: absolute; 
+    left: 100; 
+    z-index: 2;
+}
+#radioSimilarColor, #radioSimilarSize, #radioSimilarHyper, #radioSimilarLength, #radioSimilarStraight
+{
+    position: absolute; 
+    left: 200; 
+    z-index: 2;
+
+    /* for debugging */
+    /*background-color: #99ffff;*/ 
+}
+
+#radioColorful, #radioNoColor, #radioSimilarColor
+{
+    position: absolute; 
+    top: 30; 
+}
+
+#radioBig, #radioSmall, #radioSimilarSize       
+{
+    position: absolute; 
+    top: 50; 
+    }
+
+#radioHyper, #radioStill, #radioSimilarHyper
+{
+    position: absolute; 
+    top: 70; 
+}
+
+#radioLong, #radioShort, #radioSimilarLength
+{
+    position: absolute; 
+    top: 90; 
+}
+
+#radioStraight, #radioCrooked, #radioSimilarStraight
+{
+    position: absolute; 
+    top: 110; 
+}
+
+#radioRandom
+{
+    position: absolute; 
+    top: 130; 
+}
+
+#radioClosest
+{
+    position: absolute; 
+    top: 150; 
+}
+
+#colorfulLabel, #bigLabel, #hyperLabel, #straightLabel, #longLabel, #randomLabel, #closestLabel
+{
+    position: absolute; 
+    left:  25; 
+    width: 200; 
+}
+
+#noColorLabel, #smallLabel, #stillLabel, #crookedLabel, #shortLabel
+{
+    position: absolute; 
+    left:  125; 
+    width: 200; 
+}
+
+#similarColorLabel, #similarSizeLabel, #similarHyperLabel, #similarStraightLabel, #similarLengthLabel
+{
+    position: absolute; 
+    left:  225; 
+    width: 100;
+        
+    /* for debugging */
+    /*background-color: #ffcccc; */ 
+}
+
+#colorfulLabel, #noColorLabel, #similarColorLabel
+{ top: 30; }
+
+#bigLabel, #smallLabel, #similarSizeLabel
+{ top: 50; }
+
+#hyperLabel, #stillLabel, #similarHyperLabel
+{ top: 70; }
+
+#straightLabel, #crookedLabel, #similarStraightLabel
+{ top: 90; }
+
+#longLabel, #shortLabel, #similarLengthLabel
+{ top: 110; }
+
+#randomLabel
+{ top: 130; }
+
+#closestLabel
+{ top: 150; }
+
+
+/*
+#freezePanel
+{
+    position: absolute; 
+    left: 10; 
+    top:  380;
+    width: 200;
+}
+*/
+
+/* -------------------------------------------- */
+/* popup panel                                  */
+/* -------------------------------------------- */
+#popUpPanel
+{
+    font-family: "Arial";
+    font-size: 12;
+    position: absolute; 
+    right: 40; 
+    top: 100;
+    width: 320; 
+    height: 200;    
+    visibility: hidden;       
+    background-color: #bbb8b4; 
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    box-shadow: 8px 8px 16px #000010;
+	border-radius: 4px;
+}    
+
+#cancelPopUpPanelButton
+{
+    visibility: hidden;
+    position: absolute; 
+    right: 55; 
+    top: 105;
+    width: 30; 
+    height: 30;    
+}
+
+
+
+
+/* -------------------------------------------- */
+/* render                                       */
+/* -------------------------------------------- */
+#noRenderPanel
+{
+    /*
+    right:          400px;
+    top:             40px;
+    width:          400px; 
+    height:         200px;
+    */
+
+right:          17px;
+top:             42px;
+width:          317px; 
+height:         105px;
+
+
+    
+    padding-top:     20px;
+    padding-right:   20px;
+    padding-bottom:  20px;
+    padding-left:    20px;
+    font-size:      12px;
+    visibility:     hidden;
+    z-index: 2;
+}
+
+
+
+/* -------------------------------------------- */
+/* info panel                                   */
+/* -------------------------------------------- */
+#infoPanel
+{
+/* inherits from menuPanel*/
+}
+
+
+#prevInfoButton
+{
+    visibility: hidden; 
+    left:       0; 
+    bottom:     0; 
+    width:      80; 
+}
+
+#nextInfoButton
+{
+    left: 190; 
+    bottom: 0; 
+    width: 80; 
+}
+
+
+#pageNumberLabel
+{
+    position: absolute; 
+    left: 90; 
+    bottom: 0; 
+    width: 200; 
+    font-family: "Arial";
+    font-size: 14;
+}
+
+#infoText
+{
+    position: absolute; 
+    /*visibility: hidden; */
+    color: #223322; 
+    font-family: "Arial";
+    font-size: 13;
+    
+    left: 10;
+    top: 20;
+    width: 320;
+    
+    /* for debugging */
+    /*background-color: #559999;*/
+}
+
+
+/* -------------------------------------------- */
+/* data display panel                           */
+/* -------------------------------------------- */
+#dataDisplay
+{
+    /*
+    font-family: "Arial";
+    */
+
+    font-size: 14;
+    
+overflow:auto; /* added for the family tree display
+    
+    
+    /*word-wrap: 'break-word';*/
+    word-break: break-all;
+    visibility: hidden;       
+    /*position: absolute;*/ 
+    right: 200; 
+    top: 100;
+    width: 500; 
+    height: 450;    
+    z-index: 2;
+
+    padding-left: 30px;
+    padding-right: 30px;
+    box-shadow: 8px 8px 16px #000010;
+	/*border-radius: 4px;*/
+
+    /* for debugging */
+    /*background-color: #bbb8b4;*/
+}
+
+
+
+#closeDataDisplay
+{
+    visibility: hidden;       
+    /* position: absolute; */ 
+    right: 205; 
+    top: 105;
+    width: 30; 
+    height: 30;  
+    z-index: 3;      
+    
+    /* for debugging */
+    /*background-color: #bbb8b4;*/
+}
+
+
+
+#dataDisplayButton
+{
+    visibility: hidden;
+    position: absolute; 
+    right: 240; 
+    top: 210;
+    width: 120; 
+    height: 25;    
+    
+    /* for debugging */
+    background-color: #bbb8b4; 
+}
+
+
+/* -------------------------------------------- */
+/* donate panel                                 */
+/* -------------------------------------------- */
+
+#donatePanel
+{
+    /*
+    position: absolute; 
+    left: 270; 
+    top: 460; 
+    width: 130; 
+    height: 40; 
+    */
+}
+
+#donateButton
+{
+    position: absolute; 
+    left: 270; 
+    top: 460; 
+    width:  90px; 
+    height: 25px;
+}
+
+#donateHeart
+{
+    position: absolute; 
+    left: 105; 
+    top: 6; 
+}
+
+
+/* -------------------------------------------- */
+/* contact panel                                */
+/* -------------------------------------------- */
+#contactPanel
+{
+    color: #000000; 
+    font-family: "Arial";
+    font-size: 12;
+    position: absolute; 
+    left: 0; 
+    top: 460; 
+    width: 150; 
+    height: 40; 
+
+    /* for debugging */
+    /*background-color: #aaccaa;*/
+}
+
