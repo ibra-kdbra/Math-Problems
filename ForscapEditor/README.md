@@ -1,4 +1,5 @@
 # Forscape
+
 ## A language and editor for scientific computation
 
 ![alt text](doc/readme/limerick.png?raw=true "Forscape")
@@ -21,14 +22,16 @@ The editor code-model interaction has various features for matrices. The syntax 
 
 *But first, a warning*. Forscape is in early alpha. Feedback and bug reports are welcome, but backward compatibility will be broken. The language syntax will be broken. The file encoding will be broken. Crashes are likely.
 
-#### Windows
+### Windows
 
 Download and run [ForscapeInstaller_Win64.exe](https://github.com/JohnDTill/Forscape/releases/download/pre-alpha-0.0.2/ForscapeInstaller_Win64.exe).
 Alternately, install the development prerequisites listed below and compile from source.
 
 #### Linux
+
 Use the [.deb file](https://github.com/JohnDTill/Forscape/releases/download/pre-alpha-0.0.2/forscape_0.0.1_amd64.deb) or compile from source using:
-```
+
+```sh
 apt-get install cmake python3 qt5-default libqt5svg5-dev
 pip3 install conan
 git clone https://github.com/JohnDTill/Forscape
@@ -41,12 +44,13 @@ make
 
 ## Development Prerequisites
 
-* Qt5/6 (https://www.qt.io/download)
+* Qt5/6 (<https://www.qt.io/download>)
   * QtSvg module
 * Python3 on the system path
 * Conan (after installing, pick up the Qt plugin for easy use)
 
-#### Optional
+### Optional
+
 * [GraphViz](https://graphviz.org/) on system path for debugging AST
 
 #### External libraries / assets (no setup required)
@@ -71,4 +75,3 @@ Creating solid design foundations is a current challenge, but this work is inter
 Progress and feature ideas are tracked in a [Jira board](https://forscape.atlassian.net/jira/software/c/projects/FOR/boards/1) and backlog. Tests are run automatically by GitHub runners and required to pass before merging to main. There is no official communication outlet yet -- feel free to reach out to me directly with questions or interest.
 
 There is no documentation yet, either user or design docs. [Crafting Interpreters](http://www.craftinginterpreters.com/) is an excellent programming-languages primer and instant classic for anyone wanting to experiment with languages.
-
