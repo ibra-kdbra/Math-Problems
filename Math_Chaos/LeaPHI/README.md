@@ -32,9 +32,9 @@ Because every step of the generation is rooted in a parametric model, the result
 ## Results
 
 First results:
-![](pics/result_0.png "first results")
+![F](pics/result_0.png "first results")
 
 After some tweaking:
-![](pics/result_1.png "tweaked results")
+![S](pics/result_1.png "tweaked results")
 
 //TODO Animation
