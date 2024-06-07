@@ -1,0 +1,12 @@
+/.vs
+/Debug
+/Release
+/old
+/packages
+/Build
+/x64
+*.exe
+*.log
+*.vcxproj.user
+save.txt
+butler.txt
