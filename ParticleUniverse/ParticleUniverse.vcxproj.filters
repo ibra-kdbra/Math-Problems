@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{d7de92fb-432c-4867-a049-d5374f197e22}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{9225c6c5-878f-4e9b-aa62-694f20da9e9e}</UniqueIdentifier>
+      <Extensions>ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{9ead11b3-7fa8-4265-8735-ec9055016bae}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl</Extensions>
+    </Filter>
+    <Filter Include="Header Files\ARGCore">
+      <UniqueIdentifier>{24129bf1-e7bd-4c4f-af9a-a65305152fbd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\ARGCore">
+      <UniqueIdentifier>{8aabf334-da8f-413e-a52b-05783dd4171d}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\ARGCore\ARGMath.cpp">
+      <Filter>Source Files\ARGCore</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ARGCore\ARGUtils.cpp">
+      <Filter>Source Files\ARGCore</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ARGCore\GameBase.cpp">
+      <Filter>Source Files\ARGCore</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ARGCore\Keyboard.cpp">
+      <Filter>Source Files\ARGCore</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ARGCore\TimingManager.cpp">
+      <Filter>Source Files\ARGCore</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ARGCore\Vector2.cpp">
+      <Filter>Source Files\ARGCore</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ParticleUniverseGame.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Universe.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ARGCore\Sprites.cpp">
+      <Filter>Source Files\ARGCore</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ARGCore\PSectorMenu.cpp">
+      <Filter>Source Files\ARGCore</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ARGCore\Fonts.cpp">
+      <Filter>Source Files\ARGCore</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="config.cfg">
+      <Filter>Resource Files</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\ParticleUniverseGame.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Universe.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ARGCore\ARGMath.h">
+      <Filter>Header Files\ARGCore</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ARGCore\ARGUtils.h">
+      <Filter>Header Files\ARGCore</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ARGCore\GameBase.h">
+      <Filter>Header Files\ARGCore</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ARGCore\Keyboard.h">
+      <Filter>Header Files\ARGCore</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ARGCore\TimingManager.h">
+      <Filter>Header Files\ARGCore</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ARGCore\Vector2.h">
+      <Filter>Header Files\ARGCore</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ARGCore\Config.h">
+      <Filter>Header Files\ARGCore</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ARGCore\dialog.h">
+      <Filter>Header Files\ARGCore</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ARGCore\PSectorMenu.h">
+      <Filter>Header Files\ARGCore</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ARGCore\Sprites.h">
+      <Filter>Header Files\ARGCore</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ARGCore\rgb.h">
+      <Filter>Header Files\ARGCore</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ARGCore\Fonts.h">
+      <Filter>Header Files\ARGCore</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+</Project>
