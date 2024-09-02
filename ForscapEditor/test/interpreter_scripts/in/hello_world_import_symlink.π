@@ -1,3 +1,0 @@
-import ../sym_link_in/hello_world
-import hello_world.π as another_name
-hello_world.helloWorld()

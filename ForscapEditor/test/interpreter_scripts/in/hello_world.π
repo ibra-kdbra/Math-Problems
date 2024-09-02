@@ -1,5 +1,0 @@
-alg helloWorld(){
-    print("Hello world!")
-}
-
-helloWorld()

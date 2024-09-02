@@ -1,7 +1,0 @@
-alg mySwitch(x){
-    switch(x){}
-}
-
-mySwitch(0)
-mySwitch(1)
-mySwitch(2)

@@ -1,5 +1,0 @@
-alg infiniteRecursion(x){
-    return infiniteRecursion(x-1)
-}
-
-print(infiniteRecursion(3))

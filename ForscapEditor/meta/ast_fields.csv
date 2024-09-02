@@ -1,9 +1,0 @@
-property,type,word
-op,Op,y
-flag,size_t,y
-type,size_t,y
-rows,size_t,y
-cols,size_t,y
-value,Value,n
-selection,Typeset::Selection,n
-num_args,size_t,y

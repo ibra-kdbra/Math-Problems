@@ -1,4 +1,0 @@
-alg f
-alg h() return f()
-alg f() return h()
-f()

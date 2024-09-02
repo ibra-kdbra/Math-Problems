@@ -1,5 +1,0 @@
-alg hello
-hello()
-alg hello(){
-    print("Hello world")
-}
