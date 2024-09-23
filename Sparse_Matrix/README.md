@@ -5,6 +5,8 @@ There is support for [preconditioned iterations](#preconditioners) for some of t
 
 ## Iterative Methods
 
+
+
 Currently available methods are Krylov iterative methods derivatives of the BiConjugate Gradient Method. These methods can work with positive definite, negative definite and indefinite matrices. In case of symmetric positive definite and symmetric negative definite matrix the methods will converge to the exact answer. Theoretically speaking given SPD or SND matrices the methods will find the exact answer after no more that `m` steps where `m` is the size of the matrix. In the case of indefinite matrix the methods can occasionally diverge. In that case the method must be restarted with different initial guess. Keep in mind that there is no Krylov method which is proven to converge for general indefinite matrix.
 
 ## Conjugate Gradient Method
