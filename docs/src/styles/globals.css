@@ -1,0 +1,141 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+    --primary: 221.2 83.2% 53.3%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 221.2 83.2% 53.3%;
+
+    --warning: 42 100% 62%;
+    --warning-foreground: 37 100% 12%;
+
+    --callout: 120 61% 85%;
+    --callout-foreground: 152 41% 13%;
+
+    --note: 193 98% 74%;
+    --note-foreground: 205 64% 29%;
+
+    --info: 205 100% 88%;
+    --info-foreground: 216 7% 71%;
+
+    --radius: 0.5rem;
+  }
+
+  html[data-theme='dark'] {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 217.2 91.2% 59.8%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 224.3 76.3% 48%;
+
+    --warning: 42 100% 62%;
+    --warning-foreground: 48 97% 77%;
+
+    --callout: 152 41% 13%;
+    --callout-foreground: 131 50% 63%;
+
+    --note: 207 100% 23%;
+    --note-foreground: 210 100% 72%;
+
+    --info: 193 100% 14%;
+    --info-foreground: 205 100% 88%;
+  }
+}
+
+* {
+  @apply border-border;
+}
+
+body {
+  @apply bg-background text-foreground;
+}
+
+h1 {
+  @apply scroll-m-20 text-3xl font-extrabold tracking-tight lg:text-4xl;
+}
+
+h2 {
+  @apply scroll-mt-28 text-2xl font-extrabold tracking-tight lg:text-3xl my-2;
+}
+
+h3 {
+  @apply scroll-mt-28 text-xl font-extrabold tracking-tight lg:text-2xl;
+}
+
+h1 ~ p,
+h2 ~ p {
+  @apply pt-2 pb-5;
+}
+
+h3 {
+  @apply pt-0;
+}
+
+code:not(pre code) {
+  @apply bg-secondary border px-1 py-0.5 rounded text-sm;
+}
+
+blockquote {
+  @apply border-l-4 pl-4 text-foreground/70  py-1;
+}
+
+/* ul:not(.unstyled):not([class]) {
+  @apply pl-6 my-4 space-y-2;
+} */
+
+ul:not(.unstyled):not([class]) {
+  @apply pl-6 mb-4 space-y-2;
+}
+
+ul:not(.unstyled):not([class]) > li {
+  @apply relative;
+}
+
+ul:not(.unstyled):not([class]) > li::before {
+  content: '';
+  @apply absolute w-1.5 h-1.5 bg-foreground/50 rounded-full left-[-1rem] top-[0.5rem];
+}
+
+ol:not(.unstyled):not([class]) {
+  @apply pl-6 my-4 space-y-2 list-decimal;
+}
+
+ol:not(.unstyled):not([class]) > li {
+  @apply pl-1 marker:text-foreground/50 marker:font-semibold;
+}
+
+img {
+  @apply rounded-2xl border;
+}
