@@ -1,0 +1,53 @@
+---
+import type { GetStaticPathsResult } from 'astro'
+import { getCollection, type CollectionEntry } from 'astro:content'
+import DocumentationLayout from '../../layouts/DocumentationLayout.astro'
+import { generateToc } from '../../lib/toc'
+import {
+  ensureCollectionType,
+  getCollectionTypes,
+  type SiteConfig,
+} from '../../types'
+
+export async function getStaticPaths(): Promise<GetStaticPathsResult> {
+  const siteConfig: SiteConfig = import.meta.env.SITE_CONFIG
+  const collectionTypes = getCollectionTypes(siteConfig)
+
+  const allPaths = await Promise.all(
+    collectionTypes.map(async (type) => {
+      const collection = await getCollection(ensureCollectionType(type))
+      return collection.map((entry) => ({
+        params: { type, slug: entry.slug },
+        props: { entry, type },
+      }))
+    })
+  )
+
+  return allPaths.flat()
+}
+
+interface Props {
+  entry: CollectionEntry<ReturnType<typeof ensureCollectionType>>
+  type: string
+}
+
+const { type } = Astro.params
+const { entry } = Astro.props
+
+const { Content, headings } = await entry.render()
+const tocItems = generateToc(headings)
+
+const siteConfig: SiteConfig = import.meta.env.SITE_CONFIG
+const groupInfo = siteConfig.navigation.find((nav) => nav.type === type)
+
+if (!groupInfo) {
+  throw new Error(`No group info found for type: ${type}`)
+}
+---
+
+<DocumentationLayout
+  title={entry.data.title}
+  toc={tocItems}
+  type={entry.data.type}>
+  <Content />
+</DocumentationLayout>
