@@ -1,0 +1,102 @@
+---
+title: 'Quickstart'
+date: '2024-06-28'
+description: 'Learn how to set up and start using this powerful documentation template.'
+draft: false
+type: Getting Started
+---
+
+import {
+  SquarePen,
+  SwatchBook,
+  Code,
+  Rocket,
+  Image,
+  BookOpen,
+  Zap,
+} from 'lucide-react'
+import GroupName from '../../components/docs/GroupName.astro'
+import CodeBlock from '../../components/docs/CodeBlock.astro'
+import Callout from '../../components/docs/Callout'
+import ExternalLink from '../../components/docs/ExternalLink.astro'
+import DocsAccordion from '../../components/docs/Accordion.tsx'
+import Card from '../../components/Card.astro'
+import CardGrid from '../../components/docs/CardGrid.astro'
+
+Start building awesome documentation in under 5 minutes
+
+<Callout
+  variant='warning'
+  alertTitle='Prerequisites'
+  alertDescription='Before you begin, make sure you have Node.js (v18.17.1 or v20.3.0) installed on your system.'
+/>
+
+## Setup your development
+
+Learn how to update your docs locally and deploy them to the public.
+
+1. Clone the repository
+
+<CodeBlock
+  code={`git clone https://github.com/alexwhitmore/astro-mintlify.git`}
+  lang='bash'
+/>
+
+2.  Navigate to the project directory
+
+<CodeBlock code={`cd astro-mintlify`} lang='bash' />
+
+3. Install the dependencies
+
+<CodeBlock code={`npm install`} lang='bash' />
+
+4. Start your development server
+
+<CodeBlock code={`npm run dev`} lang='bash' />
+
+Once the server starts, you can view your documentation site at `http://localhost:4321`.
+
+## What to do next
+
+Now that you have your documentation site up and running, here are some next steps to make it your own:
+
+<CardGrid>
+  <Card
+    header='Add your first page'
+    content='Learn how to create and organize new documentation pages.'
+    href='/essentials/creating-pages'
+    withIcon>
+    <SquarePen className='stroke-primary' />
+  </Card>
+  <Card
+    header='Customize your style'
+    content="Tailor your docs to match your brand's colors and aesthetics."
+    href='/essentials/theming'
+    withIcon>
+    <SwatchBook className='stroke-primary' />
+  </Card>
+  <Card
+    header='Use custom components'
+    content='Enhance your docs with pre-built and custom components.'
+    href='/essentials/components'
+    withIcon>
+    <Code className='stroke-primary' />
+  </Card>
+  <Card
+    header='Add images and media'
+    content='Learn how to include images, videos, and other media in your docs.'
+    href='/essentials/images'
+    withIcon>
+    <Image className='stroke-primary' />
+  </Card>
+</CardGrid>
+
+## Need Help?
+
+If you encounter any issues or have questions, check out our <ExternalLink url="/community/faq">FAQ</ExternalLink> or <ExternalLink url="https://github.com/alexwhitmore/astro-mintlify/issues">open an issue</ExternalLink> on GitHub.
+
+<Callout
+  variant='note'
+  alertTitle='Support the project'
+  alertDescription="Remember to star the project on GitHub if you're enjoying it!"
+/>
