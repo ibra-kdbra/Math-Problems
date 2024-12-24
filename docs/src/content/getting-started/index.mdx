@@ -1,0 +1,51 @@
+---
+title: 'Introduction'
+date: '2024-06-28'
+description: 'Learn more about this documentation template.'
+draft: false
+type: Getting Started
+---
+
+import { SquarePen, SwatchBook, Code, Rocket } from 'lucide-react'
+import Card from '../../components/Card.astro'
+import CardGrid from '../../components/docs/CardGrid.astro'
+import GroupName from '../../components/docs/GroupName.astro'
+
+Welcome to your new documentation home. This template provides a solid foundation for clear and organized project documentation.
+
+![Hero Image](../../assets/hero-light.svg)
+
+## Setting up
+
+Get started with world-class documentation by setting up your editing environment and exploring key features.
+
+<CardGrid>
+  <Card
+    header='Create Pages'
+    content='Add and organize new documentation pages with ease.'
+    href='/essentials/creating-pages'
+    withIcon>
+    <SquarePen className='stroke-primary' />
+  </Card>
+  <Card
+    header='Customize Style'
+    content="Tailor your docs to match your brand's colors and aesthetics."
+    href='/essentials/theming'
+    withIcon>
+    <SwatchBook className='stroke-primary' />
+  </Card>
+  <Card
+    header='Use Components'
+    content='Leverage pre-built custom components for rich documentation.'
+    href='/essentials/components'
+    withIcon>
+    <Code className='stroke-primary' />
+  </Card>
+  <Card
+    header='Deploy Docs'
+    content='Publish your documentation quickly and effortlessly.'
+    href='/essentials/deployments'
+    withIcon>
+    <Rocket className='stroke-primary' />
+  </Card>
+</CardGrid>
