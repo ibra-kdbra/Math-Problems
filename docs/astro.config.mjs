@@ -7,7 +7,7 @@ import astroDocs from './integrations/astroDocs';
 
 export default defineConfig({
   output: 'static', // Adjust as needed.
-  outDir: './docs/dist', // Explicit output directory.
+  outDir: '/dist', // Explicit output directory.
   adapter: vercel({
     webAnalytics: {
       enabled: true,
