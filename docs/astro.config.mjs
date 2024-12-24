@@ -6,7 +6,7 @@ import { defineConfig } from 'astro/config'
 import astroDocs from './integrations/astroDocs'
 
 export default defineConfig({
-  output: 'hybrid',
+  output: 'server',
   adapter: vercel({
     webAnalytics: {
       enabled: true,
