@@ -1,12 +1,13 @@
-import mdx from '@astrojs/mdx'
-import react from '@astrojs/react'
-import tailwind from '@astrojs/tailwind'
-import vercel from '@astrojs/vercel/serverless'
-import { defineConfig } from 'astro/config'
-import astroDocs from './integrations/astroDocs'
+import mdx from '@astrojs/mdx';
+import react from '@astrojs/react';
+import tailwind from '@astrojs/tailwind';
+import vercel from '@astrojs/vercel/serverless';
+import { defineConfig } from 'astro/config';
+import astroDocs from './integrations/astroDocs';
 
 export default defineConfig({
-  output: 'hybrid',
+  output: 'static', // Adjust as needed.
+  outDir: './docs/dist', // Explicit output directory.
   adapter: vercel({
     webAnalytics: {
       enabled: true,
@@ -69,4 +70,4 @@ export default defineConfig({
   content: {
     collections: ['getting-started', 'essentials', 'my-new-page'],
   },
-})
+});
