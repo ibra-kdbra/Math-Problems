@@ -6,7 +6,7 @@ import { defineConfig } from 'astro/config'
 import astroDocs from './integrations/astroDocs'
 
 export default defineConfig({
-  output: 'server',
+  output: 'hybrid',
   adapter: vercel({
     webAnalytics: {
       enabled: true,
@@ -50,13 +50,6 @@ export default defineConfig({
             { name: 'Deployments', url: '/essentials/deployments' },
           ],
         },
-        {
-          group: 'Advanced',
-          type: 'advanced',
-          pages: [
-            { name: 'Pull Requests', url: '/advanced/pull-request' },
-          ]
-        }
       ],
     }),
   ],

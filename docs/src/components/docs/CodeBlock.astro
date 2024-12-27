@@ -98,7 +98,7 @@ const id = `codeblock-${Math.random().toString(36).substring(2, 9)}`
   </div>
 </div>
 
-<script define:vars={{ id }}>
+<script is:inline define:vars={{ id }}>
   ;(function () {
     const codeBlock = document.getElementById(id)
     const tabButtons = codeBlock.querySelectorAll('.tab-button')
