@@ -37,17 +37,15 @@ export default defineConfig({
           pages: [
             { name: 'Introduction', url: '/' },
             { name: 'Quickstart', url: '/getting-started/quickstart' },
+            { name: 'Creating pages', url: '/getting-started/creating-pages' },
           ],
         },
         {
-          group: 'Essentials',
-          type: 'essentials',
+          group: 'Differentiator',
+          type: 'differentiator',
           pages: [
-            { name: 'Creating pages', url: '/essentials/creating-pages' },
-            { name: 'Theming', url: '/essentials/theming' },
-            { name: 'Components', url: '/essentials/components' },
-            { name: 'Images', url: '/essentials/images' },
-            { name: 'Deployments', url: '/essentials/deployments' },
+            { name: 'Readme', url: '/differentiator/readme' },
+
           ],
         },
       ],
@@ -60,6 +58,6 @@ export default defineConfig({
     },
   },
   content: {
-    collections: ['getting-started', 'essentials', 'my-new-page'],
+    collections: ['getting-started', 'essentials', 'differentiator'],
   },
 })
