@@ -1,6 +1,6 @@
 ---
 import CodeBlock from './CodeBlock.astro';
-import { BundledLanguage } from 'shiki';
+import type { BundledLanguage } from 'shiki';
 
 interface Step {
   icon: string;
@@ -22,13 +22,12 @@ if (!steps || steps.length === 0) {
 
   <div class="steps">
     {steps?.map((step, index) => (
-      <div key={index} class={`step ${index % 2 !== 0 ? 'ml-8' : ''}`}>  {/* Correctly apply staircase effect */}
+      <div class={`step ${index % 2 !== 0 ? 'ml-8' : ''}`}>
         <div class="step-icon text-2xl">{step.icon || '❓'}</div>
         <div class="step-content">
           <h3 class="text-xl font-semibold">{step.title}</h3>
           <p class="text-sm text-gray-600">{step.description}</p>
 
-          {/* Using the existing CodeBlock component */}
           {step.code && step.lang && (
             <CodeBlock code={step.code} lang={step.lang as BundledLanguage} />
           )}
@@ -108,3 +107,4 @@ if (!steps || steps.length === 0) {
     background-color: rgba(128, 128, 128, 0.2);
   }
 </style>
+
