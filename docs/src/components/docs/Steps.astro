@@ -1,12 +1,13 @@
 ---
-import CodeBlock from './CodeBlock.astro';  // Import the existing CodeBlock component
+import CodeBlock from './CodeBlock.astro';
+import { BundledLanguage } from 'shiki';
 
 interface Step {
   icon: string;
   title: string;
   description: string;
   code: string;
-  lang: string;
+  lang: BundledLanguage;
 }
 
 const { steps } = Astro.props as { steps?: Step[] };
@@ -29,7 +30,7 @@ if (!steps || steps.length === 0) {
 
           {/* Using the existing CodeBlock component */}
           {step.code && step.lang && (
-            <CodeBlock code={step.code} lang={step.lang} />
+            <CodeBlock code={step.code} lang={step.lang as BundledLanguage} />
           )}
         </div>
       </div>
@@ -38,7 +39,6 @@ if (!steps || steps.length === 0) {
 </div>
 
 <style>
-  /* Step Layout (Staircase Effect) */
   .steps-container {
     margin-top: 20px;
     padding-left: 0;
@@ -56,9 +56,8 @@ if (!steps || steps.length === 0) {
     margin-bottom: 24px;
   }
 
-  /* Staircase effect: Every odd step will shift to the right */
   .step.ml-8 {
-    margin-left: 40px;  /* This creates the staircase shift */
+    margin-left: 40px;
   }
 
   .step-icon {
@@ -80,7 +79,6 @@ if (!steps || steps.length === 0) {
     color: #666;
   }
 
-  /* Removed Mint Color and Circle */
   .step::before {
     content: '';
     position: absolute;
@@ -89,26 +87,24 @@ if (!steps || steps.length === 0) {
     width: 10px;
     height: 10px;
     border-radius: 50%;
-    background-color: transparent;  /* No mint color */
+    background-color: transparent;
   }
 
-  /* Code Block Styling */
   pre {
-    background: transparent !important;  /* Ensures background is transparent */
+    background: transparent !important;
   }
 
   html[data-theme='light'] pre {
-    @apply bg-foreground !important;  /* Apply background for code block in light mode */
+    @apply bg-foreground !important;
   }
 
   code {
     font-family: 'Courier New', Courier, monospace;
     font-size: 16px;
-    color: #555;  /* Dark grey text */
+    color: #555;
   }
 
-  /* Optional: Slightly darker background when hovered */
   pre:hover {
-    background-color: rgba(128, 128, 128, 0.2);  /* Darker transparency when hovered */
+    background-color: rgba(128, 128, 128, 0.2);
   }
 </style>
