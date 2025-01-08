@@ -27,7 +27,7 @@ export default defineConfig({
         {
           name: 'Blog',
           icon: 'newspaper',
-          url: '/',
+          url: 'https://banije.vercel.app/',
         },
       ],
       navigation: [
@@ -38,13 +38,16 @@ export default defineConfig({
             { name: 'Introduction', url: '/' },
             { name: 'Quickstart', url: '/getting-started/quickstart' },
             { name: 'Creating pages', url: '/getting-started/creating-pages' },
+            { name: 'Components', url: '/getting-started/components' },
+            { name: 'Deploy', url: '/getting-started/deploy' },
+
           ],
         },
         {
           group: 'Differentiator',
           type: 'differentiator',
           pages: [
-            { name: 'Readme', url: '/differentiator/readme' },
+            { name: 'Differentiator-readme', url: '/differentiator/differentiator-readme' },
 
           ],
         },
