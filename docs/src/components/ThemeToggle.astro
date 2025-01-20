@@ -4,7 +4,7 @@
   <span id='theme-icon'></span>
 </button>
 
-<script is:inline type='module'>
+<script type='module' is:inline>
   const themeBtn = document.getElementById('theme-btn')
   const themeIcon = document.getElementById('theme-icon')
 
@@ -34,6 +34,5 @@
 
   themeBtn.addEventListener('click', toggleTheme)
 
-  // Initialize the icon based on the current theme
   setThemeIcon(getCurrentTheme())
 </script>
