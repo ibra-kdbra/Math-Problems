@@ -1,66 +1,79 @@
-import mdx from '@astrojs/mdx'
 import react from '@astrojs/react'
+import starlight from '@astrojs/starlight'
 import tailwind from '@astrojs/tailwind'
-import vercel from '@astrojs/vercel/serverless'
 import { defineConfig } from 'astro/config'
-import astroDocs from './integrations/astroDocs'
 
 export default defineConfig({
-  output: 'hybrid',
-  adapter: vercel({
-    webAnalytics: {
-      enabled: true,
-    },
-  }),
-  prefetch: true,
   integrations: [
-    react(),
-    tailwind(),
-    mdx(),
-    astroDocs({
-      anchors: [
+    starlight({
+      title: 'astrodocs',
+      logo: {
+        light: './src/assets/dark-logo.svg',
+        dark: './src/assets/light-logo.svg',
+      },
+      customCss: ['./src/styles/custom.css', './src/styles/tailwind.css'],
+      social: {
+        github: 'https://github.com/withastro/starlight',
+      },
+      components: {
+        Header: './src/components/Header.astro',
+        Head: './src/components/Head.astro',
+      },
+      sidebar: [
         {
-          name: 'Community',
-          icon: 'discord',
-          url: '/',
-        },
-        {
-          name: 'Blog',
-          icon: 'newspaper',
-          url: 'https://banije.vercel.app/',
-        },
-      ],
-      navigation: [
-        {
-          group: 'Getting Started',
-          type: 'getting-started',
-          pages: [
-            { name: 'Introduction', url: '/' },
-            { name: 'Quickstart', url: '/getting-started/quickstart' },
-            { name: 'Creating pages', url: '/getting-started/creating-pages' },
-            { name: 'Components', url: '/getting-started/components' },
-            { name: 'Deploy', url: '/getting-started/deploy' },
-
+          label: 'Getting Started',
+          items: [
+            {
+              label: 'Introduction',
+              slug: 'getting-started/introduction',
+            },
+            {
+              label: 'Quickstart',
+              slug: 'getting-started/quickstart',
+            },
+            {
+              label: 'Creating Pages',
+              slug: 'getting-started/creating-pages',
+            },
+            {
+              label: 'Deployments',
+              slug: 'getting-started/deployments',
+            },
+            {
+              label: 'Theming',
+              slug: 'getting-started/theming',
+            },
+            {
+              label: 'Images',
+              slug: 'getting-started/images',
+            },
           ],
         },
         {
-          group: 'Differentiator',
-          type: 'differentiator',
-          pages: [
-            { name: 'Differentiator-readme', url: '/differentiator/differentiator-readme' },
-
+          label: 'Differentiator',
+          items: [
+            {
+              label: 'Differentiator',
+              slug: 'differentiator/differentiator-readme',
+            },
+          ],
+        },
+        {
+          label: 'Encoder Decoder',
+          items: [
+            {
+              label: 'DnsLib',
+              slug: 'encoder-decoder/dnslib',
+            },
+            {
+              label: 'Image encoding',
+              slug: 'encoder-decoder/img-encoding',
+            },
           ],
         },
       ],
     }),
+    tailwind(),
+    react(),
   ],
-  markdown: {
-    shikiConfig: {
-      theme: 'dracula',
-      wrap: true,
-    },
-  },
-  content: {
-    collections: ['getting-started', 'essentials', 'differentiator'],
-  },
 })

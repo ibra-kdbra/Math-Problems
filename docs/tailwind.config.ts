@@ -16,6 +16,11 @@ const config = {
           DEFAULT: 'hsl(var(--primary))',
           foreground: 'hsl(var(--primary-foreground))',
         },
+        'warning-foreground': 'hsl(var(--warning-foreground))',
+        warning: 'hsl(var(--warning))',
+        'note-foreground': 'hsl(var(--note-foreground))',
+        note: 'hsl(var(--note))',
+        tip: 'hsl(var(--tip))',
         secondary: {
           DEFAULT: 'hsl(var(--secondary))',
           foreground: 'hsl(var(--secondary-foreground))',
@@ -40,17 +45,9 @@ const config = {
           DEFAULT: 'hsl(var(--card))',
           foreground: 'hsl(var(--card-foreground))',
         },
-        warning: {
-          DEFAULT: 'hsl(var(--warning))',
-          foreground: 'hsl(var(--warning-foreground))',
-        },
         callout: {
           DEFAULT: 'hsl(var(--callout))',
           foreground: 'hsl(var(--callout-foreground))',
-        },
-        note: {
-          DEFAULT: 'hsl(var(--note))',
-          foreground: 'hsl(var(--note-foreground))',
         },
         info: {
           DEFAULT: 'hsl(var(--info))',
