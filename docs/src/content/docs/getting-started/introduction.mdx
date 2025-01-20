@@ -1,21 +1,19 @@
 ---
 title: 'Introduction'
-date: '2024-11-28'
 description: 'Math Problems'
-draft: false
-type: Getting Started
 ---
 
-import { SquarePen, SwatchBook, Code, Rocket } from 'lucide-react'
-import Card from '../../components/Card.astro'
-import CardGrid from '../../components/docs/CardGrid.astro'
-import GroupName from '../../components/docs/GroupName.astro'
-import ArticleSection from '../../components/docs/ArticleSection.astro'
-import CodeBlock from '../../components/docs/CodeBlock.astro';
+import GroupName from '../../../components/GroupName.astro'
+import ArticleSection from '../../../components/ArticleSection.astro'
+import { Card, CardGrid } from '../../../components/components'
 
-<ArticleSection>
+<GroupName>Getting Started</GroupName>
+
+# Introduction
+
 Mathematics serves as the cornerstone of programming, enabling developers to solve complex problems, design efficient algorithms, optimize performance, and create aesthetically pleasing applications. Essential mathematical concepts for programming include logic, sets, functions, relations, graphs, matrices, calculus, discrete mathematics, and cryptography.
-</ArticleSection>
+
+![Astro-docs](../../../assets/hero.svg)
 
 ## Technologies used
 
@@ -40,17 +38,18 @@ Mathematics serves as the cornerstone of programming, enabling developers to sol
 ### Functions
 Functions are reusable blocks of code that perform specific tasks. They help in breaking down complex problems into manageable pieces.
 
-<CodeBlock lang="python" code={`def greet(name):
+```python
+def greet(name):
     return f"Hello, {name}!"
-
-print(greet("Alice"))`} />
+print(greet("Alice"))
+```
 </ArticleSection>
 
 <ArticleSection>
 ### Graphs
 Graphs are used to represent relationships between objects. They are fundamental in various algorithms and data structures.
-
-<CodeBlock lang="cpp" code={`#include <bits/stdc++.h>
+```c++
+#include <bits/stdc++.h>
 using namespace std;
 
 int main() {
@@ -73,39 +72,27 @@ int main() {
         cout << endl;
     }
     return 0;
-}`} />
+}
+```
 </ArticleSection>
 
 ## Explore Further
 
-
 <CardGrid>
   <Card
-    header='Build Doc'
-    content="Steps to install, build, update this doc."
-    href='/getting-started/quickstart'
-    withIcon>
-    <SwatchBook className='stroke-primary' />
+    title='Create Pages'
+    iconName='SquarePen'
+    href='/getting-started/creating-pages'>
+    Customize your docs to your company's colors and brands.
   </Card>
-  <Card
-    header='Create Pages'
-    content='Add and organize new documentation pages with ease.'
-    href='/getting-started/creating-pages'
-    withIcon>
-    <SquarePen className='stroke-primary' />
+  <Card title='Quick Start' iconName='Code' href='/getting-started/quickstart'>
+    Steps to install, build, update this doc.
   </Card>
-  <Card
-    header='Use Components'
-    content='Leverage pre-built custom components for rich documentation.'
-    href='/getting-started/components'
-    withIcon>
-    <Code className='stroke-primary' />
+  <Card title='Image' iconName='Image' href='/components/badge'>
+    Build interactive features and designs to guide your users.
   </Card>
-  <Card
-    header='Deploy Docs'
-    content='Publish your documentation quickly and effortlessly.'
-    href='/getting-started/deployments'
-    withIcon>
-    <Rocket className='stroke-primary' />
+  <Card title='Deploy Docs' iconName='Rocket' href='/getting-started/deployments'>
+    Check out our showcase of our favorite documentation.
   </Card>
 </CardGrid>
+

@@ -1,0 +1,47 @@
+---
+title: Quickstart
+description: A guide in my Starlight docs site.
+---
+
+import GroupName from '../../../components/GroupName.astro'
+import { Aside } from '@astrojs/starlight/components'
+import { Steps } from '@astrojs/starlight/components'
+
+<GroupName>Getting Started</GroupName>
+
+# Quickstart
+
+Start building awesome documentation in under 5 minutes.
+
+## Setup your development
+
+Learn how to update your docs locally and deploy them to the public.
+
+<Steps>
+
+1. Configure the plugin in your Starlight configuration in the astro.config.mjs file.
+
+   ```js
+   import starlight from '@astrojs/starlight'
+   import { defineConfig } from 'astro/config'
+   import starlightStartmint from 'starlight-theme-starmint'
+
+   export default defineConfig({
+     integrations: [
+       starlight({
+         plugins: [starlightStartmint()],
+         title: 'My Docs',
+       }),
+     ],
+   })
+   ```
+
+2. Start the development server to preview the theme in action.
+
+   ```js
+   cd my-project && npm run dev
+   ```
+
+</Steps>
+
+Once the server starts, you can view your documentation site at http://localhost:4321.
