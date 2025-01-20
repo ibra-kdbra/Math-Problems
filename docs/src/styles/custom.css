@@ -1,0 +1,395 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --sl-color-accent-low: #440d13;
+  --sl-color-accent: #c60035;
+  --sl-color-accent-high: #fab3b3;
+  --sl-color-white: #ffffff;
+  --sl-color-gray-1: #e1f1f6;
+  --sl-color-gray-2: #b2c6cb;
+  --sl-color-gray-3: #6b939d;
+  --sl-color-gray-4: #385f68;
+  --sl-color-gray-5: #173e47;
+  --sl-color-gray-6: #022c35;
+  --sl-color-black: #0b1b1f;
+  --sl-color-text-accent: hsl(217.2, 91.2%, 59.8%);
+  /* --sl-color-hairline-light: hsl(var(--secondary)); */
+
+  --sl-color-bg-sidebar: #020817;
+  --sl-color-bg: #020817;
+
+  --background: 222.2, 84%, 4.9%;
+  --foreground: 210, 40%, 98%;
+
+  --primary: 217.2, 91.2%, 59.8%;
+  --primary-foreground: 222.2, 47.4%, 11.2%;
+
+  --border: 214.3 31.8% 91.4%;
+
+  --warning-foreground: 48 97% 77%;
+
+  --tip: 272 72% 47%;
+  --tip-foreground: 264 67% 35%;
+}
+
+:root[data-theme='light'] {
+  --sl-color-accent-low: #fec7c7;
+  --sl-color-accent: #c90036;
+  --sl-color-accent-high: #630317;
+  --sl-color-white: #0b1b1f;
+  --sl-color-gray-1: #022c35;
+  --sl-color-gray-2: #173e47;
+  --sl-color-gray-3: #385f68;
+  --sl-color-gray-4: #6b939d;
+  --sl-color-gray-5: #b2c6cb;
+  --sl-color-gray-6: #e1f1f6;
+  --sl-color-gray-7: #f0f8fa;
+  --sl-color-black: #ffffff;
+
+  --sl-color-hairline-light: hsl(var(--secondary));
+
+  --sl-color-text-accent: hsl(221.2 83.2% 53.3%);
+
+  --background: 0, 0%, 100%;
+  --foreground: 222.2, 84%, 4.9%;
+  --muted-foreground: 215.4 16.3% 46.9%;
+
+  --primary: 221.2 83.2% 53.3%;
+  --primary-foreground: 210 40% 98%;
+
+  --border: 214.3, 31.8%, 91.4%;
+
+  --sl-color-bg-sidebar: var(--background);
+  --sl-color-hairline-shade: var(--border);
+
+  --warning: 42 100% 62%;
+  /* --warning-foreground: 48 97% 77%; */
+  --warning-foreground: 38 92% 50%;
+
+  /* --note-foreground: 210 100% 72%; */
+  --note-foreground: 207 100% 23%;
+  --note: 207 100% 23%;
+
+  --tip: 272 72% 47%;
+  /* --tip-foreground: 264 67% 35%; */
+}
+
+/* BADGE STYLES */
+
+.sl-badge.danger {
+  @apply inline-flex items-center gap-x-1.5 rounded-md px-1.5 py-0.5 text-sm/5 font-medium sm:text-xs/5 forced-colors:outline bg-red-500/15 text-red-700 group-data-[hover]:bg-red-500/25 dark:bg-red-500/20 dark:text-red-400 dark:group-data-[hover]:bg-red-500/20 border-none;
+}
+
+.sl-badge.caution {
+  @apply inline-flex items-center gap-x-1.5 rounded-md px-1.5 py-0.5 text-sm/5 font-medium sm:text-xs/5 forced-colors:outline bg-amber-400/20 text-amber-700 group-data-[hover]:bg-amber-400/30 dark:bg-amber-400/25 dark:text-amber-400 dark:group-data-[hover]:bg-amber-400/15 border-none;
+}
+
+.sl-badge.tip {
+  @apply inline-flex items-center gap-x-1.5 rounded-md px-1.5 py-0.5 text-sm/5 font-medium sm:text-xs/5 forced-colors:outline bg-purple-500/20 text-purple-700 group-data-[hover]:bg-purple-500/25 dark:text-purple-400 dark:group-data-[hover]:bg-purple-500/20 border-none;
+}
+
+.sl-badge.success {
+  @apply inline-flex items-center gap-x-1.5 rounded-md px-1.5 py-0.5 text-sm/5 font-medium sm:text-xs/5 forced-colors:outline bg-green-500/15 text-green-700 group-data-[hover]:bg-green-500/25 dark:bg-green-500/20 dark:text-green-400 dark:group-data-[hover]:bg-green-500/20 border-none;
+}
+
+.sl-badge.note {
+  @apply inline-flex items-center gap-x-1.5 rounded-md px-1.5 py-0.5 text-sm/5 font-medium sm:text-xs/5 forced-colors:outline bg-blue-500/20 text-blue-700 group-data-[hover]:bg-blue-500/25 dark:text-blue-400 dark:group-data-[hover]:bg-blue-500/25 border-none;
+}
+
+@media (min-width: 50rem) {
+  button[data-open-modal] {
+    @apply flex h-9 w-full rounded-md border border-input bg-transparent px-3 py-1 text-sm shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50 hover:border-input hover:text-muted-foreground;
+  }
+}
+
+/* HERO STYLES */
+
+.hero {
+  @apply flex flex-col gap-8;
+}
+
+.hero > img {
+  @apply mx-0 w-3/4;
+}
+
+/* CARD STYLES */
+
+.card {
+  @apply bg-background border-border rounded-lg gap-[2px] px-6 py-5 !important;
+}
+
+.card .title {
+  @apply flex flex-col justify-start text-left align-text-top gap-[2px] !important;
+}
+
+a > .card {
+  @apply hover:border-primary !important;
+}
+
+.card .icon {
+  @apply border-none bg-transparent text-primary !important;
+}
+
+.card .body {
+  @apply text-muted-foreground !important;
+}
+
+/* SIDEBAR STYLES */
+
+summary {
+  display: flex !important;
+}
+
+div.sidebar-pane summary + ul > li {
+  border-inline-start-color: hsl(var(--border));
+}
+
+div.sidebar-pane a[aria-current='page'] {
+  @apply bg-primary/10 text-primary;
+}
+
+div.sidebar-pane a:hover {
+  @apply bg-primary/10 text-primary;
+}
+
+div.sidebar-pane
+  ul
+  ul
+  li:has(> a:not([aria-current='page']):is(:hover, :focus-visible)) {
+  border-inline-start-color: hsl(var(--primary));
+}
+
+div.sidebar-pane a[aria-current='page'] {
+  font-weight: 400;
+}
+
+div.sidebar-pane ul ul li:has(> a[aria-current='page']) {
+  border-inline-start-color: hsl(var(--primary));
+}
+
+li {
+  @apply py-[2px];
+}
+
+/* PAGINATION LINK STYLES */
+
+.pagination-links a {
+  @apply border-none text-sm shadow-none gap-[2px];
+}
+
+.pagination-links svg {
+  @apply mt-6 !important;
+}
+
+.link-title {
+  @apply text-[hsl(var(--muted-foreground))];
+}
+
+.link-title {
+  @apply text-base transition-colors duration-100;
+}
+
+span.astro-u2l5gyhi {
+  font-size: 0;
+}
+
+span.astro-u2l5gyhi br,
+span.astro-u2l5gyhi span {
+  font-size: initial;
+}
+
+.pagiantion-links svg {
+  @apply pt-2;
+}
+
+.astro-u2l5gyhi .astro-c6vsoqas {
+  @apply mt-4 text-muted-foreground h-4 w-4;
+}
+
+/* MAIN CONTENT STYLES */
+
+.content-panel.astro-7nkwcw3z {
+  @apply border-none px-3 lg:px-6 pt-0;
+}
+
+.astro-j6tvhyss {
+  @apply hidden;
+}
+
+.sl-markdown-content h1:first-of-type {
+  @apply text-2xl sm:text-3xl mt-0;
+}
+
+h1[data-page-title] {
+  @apply text-3xl md:text-5xl font-extrabold text-center;
+}
+
+.sl-markdown-content h2 {
+  @apply text-xl sm:text-2xl mt-[2em] !important;
+}
+
+.sl-link-button.not-content.primary {
+  @apply inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 h-9 px-4 py-2 hover:bg-primary/90;
+}
+
+.sl-flex .copy .astro-jbfsktt5 {
+  @apply max-w-4xl flex justify-center;
+}
+
+.sl-markdown-content img {
+  @apply rounded-xl;
+}
+
+/* TOC STYLES */
+
+.right-sidebar {
+  @apply border-l-border;
+}
+
+summary.sl-flex {
+  @apply bg-background;
+}
+
+nav[aria-labelledby='starlight__on-this-page--mobile'] .toggle {
+  @apply border-primary/80 hover:border-primary bg-transparent mt-2 md:mt-0;
+}
+
+mobile-starlight-toc .dropdown {
+  @apply bg-secondary border-border;
+}
+
+mobile-starlight-toc .dropdown a {
+  @apply dark:border-t-white/20 border-t-gray-300;
+}
+
+/* ASIDE STYLES */
+
+.starlight-aside--caution {
+  @apply relative w-full rounded-lg border px-4 py-3 text-sm [&>svg+div]:translate-y-[-3px] [&>svg]:absolute [&>svg]:left-4 [&>svg]:top-4 [&>svg~*]:pl-7 bg-amber-400/10 border-amber-700/50 text-amber-700 dark:text-amber-200 font-light [&>svg]:text-amber-700;
+}
+
+.starlight-aside--note {
+  @apply relative w-full rounded-lg border px-4 py-3 text-sm [&>svg+div]:translate-y-[-3px] [&>svg]:absolute [&>svg]:left-4 [&>svg]:top-4 [&>svg~*]:pl-7 bg-blue-400/10 border-blue-700/50 text-blue-700 dark:text-blue-200 font-light [&>svg]:text-blue-700;
+}
+
+.starlight-aside--tip {
+  @apply relative w-full rounded-lg border px-4 py-3 text-sm [&>svg+div]:translate-y-[-3px] [&>svg]:absolute [&>svg]:left-4 [&>svg]:top-4 [&>svg~*]:pl-7 bg-purple-400/10 border-purple-700/50 text-purple-700 dark:text-purple-200 font-light [&>svg]:text-purple-700;
+}
+
+.starlight-aside--danger {
+  @apply relative w-full rounded-lg border px-4 py-3 text-sm [&>svg+div]:translate-y-[-3px] [&>svg]:absolute [&>svg]:left-4 [&>svg]:top-4 [&>svg~*]:pl-7 bg-red-400/10 border-red-700/50 text-red-700 dark:text-red-200 font-light [&>svg]:text-red-700;
+}
+
+.sl-flex .stack .astro-jbfsktt5 {
+  @apply flex justify-center;
+}
+
+.sl-flex.copy {
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+/* CODE BLOCK STYLES */
+
+.sl-markdown-content code:not(:where(.not-content *)) {
+  @apply bg-secondary rounded !important;
+}
+
+.expressive-code {
+  .frame {
+    pre {
+      @apply bg-transparent !important;
+    }
+
+    &.not-content {
+      > pre {
+        @apply rounded-lg border-border;
+      }
+
+      .copy button {
+        @apply bg-background rounded-lg;
+      }
+    }
+  }
+}
+
+/* STEP STYLES */
+
+.sl-steps > li::before {
+  @apply bg-transparent shadow-none border border-border flex items-center justify-center !important;
+}
+
+.sl-steps > li::after {
+  @apply bg-secondary;
+}
+
+/* Tabs */
+
+starlight-tabs .tablist-wrapper {
+  @apply border-l border-r border-t rounded-t-xl overflow-y-hidden;
+}
+
+starlight-tabs ul[role='tablist'] {
+  @apply border-b-[1px] border-b-border;
+}
+
+starlight-tabs ul[role='tablist'] a[role='tab'] {
+  @apply flex items-center text-muted-foreground rounded-lg transition-colors my-2 p-0 px-2 py-[2px] mx-2 shadow-none border text-sm;
+}
+
+starlight-tabs ul[role='tablist'] a[role='tab'][aria-selected='true'] {
+  @apply bg-primary/10 text-foreground font-normal;
+}
+
+.tablist-wrapper ~ [role='tabpanel'] {
+  @apply border-x border-b mt-0 p-4 rounded-b-lg;
+}
+
+.tablist-wrapper ~ [role='tabpanel'] pre,
+.tablist-wrapper ~ [role='tabpanel'] pre code {
+  @apply border-none;
+}
+
+.tab:where(.astro-esqgolmp) > :where(.astro-esqgolmp)[role='tab'] {
+  @apply border-b-border;
+}
+
+/* FILE TREE STYLES */
+
+.sl-markdown-content starlight-file-tree {
+  @apply border-border rounded-lg bg-transparent;
+}
+
+.sl-markdown-content starlight-file-tree .directory > details > summary ~ ul {
+  @apply border-border;
+}
+
+.sl-markdown-content
+  starlight-file-tree
+  .directory
+  > details
+  > summary:hover
+  ~ ul {
+  @apply border-primary;
+}
+
+/* SEARCH DIALOG STYLES */
+
+site-search .dialog-frame {
+  @apply bg-background;
+}
+
+.astro-v37mnknz {
+  @apply border-border;
+}
+
+* {
+  @apply border-border;
+}
+
+body {
+  @apply bg-background text-foreground;
+}

@@ -82,60 +82,10 @@ body {
   @apply bg-background text-foreground;
 }
 
-h1 {
-  @apply scroll-m-20 text-3xl font-extrabold tracking-tight lg:text-4xl;
+.header {
+  @apply border-0 fixed shrink-0 w-full z-50 bg-background h-0 p-0;
 }
 
-h2 {
-  @apply scroll-mt-28 text-2xl font-extrabold tracking-tight lg:text-3xl my-2;
-}
-
-h3 {
-  @apply scroll-mt-28 text-xl font-extrabold tracking-tight lg:text-2xl;
-}
-
-h1 ~ p,
-h2 ~ p {
-  @apply pt-2 pb-5;
-}
-
-h3 {
-  @apply pt-0;
-}
-
-code:not(pre code) {
-  @apply bg-secondary border px-1 py-0.5 rounded text-sm;
-}
-
-blockquote {
-  @apply border-l-4 pl-4 text-foreground/70  py-1;
-}
-
-/* ul:not(.unstyled):not([class]) {
-  @apply pl-6 my-4 space-y-2;
-} */
-
-ul:not(.unstyled):not([class]) {
-  @apply pl-6 mb-4 space-y-2;
-}
-
-ul:not(.unstyled):not([class]) > li {
-  @apply relative;
-}
-
-ul:not(.unstyled):not([class]) > li::before {
-  content: '';
-  @apply absolute w-1.5 h-1.5 bg-foreground/50 rounded-full left-[-1rem] top-[0.5rem];
-}
-
-ol:not(.unstyled):not([class]) {
-  @apply pl-6 my-4 space-y-2 list-decimal;
-}
-
-ol:not(.unstyled):not([class]) > li {
-  @apply pl-1 marker:text-foreground/50 marker:font-semibold;
-}
-
-img {
-  @apply rounded-2xl border;
+.hero .action.primary {
+  @apply bg-primary;
 }
