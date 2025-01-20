@@ -50,6 +50,23 @@ export default defineConfig({
           ],
         },
         {
+          label: 'Components',
+          items: [
+            {
+              label: 'Badge',
+              slug: 'components/badge',
+            },
+            {
+              label: 'Asides',
+              slug: 'components/asides',
+            },
+            {
+              label: 'Tabs',
+              slug: 'components/tabs',
+            },
+          ],
+        },
+        {
           label: 'Differentiator',
           items: [
             {
