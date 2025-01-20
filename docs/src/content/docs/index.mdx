@@ -1,0 +1,34 @@
+---
+title: Incredible Documentation Without the Hassle.
+description: An approachable, performant and versatile framework for building web user interfaces.
+template: splash
+hero:
+  tagline: Welcome to the home of your new documentation
+  image:
+    file: ../../assets/hero.svg
+  actions:
+    - text: Getting started
+      link: /getting-started/introduction
+      icon: right-arrow
+      variant: primary
+    - text: Read the Starlight docs
+      link: https://starlight.astro.build
+      icon: external
+---
+
+import { Card, CardGrid } from '../../components/components'
+
+## Learn More
+
+<CardGrid>
+  <a href='/getting-started/introduction'>
+    <Card title='Getting started' iconName='Rocket'>
+      Learn how to quickly get your documentation site up and running.
+    </Card>
+  </a>
+  <a href='https://starlight.astro.build/'>
+    <Card title='Learn more about Starlight' iconName='Book'>
+      Add Markdown or MDX files to `docs` to create new pages.
+    </Card>
+  </a>
+</CardGrid>
