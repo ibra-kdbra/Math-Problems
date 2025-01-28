@@ -3,9 +3,9 @@
 @tailwind utilities;
 
 :root {
-  --sl-color-accent-low: #440d13;
-  --sl-color-accent: #c60035;
-  --sl-color-accent-high: #fab3b3;
+  --sl-color-accent-low: hsl(var(secondary));
+  --sl-color-accent: hsl(var(--border));
+  --sl-color-accent-high: 214.3 31.8% 91.4%;
   --sl-color-white: #ffffff;
   --sl-color-gray-1: #e1f1f6;
   --sl-color-gray-2: #b2c6cb;
@@ -106,6 +106,7 @@
 
 /* HERO STYLES */
 
+
 .hero {
   @apply flex flex-col gap-8;
 }
@@ -119,6 +120,7 @@
 .card-grid {
   @apply grid gap-4 md:grid-cols-2;
 }
+
 @screen md {
   .stagger {
     @apply pb-20;
@@ -129,7 +131,7 @@
 }
 
 .card {
-  @apply bg-background border flex flex-col rounded-lg  px-6 py-5 ;
+  @apply bg-background border flex flex-col rounded-lg px-6 py-5;
 }
 
 .card .title {
@@ -137,7 +139,7 @@
 }
 
 a > .card {
-  @apply hover:border-primary !important;
+  @apply hover:border-primary;
 }
 
 .card .icon {
@@ -194,9 +196,11 @@ li {
 .pagination-links {
   @apply flex flex-row sm:flex-row justify-between items-center gap-4;
 }
+
 .pagination-links a {
   @apply border-none shadow-none
 }
+
 .pagination-links svg {
   @apply size-5 text-muted-foreground;
 }
@@ -209,14 +213,15 @@ li {
   @apply text-base transition-colors duration-100;
 }
 
-.pagiantion-links span {
+.pagination-links span {
   font-size: 0;
 }
 
-.pagiantion-links span br,
-.pagiantion-links span span {
+.pagination-links span br,
+.pagination-links span span {
   font-size: initial;
 }
+
 
 /* MAIN CONTENT STYLES */
 
@@ -417,11 +422,13 @@ body {
 /* site-search .dialog-frame {
   @apply bg-background border-border;
 }
+
 .pagefind-ui__search-input {
   @apply bg-background border-border;
 }
+
 site-search dialog .pagefind-ui .pagefind-ui__search-input:focus-visible {
-  @apply border-primary outline-primary
+  @apply border-primary outline-primary;
 } */
 
 @media (min-width: 50rem) {
@@ -429,75 +436,91 @@ site-search dialog .pagefind-ui .pagefind-ui__search-input:focus-visible {
     justify-content: center;
   }
 }
+
 @media (min-width: 72rem) {
   div:has(> site-search) {
     max-width: calc(var(--sl-content-width));
   }
 }
+
 @media (prefers-reduced-motion: no-preference) {
   site-search dialog::backdrop {
     animation: sl-rapide-search-backdrop-fade 150ms ease-out;
   }
+
   site-search dialog {
     animation: sl-rapide-search-dialog-zoom-in 150ms ease-out;
   }
 }
+
 @keyframes sl-rapide-search-backdrop-fade {
   from {
     -webkit-backdrop-filter: initial;
     backdrop-filter: initial;
     background-color: transparent;
   }
+
   to {
     -webkit-backdrop-filter: blur(0.25rem);
     backdrop-filter: blur(0.25rem);
     background-color: var(--sl-color-backdrop-overlay);
   }
 }
+
 @keyframes sl-rapide-search-dialog-zoom-in {
   from {
     opacity: 0;
     transform: scale(0.5) translateY(-2rem);
   }
+
   to {
     opacity: 1;
     transform: scale(1) translateY(0);
   }
 }
+
 site-search dialog {
-  background-color: var(--sl-color-black);
+  background-color: hsl(var(--background));
   box-shadow: none;
   min-height: auto;
 }
+
 site-search dialog .dialog-frame {
   padding: 1rem;
 }
+
 site-search dialog #starlight__search {
   --sl-search-corners: calc(0.5rem * var(--pagefind-ui-scale));
   --pagefind-ui-border-radius: calc(0.5rem * var(--pagefind-ui-scale));
 }
+
 site-search dialog .pagefind-ui .pagefind-ui__search-input {
-  background-color: var(--sl-rapide-ui-bg-color);
-  border: 1px solid var(--sl-color-gray-4);
+  background-color: hsl(var(--background));
+  border: 1px solid hsl(var(--border));
 }
+
 site-search dialog .pagefind-ui .pagefind-ui__search-input:focus-visible {
-  border-color: var(--sl-color-accent);
-  outline: 1px solid var(--sl-color-accent);
+  border-color: hsl(var(--primary));
+  outline: 1px solid hsl(var(--primary));
 }
+
 site-search dialog .pagefind-ui .pagefind-ui__message {
   padding-top: 0;
 }
+
 site-search dialog .pagefind-ui .pagefind-ui__message:has(+ .pagefind-ui__results:empty) {
   padding: 0;
 }
+
 site-search
   dialog
   #starlight__search
   .pagefind-ui
   :is(.pagefind-ui__result-title:not(:where(.pagefind-ui__result-nested *)), .pagefind-ui__result-nested) {
-  border-inline: 1px solid var(--sl-rapide-ui-border-color);
+  border-inline: 1px solid hsl(var(--border));
   outline-offset: -1px;
 }
+
 site-search
   dialog
   #starlight__search
@@ -505,17 +528,42 @@ site-search
   :is(.pagefind-ui__result-title:not(:where(.pagefind-ui__result-nested *)), .pagefind-ui__result-nested):not(
     :focus-within
   ) {
-  background-color: var(--sl-rapide-ui-bg-color);
+  background-color: hsl(var(--background));
 }
+
 site-search dialog #starlight__search .pagefind-ui .pagefind-ui__result-inner {
   gap: 0;
 }
+
 site-search dialog #starlight__search .pagefind-ui .pagefind-ui__result-inner > :first-child {
-  border-top: 1px solid var(--sl-rapide-ui-border-color);
+  border-top: 1px solid hsl(var(--border));
 }
+
 site-search dialog #starlight__search .pagefind-ui .pagefind-ui__result-inner > :last-child {
-  border-bottom: 1px solid var(--sl-rapide-ui-border-color);
+  border-bottom: 1px solid hsl(var(--border));
 }
+
 site-search dialog #starlight__search .pagefind-ui .pagefind-ui__result-excerpt mark {
-  color: var(--sl-color-accent-high);
+  color: hsl(var(--primary));
+}
+
+site-search dialog .pagefind-ui__result-link:active,
+site-search dialog .pagefind-ui__result-link:focus {
+  border-color: hsl(var(--border));
+  background-color: hsl(var(--secondary));
+}
+
+#starlight__search
+.pagefind-ui__result-title:not(:where(.pagefind-ui__result-nested *)):focus-within,
+#starlight__search .pagefind-ui__result-nested:focus-within {
+/* background-color: hsl(var(--secondary)); */
+@apply  bg-[hsl(var(--primary)/.1)]
+}
+
+#starlight__search .pagefind-ui__result-title:not(:where(.pagefind-ui__result-nested *)):hover,
+#starlight__search
+  .pagefind-ui__result-title:not(:where(.pagefind-ui__result-nested *)):focus-within,
+#starlight__search .pagefind-ui__result-nested:hover,
+#starlight__search .pagefind-ui__result-nested:focus-within {
+  outline: 1px solid hsl(var(--primary));
 }
