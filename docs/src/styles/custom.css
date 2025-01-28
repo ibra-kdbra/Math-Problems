@@ -180,7 +180,7 @@ li {
 }
 
 .pagination-links svg {
-  @apply mt-6 !important;
+  @apply mt-5 !important;
 }
 
 .link-title {
@@ -296,6 +296,10 @@ mobile-starlight-toc .dropdown a {
 
 .sl-markdown-content code:not(:where(.not-content *)) {
   @apply bg-secondary rounded !important;
+}
+
+kbd {
+  @apply bg-secondary !important;
 }
 
 .expressive-code {
