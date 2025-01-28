@@ -57,10 +57,13 @@ const themeScript = `
   }
 
   document.addEventListener('DOMContentLoaded', () => {
-    const button = document.getElementById('custom-theme-toggle');
-    if (button) {
-      button.addEventListener('click', toggleTheme);
-    }
+    const buttons = ['custom-theme-toggle', 'mobile-theme-toggle'];
+    buttons.forEach(id => {
+      const button = document.getElementById(id);
+      if (button) {
+        button.addEventListener('click', toggleTheme);
+      }
+    });
   });
 
   matchMedia('(prefers-color-scheme: light)').addEventListener('change', (e) => {

@@ -111,7 +111,7 @@
 }
 
 .hero > img {
-  @apply mx-0 w-3/4;
+  @apply mx-0 w-3/4 mt-10 lg:mt-0;
 }
 
 /* CARD STYLES */
@@ -410,4 +410,16 @@ site-search .dialog-frame {
 
 body {
   @apply bg-background text-foreground;
+}
+
+/* SEARCH STYLES */
+
+site-search .dialog-frame {
+  @apply bg-background border-border;
+}
+.pagefind-ui__search-input {
+  @apply bg-background border-border;
+}
+site-search dialog .pagefind-ui .pagefind-ui__search-input:focus-visible {
+  @apply border-primary outline-primary
 }
