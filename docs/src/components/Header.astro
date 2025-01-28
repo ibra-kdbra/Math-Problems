@@ -80,14 +80,14 @@ import { HeaderMenu } from './header-menu'
           </svg>
         </a>
 
-        <ThemeToggle />
+        <ThemeToggle {...Astro.props} />
       </div>
 
       <div class='flex'>
         <div class='flex lg:hidden gap-2 items-center'>
           <Search {...Astro.props} />
           <HeaderMenu client:load />
-          <ThemeToggle />
+          <ThemeToggle {...Astro.props} />
         </div>
       </div>
     </div>

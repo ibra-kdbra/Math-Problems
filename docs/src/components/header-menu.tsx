@@ -1,6 +1,6 @@
 import {
   DropdownMenu,
-  DropdownMenuContent,
+  DropdownMenuContent, 
   DropdownMenuItem,
   DropdownMenuTrigger,
  } from "./dropdown-menu"
@@ -14,10 +14,20 @@ import {
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end">
         <DropdownMenuItem asChild>
-          <a href="/support">Support</a>
+          <a 
+            href="https://github.com/ibra-kdbra/Math_Problems/issues" 
+            target="_blank" 
+            rel="noopener noreferrer"
+          >
+            Support
+          </a>
         </DropdownMenuItem>
         <DropdownMenuItem asChild>
-          <a href="https://github.com/username/repo" target="_blank" rel="noopener noreferrer">
+          <a 
+            href="https://github.com/ibra-kdbra/Math-Problems/tree/main/docs" 
+            target="_blank" 
+            rel="noopener noreferrer"
+          >
             GitHub
           </a>
         </DropdownMenuItem>
