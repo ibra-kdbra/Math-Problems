@@ -14,7 +14,6 @@ import { HeaderMenu } from './header-menu'
           class='flex items-center gap-2'
           aria-label='Astro documentation'>
           <div class='w-8 h-8 flex items-center justify-center'>
-            <!-- Your logo/icon here -->
             <svg
               xmlns='http://www.w3.org/2000/svg'
               width='24'
@@ -85,7 +84,7 @@ import { HeaderMenu } from './header-menu'
 
       <div class='flex'>
         <div class='flex lg:hidden gap-2 items-center'>
-          <Search {...Astro.props} />
+          <!-- <Search {...Astro.props} /> -->
           <HeaderMenu client:load />
           <ThemeToggle {...Astro.props} />
         </div>
@@ -93,3 +92,15 @@ import { HeaderMenu } from './header-menu'
     </div>
   </nav>
 </div>
+
+<style>
+.navbar {
+  @apply h-14;
+}
+
+@media (min-width: 50rem) {
+  .navbar {
+    @apply h-16;
+  }
+}
+</style>
