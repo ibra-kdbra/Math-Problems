@@ -66,11 +66,15 @@ export default defineConfig({
           ],
         },
         {
-          label: 'Differentiator',
+          label: 'Equation Field',
           items: [
             {
               label: 'Differentiator',
-              slug: 'differentiator/differentiator-readme',
+              slug: 'equations-field/differentiator',
+            },
+            {
+              label: 'Equa Plot',
+              slug: 'equations-field/equa-plot',
             },
           ],
         },
