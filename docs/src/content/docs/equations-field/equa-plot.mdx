@@ -39,13 +39,8 @@ import { Badge } from '@astrojs/starlight/components';
 ## Usage
 
 <Steps>
-1. Create build directory then open it.
-    ```
-    mkdir build && cd build
-    ```
 
-2. Install Glew, GLFW with conan.
-
+1. Install libraries and dependencies with conan
     <Tabs>
     <TabItem label="Already Built">
     ```
@@ -58,6 +53,11 @@ import { Badge } from '@astrojs/starlight/components';
     ```
     </TabItem>
     </Tabs>
+
+2. Enter the build directory
+    ```
+    cd build
+    ```
     
 3. Compile the cmake libraries with conan.cmake toolchain.
     ```
@@ -72,8 +72,4 @@ import { Badge } from '@astrojs/starlight/components';
 
 ### Libraries
 
-- imgui/1.83
-- implot/0.11
-- glfw/3.3.8
-- glew/2.2.0
-- exprtk
+In the conan file.
