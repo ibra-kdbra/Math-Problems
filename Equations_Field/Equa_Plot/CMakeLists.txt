@@ -10,18 +10,28 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 find_package(glfw3 REQUIRED)
 find_package(glew REQUIRED)
+find_package(imgui REQUIRED)
+find_package(implot REQUIRED)
+find_package(exprtk REQUIRED)
+find_package(OpenGL REQUIRED)
 
-add_compile_options(-fPIC)  
+add_compile_options(-fPIC)
 
-add_subdirectory(dependency)
+add_executable(
+    imgui-template
+    main.cpp
+    bindings/imgui_impl_glfw.cpp
+    bindings/imgui_impl_glfw.h
+    bindings/imgui_impl_opengl3.cpp
+    bindings/imgui_impl_opengl3.h
+    bindings/imgui_impl_opengl3_loader.h
+    )
 
-add_executable(imgui-template main.cpp)
-
-target_link_libraries(imgui-template 
+target_link_libraries(imgui-template
     glfw
     GLEW::GLEW
-    imgui 
-    implot 
-    exprtk
+    imgui::imgui
+    implot::implot
+    exprtk::exprtk
+    ${OPENGL_gl_LIBRARY}
 )
-
