@@ -1,8 +1,9 @@
 #include "imgui.h"
-#include "imgui_impl_glfw.h"
-#include "imgui_impl_opengl3.h"
+#include "bindings/imgui_impl_glfw.h"
+#include "bindings/imgui_impl_opengl3.h"
 #include "implot.h"
 #include <stdio.h>
+#include <iostream>
 #include <algorithm>
 #include <exprtk.hpp>
 #include <string>
@@ -28,7 +29,7 @@ using namespace gl;
 #include <glbinding/gl/gl.h>
 using namespace gl;
 #else
-#include IMGUI_IMPL_OPENGL_LOADER_CUSTOM
+#define IMGUI_IMPL_OPENGL_LOADER_CUSTOM
 #endif
 
 #include <GLFW/glfw3.h>
@@ -237,15 +238,15 @@ int main(int, char **)
             ImGui::SetNextWindowPos({(float)left_size, 0});
             ImGui::BeginChild("Math Plot", {0, window_size.y});
 
-            ImPlot::SetNextPlotLimits(xmin, xmax, ymin, ymax);
             ImPlot::PushStyleColor(ImPlotCol_Line, line_color);
-            if (ImPlot::BeginPlot("##f(x)", NULL, NULL, {window_size.x - left_size, window_size.y}))
+            if (ImPlot::BeginPlot("##f(x)", {window_size.x - left_size, window_size.y}))
             {
+            ImPlot::SetupAxesLimits(xmin, xmax, ymin, ymax);
                 if (!y.empty())
                 {
-                    ImPlot::PlotLine("##(fx)", &y[0].x, &y[0].y, y.size(), 0, sizeof(ImVec2));
+                    ImPlot::PlotLine("##(fx)", &y[0].x, &y[0].y, y.size(), 0, 0, sizeof(ImVec2));
                 }
-                ImPlotLimits limits = ImPlot::GetPlotLimits();
+                ImPlotRect limits = ImPlot::GetPlotLimits();
                 xmin = limits.X.Min;
                 xmax = limits.X.Max;
                 ymin = limits.Y.Min;
