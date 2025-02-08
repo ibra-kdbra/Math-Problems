@@ -15,9 +15,9 @@ The program also features the use of the exprtk library for parsing and evaluati
 ## Usage
 
 ```shell
-mkdir build && cd build
-conan install ..
+conan install . -of=build --build=missing
 cmake ..
+cd build
 cmake --build .
 ```
 
@@ -27,8 +27,8 @@ cmake --build .
 
 ### Libraries Versions
 
-- imgui/1.83
-- implot/0.11
+- imgui/1.90.5
+- implot/0.16
 - glfw/3.3.8
 - glew/2.2.0
-- exprtk
+- exprtk//0
