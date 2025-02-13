@@ -91,6 +91,19 @@ export default defineConfig({
             },
           ],
         },
+        {
+          label: 'Mandlebrot',
+          items: [
+            {
+              label: 'Fractal Gh',
+              slug: 'mandlebrot/fractal-gh',
+            },
+            {
+              label: 'Mandlebrot Coloring',
+              slug: 'mandlebrot/coloring',
+            },
+          ],
+        },
       ],
     }),
     tailwind(),
