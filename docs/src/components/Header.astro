@@ -2,10 +2,11 @@
 import Search from '@astrojs/starlight/components/Search.astro'
 import type { Props } from '@astrojs/starlight/props'
 import ThemeToggle from './ThemeToggle.astro'
+import { HeaderMenu } from './header-menu'
 ---
 
 <div>
-  <nav class='border-b h-16 bg-background w-screen px-6'>
+  <nav class='border-b bg-background w-screen px-6 navbar'>
     <div class='flex justify-between items-center h-full w-full'>
       <div>
         <a
@@ -13,7 +14,6 @@ import ThemeToggle from './ThemeToggle.astro'
           class='flex items-center gap-2'
           aria-label='Astro documentation'>
           <div class='w-8 h-8 flex items-center justify-center'>
-            <!-- Your logo/icon here -->
             <svg
               xmlns='http://www.w3.org/2000/svg'
               width='24'
@@ -79,48 +79,28 @@ import ThemeToggle from './ThemeToggle.astro'
           </svg>
         </a>
 
-        <ThemeToggle />
+        <ThemeToggle {...Astro.props} />
       </div>
 
       <div class='flex'>
         <div class='flex lg:hidden gap-2 items-center'>
-          <!-- Search icon (mobile) -->
-          <svg
-            xmlns='http://www.w3.org/2000/svg'
-            width='24'
-            height='24'
-            viewBox='0 0 24 24'
-            fill='none'
-            stroke='currentColor'
-            stroke-width='2'
-            stroke-linecap='round'
-            stroke-linejoin='round'
-            class='w-4 h-4'>
-            <circle cx='11' cy='11' r='8'></circle>
-            <path d='m21 21-4.3-4.3'></path>
-          </svg>
-
-          <!-- Settings menu (mobile) -->
-          <svg
-            xmlns='http://www.w3.org/2000/svg'
-            width='24'
-            height='24'
-            viewBox='0 0 24 24'
-            fill='none'
-            stroke='currentColor'
-            stroke-width='2'
-            stroke-linecap='round'
-            stroke-linejoin='round'
-            class='w-4 h-5'>
-            <circle cx='12' cy='12' r='1'></circle>
-            <circle cx='12' cy='5' r='1'></circle>
-            <circle cx='12' cy='19' r='1'></circle>
-          </svg>
-
-          <!-- Same Theme Toggle, for mobile -->
-          <ThemeToggle />
+          <!-- <Search {...Astro.props} /> -->
+          <HeaderMenu client:load />
+          <ThemeToggle {...Astro.props} />
         </div>
       </div>
     </div>
   </nav>
 </div>
+
+<style>
+.navbar {
+  @apply h-14;
+}
+
+@media (min-width: 50rem) {
+  .navbar {
+    @apply h-16;
+  }
+}
+</style>

@@ -17,7 +17,6 @@ export default defineConfig({
       },
       components: {
         Header: './src/components/Header.astro',
-        Head: './src/components/Head.astro',
       },
       sidebar: [
         {
@@ -67,11 +66,15 @@ export default defineConfig({
           ],
         },
         {
-          label: 'Differentiator',
+          label: 'Equation Field',
           items: [
             {
               label: 'Differentiator',
-              slug: 'differentiator/differentiator-readme',
+              slug: 'equations-field/differentiator',
+            },
+            {
+              label: 'Equa Plot',
+              slug: 'equations-field/equa-plot',
             },
           ],
         },
@@ -85,6 +88,19 @@ export default defineConfig({
             {
               label: 'Image encoding',
               slug: 'encoder-decoder/img-encoding',
+            },
+          ],
+        },
+        {
+          label: 'Mandlebrot',
+          items: [
+            {
+              label: 'Fractal Gh',
+              slug: 'mandlebrot/fractal-gh',
+            },
+            {
+              label: 'Mandlebrot Coloring',
+              slug: 'mandlebrot/coloring',
             },
           ],
         },

@@ -24,4 +24,4 @@ A clickable interactive mandelbrot set, made with Python 3, PIL, and Tkinter. Us
     -nm, --noMulti           Flag to not use multiprocessing.
 
 ## Mandelbrot Set feature rendered by this program
-<img src="https://github.com/ibra-kdbra/Math-Problems/blob/main/Mandlebrot/Mandelbrot-set-explorer/pictures/image.png" width="100%">
+<img src="./pictures/image.png" width="100%">
