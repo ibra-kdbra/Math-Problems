@@ -1,4 +1,4 @@
-# Metaheuristic-Flower_Pollination_Algorithm
+# Metaheuristic Flower Pollination Algorithm
 Flower Pollination Algorithmn to Minimize Functions with Continuous Variables. The function returns: An array containing the used value(s) for the target function and the output of the target function f(x). For example, if the function f(x1, x2) is used, then the array would be [x1, x2, f(x1, x2)].  
 
 * flowers = The population size. The Default Value is 3.

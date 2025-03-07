@@ -52,5 +52,5 @@ class FireflyAlgorithm:
             print(self.populationArray)
             print(self.functionArray)
         end = time.time()
-        print("執行時間：%f 秒" % (end - start))
+        print("Execution time: %f seconds" % (end - start))
         return self.functionArray.min()
