@@ -30,39 +30,6 @@ export default defineConfig({
               label: 'Quickstart',
               slug: 'getting-started/quickstart',
             },
-            {
-              label: 'Creating Pages',
-              slug: 'getting-started/creating-pages',
-            },
-            {
-              label: 'Deployments',
-              slug: 'getting-started/deployments',
-            },
-            {
-              label: 'Theming',
-              slug: 'getting-started/theming',
-            },
-            {
-              label: 'Images',
-              slug: 'getting-started/images',
-            },
-          ],
-        },
-        {
-          label: 'Components',
-          items: [
-            {
-              label: 'Badge',
-              slug: 'components/badge',
-            },
-            {
-              label: 'Asides',
-              slug: 'components/asides',
-            },
-            {
-              label: 'Tabs',
-              slug: 'components/tabs',
-            },
           ],
         },
         {

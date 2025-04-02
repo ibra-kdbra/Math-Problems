@@ -1,47 +1,86 @@
 ---
 title: Quickstart
-description: A guide in my Starlight docs site.
+description: A deep dive into algorithms, problem-solving, and mathematical thinking.
 ---
 
 import GroupName from '../../../components/GroupName.astro'
-import { Aside } from '@astrojs/starlight/components'
 import { Steps } from '@astrojs/starlight/components'
 
 <GroupName>Getting Started</GroupName>
 
 # Quickstart
 
-Start building awesome documentation in under 5 minutes.
+Get into the world of algorithms and mathematical problem-solving.
 
-## Setup your development
+## Setting Up Your Problem-Solving Environment
 
-Learn how to update your docs locally and deploy them to the public.
+Prepare your workspace for tackling complex problems and experimenting with algorithms.
 
 <Steps>
 
-1. Configure the plugin in your Starlight configuration in the astro.config.mjs file.
+1. **Set up a coding environment**  
+   Choose a programming language suited for algorithmic problem-solving.
 
-   ```js
-   import starlight from '@astrojs/starlight'
-   import { defineConfig } from 'astro/config'
-   import starlightStartmint from 'starlight-theme-starmint'
+       ```shell frame="none"
+       # Setting up a Python environment
+       python -m venv algolab
+       source algolab/bin/activate  # On Windows use: algolab\Scripts\activate
+       pip install numpy sympy matplotlib
+       ```
+       ```shell frame="none"
+       # Installing a C++ compiler (GCC for Linux/macOS, MinGW for Windows)
+       sudo apt install g++   # Linux
+       brew install gcc       # macOS
+       winget install -e --id MSYS2.MSYS2  # Windows (using MSYS2)
+       ```
+   
 
-   export default defineConfig({
-     integrations: [
-       starlight({
-         plugins: [starlightStartmint()],
-         title: 'My Docs',
-       }),
-     ],
-   })
-   ```
+2. **Create and test a basic function**  
+   Implement a prime-checking algorithm in your chosen language.
 
-2. Start the development server to preview the theme in action.
+       ```python
+       import math
 
-   ```shell frame="none"
-   cd my-project && npm run dev
-   ```
+       def is_prime(n):
+           if n < 2:
+               return False
+           for i in range(2, int(math.sqrt(n)) + 1):
+               if n % i == 0:
+                   return False
+           return True
 
+       print(is_prime(19))  # Output: True
+       ```
+
+       ```cpp
+       #include <iostream>
+       #include <cmath>
+
+       bool is_prime(int n) {
+           if (n < 2) return false;
+           for (int i = 2; i <= sqrt(n); i++) {
+               if (n % i == 0) return false;
+           }
+           return true;
+       }
+
+       int main() {
+           std::cout << std::boolalpha << is_prime(19) << std::endl; // Output: true
+           return 0;
+       }
+       ```
+   
+
+3. **Compile and run your code**  
+   Execute the program to verify correctness.
+   
+       ```shell frame="none"
+       python test_algorithm.py
+       ```
+       ```shell frame="none"
+       g++ -o test_algorithm test_algorithm.cpp
+       ./test_algorithm
+       ```
 </Steps>
 
-Once the server starts, you can view your documentation site at http://localhost:4321.
+Once your setup is complete, explore deeper algorithms, mathematical proofs, and computational problems.
