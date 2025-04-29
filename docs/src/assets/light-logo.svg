@@ -1,1 +1,32 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="logo"><circle cx="12" cy="12" r="3"/><circle cx="19" cy="5" r="2"/><circle cx="5" cy="19" r="2"/><path d="M10.4 21.9a10 10 0 0 0 9.941-15.416"/><path d="M13.5 2.1a10 10 0 0 0-9.841 15.416"/></svg>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Uploaded to: SVG Repo, www.svgrepo.com, Transformed by: SVG Repo Mixer Tools -->
+<svg width="800px" height="800px" viewBox="-4.8 -4.8 57.60 57.60" xmlns="http://www.w3.org/2000/svg" fill="#000000">
+<g id="SVGRepo_bgCarrier" stroke-width="0">
+<path transform="translate(-4.8, -4.8), scale(1.7999999999999998)" d="M16,27.916100952774286C19.324494027055184,27.661896026669442,22.750201593241044,27.457212590884186,25.243178261869907,25.243178261869907C27.870913979855303,22.90946324543676,29.733056927883013,19.50022500067909,29.41738981505235,16C29.118796835661627,12.689098835419951,25.99673500695951,10.702685771792943,23.71390683148875,8.28609316851125C21.315132764055626,5.746760716515645,19.46994289666006,2.198677648377552,16,1.7964058220386505C12.312547888559303,1.3689180680372006,8.614199093780153,3.390386484477169,6.263003131686499,6.263003131686498C4.086108498773175,8.922663943692594,4.54806671743773,12.567426446572208,4.37455972035726,15.999999999999998C4.185502231010807,19.740216526870746,2.6110275864386874,24.093158076951553,5.226241802641113,26.773758197358884C7.847936636077328,29.461000964181025,12.256655410029996,28.20233297098044,16,27.916100952774286" fill="#f66151" strokewidth="0"/>
+</g>
+<g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/>
+<g id="SVGRepo_iconCarrier">
+<defs>
+<style>.a{fill:none;stroke:#1c71d8;stroke-linecap:round;stroke-linejoin:round;}.b{fill:#1c71d8;}</style>
+</defs>
+<path class="a" d="M28.6794,24h-2.15"/>
+<path class="a" d="M32.3471,24h-2.15"/>
+<path class="a" d="M36.0147,24h-2.15"/>
+<path class="a" d="M39.6824,24h-2.15"/>
+<path class="a" d="M21.4706,24h-2.15"/>
+<path class="a" d="M17.8029,24h-2.15"/>
+<path class="a" d="M14.1353,24h-2.15"/>
+<path class="a" d="M10.4676,24h-2.15"/>
+<path class="a" d="M24,15.6529v2.15"/>
+<path class="a" d="M24,19.3206v2.15"/>
+<path class="a" d="M24,26.5294v2.15"/>
+<path class="a" d="M24,30.1971v2.15"/>
+<path class="a" d="M24,33.8647v2.15"/>
+<path class="a" d="M24,37.5324v2.15"/>
+<path class="a" d="M24,11.9853v2.15"/>
+<path class="a" d="M24,8.3176v2.15"/>
+<path class="a" d="M10.3412,20.7118c21.7529-22.1324,15.1764,12.9,27.5706,15.6823"/>
+<circle class="a" cx="24" cy="24" r="21.5"/>
+<circle class="b" cx="24" cy="24" r="0.75"/>
+</g>
+</svg>
