@@ -2,28 +2,32 @@
 title: MandleBrot Coloring
 description: Cpp app that draws the Mandelbrot fractal and allows you to zoom in and explore the fractal (uses zero libraries).
 ---
+import GroupName from '../../../components/GroupName.astro'
+import ArticleSection from '../../../components/ArticleSection.astro'
+import { Aside } from '@astrojs/starlight/components'
 
-# mandelbrot
+<GroupName>Mandlebrot</GroupName>
+# Mandelbrot Coloring
 
 SFML-based Mandelbrot viewer program.
 
-<p float="middle">
-    <img src="../../../../../Mandlebrot/Mandelbrot-Coloring/imgs/mandelbrot.png" width="300"/>
-    <img src="../../../../../Mandlebrot/Mandelbrot-Coloring/imgs/zoomed.png"     width="300"/>
-</p>
+![img](../../../../../Mandlebrot/Mandelbrot-Coloring/imgs/mandelbrot.png) 
+![img](../../../../../Mandlebrot/Mandelbrot-Coloring/imgs/zoomed.png)
 
-# Requirements
+## Requirements
  * C++17
  * CMake 3.22
 
-# Building & Running
+## Building & Running
 
 ```shell
 cmake -B build -DCMAKE_BUILD_TYPE=Release
 cmake --build build --config Release --target run
 ```
 
-# Controls
+### Controls
+
+<Aside type='note'>Usage</Aside>
 
 | Action            | Control         |
 | ----------------- | --------------- |
