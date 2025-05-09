@@ -19,6 +19,7 @@ export default defineConfig({
       { label: "Equations Field", autogenerate: { directory: "equations-field" } },
       { label: "Encoder Decoder", autogenerate: { directory: "encoder-decoder" } },
       { label: "Mandlebrot", autogenerate: { directory: "mandlebrot" } },
+      { label: "Math Chaos", autogenerate: { directory: "math-chaos" } },
       ],
     }),
     tailwind(),
