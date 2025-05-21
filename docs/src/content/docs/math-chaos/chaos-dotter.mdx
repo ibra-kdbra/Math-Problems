@@ -7,6 +7,8 @@ description: Basic mathematical visualization for Chaos Game.
 import GroupName from '../../../components/GroupName.astro'
 import ArticleSection from '../../../components/ArticleSection.astro'
 import { Aside } from '@astrojs/starlight/components'
+import { Steps } from '@astrojs/starlight/components'
+
 
 <GroupName>Math Chaos</GroupName>
 # Chaos Visual
@@ -30,6 +32,7 @@ It generates fractal patterns by repeatedly plotting a point that moves a certai
 
 ## How It Works
 
+<Steps>
 1. **Audio Playback**  
    - Plays `Gesaffelstei-Aleph.mp3` automatically on page load, in a loop.
 
@@ -48,8 +51,13 @@ It generates fractal patterns by repeatedly plotting a point that moves a certai
      - Move the point a percentage closer to it.
      - Draw the new position.
    - Repeated hundreds of times per second to form a visual pattern.
+</Steps>
 
 ---
+
+## ShowCase
+
+![]()
 
 ## Technical Details
 
