@@ -1,4 +1,93 @@
 ---
 title: Chaos Dotter
-description: transcript
+description: Basic mathematical visualization for Chaos Game.
 ---
+
+
+import GroupName from '../../../components/GroupName.astro'
+import ArticleSection from '../../../components/ArticleSection.astro'
+import { Aside } from '@astrojs/starlight/components'
+
+<GroupName>Math Chaos</GroupName>
+# Chaos Visual
+
+## Overview
+
+This HTML project creates an interactive visualization of a mathematical concept known as the **Chaos Game**. 
+It generates fractal patterns by repeatedly plotting a point that moves a certain percentage toward randomly chosen vertices of a polygon.
+
+---
+
+## Key Features
+
+- Canvas-based visualizer for fractal/chaotic behavior.
+- Input for choosing number of polygon vertices.
+- Input for adjusting the travel distance percentage.
+- Looping background audio.
+- Styled using Semantic UI and jQuery for interactive elements.
+
+---
+
+## How It Works
+
+1. **Audio Playback**  
+   - Plays `Gesaffelstei-Aleph.mp3` automatically on page load, in a loop.
+
+2. **Polygon Setup**  
+   - User inputs how many vertices the polygon should have (≥3).
+   - User inputs the percentage of distance to travel towards a randomly chosen vertex (e.g., 61.8%).
+
+3. **Canvas Drawing**  
+   - A `<canvas>` element is used to draw.
+   - The polygon vertices are placed around a circle.
+   - A dot starts from a random position and keeps moving toward randomly chosen vertices.
+
+4. **Chaos Algorithm**  
+   - Each iteration:
+     - Pick a random vertex.
+     - Move the point a percentage closer to it.
+     - Draw the new position.
+   - Repeated hundreds of times per second to form a visual pattern.
+
+---
+
+## Technical Details
+
+- **Libraries Used**:
+  - jQuery 3.1.1
+  - Semantic UI 2.4.2
+
+- **Important Elements**:
+  - `<canvas>`: Visualizes points.
+  - `<input>`: Collects user parameters.
+  - `<button>`: Triggers the main drawing routine.
+
+- **Script Logic**:
+  - `playForSide()`: Validates input and initializes drawing.
+  - `init()`: Clears the canvas and begins drawing.
+  - `draw()`: Executes the chaos pattern logic in a loop.
+  - `colorCircle()` & `colorRect()`: Helpers to draw on canvas.
+
+---
+
+## Extras
+
+- Accordion UI explains how the algorithm works for curious users.
+- Responsive layout (with a minimum width set).
+- Integrated with Google Analytics.
+
+---
+
+## Try It Out
+
+- Enter a number ≥ 3 for vertices.
+- Try 61.8 (inverse golden ratio) for stunning visuals.
+- Click **"Amaze me!"** to generate the pattern.
+
+---
+
+<Aside type='note'>Note</Aside>
+
+Based on a GitHub project:  
+[ibra-kdbra/Chaos_Dotter](https://github.com/ibra-kdbra/Math-Problem/Math_Chaos/Chaos_Dotter)
+
