@@ -2,51 +2,88 @@
 export interface Props {
   title?: string;
   images: { src: string; alt?: string; caption?: string }[];
-  columns?: number; // e.g. 2, 3, 4
+  columns?: number;
 }
-
 const { title, images, columns = 3 } = Astro.props;
 ---
 
-<section class="album">
-  {title && <h2 class="album-title">{title}</h2>}
-  <div class="album-grid" style={`--columns: ${columns};`}>
-    {images.map((image) => (
-      <figure class="album-item">
-        <img src={image.src} alt={image.alt || ''} loading="lazy" />
-        {image.caption && <figcaption>{image.caption}</figcaption>}
-      </figure>
-    ))}
-  </div>
-</section>
-
 <style>
-.album {
-  margin: 2rem 0;
-}
-.album-title {
-  font-size: 1.75rem;
-  margin-bottom: 1rem;
-}
 .album-grid {
   display: grid;
-  grid-template-columns: repeat(var(--columns), 1fr);
   gap: 1rem;
-}
-.album-item {
-  border-radius: 0.5rem;
-  overflow: hidden;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
 .album-item img {
   width: 100%;
-  height: auto;
-  display: block;
+  border-radius: 0.5rem;
+  cursor: zoom-in;
+  transition: transform 0.2s ease;
 }
-.album-item figcaption {
-  font-size: 0.875rem;
-  padding: 0.5rem;
+.album-item img:hover {
+  transform: scale(1.02);
+}
+figcaption {
   text-align: center;
-  background-color: #f9f9f9;
+  font-size: 0.9rem;
+  margin-top: 0.25rem;
+  color: #666;
+}
+.lightbox {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.85);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+.lightbox.open {
+  display: flex;
+}
+.lightbox img {
+  max-width: 90vw;
+  max-height: 90vh;
+  border-radius: 0.5rem;
 }
 </style>
+
+{title && <h2>{title}</h2>}
+
+<div class="album-grid" style={`grid-template-columns: repeat(${columns}, 1fr)`}>
+  {images.map((img, i) => (
+    <figure class="album-item" key={i}>
+      <img
+        src={img.src}
+        alt={img.alt || `Image ${i}`}
+        loading="lazy"
+        class="zoomable"
+        data-src={img.src}
+        data-alt={img.alt || `Image ${i}`}
+      />
+      {img.caption && <figcaption>{img.caption}</figcaption>}
+    </figure>
+  ))}
+</div>
+
+<!-- Lightbox -->
+<div id="lightbox" class="lightbox">
+  <img id="lightbox-img" src="" alt="Zoomed Image" />
+</div>
+
+<script is:inline>
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = document.getElementById('lightbox-img');
+
+  document.querySelectorAll('.zoomable').forEach(img => {
+    img.addEventListener('click', () => {
+      lightboxImg.src = img.dataset.src;
+      lightboxImg.alt = img.dataset.alt;
+      lightbox.classList.add('open');
+    });
+  });
+
+  lightbox.addEventListener('click', () => {
+    lightbox.classList.remove('open');
+    lightboxImg.src = '';
+    lightboxImg.alt = '';
+  });
+</script>
