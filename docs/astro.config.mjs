@@ -4,6 +4,7 @@ import tailwind from '@astrojs/tailwind'
 import { defineConfig } from 'astro/config'
 
 export default defineConfig({
+  site: 'https://docs-math.vercel.app',
   integrations: [
     starlight({
       title: 'starmint',
