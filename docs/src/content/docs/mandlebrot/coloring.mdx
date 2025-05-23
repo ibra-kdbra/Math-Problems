@@ -3,16 +3,17 @@ title: MandleBrot Coloring
 description: Cpp app that draws the Mandelbrot fractal and allows you to zoom in and explore the fractal (uses zero libraries).
 ---
 import GroupName from '../../../components/GroupName.astro'
+import Album from '../../../components/Album.astro'
 import ArticleSection from '../../../components/ArticleSection.astro'
 import { Aside } from '@astrojs/starlight/components'
+import { ColoringMandlebrotSamples } from '../../../data/albumImages.ts'
 
 <GroupName>Mandlebrot</GroupName>
 # Mandelbrot Coloring
 
 SFML-based Mandelbrot viewer program.
 
-![img](/imgs/mandlebrot_coloring/mandelbrot.png) 
-![img](/imgs/mandlebrot_coloring/zoomed.png)
+<Album title="Colored Samples" images={ColoringMandlebrotSamples} columns={1} />
 
 ## Requirements
  * C++17
