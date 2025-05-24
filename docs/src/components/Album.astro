@@ -50,7 +50,7 @@ figcaption {
 
 <div class="album-grid" style={`grid-template-columns: repeat(${columns}, 1fr)`}>
   {images.map((img, i) => (
-    <figure class="album-item" key={i}>
+    <figure class="album-item">
       <img
         src={img.src}
         alt={img.alt || `Image ${i}`}
