@@ -9,26 +9,43 @@ import Album from '../../../components/Album.astro';
 import { Aside } from '@astrojs/starlight/components'
 import { buddhabrotSamples } from '../../../data/albumImages';
 import TextBlock from '../../../components/TextBlock.astro'
+import NumberWrapper from "../../../components/NumberWrapper"
 
 <GroupName>Math Chaos</GroupName>
 # Multithreaded Buddhatbrot Computation
 
-<TextBlock size="lg" maxWidth="3xl" isProse={true} invertInDark={true}>
-Rendering fractals with the [Buddhabrot technique](https://en.wikipedia.org/wiki/Buddhabrot) discovered by [Melinda Green](http://superliminal.com/fractals/).
+<TextBlock size="lg" maxWidth="3xl" isProse invertInDark>
+Rendering fractals with the [Buddhabrot technique](https://en.wikipedia.org/wiki/Buddhabrot) discovered 
+by [Melinda Green](http://superliminal.com/fractals/).
 
 An optimization is implemented to compute "hint" points, i.e. points that are likely to produce viable samples.
 
-Only points that escape between the minimum and maximum recursion depth are relevant in later stages. Thus these points are saved as "hints" and are used for later computation.
+Only points that escape between the minimum and maximum recursion depth are relevant in later stages.
+
+Thus these points are saved as "hints" and are used for later computation.
 
 Additionally, a histogram method is used to compute the final brightness of each pixel in the exported image.
 </TextBlock>
+
 <Aside type="note">Note</Aside>
+
 <TextBlock size="lg" maxWidth="3xl" isProse={true} invertInDark={true}>
-A single hint file can be reused across multiple iterations of fractal rendering. It may either be precomputed and read from disk or generated on demand. Notably, its configuration—such as resolution—does not need to precisely match that of the final image. Instead, the hint file simply needs to contain high-quality candidate points to seed the recursive rendering process efficiently.
+  <NumberWrapper content={`One hint file may be computed for multiple iterations of the image computation.
 
-To finalize the image, a histogram-based method is employed to determine pixel brightness. The darkest 1⁄256th of pixels are mapped to black (0, 0, 0), the next 1⁄256th to (1, 1, 1), and so on, scaling linearly up to the brightest value of (255, 255, 255).
+It can be read from a file or computed when needed.
 
-This implementation has been tested using `clang++` on Arch Linux.
+The hint does not have to have the same exact parameters of the image, especially resolution.
+
+It just needs to provide quality candidate points for the threads to use in the recursion.
+
+Additionally, a histogram method is used to compute the final brightness of each pixel in the exported image.
+
+The darkest 1/256th of the pixels are assigned color (0,0,0),
+
+the next 1/256th get color (1,1,1), and so on until the brightest color, (255, 255, 255) is reached.
+
+Tested with clang++ on arch.`} />
 </TextBlock>
+
 
 <Album title="Buddhabrot Album" images={buddhabrotSamples} columns={2} />
