@@ -2,6 +2,7 @@ import react from '@astrojs/react'
 import starlight from '@astrojs/starlight'
 import tailwind from '@astrojs/tailwind'
 import { defineConfig } from 'astro/config'
+import mdx from '@astrojs/mdx'
 
 export default defineConfig({
   site: 'https://docs-math.vercel.app',
@@ -23,6 +24,7 @@ export default defineConfig({
       { label: "Math Chaos", autogenerate: { directory: "math-chaos" } },
       ],
     }),
+    mdx(),
     tailwind(),
     react(),
   ],

@@ -1,0 +1,12 @@
+.number-span {
+  font-weight: bold;
+  font-family: monospace;
+  color: #ef4444;
+  display: inline-block;
+  cursor: default;
+  transition: transform 0.15s ease;
+}
+
+.number-span:hover {
+  transform: scale(1.1);
+}

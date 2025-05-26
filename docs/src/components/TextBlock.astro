@@ -1,0 +1,71 @@
+---
+import NumberWrapper from './NumberWrapper';
+
+export interface Props {
+  size?: 'sm' | 'base' | 'lg' | 'xl';
+  weight?: 'light' | 'normal' | 'medium' | 'bold';
+  maxWidth?: 'sm' | 'md' | 'lg' | 'xl' | '2xl' | '3xl' | '4xl' | 'full';
+  textAlign?: 'left' | 'center' | 'justify';
+  lineHeight?: 'normal' | 'relaxed' | 'loose';
+  spacing?: 'tight' | 'normal' | 'wide';
+  isProse?: boolean;
+  tag?: string;
+  invertInDark?: boolean;
+}
+
+const {
+  size = 'base',
+  weight = 'normal',
+  maxWidth = '2xl',
+  textAlign = 'justify',
+  lineHeight = 'relaxed',
+  spacing = 'normal',
+  isProse = true,
+  tag = 'section',
+  invertInDark = true
+} = Astro.props;
+
+const Tag = tag as keyof HTMLElementTagNameMap;
+
+const sizeMap = {
+  sm: 'text-sm',
+  base: 'text-base',
+  lg: 'text-lg',
+  xl: 'text-xl'
+};
+
+const weightMap = {
+  light: 'font-light',
+  normal: 'font-normal',
+  medium: 'font-medium',
+  bold: 'font-bold'
+};
+
+const lineHeightMap = {
+  normal: 'leading-normal',
+  relaxed: 'leading-relaxed',
+  loose: 'leading-loose'
+};
+
+const spacingMap = {
+  tight: 'space-y-2',
+  normal: 'space-y-4',
+  wide: 'space-y-6'
+};
+
+const classes = [
+  'mx-auto',
+  `max-w-${maxWidth}`,
+  sizeMap[size],
+  weightMap[weight],
+  `text-${textAlign}`,
+  lineHeightMap[lineHeight],
+  spacingMap[spacing],
+  isProse ? 'prose' : '',
+  isProse && invertInDark ? 'dark:prose-invert' : ''
+].join(' ');
+---
+
+<Tag class={classes}>
+  <slot />
+</Tag>
