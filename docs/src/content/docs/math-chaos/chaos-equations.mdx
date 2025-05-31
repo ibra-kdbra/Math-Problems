@@ -5,23 +5,27 @@ description: Simple Mathematical art with cpp, OpenGL
 
 import GroupName from '../../../components/GroupName.astro'
 import ArticleSection from '../../../components/ArticleSection.astro'
-import { Aside } from '@astrojs/starlight/components'
+import Album from '../../../components/Album.astro';
+import TextBlock from '../../../components/TextBlock.astro'
+import NumberWrapper from "../../../components/NumberWrapper"
+
 
 <GroupName>Math Chaos</GroupName>
 # Chaos-Equations
-
+<TextBlock size="lg" maxWidth="3xl" isProse={true} invertInDark={true}>
 Simple mathematical art
 
 This is for trying many arts using simple mathmatic equations and simulate them using c++,CASSERT,SFML,OPENGL.
+</TextBlock>
 
 ## Summary
-
+<TextBlock size="lg" maxWidth="3xl" isProse={true} invertInDark={true}>
 These are plots of random recursive equations, which
 often produce chaos, and results in beautiful patterns.
 For every time t, a point (x,y) is initialized to (t,t).
 The equation is applied to the point many times, and each
 iteration is drawn in a unique color.
-
+</TextBlock>
 =========================================================
 
 ## ShowCase
@@ -49,5 +53,6 @@ iteration is drawn in a unique color.
     'S' - Save Equation
 
 ## Usage 
-
+<TextBlock size="base" maxWidth="3xl" isProse={true} invertInDark={true}>
 Run the exe file, from a Windows PC, or wine on Linux.
+</TextBlock>
