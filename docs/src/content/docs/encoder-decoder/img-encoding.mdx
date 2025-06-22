@@ -3,25 +3,27 @@ title: Image Encoder Decoder
 description: IMage encodes uncompressed BMPs and outputs them as baseline JPGs.
 
 ---
-
 import GroupName from '../../../components/GroupName.astro'
 import ArticleSection from '../../../components/ArticleSection.astro'
 import { Steps } from '@astrojs/starlight/components'
+import TextBlock from '../../../components/TextBlock.astro'
 
 <GroupName>Encoder Decoder</GroupName>
-
 # Image Encoder
 
+<TextBlock size="lg" maxWidth="3xl" isProse invertInDark>
 IMage decodes all **standard** JPGs (baseline, progressive, subsampled) and outputs them in BMP format.
 This project was created for the video series, [**Everything You Need to Know About JPEG**][yt].
-
+</TextBlock>
 [yt]: https://www.youtube.com/playlist?list=PLpsTn9TA_Q8VMDyOPrDKmSJYt1DLgDZU4
 
-## So what does this do? 
+## So what does this do?
+
+<TextBlock size="base" weight="normal" textAlign="justify" isProse invertInDark>
 IMage is a C++ JPG Encoder/Decoder. It enables users to:
 - **Encode uncompressed BMP images** into baseline JPG format.
 - **Decode all **standard** JPG images** (baseline, progressive, and subsampled) and convert them into BMP format.
-
+</TextBlock>
 
 ## Features
 

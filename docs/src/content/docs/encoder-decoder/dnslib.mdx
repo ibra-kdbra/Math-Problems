@@ -5,32 +5,34 @@ description: Simple C++ library designed for encoding and decoding of DNS protoc
 
 
 import GroupName from '../../../components/GroupName.astro'
-import ArticleSection from '../../../components/ArticleSection.astro'
 import { Steps } from '@astrojs/starlight/components'
+import TextBlock from '../../../components/TextBlock.astro'
 
 <GroupName>Encoder Decoder</GroupName>
-
 # DNS Protocol Library
 
+<TextBlock size="lg" maxWidth="3xl" isProse invertInDark>
 Simple C++ library designed for encoding and decoding of DNS protocol packets. It doesn't provide
 any functionality related to network (listening for packets, sending packets, etc.). Library is strictly
 focused on handling of DNS protocol packets - mapping of raw (wire) data to C++ structures (classes)
 and vice versa.
+</TextBlock>
 
 ### Current implementation covers
 
-<ArticleSection>
+<TextBlock size="lg" maxWidth="3xl" isProse invertInDark>
 * RFC 1035 - DOMAIN NAMES - IMPLEMENTATION AND SPECIFICATION
 * RFC 2915 - The Naming Authority Pointer (NAPTR) DNS Resource Record
 * RFC 3596 - DNS Extensions to Support IP Version 6
-</ArticleSection>
+</TextBlock>
 
 ### Other tests
-<ArticleSection>
+
+<TextBlock size="lg" maxWidth="3xl" isProse invertInDark>
 * checked with valgrind tool (``valgrind --leak-check=full ./unittests``)
 * linted with cppcheck (``cppcheck --enable=all *cpp``)
 * fake server tested against *Codenomicon DNS suite*
-</ArticleSection>
+</TextBlock>
 
 ### Usage
 
