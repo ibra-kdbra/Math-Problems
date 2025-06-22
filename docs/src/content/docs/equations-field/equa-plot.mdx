@@ -5,26 +5,25 @@ description: The program differentiates given equation and exports the result as
 
 import GroupName from '../../../components/GroupName.astro'
 import { Tabs, TabItem } from '@astrojs/starlight/components';
+import TextBlock from '../../../components/TextBlock.astro'
 import { Aside } from '@astrojs/starlight/components'
 import { Steps } from '@astrojs/starlight/components'
 
 <GroupName>Equations Field</GroupName>
-
-
 # Equa Plot
-
+<TextBlock size="lg" maxWidth="3xl" isProse invertInDark>
 A simple math plotter using ImGui for the user interface and ImPlot for visualizing mathematical functions. 
-
 It allows the user to input mathematical formulas, adjust axis ranges, and visualize the function's graph in real-time.
+</TextBlock>
 
 ## How it works
-<ul>
-<li> - Initializes a GLFW window with OpenGL context.</li>
-<li> - Loads ImGui and ImPlot for creating a graphical interface.</li>
-<li> - Accepts user input for a mathematical expression and plots the function.</li>
-<li> - Provides interactive controls for adjusting the plot's axis ranges.</li>
-<li> - Dynamically updates the plot based on the formula entered by the user.</li>
-</ul>
+<TextBlock size="lg" maxWidth="3xl" textAlign="justify" spacing='normal' weight='medium' isProse invertInDark>
+* Initializes a GLFW window with OpenGL context.
+* Loads ImGui and ImPlot for creating a graphical interface.
+* Accepts user input for a mathematical expression and plots the function.
+* Provides interactive controls for adjusting the plot's axis ranges.
+* Dynamically updates the plot based on the formula entered by the user.
+</TextBlock>
 
 <br/>
 import { Badge } from '@astrojs/starlight/components';
@@ -39,7 +38,6 @@ import { Badge } from '@astrojs/starlight/components';
 ## Usage
 
 <Steps>
-
 1. Install libraries and dependencies with conan
     <Tabs>
     <TabItem label="Already Built">

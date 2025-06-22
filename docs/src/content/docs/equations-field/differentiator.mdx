@@ -6,18 +6,18 @@ description: The program differentiates given equation and exports the result as
 import GroupName from '../../../components/GroupName.astro'
 import { Aside } from '@astrojs/starlight/components'
 import { Steps } from '@astrojs/starlight/components'
+import TextBlock from '../../../components/TextBlock.astro'
 
 <GroupName>Equations Field</GroupName>
 # Differentiator
-
+<TextBlock size="lg" weight="medium" maxWidth="3xl" isProse invertInDark>
 The program differentiates given equation and exports the result as a scientific article.
-
+</TextBlock>
 
 ## Usage
 
 
 <Steps>
-
 1. Install necessary packages (ubuntu) *(will install espeak and graphviz)*:
     ```
     make install
