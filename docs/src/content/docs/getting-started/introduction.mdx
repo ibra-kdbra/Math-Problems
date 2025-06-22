@@ -4,15 +4,19 @@ description: 'Math Problems'
 ---
 
 import GroupName from '../../../components/GroupName.astro'
-import ArticleSection from '../../../components/ArticleSection.astro'
 import { Card, CardGrid } from '../../../components/components'
+import TextBlock from '../../../components/TextBlock.astro'
 
 <GroupName>Getting Started</GroupName>
 
 # Introduction
-
-Mathematics serves as the cornerstone of programming, enabling developers to solve complex problems, design efficient algorithms, optimize performance, and create aesthetically pleasing applications. Essential mathematical concepts for programming include logic, sets, functions, relations, graphs, matrices, calculus, discrete mathematics, and cryptography.
-
+<TextBlock size="lg" maxWidth="3xl" isProse invertInDark>
+Mathematics serves as the cornerstone of programming,
+enabling developers to solve complex problems,
+design efficient algorithms, optimize performance,
+and create aesthetically pleasing applications.
+Essential mathematical concepts for programming include logic, sets, functions, relations, graphs, matrices, calculus, discrete mathematics, and cryptography.
+</TextBlock>
 ![Astro-docs](../../../assets/hero.svg)
 
 ## Technologies used
@@ -34,7 +38,6 @@ Mathematics serves as the cornerstone of programming, enabling developers to sol
 ## Mathematical Concepts in Programming
 
 
-<ArticleSection>
 ### Functions
 Functions are reusable blocks of code that perform specific tasks. They help in breaking down complex problems into manageable pieces.
 
@@ -43,9 +46,7 @@ def greet(name):
     return f"Hello, {name}!"
 print(greet("Alice"))
 ```
-</ArticleSection>
 
-<ArticleSection>
 ### Graphs
 Graphs are used to represent relationships between objects. They are fundamental in various algorithms and data structures.
 ```c++
@@ -74,6 +75,3 @@ int main() {
     return 0;
 }
 ```
-</ArticleSection>
-
-

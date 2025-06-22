@@ -7,11 +7,13 @@ import Album from '../../../components/Album.astro'
 import ArticleSection from '../../../components/ArticleSection.astro'
 import { Aside } from '@astrojs/starlight/components'
 import { ColoringMandlebrotSamples } from '../../../data/albumImages.ts'
+import TextBlock from '../../../components/TextBlock.astro'
 
 <GroupName>Mandlebrot</GroupName>
 # Mandelbrot Coloring
-
+<TextBlock size="lg" maxWidth="3xl" weight="medium" isProse invertInDark>
 SFML-based Mandelbrot viewer program.
+</TextBlock>
 
 <Album title="Colored Samples" images={ColoringMandlebrotSamples} columns={1} />
 
