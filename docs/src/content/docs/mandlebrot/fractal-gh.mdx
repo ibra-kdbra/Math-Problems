@@ -8,38 +8,38 @@ import Album from '../../../components/Album.astro'
 import ArticleSection from '../../../components/ArticleSection.astro'
 import { Aside } from '@astrojs/starlight/components'
 import { fractalghSamples} from '../../../data/albumImages.ts'
+import TextBlock from '../../../components/TextBlock.astro'
+import NumberWrapper from "../../../components/NumberWrapper"
+
 
 <GroupName>Mandlebrot</GroupName>
 # Mandelbrot Fractal Generator
-
+<TextBlock size="lg" maxWidth="3xl" isProse invertInDark>
 JavaScript app that draws the Mandelbrot fractal and allows you to zoom in and explore the fractal (uses zero libraries). 
 Launches in fullscreen mode for maximum impact on desktop, and has a responsive mobile compatible design with 
 a multi-touch interface on mobile devices.
+</TextBlock>
 
 <Album title="Fractals Album" images={fractalghSamples} columns={2} />
 
+<TextBlock size="lg" maxWidth="3xl" isProse invertInDark>
 The coloring algorithm adjusts to the number of colors needed (i.e. the maximum escape time for the Mandelbrot set generation). 
 See below for more info on the coloring algorithm.
+</TextBlock>
 
 <Aside type='note'>Note/default</Aside>
-<p>
-By default the maximum escape time is 224, but you can select 448, 896, or 1792 via the higher escape time links on the launch page. 
-Note that if you zoom in on the fractal and exit back to the launch page, and then select a different escape time, 
-it will launch and redraw the fractal in the same place that you had zoomed in on, just with a different maximum escape time 
-(and different coloring).
-</p>
+<br></br>
 
-The code is split into two independent parts: app.js and fractal.js. The app handles all the setup and user interaction, 
-and communicates these to the fractal using the fractal's api. 
-The fractal just calculates and draws itself based on the settings it receives from the app.
-
-## Screenshots
+<TextBlock size="base" maxWidth="3xl" isProse invertInDark>
+<NumberWrapper content={`By default the maximum escape time is 224, but you can select 448, 896, or 1792 via the higher escape time links on the launch page. Note that if you zoom in on the fractal and exit back to the launch page, and then select a different escape time, it will launch and redraw the fractal in the same place that you had zoomed in on, just with a different maximum escape time (and different coloring). The code is split into two independent parts: app.js and fractal.js. The app handles all the setup and user interaction, and communicates these to the fractal using the fractal's api. The fractal just calculates and draws itself based on the settings it receives from the app.`} />
+</TextBlock>
 
 ## Fractal API
-
+<TextBlock size="lg" maxWidth="3xl" isProse invertInDark>
 fractal.js is designed to work independently from app.js and can easily be integrated into any project. 
 It provides an api through its update function, which takes an options object that instructs
 the fractal how to adjust itself before it re-renders.
+</TextBlock>
 
 ```js
 // create fractal object, send it an HTML canvas element
@@ -119,16 +119,18 @@ var options = {
   // by default (if this is omitted or false) the cartesian coordinates are
   // adjusted to match the ratio of the canvas width/height to avoid distortion
   distortion: bool // e.g. true
-
 }
 ```
 
-## Coloring Algorithm
-<ArticleSection>
-Start with 2 of the 3 red, green and blue values fixed at either 0 or 255, 
+### Coloring Algorithm
+<TextBlock size="lg" maxWidth="3xl" isProse invertInDark>
+<NumberWrapper content={`Start with 2 of the 3 red, green and blue values fixed at either 0 or 255, 
 then increase the other R, G or B value in a given number of increments based on the number of colors needed, 
 repeat this for seven cases and you get a maximum of 1792 colors (7*256). Note that white repeats 3 times, at the end of cases 2, 4 and 6.
-</ArticleSection>
+`}/>
+</TextBlock>
+
+<TextBlock size="sm" weight="medium" textAlign="center" tag="Case" maxWidth="xl" isProse invertInDark>
 The seven case are:  
 case 0: R=0, B=0, increase green from 0 to 255  
 case 1: R=0 G=255, increase blue from 0 to 255  
@@ -137,6 +139,7 @@ case 3: G=0, B=255, increase red from 0 to 255
 case 4: R=255, B=255, increase green from 0 to 255  
 case 5: R=255, B=0, increase green from 0 to 255  
 case 6: R=255, G=255, increase blue from 0 to 255
+</TextBlock>
 
 ```js
 Fractal.prototype.rgbNum = function(escapeTime){
