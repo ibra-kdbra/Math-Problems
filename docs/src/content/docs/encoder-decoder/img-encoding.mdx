@@ -3,17 +3,16 @@ title: Image Encoder Decoder
 description: IMage encodes uncompressed BMPs and outputs them as baseline JPGs.
 
 ---
-import GroupName from '../../../components/GroupName.astro'
-import ArticleSection from '../../../components/ArticleSection.astro'
+import { GroupName, TextBlock } from '../../../components/components'
 import { Steps } from '@astrojs/starlight/components'
-import TextBlock from '../../../components/TextBlock.astro'
+
 
 <GroupName>Encoder Decoder</GroupName>
 # Image Encoder
 
 <TextBlock size="lg" maxWidth="3xl" isProse invertInDark>
 IMage decodes all **standard** JPGs (baseline, progressive, subsampled) and outputs them in BMP format.
-This project was created for the video series, [**Everything You Need to Know About JPEG**][yt].
+This project was created inspired from the video series, [**Everything You Need to Know About JPEG**][yt].
 </TextBlock>
 [yt]: https://www.youtube.com/playlist?list=PLpsTn9TA_Q8VMDyOPrDKmSJYt1DLgDZU4
 
@@ -26,43 +25,43 @@ IMage is a C++ JPG Encoder/Decoder. It enables users to:
 </TextBlock>
 
 ## Features
-
+<TextBlock size="base" maxWidth="3xl" isProse invertInDark>
 - Handles **standard** JPG formats including baseline, progressive, and subsampled JPGs.
 - Supports decoding of all JPG markers and **standard** quantization and Huffman tables.
 - Allows encoding of BMP images to JPG format using the Baseline DCT method.
-
+</TextBlock>
 ### Decode JPG to BMP
+<TextBlock size="base" maxWidth="3xl" isProse invertInDark>
 
 1. **Ensure the build environment is set up** (follow the encoding steps above).
-2. **Run the decoder**: Decode a JPG file and convert it to BMP format.
-
-```
-make
-```
+2. **Run the decoder**: Decode a JPG file and convert it to BMP format. `make`
+</TextBlock>
 
 ## Data Structures
-
-<ArticleSection>
 ### Quantization Table
+<TextBlock size="base" maxWidth="3xl" isProse invertInDark>
 The quantization tables are pre-defined for various quality settings (e.g., 50, 75, and 100). 
 Each table consists of 64 values that determine the level of compression for Y, Cb, and Cr components of the image.
-</ArticleSection>
-```
+```sh
   const QuantizationTable qTableY50 = { ... };
 ```
+</TextBlock>
 
-<ArticleSection>
+
 ### Huffman Tables
+<TextBlock size="base" maxWidth="3xl" isProse invertInDark>
 
 Huffman tables are used to efficiently encode and decode the image data. 
 The tables include both DC and AC tables for the Y, Cb, and Cr components.
-</ArticleSection>
 
-```
+```sh
   HuffmanTable hDCTableY = { ... };
   HuffmanTable hACTableY = { ... };
 ```
+</TextBlock>
 
 ### Common Issues
+<TextBlock size="base" maxWidth="3xl" isProse invertInDark>
 - **Invalid JPG format**: If the decoder fails to read the JPG file, ensure that the image is in a **standard** format (baseline, progressive, or subsampled).
 - **Compression artifacts**: If encoding results in poor image quality, adjust the quantization table for a better quality setting (e.g., use a higher quality table such as `qTableY75` or `qTableY100`).
+</TextBlock>

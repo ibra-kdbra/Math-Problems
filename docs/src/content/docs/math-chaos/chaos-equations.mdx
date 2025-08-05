@@ -3,18 +3,14 @@ title: Chaos Equations
 description: Simple Mathematical art with cpp, OpenGL
 ---
 
-import GroupName from '../../../components/GroupName.astro'
-import ArticleSection from '../../../components/ArticleSection.astro'
-import Album from '../../../components/Album.astro';
-import TextBlock from '../../../components/TextBlock.astro'
-import NumberWrapper from "../../../components/NumberWrapper"
+import { GroupName, TextBlock, ControlsTable } from '../../../components/components'
 
 
 <GroupName>Math Chaos</GroupName>
 # Chaos-Equations
 <TextBlock size="lg" maxWidth="3xl" isProse={true} invertInDark={true}>
 Simple mathematical art
-
+----------------------------
 This is for trying many arts using simple mathmatic equations and simulate them using c++,CASSERT,SFML,OPENGL.
 </TextBlock>
 
@@ -26,31 +22,31 @@ For every time t, a point (x,y) is initialized to (t,t).
 The equation is applied to the point many times, and each
 iteration is drawn in a unique color.
 </TextBlock>
-=========================================================
 
 ## ShowCase
 
 ![]()
 
 
-## Controls:
+## Controls
 
-    'A' - Automatic Mode (randomize equations)
-    'R' - Repeat Mode (keep same equation)
-    'C' - Center points
-    'D' - Dot size Toggle
-    'I' - Iteration Limit Toggle
-    'T' - Trail Toggle
-    'P' - Pause
-
-
-    'LShift' - Slow Down
-    'RShift' - Speed Up
-    'Space' - Reverse
-
-    'N' - New Equation (random)
-    'L' - Load Equation
-    'S' - Save Equation
+<ControlsTable
+  controls={[
+    { key: "A", description: "Automatic Mode (randomize equations)" },
+    { key: "R", description: "Repeat Mode (keep same equation)" },
+    { key: "C", description: "Center points" },
+    { key: "D", description: "Dot size Toggle" },
+    { key: "I", description: "Iteration Limit Toggle" },
+    { key: "T", description: "Trail Toggle" },
+    { key: "P", description: "Pause" },
+    { key: "LShift", description: "Slow Down" },
+    { key: "RShift", description: "Speed Up" },
+    { key: "Space", description: "Reverse" },
+    { key: "N", description: "New Equation (random)" },
+    { key: "L", description: "Load Equation" },
+    { key: "S", description: "Save Equation" },
+  ]}
+/>
 
 ## Usage 
 <TextBlock size="base" maxWidth="3xl" isProse={true} invertInDark={true}>
