@@ -1,3 +1,10 @@
+export {default as Album} from './Album.astro'
 export { default as Card } from './Card.astro'
 export { default as CardGrid } from './CardGrid.astro'
+export { default as CommandChecklist } from './CommandChecklist.astro'
+export { default as ControlsTable } from './ControlsTable.astro'
+export { default as GroupName } from './GroupName.astro'
+export { default as NumberWrapper } from './NumberWrapper.tsx'
+export { default as TextBlock } from './TextBlock.astro'
+export { default as TextNumber} from './TextNumber.astro'
 
