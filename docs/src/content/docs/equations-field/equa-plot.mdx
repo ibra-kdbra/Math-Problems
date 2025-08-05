@@ -3,11 +3,10 @@ title: Equations Plotter
 description: The program differentiates given equation and exports the result as a scientific article.
 ---
 
-import GroupName from '../../../components/GroupName.astro'
-import { Tabs, TabItem } from '@astrojs/starlight/components';
-import TextBlock from '../../../components/TextBlock.astro'
-import { Badge } from '@astrojs/starlight/components';
-import { Steps } from '@astrojs/starlight/components'
+import { Badge, Steps, Tabs, TabItem} from '@astrojs/starlight/components';
+
+import { GroupName, TextBlock } from '../../../components/components'
+
 
 <GroupName>Equations Field</GroupName>
 # Equa Plot
@@ -27,9 +26,10 @@ It allows the user to input mathematical formulas, adjust axis ranges, and visua
 
 <br/>
 
-<Badge text="Note:" variant="note" /> The program also features the use of the exprtk library for parsing and evaluating mathematical expressions. 
-    It allows users to input custom formulas for plotting.
-
+<Badge text="Note:" variant="note" /><TextBlock size="sm" maxWidth="lg" isProse invertInDark>
+The program also features the use of the exprtk library for parsing and evaluating mathematical expressions. 
+It allows users to input custom formulas for plotting.
+</TextBlock>
 ### Screenshot
 
 ![equa_plot](../../../../../Equations_Field/Equa_Plot/imgs/plot.gif)
@@ -69,4 +69,6 @@ It allows the user to input mathematical formulas, adjust axis ranges, and visua
 
 ### Libraries
 
+
+//need work
 In the conan file.

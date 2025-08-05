@@ -1,0 +1,43 @@
+---
+export interface Props {
+  title?: string
+  commands: { label: string; code: string }[]
+  size?: 'sm' | 'md' | 'lg'
+  theme?: 'light' | 'dark'
+}
+const { title, commands, size = 'md', theme = 'light' } = Astro.props
+---
+<div class={`command-checklist ${theme} ${size}`}>
+  {title && <h3>{title}</h3>}
+  <ul>
+    {commands.map(cmd => (
+      <li>
+        <span class="command-label">{cmd.label}</span>
+        <pre><code>{cmd.code}</code></pre>
+      </li>
+    ))}
+  </ul>
+</div>
+
+<style>
+.command-checklist {
+  padding: 1rem;
+  border-left: 4px solid var(--accent, #3fa9f5);
+  background: var(--bg);
+  border-radius: 0.5rem;
+}
+/* .command-checklist.dark { --bg: #1a1a1a; color: #ddd; } */
+/* .command-checklist.light { --bg: #f8f8f8; color: #222; } */
+.command-checklist ul { list-style: none; padding: 0; margin: 0; }
+.command-label {
+  font-weight: 600;
+  display: block;
+  margin-bottom: 0.25rem;
+}
+pre {
+  background: rgba(0,0,0,0.05);
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+  overflow-x: auto;
+}
+</style>

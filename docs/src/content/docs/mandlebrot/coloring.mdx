@@ -2,12 +2,9 @@
 title: MandleBrot Coloring
 description: Cpp app that draws the Mandelbrot fractal and allows you to zoom in and explore the fractal (uses zero libraries).
 ---
-import GroupName from '../../../components/GroupName.astro'
-import Album from '../../../components/Album.astro'
-import ArticleSection from '../../../components/ArticleSection.astro'
-import { Aside } from '@astrojs/starlight/components'
+
+import { ControlsTable, GroupName, Album, TextBlock }  from '../../../components/components'
 import { ColoringMandlebrotSamples } from '../../../data/albumImages.ts'
-import TextBlock from '../../../components/TextBlock.astro'
 
 <GroupName>Mandlebrot</GroupName>
 # Mandelbrot Coloring
@@ -30,12 +27,13 @@ cmake --build build --config Release --target run
 
 ### Controls
 
-<Aside type='note'>Usage</Aside>
+<ControlsTable
+  controls={[
+    { key: "Click", description: "Go to point"},
+    { key: "Scroll or W/S", description: "Zoom" },
+    { key: "Arrow Keys", description: "Pan" },
+    { key: "[ ]", description: "Change iterations" },
+    { key: "R", description: "Reset view" },
+  ]}
+/>
 
-| Action            | Control         |
-| ----------------- | --------------- |
-| Go to point       | Click           |
-| Zoom              | Scroll (or W/S) |
-| Pan               | Arrow keys      |
-| Change iterations | [ and ]         |
-| Reset view        | R               |

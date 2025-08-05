@@ -4,9 +4,8 @@ description: Simple C++ library designed for encoding and decoding of DNS protoc
 ---
 
 
-import GroupName from '../../../components/GroupName.astro'
+import { GroupName, TextBlock, TextNumber, CommandChecklist } from '../../../components/components'
 import { Steps } from '@astrojs/starlight/components'
-import TextBlock from '../../../components/TextBlock.astro'
 
 <GroupName>Encoder Decoder</GroupName>
 # DNS Protocol Library
@@ -20,19 +19,30 @@ and vice versa.
 
 ### Current implementation covers
 
-<TextBlock size="lg" maxWidth="3xl" isProse invertInDark>
-* RFC 1035 - DOMAIN NAMES - IMPLEMENTATION AND SPECIFICATION
-* RFC 2915 - The Naming Authority Pointer (NAPTR) DNS Resource Record
-* RFC 3596 - DNS Extensions to Support IP Version 6
-</TextBlock>
+<TextNumber
+  size="lg"
+  theme="dark"
+  items={[
+    { code: "RFC 1035", description: "DOMAIN NAMES - IMPLEMENTATION AND SPECIFICATION" },
+    { code: "RFC 2915", description: "The Naming Authority Pointer (NAPTR) DNS Resource Record" },
+    { code: "RFC 3596", description: "DNS Extensions to Support IP Version 6" }
+  ]}
+/>
+
 
 ### Other tests
 
-<TextBlock size="lg" maxWidth="3xl" isProse invertInDark>
-* checked with valgrind tool (``valgrind --leak-check=full ./unittests``)
-* linted with cppcheck (``cppcheck --enable=all *cpp``)
-* fake server tested against *Codenomicon DNS suite*
-</TextBlock>
+<CommandChecklist
+  theme="light"
+  size="lg"
+  commands={[
+    { label: "Memory check with valgrind", code: "valgrind --leak-check=full ./unittests" },
+    { label: "Lint with cppcheck", code: "cppcheck --enable=all *cpp" },
+    { label: "Fake server tested against", code: "Codenomicon DNS suite" }
+  ]}
+/>
+
+
 
 ### Usage
 

@@ -1,0 +1,42 @@
+---
+export interface Props {
+  title?: string
+  items: { code: string; description: string }[]
+  size?: 'sm' | 'md' | 'lg'
+  theme?: 'light' | 'dark'
+}
+const { title, items, size = 'md', theme = 'light' } = Astro.props
+---
+<div class={`textnumber-list ${theme} ${size}`}>
+  {title && <h3>{title}</h3>}
+  <ul>
+    {items.map(item => (
+      <li>
+        <span class="textnumber-code">{item.code}</span>
+        <span class="textnumber-desc">{item.description}</span>
+      </li>
+    ))}
+  </ul>
+</div>
+
+<style>
+.textnumber-list {
+  padding: 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid var(--border);
+  background: var(--bg);
+  font-family: monospace;
+}
+.textnumber-list.dark {--bg: #001f3f; --border: #003366; color: #ddd; }
+.textnumber-list.light { --bg: #ffffff; --border: #ccc; color: #222; }
+.textnumber-list ul { list-style: none; padding: 0; margin: 0; }
+.textnumber-code {
+  font-weight: bold;
+  color: var(--accent, #3fa9f5);
+  margin-right: 0.5rem;
+}
+.textnumber-desc { opacity: 0.85; }
+.textnumber-list.sm { font-size: 0.85rem; }
+.textnumber-list.md { font-size: 1rem; }
+.textnumber-list.lg { font-size: 1.15rem; }
+</style>
