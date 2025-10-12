@@ -1,3 +1,14 @@
-<p class='text-primary font-semibold'>
-  <slot />
-</p>
+<div class='flex items-center gap-3 mb-6'>
+  <svg class='w-6 h-6 text-primary' fill='none' stroke='currentColor' viewBox='0 0 24 24'>
+    <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M7 4V2a1 1 0 011-1h4a1 1 0 011 1v2m4 0H6m6 0H9m4 4v1m-4-1v1m2-1h.01M3 21h18a2 2 0 002-2V7a2 2 0 00-2-2H3a2 2 0 00-2 2v12a2 2 0 002 2z'></path>
+  </svg>
+  <span class='text-primary font-semibold text-lg'>
+    <slot />
+  </span>
+</div>
+
+<style>
+  div:has(+ h1) {
+    margin-bottom: 0 !important;
+  }
+</style>
