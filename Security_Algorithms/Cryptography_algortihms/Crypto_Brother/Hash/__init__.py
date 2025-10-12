@@ -1,1 +1,0 @@
-from Crypto_Brother.Hash.Hash_sc import *
