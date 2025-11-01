@@ -73,12 +73,22 @@ private:
     long long modularExponentiation(long long base, long long exponent, long long modulus);
     bool isPrime(long long n);
     std::vector<long long> sieveOfEratosthenes(long long limit);
+    std::vector<long long> segmentedSieve(long long limit);
+    std::vector<std::pair<long long, int>> primeFactorization(long long n);
     long long eulerTotient(long long n);
     long long matrixExponentiationFibonacci(long long n);
     MatrixResult matrixExponentiationGeneral(const std::vector<long long>& coefficients, long long n);
     bool isCubeFree(long long n);
     long long divisorFunction(long long n);
     long long lcmSum(long long n);
+
+    // Performance benchmarking
+    struct BenchmarkResult {
+        qint64 executionTime;
+        long long operationsCount;
+        QString algorithmName;
+    };
+    BenchmarkResult benchmarkAlgorithm(std::function<void()> algorithm, const QString& name);
 
     // Helper methods
     void addExecutionSteps(AlgorithmResult* result, const QStringList& steps);

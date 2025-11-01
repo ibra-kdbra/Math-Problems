@@ -39,6 +39,49 @@ std::unique_ptr<AlgorithmResult> NumberTheoryEngine::computeGCD(long long a, lon
     return result;
 }
 
+NumberTheoryEngine::BenchmarkResult NumberTheoryEngine::benchmarkAlgorithm(std::function<void()> algorithm, const QString& name)
+{
+    BenchmarkResult result;
+    result.algorithmName = name;
+
+    QElapsedTimer timer;
+    timer.start();
+
+    try {
+        algorithm();
+        result.executionTime = timer.elapsed();
+        result.operationsCount = 1; // Placeholder - could be enhanced to count actual operations
+    } catch (const std::exception& e) {
+        result.executionTime = -1; // Error indicator
+        result.operationsCount = 0;
+    }
+
+    return result;
+}
+
+// Helper methods
+void NumberTheoryEngine::addExecutionSteps(AlgorithmResult* result, const QStringList& steps)
+{
+    for (const QString& step : steps) {
+        result->addExecutionStep(step);
+    }
+}
+
+QJsonObject NumberTheoryEngine::createInputParameters(const QVariantList& params)
+{
+    QJsonObject inputParams;
+    // Implementation for creating input parameters from variant list
+    return inputParams;
+}
+
+qint64 NumberTheoryEngine::measureExecutionTime(std::function<void()> func)
+{
+    QElapsedTimer timer;
+    timer.start();
+    func();
+    return timer.elapsed();
+}
+
 std::unique_ptr<AlgorithmResult> NumberTheoryEngine::computeExtendedGCD(long long a, long long b)
 {
     auto result = std::make_unique<AlgorithmResult>(AlgorithmType::ExtendedGCD);
@@ -282,6 +325,83 @@ std::vector<long long> NumberTheoryEngine::sieveOfEratosthenes(long long limit)
     }
 
     return primes;
+}
+
+std::vector<long long> NumberTheoryEngine::segmentedSieve(long long limit)
+{
+    if (limit < 2) return {};
+
+    const long long segmentSize = 100000; // Process in segments for memory efficiency
+    std::vector<long long> primes;
+
+    // First, generate small primes up to sqrt(limit) using regular sieve
+    long long sqrtLimit = std::sqrt(limit) + 1;
+    auto smallPrimes = sieveOfEratosthenes(sqrtLimit);
+    primes.insert(primes.end(), smallPrimes.begin(), smallPrimes.end());
+
+    // Now process segments
+    std::vector<bool> isPrime(segmentSize);
+    long long low = sqrtLimit + 1;
+    long long high = std::min(low + segmentSize - 1, limit);
+
+    while (low <= limit) {
+        // Initialize segment as prime
+        std::fill(isPrime.begin(), isPrime.end(), true);
+
+        // Mark multiples of small primes in this segment
+        for (long long prime : smallPrimes) {
+            long long start = std::max(prime * prime, (low + prime - 1) / prime * prime);
+            for (long long j = start; j <= high; j += prime) {
+                isPrime[j - low] = false;
+            }
+        }
+
+        // Collect primes from this segment
+        for (long long i = std::max(2LL, low); i <= high; ++i) {
+            if (isPrime[i - low]) {
+                primes.push_back(i);
+            }
+        }
+
+        low += segmentSize;
+        high = std::min(high + segmentSize, limit);
+    }
+
+    return primes;
+}
+
+std::vector<std::pair<long long, int>> NumberTheoryEngine::primeFactorization(long long n)
+{
+    std::vector<std::pair<long long, int>> factors;
+
+    // Handle factor 2
+    int count = 0;
+    while (n % 2 == 0) {
+        count++;
+        n /= 2;
+    }
+    if (count > 0) {
+        factors.emplace_back(2, count);
+    }
+
+    // Handle odd factors
+    for (long long i = 3; i * i <= n; i += 2) {
+        count = 0;
+        while (n % i == 0) {
+            count++;
+            n /= i;
+        }
+        if (count > 0) {
+            factors.emplace_back(i, count);
+        }
+    }
+
+    // Handle remaining prime factor
+    if (n > 2) {
+        factors.emplace_back(n, 1);
+    }
+
+    return factors;
 }
 
 long long NumberTheoryEngine::eulerTotient(long long n)
