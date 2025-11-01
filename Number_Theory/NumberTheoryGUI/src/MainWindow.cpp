@@ -82,7 +82,10 @@ void MainWindow::setupBasicOpsTab()
     QVBoxLayout* gcdLayout = new QVBoxLayout(gcdGroup);
 
     QPushButton* gcdButton = new QPushButton("Compute GCD");
+    gcdButton->setToolTip("Calculate the Greatest Common Divisor of two integers using Euclidean algorithm");
     QPushButton* extGcdButton = new QPushButton("Extended GCD");
+    extGcdButton->setToolTip("Compute GCD with Bézout coefficients (x, y) such that ax + by = gcd(a,b)");
+
     gcdLayout->addWidget(gcdButton);
     gcdLayout->addWidget(extGcdButton);
 
@@ -90,35 +93,32 @@ void MainWindow::setupBasicOpsTab()
     connect(extGcdButton, &QPushButton::clicked, this, &MainWindow::computeExtendedGCD);
 
     layout->addWidget(gcdGroup);
+
+    // Basic Modular Arithmetic Section
+    QGroupBox* modularGroup = new QGroupBox("Basic Modular Arithmetic");
+    QVBoxLayout* modularLayout = new QVBoxLayout(modularGroup);
+
+    QPushButton* modAddButton = new QPushButton("Modular Addition");
+    modAddButton->setToolTip("(a + b) mod m");
+    QPushButton* modMulButton = new QPushButton("Modular Multiplication");
+    modMulButton->setToolTip("(a × b) mod m");
+
+    modularLayout->addWidget(modAddButton);
+    modularLayout->addWidget(modMulButton);
+
+    connect(modAddButton, &QPushButton::clicked, [this]() {
+        // Placeholder for modular addition
+        QMessageBox::information(this, "Feature", "Modular addition will be implemented in Phase 3");
+    });
+    connect(modMulButton, &QPushButton::clicked, [this]() {
+        // Placeholder for modular multiplication
+        QMessageBox::information(this, "Feature", "Modular multiplication will be implemented in Phase 3");
+    });
+
+    layout->addWidget(modularGroup);
     layout->addStretch();
 
     m_tabWidget->addTab(m_basicOpsTab, "Basic Operations");
-}
-
-void MainWindow::setupPrimesTab()
-{
-    m_primesTab = new QWidget;
-    QVBoxLayout* layout = new QVBoxLayout(m_primesTab);
-
-    // Primality Section
-    QGroupBox* primeGroup = new QGroupBox("Prime Operations");
-    QVBoxLayout* primeLayout = new QVBoxLayout(primeGroup);
-
-    QPushButton* primalityButton = new QPushButton("Test Primality");
-    QPushButton* sieveButton = new QPushButton("Generate Primes (Sieve)");
-    primeLayout->addWidget(primalityButton);
-    primeLayout->addWidget(sieveButton);
-
-    connect(primalityButton, &QPushButton::clicked, this, &MainWindow::testPrimality);
-    connect(sieveButton, &QPushButton::clicked, this, &MainWindow::generatePrimes);
-
-    layout->addWidget(primeGroup);
-    layout->addStretch();
-
-    m_tabWidget->addTab(m_primesTab, "Primes");
-}
-
-void MainWindow::setupAdvancedTab()
 {
     m_advancedTab = new QWidget;
     QVBoxLayout* layout = new QVBoxLayout(m_advancedTab);
@@ -184,13 +184,21 @@ void MainWindow::setupInputPanel()
     QFormLayout* formLayout = new QFormLayout;
 
     m_inputA = new QLineEdit;
+    m_inputA->setToolTip("First integer parameter (e.g., for GCD, modular inverse)");
     m_inputB = new QLineEdit;
+    m_inputB->setToolTip("Second integer parameter (e.g., for GCD operations)");
     m_inputM = new QLineEdit;
+    m_inputM->setToolTip("Modulus parameter (must be > 0 for modular operations)");
     m_inputBase = new QLineEdit;
+    m_inputBase->setToolTip("Base value for exponentiation operations");
     m_inputExponent = new QLineEdit;
+    m_inputExponent->setToolTip("Exponent value (can be large for fast exponentiation)");
     m_inputModulus = new QLineEdit;
+    m_inputModulus->setToolTip("Modulus for modular exponentiation (must be > 0)");
     m_inputN = new QLineEdit;
+    m_inputN->setToolTip("Main parameter n (e.g., for primality, totient, etc.)");
     m_inputLimit = new QLineEdit;
+    m_inputLimit->setToolTip("Upper limit for prime generation (recommended: ≤ 10,000,000)");
 
     formLayout->addRow("a:", m_inputA);
     formLayout->addRow("b:", m_inputB);
@@ -585,10 +593,176 @@ void MainWindow::displayResult(const AlgorithmResult* result)
 {
     if (!result) return;
 
-    QString output = result->toFormattedString();
+    QString output;
+
+    // Header with algorithm name and status
+    output += QString("╔══════════════════════════════════════════════════════════════════════════════╗\n");
+    output += QString("║ %-76s ║\n").arg(result->getAlgorithmName().toUpper());
+    output += QString("╠══════════════════════════════════════════════════════════════════════════════╣\n");
+
+    // Status and timing
+    QString statusStr = result->getStatusString();
+    QString timeStr = QString("%1 ms").arg(result->getExecutionTime());
+    output += QString("║ Status: %-20s Execution Time: %-35s ║\n").arg(statusStr, timeStr);
+    output += QString("╠══════════════════════════════════════════════════════════════════════════════╣\n");
+
+    // Input parameters
+    if (!result->getInputParameters().isEmpty()) {
+        output += QString("║ INPUT PARAMETERS:                                                        ║\n");
+        const QJsonObject& params = result->getInputParameters();
+        for (auto it = params.begin(); it != params.end(); ++it) {
+            QString paramLine = QString("║   %-15s = %-55s ║\n").arg(it.key() + ":", it.value().toString());
+            output += paramLine;
+        }
+        output += QString("╠══════════════════════════════════════════════════════════════════════════════╣\n");
+    }
+
+    // Main result with mathematical formatting
+    output += QString("║ RESULT:                                                                   ║\n");
+    QString resultStr = formatMathematicalResult(result);
+    QStringList resultLines = resultStr.split('\n');
+    for (const QString& line : resultLines) {
+        output += QString("║ %-76s ║\n").arg(line.left(76));
+    }
+
+    // Execution steps (if available)
+    const QVector<ExecutionStep>& steps = result->getExecutionSteps();
+    if (!steps.isEmpty()) {
+        output += QString("╠══════════════════════════════════════════════════════════════════════════════╣\n");
+        output += QString("║ EXECUTION STEPS:                                                          ║\n");
+        for (int i = 0; i < steps.size(); ++i) {
+            const ExecutionStep& step = steps[i];
+            QString stepLine = QString("%1. %2").arg(i + 1).arg(step.description);
+            if (!step.result.isEmpty()) {
+                stepLine += QString(" → %1").arg(step.result);
+            }
+            output += QString("║ %-76s ║\n").arg(stepLine.left(76));
+        }
+    }
+
+    output += QString("╚══════════════════════════════════════════════════════════════════════════════╝\n");
+
+    // Add educational note
+    output += QString("\n💡 %1\n").arg(m_engine->getAlgorithmDescription(result->getAlgorithmType()));
+
     m_resultsText->setPlainText(output);
 
     // Update status bar with execution time
     QString status = QString("Completed in %1 ms").arg(result->getExecutionTime());
     m_statusBar->showMessage(status);
+}
+
+QString MainWindow::formatMathematicalResult(const AlgorithmResult* result) const
+{
+    QString formatted;
+
+    switch (result->getAlgorithmType()) {
+        case AlgorithmType::GCD:
+            formatted = QString("gcd(%1, %2) = %3")
+                .arg(result->getInputParameters()["a"].toString())
+                .arg(result->getInputParameters()["b"].toString())
+                .arg(result->getMainResult().toLongLong());
+            break;
+
+        case AlgorithmType::ExtendedGCD: {
+            auto map = result->getMainResult().toMap();
+            formatted = QString("gcd(%1, %2) = %3\n")
+                .arg(result->getInputParameters()["a"].toString())
+                .arg(result->getInputParameters()["b"].toString())
+                .arg(map["gcd"].toLongLong());
+            formatted += QString("Bézout coefficients: x = %1, y = %2\n")
+                .arg(map["x"].toLongLong())
+                .arg(map["y"].toLongLong());
+            formatted += QString("Verification: %1×%2 + %3×%4 = %5")
+                .arg(result->getInputParameters()["a"].toString())
+                .arg(map["x"].toString())
+                .arg(result->getInputParameters()["b"].toString())
+                .arg(map["y"].toString())
+                .arg(map["gcd"].toString());
+            break;
+        }
+
+        case AlgorithmType::ModularInverse:
+            formatted = QString("%1⁻¹ ≡ %2 (mod %3)")
+                .arg(result->getInputParameters()["a"].toString())
+                .arg(result->getMainResult().toLongLong())
+                .arg(result->getInputParameters()["m"].toString());
+            break;
+
+        case AlgorithmType::ModularExponentiation:
+            formatted = QString("%1^%2 ≡ %3 (mod %4)")
+                .arg(result->getInputParameters()["base"].toString())
+                .arg(result->getInputParameters()["exponent"].toString())
+                .arg(result->getMainResult().toString())
+                .arg(result->getInputParameters()["modulus"].toString());
+            break;
+
+        case AlgorithmType::PrimalityTest:
+            formatted = QString("Is %1 prime? %2")
+                .arg(result->getInputParameters()["n"].toString())
+                .arg(result->getMainResult().toBool() ? "YES ✓" : "NO ✗");
+            break;
+
+        case AlgorithmType::PrimeSieve: {
+            auto primes = result->getMainResult().toList();
+            formatted = QString("Found %1 prime numbers ≤ %2\n")
+                .arg(primes.size())
+                .arg(result->getInputParameters()["limit"].toString());
+            if (primes.size() <= 20) {
+                formatted += "Primes: ";
+                for (int i = 0; i < primes.size(); ++i) {
+                    formatted += primes[i].toString();
+                    if (i < primes.size() - 1) formatted += ", ";
+                }
+            } else {
+                formatted += QString("First 10: %1, %2, %3, %4, %5, %6, %7, %8, %9, %10")
+                    .arg(primes[0].toString()).arg(primes[1].toString()).arg(primes[2].toString())
+                    .arg(primes[3].toString()).arg(primes[4].toString()).arg(primes[5].toString())
+                    .arg(primes[6].toString()).arg(primes[7].toString()).arg(primes[8].toString())
+                    .arg(primes[9].toString());
+                formatted += QString("\nLast 10: %1, %2, %3, %4, %5, %6, %7, %8, %9, %10")
+                    .arg(primes[primes.size()-10].toString()).arg(primes[primes.size()-9].toString())
+                    .arg(primes[primes.size()-8].toString()).arg(primes[primes.size()-7].toString())
+                    .arg(primes[primes.size()-6].toString()).arg(primes[primes.size()-5].toString())
+                    .arg(primes[primes.size()-4].toString()).arg(primes[primes.size()-3].toString())
+                    .arg(primes[primes.size()-2].toString()).arg(primes[primes.size()-1].toString());
+            }
+            break;
+        }
+
+        case AlgorithmType::EulerTotient:
+            formatted = QString("φ(%1) = %2")
+                .arg(result->getInputParameters()["n"].toString())
+                .arg(result->getMainResult().toLongLong());
+            break;
+
+        case AlgorithmType::MatrixExponentiation:
+            formatted = QString("F(%1) = %2 (nth Fibonacci number)")
+                .arg(result->getInputParameters()["n"].toString())
+                .arg(result->getMainResult().toLongLong());
+            break;
+
+        case AlgorithmType::CubeFreeCheck:
+            formatted = QString("Is %1 cube-free? %2")
+                .arg(result->getInputParameters()["n"].toString())
+                .arg(result->getMainResult().toBool() ? "YES ✓" : "NO ✗");
+            break;
+
+        case AlgorithmType::DivisorFunction:
+            formatted = QString("d(%1) = %2 (number of positive divisors)")
+                .arg(result->getInputParameters()["n"].toString())
+                .arg(result->getMainResult().toLongLong());
+            break;
+
+        case AlgorithmType::LCMSum:
+            formatted = QString("∑ LCM(i,%1) for i=1 to %1 = %2")
+                .arg(result->getInputParameters()["n"].toString())
+                .arg(result->getMainResult().toString());
+            break;
+
+        default:
+            formatted = result->formatResult();
+    }
+
+    return formatted;
 }

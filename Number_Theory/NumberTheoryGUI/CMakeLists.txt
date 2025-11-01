@@ -6,7 +6,7 @@ set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 # Find Qt6 packages
-find_package(Qt6 REQUIRED COMPONENTS Core Widgets Charts)
+find_package(Qt6 REQUIRED COMPONENTS Core Widgets Charts Test)
 
 # Enable Qt6 automoc, autorcc, and autouic
 set(CMAKE_AUTOMOC ON)
@@ -23,6 +23,25 @@ add_executable(${PROJECT_NAME}
     src/core/NumberTheoryEngine.h
     src/core/AlgorithmResult.cpp
     src/core/AlgorithmResult.h
+)
+
+# Add test executable
+add_executable(${PROJECT_NAME}Test
+    tests/test_mainwindow.cpp
+    src/MainWindow.cpp
+    src/MainWindow.h
+    src/MainWindow.ui
+    src/core/NumberTheoryEngine.cpp
+    src/core/NumberTheoryEngine.h
+    src/core/AlgorithmResult.cpp
+    src/core/AlgorithmResult.h
+)
+
+target_link_libraries(${PROJECT_NAME}Test PRIVATE
+    Qt6::Core
+    Qt6::Widgets
+    Qt6::Charts
+    Qt6::Test
 )
 
 # Include directories
