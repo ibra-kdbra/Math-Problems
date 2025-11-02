@@ -1,12 +1,18 @@
 #include <QApplication>
-#include <QStyleFactory>
+#include <QQmlApplicationEngine>
+#include <QQmlContext>
 #include <QDir>
 #include <QStandardPaths>
 #include <QTranslator>
 #include <QLocale>
 #include <QDebug>
+#include <QIcon>
 
-#include "MainWindow.h"
+#include "core/NumberTheoryEngine.h"
+#include "core/AlgorithmResult.h"
+
+// Register meta types for Qt signals
+#include <QMetaType>
 
 int main(int argc, char *argv[])
 {
@@ -21,27 +27,15 @@ int main(int argc, char *argv[])
     // Set application icon (if available)
     // app.setWindowIcon(QIcon(":/icons/app.png"));
 
-    // Set a modern style
-    app.setStyle(QStyleFactory::create("Fusion"));
+    // Register C++ types with QML
+    qmlRegisterType<NumberTheoryEngine>("NumberTheory", 1, 0, "NumberTheoryEngine");
+    qmlRegisterType<AlgorithmResult>("NumberTheory", 1, 0, "AlgorithmResult");
 
-    // Dark theme palette (optional)
-    QPalette darkPalette;
-    darkPalette.setColor(QPalette::Window, QColor(53, 53, 53));
-    darkPalette.setColor(QPalette::WindowText, Qt::white);
-    darkPalette.setColor(QPalette::Base, QColor(25, 25, 25));
-    darkPalette.setColor(QPalette::AlternateBase, QColor(53, 53, 53));
-    darkPalette.setColor(QPalette::ToolTipBase, Qt::white);
-    darkPalette.setColor(QPalette::ToolTipText, Qt::black);
-    darkPalette.setColor(QPalette::Text, Qt::white);
-    darkPalette.setColor(QPalette::Button, QColor(53, 53, 53));
-    darkPalette.setColor(QPalette::ButtonText, Qt::white);
-    darkPalette.setColor(QPalette::BrightText, Qt::red);
-    darkPalette.setColor(QPalette::Link, QColor(42, 130, 218));
-    darkPalette.setColor(QPalette::Highlight, QColor(42, 130, 218));
-    darkPalette.setColor(QPalette::HighlightedText, Qt::black);
+    // Register meta types for Qt signals
+    qRegisterMetaType<QList<ExecutionStep>>("QList<ExecutionStep>");
 
-    // Uncomment to use dark theme
-    // app.setPalette(darkPalette);
+    // Create QML application engine
+    QQmlApplicationEngine engine;
 
     // Load translations if available
     QTranslator translator;
@@ -54,9 +48,13 @@ int main(int argc, char *argv[])
         }
     }
 
-    // Create and show main window
-    MainWindow window;
-    window.show();
+    // Load main QML file
+    engine.load(QUrl("qrc:/qml/main.qml"));
+
+    if (engine.rootObjects().isEmpty()) {
+        qCritical() << "Failed to load main.qml";
+        return -1;
+    }
 
     return app.exec();
 }

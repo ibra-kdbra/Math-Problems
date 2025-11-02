@@ -50,13 +50,13 @@ public:
     void setInputParameters(const QJsonObject& params);
 
     // Getters
-    AlgorithmType getAlgorithmType() const;
-    ResultStatus getStatus() const;
-    QVariant getMainResult() const;
-    QString getErrorMessage() const;
-    qint64 getExecutionTime() const;
-    QVector<ExecutionStep> getExecutionSteps() const;
-    QJsonObject getInputParameters() const;
+    Q_INVOKABLE AlgorithmType getAlgorithmType() const;
+    Q_INVOKABLE ResultStatus getStatus() const;
+    Q_INVOKABLE QVariant getMainResult() const;
+    Q_INVOKABLE QString getErrorMessage() const;
+    Q_INVOKABLE qint64 getExecutionTime() const;
+    Q_INVOKABLE QVector<ExecutionStep> getExecutionSteps() const;
+    Q_INVOKABLE QJsonObject getInputParameters() const;
 
     // Utility methods
     QString getAlgorithmName() const;

@@ -43,17 +43,17 @@ public:
     std::unique_ptr<AlgorithmResult> computeLCMSum(long long n);
 
     // Asynchronous execution with signals
-    void computeGCDAsync(long long a, long long b);
-    void computeExtendedGCDAsync(long long a, long long b);
-    void computeModularInverseAsync(long long a, long long m);
-    void computeModularExponentiationAsync(long long base, long long exponent, long long modulus);
-    void testPrimalityAsync(long long n);
-    void generatePrimesAsync(long long limit);
-    void computeEulerTotientAsync(long long n);
-    void computeMatrixExponentiationAsync(const std::vector<long long>& coefficients, long long n);
-    void checkCubeFreeAsync(long long n);
-    void computeDivisorFunctionAsync(long long n);
-    void computeLCMSumAsync(long long n);
+    Q_INVOKABLE void computeGCDAsync(long long a, long long b);
+    Q_INVOKABLE void computeExtendedGCDAsync(long long a, long long b);
+    Q_INVOKABLE void computeModularInverseAsync(long long a, long long m);
+    Q_INVOKABLE void computeModularExponentiationAsync(long long base, long long exponent, long long modulus);
+    Q_INVOKABLE void testPrimalityAsync(long long n);
+    Q_INVOKABLE void generatePrimesAsync(long long limit);
+    Q_INVOKABLE void computeEulerTotientAsync(long long n);
+    Q_INVOKABLE void computeMatrixExponentiationAsync(const std::vector<long long>& coefficients, long long n);
+    Q_INVOKABLE void checkCubeFreeAsync(long long n);
+    Q_INVOKABLE void computeDivisorFunctionAsync(long long n);
+    Q_INVOKABLE void computeLCMSumAsync(long long n);
 
     // Utility methods
     bool validateInput(const QString& input, long long& output, long long min = LLONG_MIN, long long max = LLONG_MAX);
@@ -61,7 +61,9 @@ public:
     QString getAlgorithmDescription(AlgorithmType type);
 
 signals:
-    void computationFinished(AlgorithmResult* result);
+    void computationFinished(const QString& algorithmName, const QString& status, qint64 executionTime,
+                           const QJsonObject& inputParams, const QVariant& mainResult,
+                           const QVector<ExecutionStep>& steps, int algorithmType);
     void computationError(const QString& error);
     void progressUpdated(int percentage, const QString& message);
 

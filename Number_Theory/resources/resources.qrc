@@ -1,0 +1,8 @@
+<!DOCTYPE RCC>
+<RCC version="1.0">
+<qresource>
+    <file>qml/main.qml</file>
+    <file>qml/InputPanel.qml</file>
+    <file>qml/ResultsView.qml</file>
+</qresource>
+</RCC>
