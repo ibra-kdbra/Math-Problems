@@ -61,7 +61,7 @@ public:
     QString getAlgorithmDescription(AlgorithmType type);
 
 signals:
-    void computationFinished(std::unique_ptr<AlgorithmResult> result);
+    void computationFinished(AlgorithmResult* result);
     void computationError(const QString& error);
     void progressUpdated(int percentage, const QString& message);
 

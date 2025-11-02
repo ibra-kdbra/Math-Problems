@@ -119,6 +119,33 @@ void MainWindow::setupBasicOpsTab()
     layout->addStretch();
 
     m_tabWidget->addTab(m_basicOpsTab, "Basic Operations");
+}
+
+void MainWindow::setupPrimesTab()
+{
+    m_primesTab = new QWidget;
+    QVBoxLayout* layout = new QVBoxLayout(m_primesTab);
+
+    // Prime Operations
+    QGroupBox* primeGroup = new QGroupBox("Prime Operations");
+    QVBoxLayout* primeLayout = new QVBoxLayout(primeGroup);
+
+    QPushButton* primalityButton = new QPushButton("Test Primality");
+    QPushButton* sieveButton = new QPushButton("Generate Primes (Sieve)");
+
+    primeLayout->addWidget(primalityButton);
+    primeLayout->addWidget(sieveButton);
+
+    connect(primalityButton, &QPushButton::clicked, this, &MainWindow::testPrimality);
+    connect(sieveButton, &QPushButton::clicked, this, &MainWindow::generatePrimes);
+
+    layout->addWidget(primeGroup);
+    layout->addStretch();
+
+    m_tabWidget->addTab(m_primesTab, "Primes");
+}
+
+void MainWindow::setupAdvancedTab()
 {
     m_advancedTab = new QWidget;
     QVBoxLayout* layout = new QVBoxLayout(m_advancedTab);
@@ -286,16 +313,17 @@ void MainWindow::setupStatusBar()
 
 void MainWindow::setInputValidators()
 {
-    QIntValidator* longLongValidator = new QIntValidator(LLONG_MIN, LLONG_MAX, this);
+    // Use reasonable ranges for QIntValidator (Qt's validator has limitations)
+    QIntValidator* intValidator = new QIntValidator(INT_MIN, INT_MAX, this);
 
-    m_inputA->setValidator(longLongValidator);
-    m_inputB->setValidator(longLongValidator);
-    m_inputM->setValidator(longLongValidator);
-    m_inputBase->setValidator(longLongValidator);
-    m_inputExponent->setValidator(longLongValidator);
-    m_inputModulus->setValidator(longLongValidator);
-    m_inputN->setValidator(longLongValidator);
-    m_inputLimit->setValidator(longLongValidator);
+    m_inputA->setValidator(intValidator);
+    m_inputB->setValidator(intValidator);
+    m_inputM->setValidator(intValidator);
+    m_inputBase->setValidator(intValidator);
+    m_inputExponent->setValidator(intValidator);
+    m_inputModulus->setValidator(intValidator);
+    m_inputN->setValidator(intValidator);
+    m_inputLimit->setValidator(intValidator);
 }
 
 void MainWindow::updateInputFields(AlgorithmType type)
@@ -575,11 +603,12 @@ void MainWindow::showAbout()
         "including GCD, modular arithmetic, prime generation, and advanced functions.</p>");
 }
 
-void MainWindow::onComputationFinished(std::unique_ptr<AlgorithmResult> result)
+void MainWindow::onComputationFinished(AlgorithmResult* result)
 {
     m_progressBar->setVisible(false);
-    displayResult(result.get());
+    displayResult(result);
     m_statusLabel->setText("Computation completed");
+    // Note: result is managed by the engine, don't delete it here
 }
 
 void MainWindow::onComputationError(const QString& error)
@@ -596,51 +625,58 @@ void MainWindow::displayResult(const AlgorithmResult* result)
     QString output;
 
     // Header with algorithm name and status
-    output += QString("╔══════════════════════════════════════════════════════════════════════════════╗\n");
-    output += QString("║ %-76s ║\n").arg(result->getAlgorithmName().toUpper());
-    output += QString("╠══════════════════════════════════════════════════════════════════════════════╣\n");
+    output += "╔══════════════════════════════════════════════════════════════════════════════╗\n";
+    output += QString("║ %1 ║\n").arg(result->getAlgorithmName().toUpper().leftJustified(76, ' ', true));
+    output += "╠══════════════════════════════════════════════════════════════════════════════╣\n";
 
     // Status and timing
     QString statusStr = result->getStatusString();
     QString timeStr = QString("%1 ms").arg(result->getExecutionTime());
-    output += QString("║ Status: %-20s Execution Time: %-35s ║\n").arg(statusStr, timeStr);
-    output += QString("╠══════════════════════════════════════════════════════════════════════════════╣\n");
+    QString statusLine = QString("║ Status: %1 Execution Time: %2 ║\n")
+        .arg(statusStr.leftJustified(20, ' ', false))
+        .arg(timeStr.leftJustified(35, ' ', false));
+    output += statusLine;
+    output += "╠══════════════════════════════════════════════════════════════════════════════╣\n";
 
     // Input parameters
     if (!result->getInputParameters().isEmpty()) {
-        output += QString("║ INPUT PARAMETERS:                                                        ║\n");
+        output += "║ INPUT PARAMETERS:                                                        ║\n";
         const QJsonObject& params = result->getInputParameters();
         for (auto it = params.begin(); it != params.end(); ++it) {
-            QString paramLine = QString("║   %-15s = %-55s ║\n").arg(it.key() + ":", it.value().toString());
+            QString paramKey = it.key() + ":";
+            QString paramValue = it.value().toString();
+            QString paramLine = QString("║   %1 = %2 ║\n")
+                .arg(paramKey.leftJustified(15, ' ', false))
+                .arg(paramValue.leftJustified(55, ' ', false));
             output += paramLine;
         }
-        output += QString("╠══════════════════════════════════════════════════════════════════════════════╣\n");
+        output += "╠══════════════════════════════════════════════════════════════════════════════╣\n";
     }
 
     // Main result with mathematical formatting
-    output += QString("║ RESULT:                                                                   ║\n");
+    output += "║ RESULT:                                                                   ║\n";
     QString resultStr = formatMathematicalResult(result);
     QStringList resultLines = resultStr.split('\n');
     for (const QString& line : resultLines) {
-        output += QString("║ %-76s ║\n").arg(line.left(76));
+        output += QString("║ %1 ║\n").arg(line.leftJustified(76, ' ', false));
     }
 
     // Execution steps (if available)
     const QVector<ExecutionStep>& steps = result->getExecutionSteps();
     if (!steps.isEmpty()) {
-        output += QString("╠══════════════════════════════════════════════════════════════════════════════╣\n");
-        output += QString("║ EXECUTION STEPS:                                                          ║\n");
+        output += "╠══════════════════════════════════════════════════════════════════════════════╣\n";
+        output += "║ EXECUTION STEPS:                                                          ║\n";
         for (int i = 0; i < steps.size(); ++i) {
             const ExecutionStep& step = steps[i];
             QString stepLine = QString("%1. %2").arg(i + 1).arg(step.description);
             if (!step.result.isEmpty()) {
                 stepLine += QString(" → %1").arg(step.result);
             }
-            output += QString("║ %-76s ║\n").arg(stepLine.left(76));
+            output += QString("║ %1 ║\n").arg(stepLine.leftJustified(76, ' ', false));
         }
     }
 
-    output += QString("╚══════════════════════════════════════════════════════════════════════════════╝\n");
+    output += "╚══════════════════════════════════════════════════════════════════════════════╝\n";
 
     // Add educational note
     output += QString("\n💡 %1\n").arg(m_engine->getAlgorithmDescription(result->getAlgorithmType()));

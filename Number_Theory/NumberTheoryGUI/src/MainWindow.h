@@ -50,7 +50,7 @@ private slots:
     void showAbout();
 
     // Engine result handling
-    void onComputationFinished(std::unique_ptr<AlgorithmResult> result);
+    void onComputationFinished(AlgorithmResult* result);
     void onComputationError(const QString& error);
 
 private:
@@ -107,6 +107,7 @@ private:
     void displayResult(const AlgorithmResult* result);
     void setInputValidators();
     bool validateCurrentInputs();
+    QString formatMathematicalResult(const AlgorithmResult* result) const;
 
     // Current algorithm context
     AlgorithmType m_currentAlgorithm;

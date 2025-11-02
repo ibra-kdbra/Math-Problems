@@ -389,14 +389,14 @@
    </property>
    <widget class="QMenu" name="menuFile">
     <property name="title">
-     <string>&File</string>
+     <string>File</string>
     </property>
     <addaction name="actionExport"/>
     <addaction name="actionExit"/>
    </widget>
    <widget class="QMenu" name="menuHelp">
     <property name="title">
-     <string>&Help</string>
+     <string>Help</string>
     </property>
     <addaction name="actionAbout"/>
     <addaction name="actionAboutQt"/>
@@ -407,22 +407,22 @@
   <widget class="QStatusBar" name="statusbar"/>
   <action name="actionExport">
    <property name="text">
-    <string>&Export Results...</string>
+    <string>Export Results...</string>
    </property>
   </action>
   <action name="actionExit">
    <property name="text">
-    <string>E&xit</string>
+    <string>Exit</string>
    </property>
   </action>
   <action name="actionAbout">
    <property name="text">
-    <string>&About</string>
+    <string>About</string>
    </property>
   </action>
   <action name="actionAboutQt">
    <property name="text">
-    <string>About &Qt</string>
+    <string>About Qt</string>
    </property>
   </action>
  </widget>

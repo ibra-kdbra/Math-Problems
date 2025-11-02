@@ -520,8 +520,15 @@ long long NumberTheoryEngine::lcmSum(long long n)
 void NumberTheoryEngine::computeGCDAsync(long long a, long long b)
 {
     QtConcurrent::run([this, a, b]() {
-        auto result = computeGCD(a, b);
-        emit computationFinished(std::move(result));
+        try {
+            auto result = computeGCD(a, b);
+            // Store result temporarily to avoid lifetime issues
+            static std::unique_ptr<AlgorithmResult> lastResult;
+            lastResult = std::move(result);
+            emit computationFinished(lastResult.get());
+        } catch (const std::exception& e) {
+            emit computationError(QString("Async computation error: %1").arg(e.what()));
+        }
     });
 }
 
@@ -529,80 +536,140 @@ void NumberTheoryEngine::computeGCDAsync(long long a, long long b)
 void NumberTheoryEngine::computeExtendedGCDAsync(long long a, long long b)
 {
     QtConcurrent::run([this, a, b]() {
-        auto result = computeExtendedGCD(a, b);
-        emit computationFinished(std::move(result));
+        try {
+            auto result = computeExtendedGCD(a, b);
+            static std::unique_ptr<AlgorithmResult> lastResult;
+            lastResult = std::move(result);
+            emit computationFinished(lastResult.get());
+        } catch (const std::exception& e) {
+            emit computationError(QString("Async computation error: %1").arg(e.what()));
+        }
     });
 }
 
 void NumberTheoryEngine::computeModularInverseAsync(long long a, long long m)
 {
     QtConcurrent::run([this, a, m]() {
-        auto result = computeModularInverse(a, m);
-        emit computationFinished(std::move(result));
+        try {
+            auto result = computeModularInverse(a, m);
+            static std::unique_ptr<AlgorithmResult> lastResult;
+            lastResult = std::move(result);
+            emit computationFinished(lastResult.get());
+        } catch (const std::exception& e) {
+            emit computationError(QString("Async computation error: %1").arg(e.what()));
+        }
     });
 }
 
 void NumberTheoryEngine::computeModularExponentiationAsync(long long base, long long exponent, long long modulus)
 {
     QtConcurrent::run([this, base, exponent, modulus]() {
-        auto result = computeModularExponentiation(base, exponent, modulus);
-        emit computationFinished(std::move(result));
+        try {
+            auto result = computeModularExponentiation(base, exponent, modulus);
+            static std::unique_ptr<AlgorithmResult> lastResult;
+            lastResult = std::move(result);
+            emit computationFinished(lastResult.get());
+        } catch (const std::exception& e) {
+            emit computationError(QString("Async computation error: %1").arg(e.what()));
+        }
     });
 }
 
 void NumberTheoryEngine::testPrimalityAsync(long long n)
 {
     QtConcurrent::run([this, n]() {
-        auto result = testPrimality(n);
-        emit computationFinished(std::move(result));
+        try {
+            auto result = testPrimality(n);
+            static std::unique_ptr<AlgorithmResult> lastResult;
+            lastResult = std::move(result);
+            emit computationFinished(lastResult.get());
+        } catch (const std::exception& e) {
+            emit computationError(QString("Async computation error: %1").arg(e.what()));
+        }
     });
 }
 
 void NumberTheoryEngine::generatePrimesAsync(long long limit)
 {
     QtConcurrent::run([this, limit]() {
-        auto result = generatePrimes(limit);
-        emit computationFinished(std::move(result));
+        try {
+            auto result = generatePrimes(limit);
+            static std::unique_ptr<AlgorithmResult> lastResult;
+            lastResult = std::move(result);
+            emit computationFinished(lastResult.get());
+        } catch (const std::exception& e) {
+            emit computationError(QString("Async computation error: %1").arg(e.what()));
+        }
     });
 }
 
 void NumberTheoryEngine::computeEulerTotientAsync(long long n)
 {
     QtConcurrent::run([this, n]() {
-        auto result = computeEulerTotient(n);
-        emit computationFinished(std::move(result));
+        try {
+            auto result = computeEulerTotient(n);
+            static std::unique_ptr<AlgorithmResult> lastResult;
+            lastResult = std::move(result);
+            emit computationFinished(lastResult.get());
+        } catch (const std::exception& e) {
+            emit computationError(QString("Async computation error: %1").arg(e.what()));
+        }
     });
 }
 
 void NumberTheoryEngine::computeMatrixExponentiationAsync(const std::vector<long long>& coefficients, long long n)
 {
     QtConcurrent::run([this, coefficients, n]() {
-        auto result = computeMatrixExponentiation(coefficients, n);
-        emit computationFinished(std::move(result));
+        try {
+            auto result = computeMatrixExponentiation(coefficients, n);
+            static std::unique_ptr<AlgorithmResult> lastResult;
+            lastResult = std::move(result);
+            emit computationFinished(lastResult.get());
+        } catch (const std::exception& e) {
+            emit computationError(QString("Async computation error: %1").arg(e.what()));
+        }
     });
 }
 
 void NumberTheoryEngine::checkCubeFreeAsync(long long n)
 {
     QtConcurrent::run([this, n]() {
-        auto result = checkCubeFree(n);
-        emit computationFinished(std::move(result));
+        try {
+            auto result = checkCubeFree(n);
+            static std::unique_ptr<AlgorithmResult> lastResult;
+            lastResult = std::move(result);
+            emit computationFinished(lastResult.get());
+        } catch (const std::exception& e) {
+            emit computationError(QString("Async computation error: %1").arg(e.what()));
+        }
     });
 }
 
 void NumberTheoryEngine::computeDivisorFunctionAsync(long long n)
 {
     QtConcurrent::run([this, n]() {
-        auto result = computeDivisorFunction(n);
-        emit computationFinished(std::move(result));
+        try {
+            auto result = computeDivisorFunction(n);
+            static std::unique_ptr<AlgorithmResult> lastResult;
+            lastResult = std::move(result);
+            emit computationFinished(lastResult.get());
+        } catch (const std::exception& e) {
+            emit computationError(QString("Async computation error: %1").arg(e.what()));
+        }
     });
 }
 
 void NumberTheoryEngine::computeLCMSumAsync(long long n)
 {
     QtConcurrent::run([this, n]() {
-        auto result = computeLCMSum(n);
-        emit computationFinished(std::move(result));
+        try {
+            auto result = computeLCMSum(n);
+            static std::unique_ptr<AlgorithmResult> lastResult;
+            lastResult = std::move(result);
+            emit computationFinished(lastResult.get());
+        } catch (const std::exception& e) {
+            emit computationError(QString("Async computation error: %1").arg(e.what()));
+        }
     });
 }
 
