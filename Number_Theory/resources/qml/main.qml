@@ -17,6 +17,11 @@ ApplicationWindow {
     Material.accent: "#3b82f6" // Lighter Blue
     Material.background: "#f3f4f6" // Light Gray Background
 
+    Component.onCompleted: {
+        // Initialize with default algorithm
+        inputWorkspace.showAlgorithm("ExtendedGCD")
+    }
+
     // Computation History
     property var computationHistory: []
 

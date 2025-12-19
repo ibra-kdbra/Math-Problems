@@ -21,8 +21,6 @@ Pane {
         anchors.fill: parent
         color: "white"
         radius: 12
-        
-        // Shadow effect
         border.color: Material.color(Material.Grey, Material.Shade200)
         border.width: 1
 
@@ -57,20 +55,23 @@ Pane {
                     width: parent.width
                     spacing: 16
 
+                    // Helper to check visibility
+                    function isAlgo(list) {
+                        return list.includes(root.currentAlgorithm)
+                    }
+
                     // Integer 'a'
                     ColumnLayout {
-                        visible: inputA.visible
+                        visible: isAlgo(["GCD", "ExtendedGCD", "ModularInverse"])
                         Layout.fillWidth: true
                         spacing: 8
                         Label { text: "Integer 'a'"; color: Material.color(Material.Grey, Material.Shade700) }
                         TextField {
                             id: inputA
-                            visible: false
                             placeholderText: "99"
                             Layout.fillWidth: true
                             color: "black"
                             selectByMouse: true
-                            validator: IntValidator { bottom: -999999999; top: 999999999 }
                             background: Rectangle {
                                 color: Material.color(Material.Grey, Material.Shade100)
                                 radius: 8
@@ -81,18 +82,16 @@ Pane {
 
                     // Integer 'b'
                     ColumnLayout {
-                        visible: inputB.visible
+                        visible: isAlgo(["GCD", "ExtendedGCD"])
                         Layout.fillWidth: true
                         spacing: 8
                         Label { text: "Integer 'b'"; color: Material.color(Material.Grey, Material.Shade700) }
                         TextField {
                             id: inputB
-                            visible: false
                             placeholderText: "78"
                             Layout.fillWidth: true
                             color: "black"
                             selectByMouse: true
-                            validator: IntValidator { bottom: -999999999; top: 999999999 }
                             background: Rectangle {
                                 color: Material.color(Material.Grey, Material.Shade100)
                                 radius: 8
@@ -103,18 +102,16 @@ Pane {
 
                     // Modulus 'm'
                     ColumnLayout {
-                        visible: inputM.visible
+                        visible: isAlgo(["ModularInverse"])
                         Layout.fillWidth: true
                         spacing: 8
                         Label { text: "Modulus 'm'"; color: Material.color(Material.Grey, Material.Shade700) }
                         TextField {
                             id: inputM
-                            visible: false
                             placeholderText: "Enter modulus"
                             Layout.fillWidth: true
                             color: "black"
                             selectByMouse: true
-                            validator: IntValidator { bottom: 1; top: 999999999 }
                             background: Rectangle {
                                 color: Material.color(Material.Grey, Material.Shade100)
                                 radius: 8
@@ -125,18 +122,16 @@ Pane {
 
                     // Base
                     ColumnLayout {
-                        visible: inputBase.visible
+                        visible: isAlgo(["ModularExponentiation"])
                         Layout.fillWidth: true
                         spacing: 8
                         Label { text: "Base"; color: Material.color(Material.Grey, Material.Shade700) }
                         TextField {
                             id: inputBase
-                            visible: false
                             placeholderText: "Enter base"
                             Layout.fillWidth: true
                             color: "black"
                             selectByMouse: true
-                            validator: IntValidator { bottom: 0; top: 999999999 }
                             background: Rectangle {
                                 color: Material.color(Material.Grey, Material.Shade100)
                                 radius: 8
@@ -147,18 +142,16 @@ Pane {
 
                     // Exponent
                     ColumnLayout {
-                        visible: inputExponent.visible
+                        visible: isAlgo(["ModularExponentiation"])
                         Layout.fillWidth: true
                         spacing: 8
                         Label { text: "Exponent"; color: Material.color(Material.Grey, Material.Shade700) }
                         TextField {
                             id: inputExponent
-                            visible: false
                             placeholderText: "Enter exponent"
                             Layout.fillWidth: true
                             color: "black"
                             selectByMouse: true
-                            validator: IntValidator { bottom: 0; top: 999999999 }
                             background: Rectangle {
                                 color: Material.color(Material.Grey, Material.Shade100)
                                 radius: 8
@@ -169,18 +162,16 @@ Pane {
 
                     // Modulus (for exp)
                     ColumnLayout {
-                        visible: inputModulus.visible
+                        visible: isAlgo(["ModularExponentiation"])
                         Layout.fillWidth: true
                         spacing: 8
                         Label { text: "Modulus"; color: Material.color(Material.Grey, Material.Shade700) }
                         TextField {
                             id: inputModulus
-                            visible: false
                             placeholderText: "Enter modulus"
                             Layout.fillWidth: true
                             color: "black"
                             selectByMouse: true
-                            validator: IntValidator { bottom: 1; top: 999999999 }
                             background: Rectangle {
                                 color: Material.color(Material.Grey, Material.Shade100)
                                 radius: 8
@@ -191,18 +182,16 @@ Pane {
 
                     // N (Generic)
                     ColumnLayout {
-                        visible: inputN.visible
+                        visible: isAlgo(["PrimalityTest", "EulerTotient", "MatrixExponentiation", "DivisorFunction", "LCMSum", "CubeFreeCheck"])
                         Layout.fillWidth: true
                         spacing: 8
                         Label { text: "Integer 'n'"; color: Material.color(Material.Grey, Material.Shade700) }
                         TextField {
                             id: inputN
-                            visible: false
                             placeholderText: "Enter n"
                             Layout.fillWidth: true
                             color: "black"
                             selectByMouse: true
-                            validator: IntValidator { bottom: 0; top: 999999999 }
                             background: Rectangle {
                                 color: Material.color(Material.Grey, Material.Shade100)
                                 radius: 8
@@ -213,18 +202,16 @@ Pane {
 
                     // Limit
                     ColumnLayout {
-                        visible: inputLimit.visible
+                        visible: isAlgo(["PrimeSieve"])
                         Layout.fillWidth: true
                         spacing: 8
                         Label { text: "Limit"; color: Material.color(Material.Grey, Material.Shade700) }
                         TextField {
                             id: inputLimit
-                            visible: false
                             placeholderText: "Enter limit"
                             Layout.fillWidth: true
                             color: "black"
                             selectByMouse: true
-                            validator: IntValidator { bottom: 2; top: 10000000 }
                             background: Rectangle {
                                 color: Material.color(Material.Grey, Material.Shade100)
                                 radius: 8
@@ -277,7 +264,7 @@ Pane {
                             
                             Label {
                                 id: descriptionLabel
-                                text: ""
+                                text: getAlgorithmDescription(root.currentAlgorithm)
                                 wrapMode: Text.WordWrap
                                 Layout.fillWidth: true
                                 color: Material.color(Material.Grey, Material.Shade800)
@@ -382,85 +369,7 @@ Pane {
     function showAlgorithm(algorithm) {
         root.currentAlgorithm = algorithm
         clearInputs()
-        
-        // Hide all inputs first
-        inputA.visible = false
-        inputB.visible = false
-        inputM.visible = false
-        inputBase.visible = false
-        inputExponent.visible = false
-        inputModulus.visible = false
-        inputN.visible = false
-        inputLimit.visible = false
-
-        // Update Title and Icon
         updateTitleAndIcon(algorithm)
-
-        // Show relevant inputs and set description
-        switch(algorithm) {
-            case "GCD":
-                inputA.visible = true
-                inputB.visible = true
-                descriptionLabel.text = "Finds the largest positive integer that divides each of the integers."
-                break
-
-            case "ExtendedGCD":
-                inputA.visible = true
-                inputB.visible = true
-                descriptionLabel.text = "Finds x, y for ax+by=gcd(a,b)"
-                break
-
-            case "ModularInverse":
-                inputA.visible = true
-                inputM.visible = true
-                descriptionLabel.text = "Finds x such that ax ≡ 1 (mod m)"
-                break
-
-            case "ModularExponentiation":
-                inputBase.visible = true
-                inputExponent.visible = true
-                inputModulus.visible = true
-                descriptionLabel.text = "Computes (base^exponent) mod modulus efficiently."
-                break
-
-            case "PrimalityTest":
-                inputN.visible = true
-                descriptionLabel.text = "Determines if a number is prime."
-                break
-
-            case "PrimeSieve":
-                inputLimit.visible = true
-                descriptionLabel.text = "Generates all prime numbers up to the limit."
-                break
-
-            case "EulerTotient":
-                inputN.visible = true
-                descriptionLabel.text = "Counts positive integers up to n that are relatively prime to n."
-                break
-
-            case "MatrixExponentiation":
-                inputN.visible = true
-                descriptionLabel.text = "Computes the nth Fibonacci number using matrix exponentiation."
-                break
-
-            case "DivisorFunction":
-                inputN.visible = true
-                descriptionLabel.text = "Counts the number of divisors of n."
-                break
-
-            case "LCMSum":
-                inputN.visible = true
-                descriptionLabel.text = "Computes the sum of LCM(i, n) for 1 <= i <= n."
-                break
-
-            case "CubeFreeCheck":
-                inputN.visible = true
-                descriptionLabel.text = "Checks if n is not divisible by any perfect cube > 1."
-                break
-            
-            default:
-                descriptionLabel.text = "Select an algorithm to begin."
-        }
     }
     
     function updateTitleAndIcon(algorithm) {
@@ -512,6 +421,23 @@ Pane {
             case "LCMSum": return "n=5"
             case "CubeFreeCheck": return "n=12"
             default: return ""
+        }
+    }
+    
+    function getAlgorithmDescription(algorithm) {
+        switch(algorithm) {
+            case "GCD": return "Finds the largest positive integer that divides each of the integers."
+            case "ExtendedGCD": return "Finds x, y for ax+by=gcd(a,b)"
+            case "ModularInverse": return "Finds x such that ax ≡ 1 (mod m)"
+            case "ModularExponentiation": return "Computes (base^exponent) mod modulus efficiently."
+            case "PrimalityTest": return "Determines if a number is prime."
+            case "PrimeSieve": return "Generates all prime numbers up to the limit."
+            case "EulerTotient": return "Counts positive integers up to n that are relatively prime to n."
+            case "MatrixExponentiation": return "Computes the nth Fibonacci number using matrix exponentiation."
+            case "DivisorFunction": return "Counts the number of divisors of n."
+            case "LCMSum": return "Computes the sum of LCM(i, n) for 1 <= i <= n."
+            case "CubeFreeCheck": return "Checks if n is not divisible by any perfect cube > 1."
+            default: return "Select an algorithm to begin."
         }
     }
 

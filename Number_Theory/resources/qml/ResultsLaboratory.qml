@@ -85,10 +85,23 @@ Pane {
                                     }
                                     
                                     Button {
-                                        text: "📄 Copy"
-                                        flat: true
-                                        font.pixelSize: 12
+                                        text: "COPY RESULT"
+                                        font.pixelSize: 10
+                                        font.bold: true
+                                        flat: false
+                                        height: 32
+                                        leftPadding: 16
+                                        rightPadding: 16
+                                        Material.background: Material.color(Material.Blue, Material.Shade50)
                                         Material.foreground: Material.primary
+                                        
+                                        background: Rectangle {
+                                            color: parent.down ? Material.color(Material.Blue, Material.Shade100) : Material.color(Material.Blue, Material.Shade50)
+                                            radius: 16
+                                            border.color: Material.primary
+                                            border.width: 1
+                                        }
+
                                         onClicked: {
                                             copyToClipboard(model.content)
                                         }
@@ -136,26 +149,59 @@ Pane {
                 clip: true
                 ListView {
                     model: root.currentResult ? root.currentResult.executionSteps : []
-                    delegate: ItemDelegate {
+                    spacing: 12
+                    delegate: Rectangle {
                         width: parent.width
+                        height: stepColumn.implicitHeight + 24
+                        color: "white"
+                        radius: 8
+                        border.color: Material.color(Material.Grey, Material.Shade200)
+                        border.width: 1
                         
-                        contentItem: ColumnLayout {
-                            spacing: 4
-                            Label { 
-                                text: "Step " + (index + 1)
-                                font.bold: true
-                                color: Material.primary
-                            }
-                            Label {
-                                text: modelData.description
-                                wrapMode: Text.Wrap
+                        ColumnLayout {
+                            id: stepColumn
+                            anchors.fill: parent
+                            anchors.margins: 12
+                            spacing: 8
+                            
+                            RowLayout {
                                 Layout.fillWidth: true
+                                Rectangle {
+                                    width: 24
+                                    height: 24
+                                    radius: 12
+                                    color: Material.primary
+                                    Label {
+                                        anchors.centerIn: parent
+                                        text: (index + 1).toString()
+                                        color: "white"
+                                        font.bold: true
+                                        font.pixelSize: 12
+                                    }
+                                }
+                                
+                                Label {
+                                    text: modelData.description
+                                    font.bold: true
+                                    color: Material.color(Material.Grey, Material.Shade800)
+                                    Layout.fillWidth: true
+                                    wrapMode: Text.Wrap
+                                }
                             }
+                            
                             Label {
-                                text: modelData.result || ""
+                                visible: modelData.result !== ""
+                                text: modelData.result
                                 font.family: "Monospace"
                                 color: Material.accent
-                                visible: text !== ""
+                                Layout.leftMargin: 32
+                                Layout.fillWidth: true
+                                wrapMode: Text.Wrap
+                                background: Rectangle {
+                                    color: Material.color(Material.Grey, Material.Shade100)
+                                    radius: 4
+                                }
+                                padding: 8
                             }
                         }
                     }
@@ -180,10 +226,13 @@ Pane {
                 Loader {
                     anchors.fill: parent
                     sourceComponent: {
-                        if (root.currentResult && root.currentResult.algorithmType == 5) { // PrimeSieve
+                        if (!root.currentResult) return defaultViz
+                        
+                        if (root.currentResult.algorithmType == 5) { // PrimeSieve
                             return primeSieveViz
                         }
-                        return defaultViz
+                        // Fallback for others
+                        return genericViz
                     }
                 }
 
@@ -192,8 +241,52 @@ Pane {
                     Item {
                         Label {
                             anchors.centerIn: parent
-                            text: "Visualization not available for this algorithm"
+                            text: "Select an algorithm to see visualization"
                             color: Material.color(Material.Grey, Material.Shade500)
+                        }
+                    }
+                }
+                
+                Component {
+                    id: genericViz
+                    ColumnLayout {
+                        anchors.centerIn: parent
+                        spacing: 16
+                        
+                        Label {
+                            text: "Visualization"
+                            font.pixelSize: 24
+                            font.bold: true
+                            Layout.alignment: Qt.AlignHCenter
+                        }
+                        
+                        Rectangle {
+                            width: 400
+                            height: 200
+                            color: Material.color(Material.Grey, Material.Shade100)
+                            radius: 8
+                            border.color: Material.color(Material.Grey, Material.Shade300)
+                            
+                            ColumnLayout {
+                                anchors.centerIn: parent
+                                spacing: 8
+                                Label {
+                                    text: "Result Summary"
+                                    font.bold: true
+                                    Layout.alignment: Qt.AlignHCenter
+                                }
+                                Label {
+                                    text: root.currentResult ? root.currentResult.mainResult.toString() : ""
+                                    font.pixelSize: 18
+                                    color: Material.primary
+                                    Layout.alignment: Qt.AlignHCenter
+                                }
+                                Label {
+                                    text: "Execution Time: " + (root.currentResult ? root.currentResult.executionTime + " ms" : "")
+                                    color: Material.color(Material.Grey, Material.Shade600)
+                                    Layout.alignment: Qt.AlignHCenter
+                                }
+                            }
                         }
                     }
                 }
@@ -233,6 +326,8 @@ Pane {
 
                                     function isPrime(num) {
                                         if (!root.currentResult || !root.currentResult.mainResult) return false
+                                        // Check if mainResult is array and contains num
+                                        // mainResult is a QVariantList -> JS Array
                                         return root.currentResult.mainResult.indexOf(num) !== -1
                                     }
                                 }
