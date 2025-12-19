@@ -5,288 +5,320 @@ import QtQuick.Controls.Material
 
 Pane {
     id: root
+    padding: 0
+    
+    // Signal to notify main window of selection
+    signal algorithmSelected(string algorithmName)
 
-    property string currentAlgorithm: ""
-    property bool isComputing: false
-    signal computeRequested(string algorithm, var params)
+    property string searchText: ""
 
-    Material.background: Material.color(Material.Grey, Material.Shade800)
-    Material.elevation: 4
-
-    Rectangle {
-        anchors.fill: parent
-        color: Material.color(Material.Grey, Material.Shade800)
-        border.color: isComputing ? Material.color(Material.Orange, Material.Shade600) : Material.color(Material.Teal, Material.Shade600)
-        border.width: 1
-        radius: 8
-    }
+    Material.background: Material.color(Material.Grey, Material.Shade50)
 
     ColumnLayout {
         anchors.fill: parent
-        spacing: 16
+        spacing: 0
 
-        Label {
-            text: "Input Parameters"
-            font.pixelSize: 16
-            font.bold: true
-            color: Material.primary
-        }
-
-        ScrollView {
-            Layout.fillHeight: true
+        // Search Bar
+        Rectangle {
             Layout.fillWidth: true
-
-            ColumnLayout {
-                width: parent.width
-                spacing: 12
-
-                // Dynamic input fields based on algorithm
-                TextField {
-                    id: inputA
-                    visible: false
-                    placeholderText: "Enter value for a"
-                    validator: IntValidator { bottom: -999999999; top: 999999999 }
-                    Layout.fillWidth: true
+            height: 60
+            color: "transparent"
+            
+            TextField {
+                id: searchField
+                anchors.centerIn: parent
+                width: parent.width - 32
+                placeholderText: "Search algorithms..."
+                leftPadding: 40
+                
+                onTextChanged: root.searchText = text.toLowerCase()
+                
+                background: Rectangle {
+                    color: Material.color(Material.Grey, Material.Shade200)
+                    radius: 8
+                    border.width: 0
                 }
 
-                TextField {
-                    id: inputB
-                    visible: false
-                    placeholderText: "Enter value for b"
-                    validator: IntValidator { bottom: -999999999; top: 999999999 }
-                    Layout.fillWidth: true
-                }
-
-                TextField {
-                    id: inputM
-                    visible: false
-                    placeholderText: "Enter modulus m"
-                    validator: IntValidator { bottom: 1; top: 999999999 }
-                    Layout.fillWidth: true
-                }
-
-                TextField {
-                    id: inputBase
-                    visible: false
-                    placeholderText: "Enter base"
-                    validator: IntValidator { bottom: 0; top: 999999999 }
-                    Layout.fillWidth: true
-                }
-
-                TextField {
-                    id: inputExponent
-                    visible: false
-                    placeholderText: "Enter exponent"
-                    validator: IntValidator { bottom: 0; top: 999999999 }
-                    Layout.fillWidth: true
-                }
-
-                TextField {
-                    id: inputModulus
-                    visible: false
-                    placeholderText: "Enter modulus"
-                    validator: IntValidator { bottom: 1; top: 999999999 }
-                    Layout.fillWidth: true
-                }
-
-                TextField {
-                    id: inputN
-                    visible: false
-                    placeholderText: "Enter value for n"
-                    validator: IntValidator { bottom: 0; top: 999999999 }
-                    Layout.fillWidth: true
-                }
-
-                TextField {
-                    id: inputLimit
-                    visible: false
-                    placeholderText: "Enter upper limit"
-                    validator: IntValidator { bottom: 2; top: 10000000 }
-                    Layout.fillWidth: true
-                }
-
-                // Algorithm description
                 Label {
-                    id: descriptionLabel
-                    text: ""
-                    wrapMode: Text.WordWrap
-                    Layout.fillWidth: true
-                    font.pixelSize: 12
-                    opacity: 0.8
+                    text: "🔍"
+                    anchors.left: parent.left
+                    anchors.verticalCenter: parent.verticalCenter
+                    anchors.leftMargin: 12
+                    font.pixelSize: 14
+                    color: Material.color(Material.Grey, Material.Shade600)
                 }
             }
         }
 
-        RowLayout {
-            spacing: 8
-
-            Button {
-                id: computeButton
-                text: isComputing ? "⏳ Computing..." : "⚡ Compute"
-                highlighted: !isComputing
-                Layout.fillWidth: true
-                enabled: !isComputing
-
-                contentItem: RowLayout {
+        // Algorithm List
+        ListView {
+            id: algorithmList
+            Layout.fillWidth: true
+            Layout.fillHeight: true
+            clip: true
+            model: algorithmModel
+            
+            // Section handling
+            section.property: "category"
+            section.delegate: Item {
+                width: parent.width
+                height: 40
+                
+                RowLayout {
+                    anchors.fill: parent
+                    anchors.leftMargin: 16
                     spacing: 8
-
+                    
+                    Text {
+                        text: "−" // Minus sign for expanded state (visual only for now)
+                        font.pixelSize: 12
+                        color: Material.color(Material.Grey, Material.Shade600)
+                    }
+                    
                     Label {
-                        text: computeButton.text
-                        color: computeButton.enabled ? Material.foreground : Material.color(Material.Grey, Material.Shade500)
-                        Layout.alignment: Qt.AlignVCenter
+                        text: section
+                        font.bold: true
+                        font.pixelSize: 13
+                        color: Material.color(Material.Grey, Material.Shade900)
+                    }
+                }
+            }
+
+            delegate: ItemDelegate {
+                id: delegateItem
+                width: parent.width
+                
+                property bool isMatch: model.title.toLowerCase().includes(root.searchText) || model.category.toLowerCase().includes(root.searchText)
+                visible: isMatch
+                height: isMatch ? (model.isCard ? 140 : 50) : 0
+                
+                highlighted: ListView.isCurrentItem
+
+                contentItem: Item {
+                    // Regular List Item
+                    RowLayout {
+                        visible: !model.isCard
+                        anchors.fill: parent
+                        anchors.leftMargin: 32
+                        anchors.rightMargin: 16
+                        spacing: 12
+
+                        Label {
+                            text: model.icon
+                            font.pixelSize: 16
+                            Layout.preferredWidth: 24
+                        }
+
+                        Label {
+                            text: model.title
+                            font.pixelSize: 14
+                            color: delegateItem.highlighted ? Material.primary : Material.foreground
+                            Layout.fillWidth: true
+                        }
                     }
 
-                    BusyIndicator {
-                        visible: isComputing
-                        running: isComputing
-                        Layout.preferredWidth: 20
-                        Layout.preferredHeight: 20
-                        Material.accent: Material.Orange
+                    // Card Style Item (for Featured/First item)
+                    Rectangle {
+                        visible: model.isCard
+                        anchors.fill: parent
+                        anchors.margins: 12
+                        anchors.leftMargin: 16
+                        anchors.rightMargin: 16
+                        color: "white"
+                        radius: 8
+                        border.color: Material.color(Material.Grey, Material.Shade300)
+                        border.width: 1
+
+                        ColumnLayout {
+                            anchors.fill: parent
+                            anchors.margins: 12
+                            spacing: 4
+
+                            RowLayout {
+                                spacing: 8
+                                Label { text: model.icon; font.pixelSize: 18 }
+                                Label { 
+                                    text: model.title
+                                    font.bold: true
+                                    font.pixelSize: 14
+                                }
+                            }
+
+                            RowLayout {
+                                spacing: 2
+                                Repeater {
+                                    model: 5
+                                    Text {
+                                        text: "★"
+                                        color: index < model.stars ? "#fbbf24" : "#e5e7eb"
+                                        font.pixelSize: 12
+                                    }
+                                }
+                            }
+
+                            Label {
+                                text: model.level
+                                color: Material.color(Material.Grey, Material.Shade600)
+                                font.pixelSize: 12
+                            }
+
+                            Label {
+                                text: model.description
+                                color: Material.color(Material.Grey, Material.Shade600)
+                                font.pixelSize: 11
+                                elide: Text.ElideRight
+                                maximumLineCount: 2
+                                Layout.fillWidth: true
+                            }
+                        }
+                    }
+                }
+
+                background: Rectangle {
+                    visible: !model.isCard
+                    color: delegateItem.highlighted ? Material.color(Material.Blue, Material.Shade50) : "transparent"
+                    radius: 0
+                    
+                    Rectangle {
+                        visible: delegateItem.highlighted
+                        width: 4
+                        height: parent.height
+                        color: Material.primary
+                        anchors.left: parent.left
                     }
                 }
 
                 onClicked: {
-                    var params = {}
-
-                    switch(root.currentAlgorithm) {
-                        case "GCD":
-                        case "ExtendedGCD":
-                            params.a = parseInt(inputA.text) || 0
-                            params.b = parseInt(inputB.text) || 0
-                            break
-                        case "ModularInverse":
-                            params.a = parseInt(inputA.text) || 0
-                            params.m = parseInt(inputM.text) || 1
-                            break
-                        case "ModularExponentiation":
-                            params.base = parseInt(inputBase.text) || 0
-                            params.exponent = parseInt(inputExponent.text) || 0
-                            params.modulus = parseInt(inputModulus.text) || 1
-                            break
-                        case "PrimalityTest":
-                        case "EulerTotient":
-                        case "MatrixExponentiation":
-                        case "DivisorFunction":
-                        case "LCMSum":
-                        case "CubeFreeCheck":
-                            params.n = parseInt(inputN.text) || 0
-                            break
-                        case "PrimeSieve":
-                            params.limit = parseInt(inputLimit.text) || 100
-                            break
-                    }
-
-                    root.computeRequested(root.currentAlgorithm, params)
+                    algorithmList.currentIndex = index
+                    root.algorithmSelected(model.algorithmId)
                 }
             }
-
-            Button {
-                text: "🗑️ Clear"
-                enabled: !isComputing
-                onClicked: clearInputs()
-            }
         }
     }
 
-    function showAlgorithm(algorithm) {
-        root.currentAlgorithm = algorithm
-        clearInputs()
+    // Data Model
+    ListModel {
+        id: algorithmModel
 
-        // Hide all inputs first
-        inputA.visible = false
-        inputB.visible = false
-        inputM.visible = false
-        inputBase.visible = false
-        inputExponent.visible = false
-        inputModulus.visible = false
-        inputN.visible = false
-        inputLimit.visible = false
-
-        // Show relevant inputs and set description
-        switch(algorithm) {
-            case "GCD":
-                inputA.visible = true
-                inputB.visible = true
-                inputA.placeholderText = "Enter first integer (a)"
-                inputB.placeholderText = "Enter second integer (b)"
-                descriptionLabel.text = "Computes the Greatest Common Divisor of two integers using the Euclidean algorithm."
-                break
-
-            case "ExtendedGCD":
-                inputA.visible = true
-                inputB.visible = true
-                inputA.placeholderText = "Enter first integer (a)"
-                inputB.placeholderText = "Enter second integer (b)"
-                descriptionLabel.text = "Computes GCD and the coefficients of Bézout's identity using the extended Euclidean algorithm."
-                break
-
-            case "ModularInverse":
-                inputA.visible = true
-                inputM.visible = true
-                inputA.placeholderText = "Enter number (a)"
-                inputM.placeholderText = "Enter modulus (m)"
-                descriptionLabel.text = "Computes the modular multiplicative inverse using the extended Euclidean algorithm."
-                break
-
-            case "ModularExponentiation":
-                inputBase.visible = true
-                inputExponent.visible = true
-                inputModulus.visible = true
-                descriptionLabel.text = "Computes (base^exponent) mod modulus using fast exponentiation."
-                break
-
-            case "PrimalityTest":
-                inputN.visible = true
-                inputN.placeholderText = "Enter number to test (n)"
-                descriptionLabel.text = "Tests whether a number is prime using trial division."
-                break
-
-            case "PrimeSieve":
-                inputLimit.visible = true
-                inputLimit.placeholderText = "Enter upper limit for prime generation"
-                descriptionLabel.text = "Generates all prime numbers up to a limit using the Sieve of Eratosthenes."
-                break
-
-            case "EulerTotient":
-                inputN.visible = true
-                inputN.placeholderText = "Enter number (n)"
-                descriptionLabel.text = "Computes Euler's Totient function φ(n) - the count of integers up to n that are coprime to n."
-                break
-
-            case "MatrixExponentiation":
-                inputN.visible = true
-                inputN.placeholderText = "Enter exponent (n)"
-                descriptionLabel.text = "Computes linear recurrence sequences using matrix exponentiation (Fibonacci example)."
-                break
-
-            case "DivisorFunction":
-                inputN.visible = true
-                inputN.placeholderText = "Enter number (n)"
-                descriptionLabel.text = "Computes the divisor function d(n) - the number of positive divisors of n."
-                break
-
-            case "LCMSum":
-                inputN.visible = true
-                inputN.placeholderText = "Enter upper limit (n)"
-                descriptionLabel.text = "Computes the sum of LCM(i,n) for i from 1 to n."
-                break
-
-            case "CubeFreeCheck":
-                inputN.visible = true
-                inputN.placeholderText = "Enter number to check (n)"
-                descriptionLabel.text = "Checks if a number is cube-free (not divisible by any cube > 1)."
-                break
+        ListElement {
+            category: "Basic Operations"
+            title: "Greatest Common Divisor"
+            algorithmId: "GCD"
+            icon: "💎"
+            isCard: true
+            level: "Beginner"
+            stars: 4
+            description: "The fundamental algorithm for finding the largest common divisor of two numbers."
         }
-    }
 
-    function clearInputs() {
-        inputA.text = ""
-        inputB.text = ""
-        inputM.text = ""
-        inputBase.text = ""
-        inputExponent.text = ""
-        inputModulus.text = ""
-        inputN.text = ""
-        inputLimit.text = ""
+        ListElement {
+            category: "Basic Operations"
+            title: "Extended GCD"
+            algorithmId: "ExtendedGCD"
+            icon: "🔍"
+            isCard: false
+            level: "Intermediate"
+            stars: 0
+            description: ""
+        }
+        
+        ListElement {
+            category: "Basic Operations"
+            title: "Modular Inverse"
+            algorithmId: "ModularInverse"
+            icon: "🔄"
+            isCard: false
+            level: "Intermediate"
+            stars: 0
+            description: ""
+        }
+        
+        ListElement {
+            category: "Basic Operations"
+            title: "Modular Exponentiation"
+            algorithmId: "ModularExponentiation"
+            icon: "🚀"
+            isCard: false
+            level: "Intermediate"
+            stars: 0
+            description: ""
+        }
+
+        ListElement {
+            category: "Primes"
+            title: "Generate Primes"
+            algorithmId: "PrimeSieve"
+            icon: "⚡"
+            isCard: false
+            level: "Intermediate"
+            stars: 0
+            description: ""
+        }
+
+        ListElement {
+            category: "Primes"
+            title: "Primality Test"
+            algorithmId: "PrimalityTest"
+            icon: "❓"
+            isCard: false
+            level: "Beginner"
+            stars: 0
+            description: ""
+        }
+
+        ListElement {
+            category: "Number Functions"
+            title: "Divisor Function"
+            algorithmId: "DivisorFunction"
+            icon: "🔢"
+            isCard: false
+            level: "Intermediate"
+            stars: 0
+            description: ""
+        }
+
+        ListElement {
+            category: "Number Functions"
+            title: "Euler's Totient"
+            algorithmId: "EulerTotient"
+            icon: "ϕ"
+            isCard: false
+            level: "Advanced"
+            stars: 0
+            description: ""
+        }
+        
+        ListElement {
+            category: "Number Functions"
+            title: "LCM Sum"
+            algorithmId: "LCMSum"
+            icon: "Σ"
+            isCard: false
+            level: "Advanced"
+            stars: 0
+            description: ""
+        }
+
+        ListElement {
+            category: "Advanced"
+            title: "Matrix Exponentiation"
+            algorithmId: "MatrixExponentiation"
+            icon: "▦"
+            isCard: false
+            level: "Advanced"
+            stars: 0
+            description: ""
+        }
+        
+        ListElement {
+            category: "Advanced"
+            title: "Cube Free Check"
+            algorithmId: "CubeFreeCheck"
+            icon: "🧊"
+            isCard: false
+            level: "Beginner"
+            stars: 0
+            description: ""
+        }
     }
 }
