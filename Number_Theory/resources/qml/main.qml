@@ -207,13 +207,13 @@ ApplicationWindow {
                 spacing: 8
                 
                 delegate: Rectangle {
-                    width: historyList.width - 32
+                    width: (historyList && historyList.width > 32) ? historyList.width - 32 : 100
                     height: 80
                     color: "white"
                     radius: 8
                     border.color: Material.color(Material.Grey, Material.Shade300)
                     border.width: 1
-                    anchors.horizontalCenter: parent.horizontalCenter
+                    anchors.horizontalCenter: parent ? parent.horizontalCenter : undefined
                     
                     RowLayout {
                         anchors.fill: parent

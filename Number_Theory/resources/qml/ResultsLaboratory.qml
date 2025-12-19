@@ -229,168 +229,16 @@ Pane {
                         if (!root.currentResult) return defaultViz
                         
                         switch(root.currentResult.algorithmType) {
-                            case 0: // GCD
-                                return gcdViz
-                            case 1: // ExtendedGCD
-                                return extendedGcdViz
-                            case 5: // PrimeSieve
-                                return primeSieveViz
-                            default:
-                                return genericViz
-                        }
-                    }
-                }
-
-                Component {
-                    id: gcdViz
-                    ColumnLayout {
-                        anchors.fill: parent
-                        anchors.margins: 32
-                        spacing: 24
-
-                        Label {
-                            text: "Euclidean Visualization"
-                            font.pixelSize: 20
-                            font.bold: true
-                            Layout.alignment: Qt.AlignHCenter
-                        }
-
-                        RowLayout {
-                            Layout.fillWidth: true
-                            Layout.preferredHeight: 200
-                            spacing: 40
-
-                            // Bar for A
-                            ColumnLayout {
-                                Layout.fillWidth: true
-                                spacing: 8
-                                Rectangle {
-                                    Layout.fillWidth: true
-                                    Layout.preferredHeight: Math.min(200, (root.currentResult.inputParameters.a / Math.max(root.currentResult.inputParameters.a, root.currentResult.inputParameters.b)) * 200)
-                                    color: Material.primary
-                                    radius: 4
-                                    Layout.alignment: Qt.AlignBottom
-                                }
-                                Label {
-                                    text: "a = " + root.currentResult.inputParameters.a
-                                    Layout.alignment: Qt.AlignHCenter
-                                    font.bold: true
-                                }
-                            }
-
-                            // Bar for B
-                            ColumnLayout {
-                                Layout.fillWidth: true
-                                spacing: 8
-                                Rectangle {
-                                    Layout.fillWidth: true
-                                    Layout.preferredHeight: Math.min(200, (root.currentResult.inputParameters.b / Math.max(root.currentResult.inputParameters.a, root.currentResult.inputParameters.b)) * 200)
-                                    color: Material.accent
-                                    radius: 4
-                                    Layout.alignment: Qt.AlignBottom
-                                }
-                                Label {
-                                    text: "b = " + root.currentResult.inputParameters.b
-                                    Layout.alignment: Qt.AlignHCenter
-                                    font.bold: true
-                                }
-                            }
-                        }
-
-                        Rectangle {
-                            Layout.fillWidth: true
-                            height: 100
-                            color: Material.color(Material.Blue, Material.Shade50)
-                            radius: 12
-                            border.color: Material.primary
-                            border.width: 1
-
-                            ColumnLayout {
-                                anchors.centerIn: parent
-                                spacing: 4
-                                Label {
-                                    text: "Greatest Common Divisor"
-                                    font.pixelSize: 12
-                                    color: Material.color(Material.Grey, Material.Shade700)
-                                }
-                                Label {
-                                    text: root.currentResult.mainResult
-                                    font.pixelSize: 32
-                                    font.bold: true
-                                    color: Material.primary
-                                }
-                            }
-                        }
-                    }
-                }
-
-                Component {
-                    id: extendedGcdViz
-                    ColumnLayout {
-                        anchors.fill: parent
-                        anchors.margins: 32
-                        spacing: 24
-
-                        Label {
-                            text: "Linear Combination Visualization"
-                            font.pixelSize: 20
-                            font.bold: true
-                            Layout.alignment: Qt.AlignHCenter
-                        }
-
-                        // Visualization of ax + by = gcd
-                        Rectangle {
-                            Layout.fillWidth: true
-                            Layout.fillHeight: true
-                            color: "white"
-                            radius: 12
-                            border.color: Material.color(Material.Grey, Material.Shade200)
-
-                            ColumnLayout {
-                                anchors.centerIn: parent
-                                spacing: 32
-                                width: parent.width * 0.8
-
-                                RowLayout {
-                                    Layout.fillWidth: true
-                                    spacing: 8
-                                    
-                                    // term ax
-                                    ColumnLayout {
-                                        spacing: 4
-                                        Label { text: "(" + root.currentResult.mainResult.x + ")"; font.bold: true; color: Material.accent; Layout.alignment: Qt.AlignHCenter }
-                                        Label { text: root.currentResult.inputParameters.a; font.pixelSize: 24; Layout.alignment: Qt.AlignHCenter }
-                                        Label { text: "x"; font.italic: true; color: Material.color(Material.Grey, Material.Shade500); Layout.alignment: Qt.AlignHCenter }
-                                    }
-
-                                    Label { text: "+"; font.pixelSize: 32; color: Material.color(Material.Grey, Material.Shade400) }
-
-                                    // term by
-                                    ColumnLayout {
-                                        spacing: 4
-                                        Label { text: "(" + root.currentResult.mainResult.y + ")"; font.bold: true; color: Material.accent; Layout.alignment: Qt.AlignHCenter }
-                                        Label { text: root.currentResult.inputParameters.b; font.pixelSize: 24; Layout.alignment: Qt.AlignHCenter }
-                                        Label { text: "y"; font.italic: true; color: Material.color(Material.Grey, Material.Shade500); Layout.alignment: Qt.AlignHCenter }
-                                    }
-
-                                    Label { text: "="; font.pixelSize: 32; color: Material.color(Material.Grey, Material.Shade400) }
-
-                                    // gcd
-                                    ColumnLayout {
-                                        spacing: 4
-                                        Label { text: "GCD"; font.bold: true; color: Material.primary; Layout.alignment: Qt.AlignHCenter }
-                                        Label { text: root.currentResult.mainResult.gcd; font.pixelSize: 32; font.bold: true; color: Material.primary; Layout.alignment: Qt.AlignHCenter }
-                                    }
-                                }
-
-                                Label {
-                                    text: "Bézout's identity states that for any integers a and b,\nthere exist integers x and y such that ax + by = gcd(a,b)."
-                                    horizontalAlignment: Text.AlignHCenter
-                                    color: Material.color(Material.Grey, Material.Shade600)
-                                    wrapMode: Text.Wrap
-                                    Layout.fillWidth: true
-                                }
-                            }
+                            case 0: return gcdViz
+                            case 1: return extendedGcdViz
+                            case 2: return modularClockViz
+                            case 3: return modularClockViz
+                            case 4: return primalityScanningViz
+                            case 5: return primeSieveViz
+                            case 6: return eulerTotientViz
+                            case 7: return matrixGridViz
+                            case 9: return divisorCloudViz
+                            default: return genericViz
                         }
                     }
                 }
@@ -405,46 +253,185 @@ Pane {
                         }
                     }
                 }
-                
+
                 Component {
-                    id: genericViz
+                    id: gcdViz
                     ColumnLayout {
-                        anchors.centerIn: parent
-                        spacing: 16
-                        
-                        Label {
-                            text: "Visualization"
-                            font.pixelSize: 24
-                            font.bold: true
-                            Layout.alignment: Qt.AlignHCenter
-                        }
-                        
-                        Rectangle {
-                            width: 400
-                            height: 200
-                            color: Material.color(Material.Grey, Material.Shade100)
-                            radius: 8
-                            border.color: Material.color(Material.Grey, Material.Shade300)
-                            
+                        anchors.fill: parent
+                        anchors.margins: 32
+                        spacing: 24
+                        Label { text: "Euclidean Bar Visualization"; font.pixelSize: 20; font.bold: true; Layout.alignment: Qt.AlignHCenter }
+                        RowLayout {
+                            Layout.fillWidth: true; Layout.preferredHeight: 250; spacing: 50
                             ColumnLayout {
-                                anchors.centerIn: parent
-                                spacing: 8
-                                Label {
-                                    text: "Result Summary"
-                                    font.bold: true
-                                    Layout.alignment: Qt.AlignHCenter
+                                Layout.fillWidth: true; spacing: 10
+                                Rectangle {
+                                    Layout.fillWidth: true
+                                    Layout.preferredHeight: (root.currentResult.inputParameters.a / Math.max(root.currentResult.inputParameters.a, root.currentResult.inputParameters.b)) * 200
+                                    color: Material.primary; radius: 8; Layout.alignment: Qt.AlignBottom
+                                    Behavior on Layout.preferredHeight { NumberAnimation { duration: 500; easing.type: Easing.InOutQuad } }
                                 }
-                                Label {
-                                    text: root.currentResult ? root.currentResult.mainResult.toString() : ""
-                                    font.pixelSize: 18
-                                    color: Material.primary
-                                    Layout.alignment: Qt.AlignHCenter
+                                Label { text: "a=" + root.currentResult.inputParameters.a; font.bold: true; Layout.alignment: Qt.AlignHCenter }
+                            }
+                            ColumnLayout {
+                                Layout.fillWidth: true; spacing: 10
+                                Rectangle {
+                                    Layout.fillWidth: true
+                                    Layout.preferredHeight: (root.currentResult.inputParameters.b / Math.max(root.currentResult.inputParameters.a, root.currentResult.inputParameters.b)) * 200
+                                    color: Material.accent; radius: 8; Layout.alignment: Qt.AlignBottom
+                                    Behavior on Layout.preferredHeight { NumberAnimation { duration: 500; easing.type: Easing.InOutQuad } }
                                 }
-                                Label {
-                                    text: "Execution Time: " + (root.currentResult ? root.currentResult.executionTime + " ms" : "")
-                                    color: Material.color(Material.Grey, Material.Shade600)
-                                    Layout.alignment: Qt.AlignHCenter
+                                Label { text: "b=" + root.currentResult.inputParameters.b; font.bold: true; Layout.alignment: Qt.AlignHCenter }
+                            }
+                        }
+                    }
+                }
+
+                Component {
+                    id: extendedGcdViz
+                    Item {
+                        ColumnLayout {
+                            anchors.centerIn: parent
+                            spacing: 30
+                            width: parent.width * 0.8
+                            Label { text: "Bézout's identity"; font.pixelSize: 24; font.bold: true; Layout.alignment: Qt.AlignHCenter }
+                            RowLayout {
+                                spacing: 15; Layout.alignment: Qt.AlignHCenter
+                                ColumnLayout {
+                                    Label { text: "(" + root.currentResult.mainResult.x + ")"; font.pixelSize: 28; color: Material.primary; font.bold: true }
+                                    Label { text: "x"; font.italic: true; Layout.alignment: Qt.AlignHCenter }
                                 }
+                                Label { text: "×"; font.pixelSize: 24 }
+                                Label { text: root.currentResult.inputParameters.a; font.pixelSize: 28 }
+                                Label { text: "+"; font.pixelSize: 24 }
+                                ColumnLayout {
+                                    Label { text: "(" + root.currentResult.mainResult.y + ")"; font.pixelSize: 28; color: Material.primary; font.bold: true }
+                                    Label { text: "y"; font.italic: true; Layout.alignment: Qt.AlignHCenter }
+                                }
+                                Label { text: "×"; font.pixelSize: 24 }
+                                Label { text: root.currentResult.inputParameters.b; font.pixelSize: 28 }
+                                Label { text: "="; font.pixelSize: 24 }
+                                Label { text: root.currentResult.mainResult.gcd; font.pixelSize: 32; color: Material.accent; font.bold: true }
+                            }
+                        }
+                    }
+                }
+
+                Component {
+                    id: modularClockViz
+                    Item {
+                        id: clockRoot
+                        property int m: root.currentResult.algorithmType === 2 ? root.currentResult.inputParameters.m : root.currentResult.inputParameters.modulus
+                        property int res: root.currentResult.mainResult
+                        
+                        Canvas {
+                            anchors.fill: parent
+                            onPaint: {
+                                var ctx = getContext("2d");
+                                ctx.clearRect(0, 0, width, height);
+                                var cx = width / 2;
+                                var cy = height / 2;
+                                var radius = Math.min(cx, cy) - 40;
+                                
+                                // Draw circle
+                                ctx.strokeStyle = "#ddd";
+                                ctx.lineWidth = 2;
+                                ctx.beginPath();
+                                ctx.arc(cx, cy, radius, 0, 2 * Math.PI);
+                                ctx.stroke();
+                                
+                                // Draw points
+                                var points = Math.min(clockRoot.m, 60);
+                                for (var i = 0; i < points; i++) {
+                                    var angle = (i / points) * 2 * Math.PI - Math.PI / 2;
+                                    var px = cx + radius * Math.cos(angle);
+                                    var py = cy + radius * Math.sin(angle);
+                                    
+                                    ctx.fillStyle = (i === clockRoot.res % points) ? Material.primary : "#999";
+                                    ctx.beginPath();
+                                    ctx.arc(px, py, (i === clockRoot.res % points) ? 8 : 4, 0, 2 * Math.PI);
+                                    ctx.fill();
+                                }
+                            }
+                        }
+                        Label {
+                            anchors.centerIn: parent
+                            text: "mod " + clockRoot.m
+                            font.bold: true; color: Material.color(Material.Grey, Material.Shade600)
+                        }
+                    }
+                }
+
+                Component {
+                    id: eulerTotientViz
+                    Flow {
+                        anchors.fill: parent; anchors.margins: 20; spacing: 10
+                        Repeater {
+                            model: Math.min(root.currentResult.inputParameters.n, 200)
+                            delegate: Rectangle {
+                                width: 30; height: 30; radius: 15
+                                color: isCoPrime(index + 1) ? Material.primary : Material.color(Material.Grey, Material.Shade200)
+                                Label { anchors.centerIn: parent; text: index + 1; color: isCoPrime(index + 1) ? "white" : "black"; font.pixelSize: 10 }
+                                function isCoPrime(val) {
+                                    // Simplified for UI - in real app we'd get this from C++
+                                    function gcd(a, b) { return b ? gcd(b, a % b) : a; }
+                                    return gcd(val, root.currentResult.inputParameters.n) === 1;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                Component {
+                    id: primalityScanningViz
+                    Item {
+                        ColumnLayout {
+                            anchors.centerIn: parent; spacing: 20
+                            Label { text: "Scanning for factors..."; font.pixelSize: 18; color: Material.primary }
+                            ProgressBar {
+                                indeterminate: true; Layout.preferredWidth: 300
+                            }
+                            Label {
+                                text: root.currentResult.mainResult ? "No factors found. It's Prime!" : "Factor found!"
+                                font.bold: true; font.pixelSize: 22; color: root.currentResult.mainResult ? "green" : "red"
+                            }
+                        }
+                    }
+                }
+
+                Component {
+                    id: matrixGridViz
+                    Item {
+                        ColumnLayout {
+                            anchors.centerIn: parent; spacing: 20
+                            Label { text: "Transformation Matrix"; font.bold: true }
+                            Rectangle {
+                                width: 120; height: 120; border.color: "black"; border.width: 2; color: "transparent"
+                                GridLayout {
+                                    anchors.fill: parent; columns: 2; anchors.margins: 10
+                                    Label { text: "1"; font.pixelSize: 24; Layout.alignment: Qt.AlignCenter }
+                                    Label { text: "1"; font.pixelSize: 24; Layout.alignment: Qt.AlignCenter }
+                                    Label { text: "1"; font.pixelSize: 24; Layout.alignment: Qt.AlignCenter }
+                                    Label { text: "0"; font.pixelSize: 24; Layout.alignment: Qt.AlignCenter }
+                                }
+                            }
+                            Label { text: "Raised to power " + root.currentResult.inputParameters.n; font.italic: true }
+                        }
+                    }
+                }
+
+                Component {
+                    id: divisorCloudViz
+                    Flow {
+                        anchors.fill: parent; anchors.margins: 40; spacing: 20
+                        Repeater {
+                            model: root.currentResult.executionSteps.length > 0 ? root.currentResult.executionSteps.length : 0
+                            delegate: Rectangle {
+                                width: Math.max(60, txt.implicitWidth + 20); height: 40; radius: 20
+                                color: Material.accent
+                                Label { id: txt; anchors.centerIn: parent; text: modelData.result; color: "white"; font.bold: true }
+                                scale: 0; Component.onCompleted: scaleAnim.start()
+                                NumberAnimation { id: scaleAnim; target: parent; property: "scale"; to: 1; duration: 500; easing.type: Easing.OutBack }
                             }
                         }
                     }
@@ -453,43 +440,37 @@ Pane {
                 Component {
                     id: primeSieveViz
                     ScrollView {
-                        contentWidth: parent.width
-                        contentHeight: Math.max(parent.height, gridFlow.height + 32)
                         clip: true
-
                         Flow {
-                            id: gridFlow
-                            width: parent.width - 32
-                            anchors.horizontalCenter: parent.horizontalCenter
-                            anchors.top: parent.top
-                            anchors.topMargin: 16
-                            spacing: 4
-
+                            width: parent.width - 40; anchors.horizontalCenter: parent.horizontalCenter; spacing: 5; anchors.top: parent.top; anchors.topMargin: 20
                             Repeater {
-                                model: (root.currentResult && root.currentResult.inputParameters && root.currentResult.inputParameters.limit) ? root.currentResult.inputParameters.limit + 1 : 0
+                                model: Math.min(root.currentResult.inputParameters.limit + 1, 500)
                                 delegate: Rectangle {
-                                    visible: index > 0 // Skip 0
-                                    width: 40
-                                    height: 40
-                                    color: isPrime(index) ? Material.color(Material.Green, Material.Shade100) : "white"
-                                    border.color: isPrime(index) ? Material.primary : Material.color(Material.Grey, Material.Shade300)
-                                    border.width: isPrime(index) ? 2 : 1
-                                    radius: 4
-
-                                    Text {
-                                        anchors.centerIn: parent
-                                        text: index
-                                        font.bold: isPrime(index)
-                                        color: isPrime(index) ? Material.primary : Material.color(Material.Grey, Material.Shade500)
-                                    }
-
-                                    function isPrime(num) {
-                                        if (!root.currentResult || !root.currentResult.mainResult) return false
-                                        // Check if mainResult is array and contains num
-                                        // mainResult is a QVariantList -> JS Array
-                                        return root.currentResult.mainResult.indexOf(num) !== -1
-                                    }
+                                    visible: index > 1
+                                    width: 35; height: 35; radius: 4
+                                    color: isP ? Material.primary : "white"
+                                    border.color: isP ? Material.primary : "#ddd"
+                                    property bool isP: root.currentResult.mainResult.indexOf(index) !== -1
+                                    Label { anchors.centerIn: parent; text: index; color: isP ? "white" : "#666"; font.bold: isP }
+                                    Behavior on color { ColorAnimation { duration: 300 } }
                                 }
+                            }
+                        }
+                    }
+                }
+
+                Component {
+                    id: genericViz
+                    ColumnLayout {
+                        anchors.centerIn: parent; spacing: 20
+                        Label { text: "Execution Summary"; font.pixelSize: 22; font.bold: true }
+                        Rectangle {
+                            width: 300; height: 150; color: "white"; radius: 15; border.color: "#eee"
+                            ColumnLayout {
+                                anchors.centerIn: parent
+                                Label { text: "Value"; font.pixelSize: 12; color: "#999" }
+                                Label { text: root.currentResult.mainResult.toString(); font.pixelSize: 28; font.bold: true; color: Material.primary }
+                                Label { text: "Time: " + root.currentResult.executionTime + "ms"; font.italic: true }
                             }
                         }
                     }
@@ -499,148 +480,60 @@ Pane {
 
         // Bottom Action Bar
         RowLayout {
-            Layout.fillWidth: true
-            spacing: 12
-            visible: root.currentResult !== null
-
+            Layout.fillWidth: true; spacing: 12; visible: root.currentResult !== null
             Button {
-                text: "Export"
-                Layout.fillWidth: true
-                height: 48
-                
-                background: Rectangle {
-                    color: "#1e3a8a" // Blue
-                    radius: 24
-                }
-                contentItem: Text {
-                    text: parent.text
-                    color: "white"
-                    horizontalAlignment: Text.AlignHCenter
-                    verticalAlignment: Text.AlignVCenter
-                    font.bold: true
-                }
+                text: "Export PDF"; Layout.fillWidth: true; height: 48
+                background: Rectangle { color: "#1e3a8a"; radius: 24 }
+                contentItem: Label { text: parent.text; color: "white"; horizontalAlignment: Text.AlignHCenter; verticalAlignment: Text.AlignVCenter; font.bold: true }
             }
-
             Button {
-                text: "Clear"
-                Layout.preferredWidth: 120
-                height: 48
-                
-                background: Rectangle {
-                    color: Material.color(Material.Grey, Material.Shade200)
-                    radius: 24
-                }
-                contentItem: Text {
-                    text: parent.text
-                    color: Material.color(Material.Grey, Material.Shade800)
-                    horizontalAlignment: Text.AlignHCenter
-                    verticalAlignment: Text.AlignVCenter
-                    font.bold: true
-                }
-                
-                onClicked: {
-                    root.currentResult = null
-                    resultCardModel.clear()
-                }
+                text: "Clear"; Layout.preferredWidth: 120; height: 48
+                background: Rectangle { color: Material.color(Material.Grey, Material.Shade200); radius: 24 }
+                contentItem: Label { text: parent.text; color: Material.color(Material.Grey, Material.Shade800); horizontalAlignment: Text.AlignHCenter; verticalAlignment: Text.AlignVCenter; font.bold: true }
+                onClicked: { root.currentResult = null; resultCardModel.clear() }
             }
         }
     }
 
-    ListModel {
-        id: resultCardModel
-    }
+    ListModel { id: resultCardModel }
 
     function displayResult(result) {
         root.currentResult = result
         resultCardModel.clear()
-        
-        // Parse result and populate cards
         var inputParams = result.inputParameters
         var mainResult = result.mainResult
 
         switch(result.algorithmType) {
-            case 0: // GCD
-                resultCardModel.append({
-                    "title": "Card: Greatest Common Divisor",
-                    "content": "gcd(" + inputParams.a + ", " + inputParams.b + ") = " + mainResult
-                })
+            case 0: resultCardModel.append({ "title": "Greatest Common Divisor", "content": "gcd(" + inputParams.a + ", " + inputParams.b + ") = " + mainResult }); break
+            case 1: 
+                resultCardModel.append({ "title": "GCD", "content": mainResult.gcd })
+                resultCardModel.append({ "title": "Bézout Coefficients", "content": "x=" + mainResult.x + ", y=" + mainResult.y })
                 break
-
-            case 1: // ExtendedGCD
-                var map = mainResult
-                resultCardModel.append({
-                    "title": "Card: Greatest Common Divisor",
-                    "content": "gcd " + inputParams.a + ", " + inputParams.b + " = " + map.gcd
-                })
-                resultCardModel.append({
-                    "title": "Card: Bézout's Identity",
-                    "content": "(" + map.x + ") · " + inputParams.a + " + " + map.y + " · " + inputParams.b + " = " + map.gcd
-                })
-                break
-
-            case 2: // ModularInverse
-                resultCardModel.append({
-                    "title": "Card: Modular Inverse",
-                    "content": inputParams.a + "⁻¹ ≡ " + mainResult + " (mod " + inputParams.m + ")"
-                })
-                break
-
-            case 3: // ModularExponentiation
-                resultCardModel.append({
-                    "title": "Card: Result",
-                    "content": inputParams.base + "^" + inputParams.exponent + " ≡ " + mainResult + " (mod " + inputParams.modulus + ")"
-                })
-                break
-                
-            case 5: // PrimeSieve
-                var primes = mainResult
-                var count = primes.length
-                resultCardModel.append({
-                    "title": "Card: Prime Count",
-                    "content": "Found " + count + " primes ≤ " + inputParams.limit
-                })
-                var primeStr = count <= 20 ? primes.join(", ") : primes.slice(0, 20).join(", ") + "..."
-                resultCardModel.append({
-                    "title": "Card: Primes",
-                    "content": primeStr
-                })
-                break
-
-            default:
-                resultCardModel.append({
-                    "title": "Card: Result",
-                    "content": mainResult.toString()
-                })
+            case 2: resultCardModel.append({ "title": "Modular Inverse", "content": inputParams.a + "⁻¹ mod " + inputParams.m + " = " + mainResult }); break
+            case 3: resultCardModel.append({ "title": "Result", "content": inputParams.base + "^" + inputParams.exponent + " mod " + inputParams.modulus + " = " + mainResult }); break
+            case 4: resultCardModel.append({ "title": "Primality", "content": String(inputParams.n + (mainResult ? " is Prime" : " is Composite")) }); break
+            case 5: resultCardModel.append({ "title": "Primes Found", "content": String(mainResult.length + " primes up to " + inputParams.limit) }); break
+            case 6: resultCardModel.append({ "title": "φ(" + inputParams.n + ")", "content": String(mainResult) }); break
+            default: resultCardModel.append({ "title": "Result", "content": String(mainResult) })
         }
-        
-        resultTabBar.currentIndex = 0
+        resultTabBar.currentIndex = 3 // Switch to Visualization by default
     }
     
-    function copyToClipboard(text) {
-        textHelper.text = text
-        textHelper.selectAll()
-        textHelper.copy()
-    }
-    
-    TextArea {
-        id: textHelper
-        visible: false
-    }
+    function copyToClipboard(text) { textHelper.text = text; textHelper.selectAll(); textHelper.copy() }
+    TextArea { id: textHelper; visible: false }
 
     function getAlgorithmExplanation(type) {
         var explanations = {
-            0: "The Greatest Common Divisor (GCD) is the largest positive integer that divides two numbers without remainder.\n\nEuclidean Algorithm:\n1. While b ≠ 0:\n   a. Set temp = b\n   b. Set b = a mod b\n   c. Set a = temp\n2. Return a",
-            1: "Extended Euclidean Algorithm finds GCD(a,b) and coefficients x,y such that ax + by = gcd(a,b).\n\nThis is useful for finding modular inverses and solving Diophantine equations.\n\nBézout's Identity: For any integers a and b, there exist integers x and y such that ax + by = gcd(a,b).",
-            2: "The modular inverse of a modulo m is a number x such that ax ≡ 1 (mod m). This exists only when gcd(a,m) = 1.",
-            3: "Modular exponentiation computes (base^exponent) mod modulus efficiently using the method of repeated squaring (binary exponentiation).",
-            4: "Primality testing determines if a number is prime (divisible only by 1 and itself).",
-            5: "Sieve of Eratosthenes is an efficient algorithm to find all prime numbers up to any given limit.",
-            6: "Euler's Totient function φ(n) counts the positive integers up to a given integer n that are relatively prime to n.",
-            7: "Matrix exponentiation is used to calculate the n-th term of a linear recurrence relation (like Fibonacci) in O(log n) time.",
-            8: "A number is cube-free if it is not divisible by any perfect cube greater than 1.",
-            9: "The divisor function d(n) counts the number of divisors of n.",
-            10: "Calculates the sum of LCM(i, n) for all i from 1 to n."
+            0: "GCD: The largest positive integer that divides two numbers without remainder.",
+            1: "Extended GCD: Finds GCD and coefficients x,y such that ax + by = gcd(a,b).",
+            2: "Modular Inverse: Finds x such that ax ≡ 1 (mod m).",
+            3: "Modular Exponentiation: Efficiently calculates (base^exp) mod m.",
+            4: "Primality: Determines if a number is divisible only by 1 and itself.",
+            5: "Sieve: Efficiently finds all primes up to a limit by marking multiples.",
+            6: "Totient: Counts numbers up to n that are relatively prime to n.",
+            7: "Matrix: Calculates linear recurrences in logarithmic time.",
+            9: "Divisors: Finds all numbers that divide n evenly."
         }
-        return explanations[type] || "No explanation available."
+        return explanations[type] || "Mathematical details for this algorithm."
     }
 }
