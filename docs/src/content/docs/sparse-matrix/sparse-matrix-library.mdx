@@ -1,0 +1,158 @@
+---
+title: Sparse Matrix Library
+description: C++17 header-only library for solving systems of equations with sparse matrices using iterative methods.
+---
+
+import { GroupName, TextBlock, Math } from '../../../components/components'
+
+<div class="space-y-0">
+<GroupName>Sparse Matrix</GroupName>
+# Sparse Matrix Library
+</div>
+
+<TextBlock size="lg" maxWidth="3xl" weight="medium" isProse invertInDark>
+A comprehensive C++17 header-only library for solving systems of linear equations with sparse matrices using advanced iterative methods. The library provides efficient implementations of Krylov subspace methods with support for preconditioning and parallel execution.
+</TextBlock>
+
+## Mathematical Foundation
+
+<TextBlock size="base" maxWidth="3xl" isProse invertInDark>
+Sparse matrices are matrices in which most elements are zero. This property allows for significant optimization in both storage and computation. The library focuses on iterative methods that are particularly effective for large sparse systems where direct methods would be computationally expensive.
+</TextBlock>
+
+### Matrix Representations
+
+<TextBlock size="base" maxWidth="3xl" isProse invertInDark>
+The library supports two primary sparse matrix formats:
+- **Coordinate Format (COO)**: Stores non-zero elements as triplets (row, column, value)
+- **Compressed Sparse Row (CSR)**: Optimized format for efficient row-wise operations
+</TextBlock>
+
+## Iterative Methods
+
+<TextBlock size="lg" maxWidth="3xl" weight="medium" isProse invertInDark>
+The library implements Krylov subspace methods, derivatives of the BiConjugate Gradient method, capable of handling positive definite, negative definite, and indefinite matrices.
+</TextBlock>
+
+### Conjugate Gradient Method
+
+<TextBlock size="base" maxWidth="3xl" isProse invertInDark>
+The classic CG method, proven to converge for every symmetric positive definite (SPD) matrix. The theoretical guarantee is that the method finds the exact solution in no more than `m` iterations, where `m` is the matrix size.
+</TextBlock>
+
+```cpp
+SMM::CSRMatrix matrix;
+float* rhs = initializeRHS();
+float* initial = initialGuess();
+float* result = new float[matrix.getDenseRowCount()];
+
+SMM::SolverStatus status = SMM::ConjugateGradient(
+    matrix, rhs, initial, result, 100, 1e-6f
+);
+```
+
+### BiConjugate Gradient Symmetric
+
+<TextBlock size="base" maxWidth="3xl" isProse invertInDark>
+A variant optimized for symmetric matrices. For SPD matrices, it yields identical results to the standard CG method, providing an alternative implementation with different numerical properties.
+</TextBlock>
+```cpp
+SMM::SolverStatus status = SMM::BiCGSymmetric(
+    matrix, rhs, result, 100, 1e-6f
+);
+```
+
+### Advanced Methods
+
+<TextBlock size="base" maxWidth="3xl" isProse invertInDark>
+- **Conjugate Gradient Squared**: Transpose-free variant with faster convergence but increased susceptibility to rounding errors
+- **BiConjugate Gradient Stabilized**: Robust transpose-free method with smooth convergence behavior
+</TextBlock>
+
+## Preconditioning
+
+<TextBlock size="lg" maxWidth="3xl" weight="medium" isProse invertInDark>
+Preconditioning dramatically improves convergence rates by transforming the system into an equivalent one with better numerical properties.
+</TextBlock>
+
+### Symmetric Gauss-Seidel Preconditioner
+
+<TextBlock size="base" maxWidth="3xl" isProse invertInDark>
+A static preconditioner with the form <Math formula={`M = (D + L)^{-1}D(D + U)`} />, where <Math formula={`D`} />, <Math formula={`L`} />, and <Math formula={`U`} /> represent the diagonal, lower triangular, and upper triangular portions of the matrix respectively.
+</TextBlock>
+
+```cpp
+auto preconditioner = matrix.getPreconditioner(
+    SMM::SolverPreconditioner::SYMMETRIC_GAUSS_SEIDEL
+);
+SMM::SolverStatus status = SMM::BiCGStab(
+    matrix, rhs, result, 100, 1e-6f, preconditioner
+);
+```
+
+## Parallel Implementation
+
+<TextBlock size="lg" maxWidth="3xl" weight="medium" isProse invertInDark>
+The library supports parallel execution using Intel Threading Building Blocks (TBB), providing significant performance improvements for large-scale problems.
+</TextBlock>
+
+### Performance Characteristics
+
+<TextBlock size="base" maxWidth="3xl" isProse invertInDark>
+- **Scalability**: Linear performance improvement with core count for appropriately sized problems
+- **Memory Efficiency**: Minimal overhead for parallel execution
+- **Load Balancing**: Automatic work distribution across available threads
+</TextBlock>
+
+## Dependencies and Build System
+
+<TextBlock size="base" maxWidth="3xl" isProse invertInDark>
+The library uses modern CMake with FetchContent for dependency management:
+- **Doctest v2.4.8**: Unit testing framework
+- **TBB v2021.5.0**: Parallel execution support (optional)
+</TextBlock>
+
+### Build Configuration
+
+```bash
+mkdir build
+cmake -B "./build" -DCMAKE_BUILD_TYPE=Release -DSMM_WITH_TESTS=ON
+cd build
+cmake --build . --config Release
+ctest
+```
+
+### CMake Options
+
+<TextBlock size="base" maxWidth="3xl" isProse invertInDark>
+- `SMM_WITH_MULTITHREADING`: Enable TBB-based parallelization (default: ON)
+- `SMM_WITH_TESTS`: Build unit tests (default: OFF)
+- `SMM_WITH_INSTALL`: Generate install target (default: OFF)
+</TextBlock>
+
+## Matrix Market Support
+
+<TextBlock size="base" maxWidth="3xl" isProse invertInDark>
+Limited support for loading Matrix Market format files, enabling interoperability with scientific computing tools and benchmark datasets.
+</TextBlock>
+
+## Applications
+
+<TextBlock size="lg" maxWidth="3xl" weight="medium" isProse invertInDark>
+This library is particularly useful in computational domains where large sparse systems arise naturally.
+</TextBlock>
+
+### Use Cases
+
+<TextBlock size="base" maxWidth="3xl" isProse invertInDark>
+- **Finite Element Analysis**: Structural engineering, fluid dynamics
+- **Graph Algorithms**: Network analysis, PageRank computations
+- **Machine Learning**: Large-scale optimization problems
+- **Scientific Computing**: Differential equation discretizations
+</TextBlock>
+
+## Implementation Notes
+
+<TextBlock size="sm" maxWidth="lg" isProse invertInDark>
+The header-only design simplifies integration while maintaining high performance through template specialization and compiler optimizations.
+</TextBlock>
