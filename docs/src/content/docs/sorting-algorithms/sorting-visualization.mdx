@@ -1,0 +1,102 @@
+---
+title: Sorting Algorithms Visualization
+description: Interactive visualization of popular sorting algorithms using Qt framework.
+---
+
+import { GroupName, TextBlock, Album } from '../../../components/components'
+
+export const sortingSamples = [
+  { src: '/imgs/sorting_algorithms/1.gif', alt: 'Bubble Sort Visualization' },
+  { src: '/imgs/sorting_algorithms/2.gif', alt: 'Recursive Bubble Sort Visualization' },
+  { src: '/imgs/sorting_algorithms/3.gif', alt: 'Cocktail Sort Visualization' },
+  { src: '/imgs/sorting_algorithms/4.gif', alt: 'Gnome Sort Visualization' },
+  { src: '/imgs/sorting_algorithms/5.gif', alt: 'Quick Sort Visualization' },
+  { src: '/imgs/sorting_algorithms/6.gif', alt: 'Heap Sort Visualization' }
+];
+
+<div class="space-y-0">
+<GroupName>Sorting Algorithms</GroupName>
+# Sorting Algorithms Visualization
+</div>
+
+<TextBlock size="lg" maxWidth="3xl" weight="medium" isProse invertInDark>
+Interactive desktop application that visualizes the sorting process of the most popular sorting algorithms. The application generates columns in a triangular arrangement and demonstrates how different algorithms organize data through animated visualizations.
+</TextBlock>
+
+<Album title="Sorting Algorithm Visualizations" images={sortingSamples} columns={2} />
+
+## Algorithmic Foundations
+
+<TextBlock size="base" maxWidth="3xl" isProse invertInDark>
+Sorting algorithms are fundamental to computer science and demonstrate various approaches to data organization. Each algorithm represents different trade-offs between time complexity, space complexity, and stability.
+</TextBlock>
+
+### Implemented Algorithms
+
+<TextBlock size="base" maxWidth="3xl" isProse invertInDark>
+- **Bubble Sort**: Simple comparison-based algorithm with O(n²) time complexity
+- **Recursive Bubble Sort**: Recursive implementation of the classic bubble sort
+- **Cocktail Sort**: Bidirectional bubble sort variant that sorts in both directions
+- **Gnome Sort**: Simple sorting algorithm similar to insertion sort
+- **Quick Sort**: Efficient divide-and-conquer algorithm with O(n log n) average complexity
+- **Heap Sort**: Comparison-based sorting using binary heap data structure
+</TextBlock>
+
+## Technical Implementation
+
+<TextBlock size="lg" maxWidth="3xl" weight="medium" isProse invertInDark>
+The application is built using the Qt framework for cross-platform desktop development, providing smooth animations and responsive user interaction.
+</TextBlock>
+
+### Architecture
+
+<TextBlock size="base" maxWidth="3xl" isProse invertInDark>
+- **Frontend**: Qt-based GUI with customizable visualization parameters
+- **Algorithm Engine**: Modular design allowing easy addition of new sorting algorithms
+- **Animation System**: Frame-based rendering with configurable timing
+- **Data Generation**: Pseudo-random data generation with reproducible seeds
+</TextBlock>
+
+## Usage Instructions
+
+### Compilation
+
+```bash
+qmake
+make
+./SortingVisualization
+```
+
+### Operation
+
+<TextBlock size="base" maxWidth="3xl" isProse invertInDark>
+1. **Algorithm Selection**: Choose from the available sorting algorithms
+2. **Parameter Configuration**: Optionally specify the number of columns and animation delay
+3. **Visualization**: Click start to begin the animated sorting process
+4. **Analysis**: Observe the efficiency and pattern of each algorithm
+</TextBlock>
+
+## Educational Value
+
+<TextBlock size="base" maxWidth="3xl" isProse invertInDark>
+This visualization tool serves as an educational resource for understanding:
+- **Algorithm Efficiency**: Visual comparison of time complexity
+- **Pattern Recognition**: Understanding how different algorithms approach sorting
+- **Performance Analysis**: Real-world performance characteristics
+- **Algorithm Design**: Insights into algorithmic thinking and optimization
+</TextBlock>
+
+## Computational Complexity Analysis
+
+<TextBlock size="base" maxWidth="3xl" isProse invertInDark>
+The visualization clearly demonstrates the theoretical complexity differences:
+- **O(n²) Algorithms**: Bubble, Cocktail, and Gnome sort show quadratic behavior
+- **O(n log n) Algorithms**: Quick and Heap sort demonstrate logarithmic efficiency
+- **Best vs. Worst Case**: Visual representation of algorithm performance under different conditions
+</TextBlock>
+
+## Extensions and Modifications
+
+<TextBlock size="sm" maxWidth="lg" isProse invertInDark>
+The modular architecture allows for easy addition of new algorithms, comparison modes, and statistical analysis features for advanced algorithmic study.
+</TextBlock>
