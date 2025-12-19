@@ -14,6 +14,11 @@ Pane {
     
     signal computeRequested(string algorithm, var params)
 
+    // Helper to check visibility
+    function isAlgo(list) {
+        return list.includes(root.currentAlgorithm)
+    }
+
     Material.background: Material.color(Material.Grey, Material.Shade50)
 
     // Main Card
@@ -54,11 +59,6 @@ Pane {
                 ColumnLayout {
                     width: parent.width
                     spacing: 16
-
-                    // Helper to check visibility
-                    function isAlgo(list) {
-                        return list.includes(root.currentAlgorithm)
-                    }
 
                     // Integer 'a'
                     ColumnLayout {

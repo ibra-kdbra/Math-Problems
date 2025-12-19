@@ -228,11 +228,170 @@ Pane {
                     sourceComponent: {
                         if (!root.currentResult) return defaultViz
                         
-                        if (root.currentResult.algorithmType == 5) { // PrimeSieve
-                            return primeSieveViz
+                        switch(root.currentResult.algorithmType) {
+                            case 0: // GCD
+                                return gcdViz
+                            case 1: // ExtendedGCD
+                                return extendedGcdViz
+                            case 5: // PrimeSieve
+                                return primeSieveViz
+                            default:
+                                return genericViz
                         }
-                        // Fallback for others
-                        return genericViz
+                    }
+                }
+
+                Component {
+                    id: gcdViz
+                    ColumnLayout {
+                        anchors.fill: parent
+                        anchors.margins: 32
+                        spacing: 24
+
+                        Label {
+                            text: "Euclidean Visualization"
+                            font.pixelSize: 20
+                            font.bold: true
+                            Layout.alignment: Qt.AlignHCenter
+                        }
+
+                        RowLayout {
+                            Layout.fillWidth: true
+                            Layout.preferredHeight: 200
+                            spacing: 40
+
+                            // Bar for A
+                            ColumnLayout {
+                                Layout.fillWidth: true
+                                spacing: 8
+                                Rectangle {
+                                    Layout.fillWidth: true
+                                    Layout.preferredHeight: Math.min(200, (root.currentResult.inputParameters.a / Math.max(root.currentResult.inputParameters.a, root.currentResult.inputParameters.b)) * 200)
+                                    color: Material.primary
+                                    radius: 4
+                                    Layout.alignment: Qt.AlignBottom
+                                }
+                                Label {
+                                    text: "a = " + root.currentResult.inputParameters.a
+                                    Layout.alignment: Qt.AlignHCenter
+                                    font.bold: true
+                                }
+                            }
+
+                            // Bar for B
+                            ColumnLayout {
+                                Layout.fillWidth: true
+                                spacing: 8
+                                Rectangle {
+                                    Layout.fillWidth: true
+                                    Layout.preferredHeight: Math.min(200, (root.currentResult.inputParameters.b / Math.max(root.currentResult.inputParameters.a, root.currentResult.inputParameters.b)) * 200)
+                                    color: Material.accent
+                                    radius: 4
+                                    Layout.alignment: Qt.AlignBottom
+                                }
+                                Label {
+                                    text: "b = " + root.currentResult.inputParameters.b
+                                    Layout.alignment: Qt.AlignHCenter
+                                    font.bold: true
+                                }
+                            }
+                        }
+
+                        Rectangle {
+                            Layout.fillWidth: true
+                            height: 100
+                            color: Material.color(Material.Blue, Material.Shade50)
+                            radius: 12
+                            border.color: Material.primary
+                            border.width: 1
+
+                            ColumnLayout {
+                                anchors.centerIn: parent
+                                spacing: 4
+                                Label {
+                                    text: "Greatest Common Divisor"
+                                    font.pixelSize: 12
+                                    color: Material.color(Material.Grey, Material.Shade700)
+                                }
+                                Label {
+                                    text: root.currentResult.mainResult
+                                    font.pixelSize: 32
+                                    font.bold: true
+                                    color: Material.primary
+                                }
+                            }
+                        }
+                    }
+                }
+
+                Component {
+                    id: extendedGcdViz
+                    ColumnLayout {
+                        anchors.fill: parent
+                        anchors.margins: 32
+                        spacing: 24
+
+                        Label {
+                            text: "Linear Combination Visualization"
+                            font.pixelSize: 20
+                            font.bold: true
+                            Layout.alignment: Qt.AlignHCenter
+                        }
+
+                        // Visualization of ax + by = gcd
+                        Rectangle {
+                            Layout.fillWidth: true
+                            Layout.fillHeight: true
+                            color: "white"
+                            radius: 12
+                            border.color: Material.color(Material.Grey, Material.Shade200)
+
+                            ColumnLayout {
+                                anchors.centerIn: parent
+                                spacing: 32
+                                width: parent.width * 0.8
+
+                                RowLayout {
+                                    Layout.fillWidth: true
+                                    spacing: 8
+                                    
+                                    // term ax
+                                    ColumnLayout {
+                                        spacing: 4
+                                        Label { text: "(" + root.currentResult.mainResult.x + ")"; font.bold: true; color: Material.accent; Layout.alignment: Qt.AlignHCenter }
+                                        Label { text: root.currentResult.inputParameters.a; font.pixelSize: 24; Layout.alignment: Qt.AlignHCenter }
+                                        Label { text: "x"; font.italic: true; color: Material.color(Material.Grey, Material.Shade500); Layout.alignment: Qt.AlignHCenter }
+                                    }
+
+                                    Label { text: "+"; font.pixelSize: 32; color: Material.color(Material.Grey, Material.Shade400) }
+
+                                    // term by
+                                    ColumnLayout {
+                                        spacing: 4
+                                        Label { text: "(" + root.currentResult.mainResult.y + ")"; font.bold: true; color: Material.accent; Layout.alignment: Qt.AlignHCenter }
+                                        Label { text: root.currentResult.inputParameters.b; font.pixelSize: 24; Layout.alignment: Qt.AlignHCenter }
+                                        Label { text: "y"; font.italic: true; color: Material.color(Material.Grey, Material.Shade500); Layout.alignment: Qt.AlignHCenter }
+                                    }
+
+                                    Label { text: "="; font.pixelSize: 32; color: Material.color(Material.Grey, Material.Shade400) }
+
+                                    // gcd
+                                    ColumnLayout {
+                                        spacing: 4
+                                        Label { text: "GCD"; font.bold: true; color: Material.primary; Layout.alignment: Qt.AlignHCenter }
+                                        Label { text: root.currentResult.mainResult.gcd; font.pixelSize: 32; font.bold: true; color: Material.primary; Layout.alignment: Qt.AlignHCenter }
+                                    }
+                                }
+
+                                Label {
+                                    text: "Bézout's identity states that for any integers a and b,\nthere exist integers x and y such that ax + by = gcd(a,b)."
+                                    horizontalAlignment: Text.AlignHCenter
+                                    color: Material.color(Material.Grey, Material.Shade600)
+                                    wrapMode: Text.Wrap
+                                    Layout.fillWidth: true
+                                }
+                            }
+                        }
                     }
                 }
 
