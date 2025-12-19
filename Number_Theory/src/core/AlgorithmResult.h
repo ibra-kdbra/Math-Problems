@@ -1,6 +1,7 @@
 #ifndef ALGORITHMRESULT_H
 #define ALGORITHMRESULT_H
 
+#include <QObject>
 #include <QString>
 #include <QVariant>
 #include <QVector>
@@ -30,6 +31,12 @@ enum class ResultStatus {
 };
 
 struct ExecutionStep {
+    Q_GADGET
+    Q_PROPERTY(QString description MEMBER description)
+    Q_PROPERTY(QString result MEMBER result)
+    Q_PROPERTY(qint64 timestamp MEMBER timestamp)
+
+public:
     QString description;
     QString result;
     qint64 timestamp;
