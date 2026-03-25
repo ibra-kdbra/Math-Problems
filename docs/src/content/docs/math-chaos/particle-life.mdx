@@ -1,0 +1,78 @@
+---
+title: Particle Life
+description: A GUI-based framework for exploring emergent life-like behaviors in particle systems.
+---
+
+import { Aside, Steps, Badge, Card, CardGrid } from '@astrojs/starlight/components'
+import { GroupName, TextBlock } from '../../../components/components'
+
+<div class="space-y-0">
+<GroupName>Math Chaos</GroupName>
+# Particle Life Simulation
+</div>
+
+<TextBlock size="lg" maxWidth="3xl" isProse={true} invertInDark={true}>
+Particle Life is an interactive simulation where simple attraction and repulsion rules between different types of particles give rise to complex, life-like behaviors, including cells, clusters, and self-organizing structures.
+</TextBlock>
+
+## Core Mechanics
+
+The simulation is based on a set of simple interactions between particle species. Each species has a specific attraction or repulsion force toward every other species (and itself).
+
+### Rules of Interaction
+- **Distance-based Forces**: Particles exert forces on each other based on their proximity.
+- **Color-coded Species**: Particles are grouped by color, where each color has a unique set of interaction rules.
+- **Emergence**: From these basic rules, higher-order structures emerge that appear to move, rotate, and interact in ways similar to microorganisms.
+
+## Key Features
+
+<CardGrid>
+  <Card title="Java GUI" icon="rocket">
+    A robust graphical user interface built with Java, providing real-time control over the simulation.
+  </Card>
+
+  <Card title="Rule Customization" icon="settings">
+    Adjust the attraction/repulsion matrix to discover entirely different "ecosystems."
+  </Card>
+
+  <Card title="Real-time Visualization" icon="eye">
+    Watch thousands of particles interact at high frame rates.
+  </Card>
+
+  <Card title="Cross-Platform" icon="laptop">
+    Built with Java/Gradle, allowing it to run on Windows, macOS, and Linux.
+  </Card>
+</CardGrid>
+
+## Getting Started
+
+### Building from Source
+
+To run the Particle Life app, you will need Java 16 or higher and Git.
+
+<Steps>
+1. **Clone the Repository**
+   Ensure you have all the project files locally.
+
+2. **Run with Gradle**
+   Execute the following command in the project root:
+   ```bash
+   ./gradlew run
+   ```
+</Steps>
+
+## Technical Details
+
+### Framework Architecture
+- **Language**: Java
+- **Build System**: Gradle
+- **Rendering**: Custom rendering engine for efficient particle display.
+
+<Aside type="tip">
+Try increasing the "friction" parameter to see more stable, static structures, or decrease it for highly dynamic, chaotic systems.
+</Aside>
+
+<Aside type="note">
+Based on the Particle Life concept.
+Explore the source at [Math_Chaos/Particle_Life](https://github.com/ibra-kdbra/Math-Problems/tree/main/Math_Chaos/Particle_Life).
+</Aside>

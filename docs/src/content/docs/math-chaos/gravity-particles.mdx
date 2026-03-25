@@ -1,0 +1,76 @@
+---
+title: Gravity Particles
+description: A real-time gravity simulation using RayLib.
+---
+
+import { Aside, Steps, Badge, Card, CardGrid } from '@astrojs/starlight/components'
+import { GroupName, TextBlock } from '../../../components/components'
+
+<div class="space-y-0">
+<GroupName>Math Chaos</GroupName>
+# Gravity Particle Simulation
+</div>
+
+<TextBlock size="lg" maxWidth="3xl" isProse={true} invertInDark={true}>
+An interactive, real-time particle simulation built with **RayLib** that explores gravitational interactions between hundreds of particles in a 2D space.
+</TextBlock>
+
+## Overview
+
+The Gravity Particle simulation (also known as `raylib-particle-toy`) models the N-body problem where each particle exerts a gravitational force on every other particle. This leads to the emergence of complex orbital behaviors, clusters, and chaotic trajectories.
+
+## Technical Foundation
+
+<CardGrid>
+  <Card title="RayLib Integration" icon="rocket">
+    Leverages the high-performance RayLib library for hardware-accelerated 2D rendering.
+  </Card>
+
+  <Card title="C++ Core" icon="seti:cpp">
+    Efficient particle physics calculations implemented in modern C++.
+  </Card>
+
+  <Card title="N-Body Physics" icon="random">
+    Calculates gravitational attraction using Newton's law of universal gravitation.
+  </Card>
+
+  <Card title="Cross-Platform" icon="laptop">
+    Support for desktop (Windows/Linux) and potential for Android builds.
+  </Card>
+</CardGrid>
+
+## Physics Implementation
+
+The simulation tracks each particle's position, velocity, and mass. At every frame, it calculates the net force acting on each particle:
+
+```math
+F = G * (m1 * m2) / r^2
+```
+
+### Key Components
+- `particle.h`: Defines the particle structure and physics update logic.
+- `main.cpp`: Manages the simulation loop, RayLib window, and user input.
+
+## Building and Running
+
+The project uses CMake with presets for a streamlined build process.
+
+<Steps>
+1. **Configure CMake**
+   ```bash
+   cmake --preset=default
+   ```
+
+2. **Build the Project**
+   ```bash
+   cmake --build --preset=default
+   ```
+
+3. **Run the Simulation**
+   Execute `raylib-particle-toy` from the generated build folder.
+</Steps>
+
+<Aside type="note">
+Ensure you have RayLib 4.0 or later installed on your system before building.
+Explore the source at [Math_Chaos/Gravity_Particles](https://github.com/ibra-kdbra/Math-Problems/tree/main/Math_Chaos/Gravity_Particles).
+</Aside>

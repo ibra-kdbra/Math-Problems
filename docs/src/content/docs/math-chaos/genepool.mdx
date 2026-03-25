@@ -1,0 +1,78 @@
+---
+title: GenePool Swimbots
+description: Simulated organisms evolving through natural selection and mate preference.
+---
+
+import { Aside, Steps, Badge, Card, CardGrid } from '@astrojs/starlight/components'
+import { GroupName, TextBlock } from '../../../components/components'
+
+<div class="space-y-0">
+<GroupName>Math Chaos</GroupName>
+# Evolutionary Dynamics: GenePool
+</div>
+
+<TextBlock size="lg" maxWidth="3xl" isProse={true} invertInDark={true}>
+GenePool is a virtual aquarium where "swimbots"—proto-swimming robots—compete for mates and food. This project illustrates the profound effects of Darwinian evolution, natural selection, and sexual selection within a closed ecosystem.
+</TextBlock>
+
+## Core Concept
+
+The simulation allows you to witness the emergence of complex behaviors and morphologies from simple evolutionary rules. Swimbots possess genetic traits that determine their physical structure and swimming mechanics.
+
+### Natural Selection
+Swimmers that are more efficient at locating food (algae) survive longer and have more opportunities to reproduce. Those that cannot find food eventually perish.
+
+### Sexual Selection
+Mate preference plays a significant role in GenePool. Swimmers choose mates based on certain genetic criteria, which can lead to the emergence of distinct "races" or lineages with unique characteristics.
+
+## Key Features
+
+<CardGrid>
+  <Card title="Darwinian Evolution" icon="star">
+    Real-time emergence of swimming skills and adaptive strategies over generations.
+  </Card>
+
+  <Card title="Genetic Diversity" icon="random">
+    Every pool starts with random genomes, leading to a unique evolutionary outcome every time.
+  </Card>
+
+  <Card title="Mate Preference" icon="heart">
+    Explore how non-random mating affects the evolutionary trajectory of a population.
+  </Card>
+
+  <Card title="JavaScript Engine" icon="seti:javascript">
+    Pure, performant JavaScript simulation detached from UI logic for maximum research flexibility.
+  </Card>
+</CardGrid>
+
+## Simulation Mechanics
+
+<Steps>
+1. **Initialization**
+   A new pool is populated with swimbots having randomized genetic code.
+
+2. **Energy Management**
+   Swimbots consume energy to move. They must eat food pellets to replenish their energy levels.
+
+3. **Reproduction**
+   When two swimbots meet and satisfy each other's mate preferences, they produce offspring with combined genetic material (crossover) and occasional mutations.
+
+4. **Emergence**
+   Over time (typically ~30 minutes), dominant traits and efficient swimming skills become prevalent across the population.
+</Steps>
+
+## Architecture
+
+The project is designed with a clear separation between the simulation core and the browser-specific UI/UX.
+
+- **Core Simulation**: Pure JavaScript object-oriented logic.
+- **Visuals**: Canvas-based rendering for real-time observation of the virtual aquarium.
+- **Extensibility**: Includes a basic API for developers to create custom scenarios or educational levels.
+
+<Aside type="tip">
+Watch the pool for at least 30 minutes to see the most significant evolutionary shifts. You'll notice how random twitching evolves into rhythmic, purposeful locomotion.
+</Aside>
+
+<Aside type="note">
+Original concept and copyright by Jeffrey Ventrella. Explore the web version implementation at [Math_Chaos/GenePool](https://github.com/ibra-kdbra/Math-Problems/tree/main/Math_Chaos/GenePool).
+</Aside>
