@@ -7,3 +7,4 @@ out/
 
 # Ignore Gradle build output directory
 build
+bin/main/com/particle_life/app/*.class
