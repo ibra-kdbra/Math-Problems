@@ -19,40 +19,36 @@ export default defineConfig({
       },
       sidebar: [
         {
-          label: "Getting Started",
-          autogenerate: { directory: "getting-started" },
+          label: "Stage 1: The Foundations",
+          items: [
+            { label: "Getting Started", autogenerate: { directory: "getting-started" } },
+            { label: "Number Theory", autogenerate: { directory: "number-theory" } },
+            { label: "Equations Field", autogenerate: { directory: "equations-field" } },
+          ],
         },
         {
-          label: "Equations Field",
-          autogenerate: { directory: "equations-field" },
+          label: "Stage 2: Algorithms & Logic",
+          items: [
+            { label: "Sorting Algorithms", autogenerate: { directory: "sorting-algorithms" } },
+            { label: "Unique Algorithms", autogenerate: { directory: "unique-algorithms" } },
+            { label: "Sparse Matrix", autogenerate: { directory: "sparse-matrix" } },
+            { label: "Encoder Decoder", autogenerate: { directory: "encoder-decoder" } },
+            { label: "Security Algorithms", autogenerate: { directory: "security-algorithms" } },
+          ],
         },
         {
-          label: "Encoder Decoder",
-          autogenerate: { directory: "encoder-decoder" },
-        },
-        { label: "Mandlebrot", autogenerate: { directory: "mandlebrot" } },
-        { label: "Math Chaos", autogenerate: { directory: "math-chaos" } },
-        {
-          label: "Number Theory",
-          autogenerate: { directory: "number-theory" },
+          label: "Stage 3: The Edge of Chaos",
+          items: [
+            { label: "Mandlebrot", autogenerate: { directory: "mandlebrot" } },
+            { label: "Math Chaos", autogenerate: { directory: "math-chaos" } },
+          ],
         },
         {
-          label: "Security Algorithms",
-          autogenerate: { directory: "security-algorithms" },
+          label: "Stage 4: Simulating Life",
+          items: [
+            { label: "PySpace", autogenerate: { directory: "pyspace" } },
+          ],
         },
-        {
-          label: "Sorting Algorithms",
-          autogenerate: { directory: "sorting-algorithms" },
-        },
-        {
-          label: "Sparse Matrix",
-          autogenerate: { directory: "sparse-matrix" },
-        },
-        {
-          label: "Unique Algorithms",
-          autogenerate: { directory: "unique-algorithms" },
-        },
-        { label: "PySpace", autogenerate: { directory: "pyspace" } },
       ],
     }),
     mdx(),
