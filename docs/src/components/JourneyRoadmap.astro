@@ -1,0 +1,123 @@
+---
+// src/components/JourneyRoadmap.astro
+---
+
+<div class="space-y-12 my-10">
+  <!-- Stage 1 -->
+  <div class="relative pl-8 border-l-2 border-blue-500/30 dark:border-blue-500/20 group">
+    <!-- Icon Indicator -->
+    <div class="absolute -left-[17px] top-0 w-8 h-8 rounded-full bg-blue-500/10 border-2 border-blue-500 flex items-center justify-center text-blue-500 font-bold transition-all duration-300 group-hover:scale-110 group-hover:shadow-[0_0_15px_rgba(59,130,246,0.5)]">
+      1
+    </div>
+    <div class="mb-4">
+      <span class="text-xs font-semibold uppercase tracking-wider text-blue-500 bg-blue-500/10 px-2.5 py-1 rounded-full">Stage 1</span>
+      <h3 class="text-xl sm:text-2xl font-bold mt-2 text-foreground">The Foundations</h3>
+      <p class="text-muted-foreground mt-1 text-sm sm:text-base">Before building complex simulations, you need the basic mathematical building blocks.</p>
+    </div>
+    <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+      <a href="/getting-started/introduction" class="block p-4 rounded-xl border border-border bg-card/30 hover:bg-card/75 hover:border-blue-500/50 hover:-translate-y-1 transition-all duration-300 group/card no-underline">
+        <h4 class="font-semibold text-foreground group-hover/card:text-blue-500 transition-colors flex items-center gap-2 mt-0">
+          <span>🚀 Getting Started</span>
+        </h4>
+        <p class="text-xs text-muted-foreground mt-2">Learn how to setup, run, and execute the interactive code in this repository.</p>
+      </a>
+      <a href="/number-theory/number-theory" class="block p-4 rounded-xl border border-border bg-card/30 hover:bg-card/75 hover:border-blue-500/50 hover:-translate-y-1 transition-all duration-300 group/card no-underline">
+        <h4 class="font-semibold text-foreground group-hover/card:text-blue-500 transition-colors flex items-center gap-2 mt-0">
+          <span>🔢 Number Theory</span>
+        </h4>
+        <p class="text-xs text-muted-foreground mt-2">Explore prime numbers, factorization, modular arithmetic, and proofs in code.</p>
+      </a>
+      <a href="/equations-field/differentiator" class="block p-4 rounded-xl border border-border bg-card/30 hover:bg-card/75 hover:border-blue-500/50 hover:-translate-y-1 transition-all duration-300 group/card no-underline">
+        <h4 class="font-semibold text-foreground group-hover/card:text-blue-500 transition-colors flex items-center gap-2 mt-0">
+          <span>📈 Equations Field</span>
+        </h4>
+        <p class="text-xs text-muted-foreground mt-2">Solve linear/non-linear systems and plot mathematical equations dynamically.</p>
+      </a>
+    </div>
+  </div>
+
+  <!-- Stage 2 -->
+  <div class="relative pl-8 border-l-2 border-purple-500/30 dark:border-purple-500/20 group">
+    <!-- Icon Indicator -->
+    <div class="absolute -left-[17px] top-0 w-8 h-8 rounded-full bg-purple-500/10 border-2 border-purple-500 flex items-center justify-center text-purple-500 font-bold transition-all duration-300 group-hover:scale-110 group-hover:shadow-[0_0_15px_rgba(168,85,247,0.5)]">
+      2
+    </div>
+    <div class="mb-4">
+      <span class="text-xs font-semibold uppercase tracking-wider text-purple-500 bg-purple-500/10 px-2.5 py-1 rounded-full">Stage 2</span>
+      <h3 class="text-xl sm:text-2xl font-bold mt-2 text-foreground">Algorithms & Logic</h3>
+      <p class="text-muted-foreground mt-1 text-sm sm:text-base">Here, we apply optimized logic to solve complex, bounded computational problems.</p>
+    </div>
+    <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+      <a href="/sorting-algorithms/sorting-visualization" class="block p-4 rounded-xl border border-border bg-card/30 hover:bg-card/75 hover:border-purple-500/50 hover:-translate-y-1 transition-all duration-300 group/card no-underline">
+        <h4 class="font-semibold text-foreground group-hover/card:text-purple-500 transition-colors mt-0">📊 Sorting Visuals</h4>
+        <p class="text-xs text-muted-foreground mt-2">Observe and compare how computers sort arrays and organize datasets visually.</p>
+      </a>
+      <a href="/unique-algorithms/bat-searching" class="block p-4 rounded-xl border border-border bg-card/30 hover:bg-card/75 hover:border-purple-500/50 hover:-translate-y-1 transition-all duration-300 group/card no-underline">
+        <h4 class="font-semibold text-foreground group-hover/card:text-purple-500 transition-colors mt-0">🦇 Unique Algorithms</h4>
+        <p class="text-xs text-muted-foreground mt-2">Bio-inspired heuristics like the Bat Searching and Firefly algorithms.</p>
+      </a>
+      <a href="/security-algorithms/cryptographic-clang" class="block p-4 rounded-xl border border-border bg-card/30 hover:bg-card/75 hover:border-purple-500/50 hover:-translate-y-1 transition-all duration-300 group/card no-underline">
+        <h4 class="font-semibold text-foreground group-hover/card:text-purple-500 transition-colors mt-0">🔐 Security Algos</h4>
+        <p class="text-xs text-muted-foreground mt-2">Delve into modern cryptography, ciphers, hashing, and security analyses.</p>
+      </a>
+      <a href="/sparse-matrix/sparse-matrix-library" class="block p-4 rounded-xl border border-border bg-card/30 hover:bg-card/75 hover:border-purple-500/50 hover:-translate-y-1 transition-all duration-300 group/card no-underline">
+        <h4 class="font-semibold text-foreground group-hover/card:text-purple-500 transition-colors mt-0">🗂️ Sparse Matrix</h4>
+        <p class="text-xs text-muted-foreground mt-2">Handle massive, mostly-empty multi-dimensional arrays with specialized libraries.</p>
+      </a>
+    </div>
+  </div>
+
+  <!-- Stage 3 -->
+  <div class="relative pl-8 border-l-2 border-pink-500/30 dark:border-pink-500/20 group">
+    <!-- Icon Indicator -->
+    <div class="absolute -left-[17px] top-0 w-8 h-8 rounded-full bg-pink-500/10 border-2 border-pink-500 flex items-center justify-center text-pink-500 font-bold transition-all duration-300 group-hover:scale-110 group-hover:shadow-[0_0_15px_rgba(236,72,153,0.5)]">
+      3
+    </div>
+    <div class="mb-4">
+      <span class="text-xs font-semibold uppercase tracking-wider text-pink-500 bg-pink-500/10 px-2.5 py-1 rounded-full">Stage 3</span>
+      <h3 class="text-xl sm:text-2xl font-bold mt-2 text-foreground">The Edge of Chaos</h3>
+      <p class="text-muted-foreground mt-1 text-sm sm:text-base">We move beyond predictable logic into the continuous, dynamic systems of determinism and chaos.</p>
+    </div>
+    <div class="grid gap-4 sm:grid-cols-2">
+      <a href="/math-chaos/lorenz-attractor" class="block p-4 rounded-xl border border-border bg-card/30 hover:bg-card/75 hover:border-pink-500/50 hover:-translate-y-1 transition-all duration-300 group/card no-underline">
+        <h4 class="font-semibold text-foreground group-hover/card:text-pink-500 transition-colors mt-0">🌀 Math Chaos</h4>
+        <p class="text-xs text-muted-foreground mt-2">Explore the Lorenz Attractor, attractors, and how small initial shifts trigger vast system splits.</p>
+      </a>
+      <a href="/mandlebrot/mandelbrot-explorer" class="block p-4 rounded-xl border border-border bg-card/30 hover:bg-card/75 hover:border-pink-500/50 hover:-translate-y-1 transition-all duration-300 group/card no-underline">
+        <h4 class="font-semibold text-foreground group-hover/card:text-pink-500 transition-colors mt-0">❄️ Mandelbrot Fractals</h4>
+        <p class="text-xs text-muted-foreground mt-2">Render and zoom infinitely into complex fractal geometries and mathematical coloring routines.</p>
+      </a>
+    </div>
+  </div>
+
+  <!-- Stage 4 -->
+  <div class="relative pl-8 border-l-2 border-emerald-500/30 dark:border-emerald-500/20 group">
+    <!-- Icon Indicator -->
+    <div class="absolute -left-[17px] top-0 w-8 h-8 rounded-full bg-emerald-500/10 border-2 border-emerald-500 flex items-center justify-center text-emerald-500 font-bold transition-all duration-300 group-hover:scale-110 group-hover:shadow-[0_0_15px_rgba(16,185,129,0.5)]">
+      4
+    </div>
+    <div class="mb-4">
+      <span class="text-xs font-semibold uppercase tracking-wider text-emerald-500 bg-emerald-500/10 px-2.5 py-1 rounded-full">Stage 4</span>
+      <h3 class="text-xl sm:text-2xl font-bold mt-2 text-foreground">Simulating Life</h3>
+      <p class="text-muted-foreground mt-1 text-sm sm:text-base">The final frontier. Combining computation and geometry to simulate biology, physics, and evolution.</p>
+    </div>
+    <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+      <a href="/pyspace/ray-marching" class="block p-4 rounded-xl border border-border bg-card/30 hover:bg-card/75 hover:border-emerald-500/50 hover:-translate-y-1 transition-all duration-300 group/card no-underline">
+        <h4 class="font-semibold text-foreground group-hover/card:text-emerald-500 transition-colors mt-0">🕶️ PySpace Ray-Marching</h4>
+        <p class="text-xs text-muted-foreground mt-2">Observe advanced 3D shaders, signed distance fields, and ray-marching logic.</p>
+      </a>
+      <a href="/math-chaos/genepool" class="block p-4 rounded-xl border border-border bg-card/30 hover:bg-card/75 hover:border-emerald-500/50 hover:-translate-y-1 transition-all duration-300 group/card no-underline">
+        <h4 class="font-semibold text-foreground group-hover/card:text-emerald-500 transition-colors mt-0">🧬 GenePool Evolution</h4>
+        <p class="text-xs text-muted-foreground mt-2">Watch autonomous, swimming creatures learn to move, feed, and reproduce over generations.</p>
+      </a>
+      <a href="/math-chaos/particle-life" class="block p-4 rounded-xl border border-border bg-card/30 hover:bg-card/75 hover:border-emerald-500/50 hover:-translate-y-1 transition-all duration-300 group/card no-underline">
+        <h4 class="font-semibold text-foreground group-hover/card:text-emerald-500 transition-colors mt-0">🦠 Particle Life</h4>
+        <p class="text-xs text-muted-foreground mt-2">Observe colored particles forming cellular systems based on simple physics attraction rules.</p>
+      </a>
+      <a href="/math-chaos/lenia" class="block p-4 rounded-xl border border-border bg-card/30 hover:bg-card/75 hover:border-emerald-500/50 hover:-translate-y-1 transition-all duration-300 group/card no-underline">
+        <h4 class="font-semibold text-foreground group-hover/card:text-emerald-500 transition-colors mt-0">🪐 Lenia Cellular Automata</h4>
+        <p class="text-xs text-muted-foreground mt-2">Witness continuous cellular automata generating organic, self-organizing digital lifelike patterns.</p>
+      </a>
+    </div>
+  </div>
+</div>

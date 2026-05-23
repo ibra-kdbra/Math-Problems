@@ -8,4 +8,6 @@ export { default as NumberWrapper } from './NumberWrapper.tsx'
 export { default as TextBlock } from './TextBlock.astro'
 export { default as TextNumber} from './TextNumber.astro'
 export { default as Math } from './Math.astro'
+export { default as JourneyRoadmap } from './JourneyRoadmap.astro'
+
 
