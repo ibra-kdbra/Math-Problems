@@ -1,9 +1,8 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
 
-:root {
-  --sl-color-accent-low: hsl(var(secondary));
+:root,
+:root[data-theme='dark'],
+[data-theme='dark'] {
+  --sl-color-accent-low: hsl(var(--secondary));
   --sl-color-accent: hsl(var(--border));
   --sl-color-accent-high: 214.3 31.8% 91.4%;
   --sl-color-white: #ffffff;
@@ -26,7 +25,7 @@
   --primary: 217.2, 91.2%, 59.8%;
   --primary-foreground: 222.2, 47.4%, 11.2%;
 
-  --border: 214.3 31.8% 91.4%;
+  --border: 217.2 32.6% 17.5%;
 
   --warning-foreground: 48 97% 77%;
 
@@ -121,7 +120,7 @@
   @apply grid gap-4 md:grid-cols-2;
 }
 
-@screen md {
+@media (min-width: 48rem) {
   .stagger {
     @apply pb-20;
   }
@@ -143,7 +142,7 @@ a > .card {
 }
 
 .card .icon {
-  @apply border-none bg-transparent text-primary !important;
+  @apply !border-none !bg-transparent !text-primary;
 }
 
 .card .body {
@@ -184,7 +183,7 @@ div.sidebar-pane ul ul li:has(> a[aria-current='page']) {
 }
 
 .sidebar-pane {
-  @apply border-r-border !important;
+  @apply !border-r-border;
 }
 
 li {
@@ -242,7 +241,7 @@ h1[data-page-title] {
 }
 
 .sl-markdown-content h2 {
-  @apply text-xl sm:text-2xl mt-[2em] !important;
+  @apply !text-xl sm:!text-2xl !mt-[2em];
 }
 
 .sl-link-button.not-content.primary {
@@ -314,17 +313,17 @@ mobile-starlight-toc .dropdown a {
 /* CODE BLOCK STYLES */
 
 .sl-markdown-content code:not(:where(.not-content *)) {
-  @apply bg-secondary rounded !important;
+  @apply !bg-secondary !rounded;
 }
 
 kbd {
-  @apply bg-secondary !important;
+  @apply !bg-secondary;
 }
 
 .expressive-code {
   .frame {
     pre {
-      @apply bg-transparent !important;
+      @apply !bg-transparent;
     }
 
     &.not-content {
@@ -342,11 +341,11 @@ kbd {
 /* STEP STYLES */
 
 .sl-steps > li::before {
-  @apply bg-transparent shadow-none border border-border flex items-center justify-center !important;
+  @apply !bg-transparent !shadow-none !border !border-border !flex !items-center !justify-center;
 }
 
 .sl-steps > li::after {
-  @apply bg-secondary !important;
+  @apply !bg-secondary;
 }
 
 /* Tabs */
@@ -566,4 +565,14 @@ site-search dialog .pagefind-ui__result-link:focus {
 #starlight__search .pagefind-ui__result-nested:hover,
 #starlight__search .pagefind-ui__result-nested:focus-within {
   outline: 1px solid hsl(var(--primary));
+}
+
+/* Eliminate the massive space between GroupName (briefcase) and the H1 title */
+.flex.items-center.gap-3:has(span) {
+  margin-bottom: 0.5rem !important;
+}
+.flex.items-center.gap-3:has(span) + h1,
+.flex.items-center.gap-3:has(svg) + h1,
+.space-y-0 > .flex.items-center.gap-3 + h1 {
+  margin-top: 0rem !important;
 }
