@@ -1,6 +1,6 @@
 import react from "@astrojs/react";
 import starlight from "@astrojs/starlight";
-import tailwind from "@astrojs/tailwind";
+import tailwindcss from "@tailwindcss/vite";
 import { defineConfig } from "astro/config";
 import mdx from "@astrojs/mdx";
 
@@ -13,7 +13,7 @@ export default defineConfig({
         light: "./src/assets/dark-logo.svg",
         dark: "./src/assets/light-logo.svg",
       },
-      customCss: ["./src/styles/custom.css", "./src/styles/tailwind.css"],
+      customCss: ["./src/styles/tailwind.css"],
       components: {
         Header: "./src/components/Header.astro",
       },
@@ -52,7 +52,9 @@ export default defineConfig({
       ],
     }),
     mdx(),
-    tailwind(),
     react(),
   ],
+  vite: {
+    plugins: [tailwindcss()],
+  },
 });
