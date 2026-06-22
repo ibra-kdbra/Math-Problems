@@ -1,18 +1,27 @@
 # Abstract Swarm Class
-import numpy as np
-from numpy.random import seed
-from numpy.random import rand
-from Bat import Bat
-from Objective import Objective
 from copy import deepcopy
-from EA import SEA
+
 import matplotlib
 import matplotlib.pyplot as plt
+import numpy as np
+from Bat import Bat
+from EA import SEA
+from numpy.random import rand, seed
+from Objective import Objective
 
 
 class Swarm:
 
-    def __init__(self, name, numberOfSwarm, objectiveFunction, numOfFeature, featureRange, numberOfIter, q):
+    def __init__(
+        self,
+        name,
+        numberOfSwarm,
+        objectiveFunction,
+        numOfFeature,
+        featureRange,
+        numberOfIter,
+        q,
+    ):
         self.swarmName = name
         self.graph = []
         self.archive = []
@@ -58,21 +67,23 @@ class Swarm:
     def initialize(self):
         self.swarms = []
         for i in range(self.numberOfSwarm):
-            self.swarms.append(Bat(
-                numOfFeature=self.numOfFeature,
-                featureRange=self.featureRange,
-                f_min=self.f_min,
-                f_max=self.f_max,
-                w1=self.w1,
-                w2=self.w2,
-                w3=self.w3,
-                A_base=self.A_base,
-                alpha=self.alpha,
-                r_base=self.r_base,
-                gama=self.gama,
-                epsilon=self.epsilon,
-                objectiveFunction=self.objectiveFunction
-            ))
+            self.swarms.append(
+                Bat(
+                    numOfFeature=self.numOfFeature,
+                    featureRange=self.featureRange,
+                    f_min=self.f_min,
+                    f_max=self.f_max,
+                    w1=self.w1,
+                    w2=self.w2,
+                    w3=self.w3,
+                    A_base=self.A_base,
+                    alpha=self.alpha,
+                    r_base=self.r_base,
+                    gama=self.gama,
+                    epsilon=self.epsilon,
+                    objectiveFunction=self.objectiveFunction,
+                )
+            )
 
         self.graph = self.createGraph()
 
@@ -127,7 +138,7 @@ class Swarm:
 
         newArchive.sort(key=lambda x: x.fitnessValue)
         if len(newArchive) > self.archiveLimit:
-            newArchive = newArchive[0:self.archiveLimit]
+            newArchive = newArchive[0 : self.archiveLimit]
 
         self.archive = newArchive
 
@@ -159,7 +170,9 @@ class Swarm:
 
     def CBA(self):
         for item in self.swarms:
-            item.update_v_BA(p=self.bestX, vType=0, xType=0)  # Basic method to update BAT
+            item.update_v_BA(
+                p=self.bestX, vType=0, xType=0
+            )  # Basic method to update BAT
             item.update_x_byV(xType=0)
             item.update_A()
             item.update_r()
@@ -183,16 +196,12 @@ class Swarm:
 
     def updateArchiveHistory(self):
         self.average_archive_fitness_History.append(
-            np.mean(
-                [item.fitnessValue for item in self.archive]
-            )
+            np.mean([item.fitnessValue for item in self.archive])
         )
         tempOlist = []
         for i in range(len(self.objectiveFunction)):
             tempOlist.append(
-                np.mean(
-                    [item.objectiveValues[i] for item in self.archive]
-                )
+                np.mean([item.objectiveValues[i] for item in self.archive])
             )
         self.average_archive_objectiveValue_History.append(tempOlist)
 
@@ -205,7 +214,7 @@ class Swarm:
             self.updateArchive(self.swarms)
             EA_output = self.EA.optimize(self.swarms)
             self.updateArchive(EA_output)
-            self.updateArchiveHistory() # to draw charts
+            self.updateArchiveHistory()  # to draw charts
 
         return True
 
@@ -218,13 +227,12 @@ class Swarm:
         fig, ax = plt.subplots()
         ax.plot(t, s)
 
-        ax.set(xlabel='time', ylabel='avg Fitness',
-               title='average Fitness over time')
+        ax.set(xlabel="time", ylabel="avg Fitness", title="average Fitness over time")
         ax.grid()
 
         fig.savefig("Fitness_AVG.png")
 
-        #best Fitness
+        # best Fitness
         plt.clf()
         t = range(len(self.best_fitness_History))
         s = self.best_fitness_History
@@ -232,29 +240,33 @@ class Swarm:
         fig, ax = plt.subplots()
         ax.plot(t, s)
 
-        ax.set(xlabel='time', ylabel='best Fitness',
-               title='best Fitness over time')
+        ax.set(xlabel="time", ylabel="best Fitness", title="best Fitness over time")
         ax.grid()
 
         fig.savefig("Fitness_Best.png")
 
-        #AVG Objective
+        # AVG Objective
         for i in range(len(self.objectiveFunction)):
             plt.clf()
 
             t = range(len(self.average_archive_objectiveValue_History))
-            s = np.array(self.average_archive_objectiveValue_History)[:,i]
+            s = np.array(self.average_archive_objectiveValue_History)[:, i]
 
             fig, ax = plt.subplots()
             ax.plot(t, s)
 
-            ax.set(xlabel='time', ylabel='avg ' + self.objectiveFunction[i].name,
-                   title='average ' + self.objectiveFunction[i].name + ' over time')
+            ax.set(
+                xlabel="time",
+                ylabel="avg " + self.objectiveFunction[i].name,
+                title="average " + self.objectiveFunction[i].name + " over time",
+            )
             ax.grid()
 
-            fig.savefig(self.swarmName + "_" + self.objectiveFunction[i].name + "_AVG.png")
+            fig.savefig(
+                self.swarmName + "_" + self.objectiveFunction[i].name + "_AVG.png"
+            )
 
-        #Best Objective
+        # Best Objective
         for i in range(len(self.objectiveFunction)):
             plt.clf()
             t = range(len(self.best_objectiveValue_History))
@@ -263,10 +275,15 @@ class Swarm:
             fig, ax = plt.subplots()
             ax.plot(t, s)
 
-            ax.set(xlabel='time', ylabel='Best ' + self.objectiveFunction[i].name,
-                   title='Best ' + self.objectiveFunction[i].name + ' over time')
+            ax.set(
+                xlabel="time",
+                ylabel="Best " + self.objectiveFunction[i].name,
+                title="Best " + self.objectiveFunction[i].name + " over time",
+            )
             ax.grid()
 
-            fig.savefig(self.swarmName + "_" + self.objectiveFunction[i].name + "_Best.png")
+            fig.savefig(
+                self.swarmName + "_" + self.objectiveFunction[i].name + "_Best.png"
+            )
 
         return True

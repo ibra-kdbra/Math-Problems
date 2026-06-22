@@ -1,7 +1,8 @@
 from itertools import combinations
-from solvatore import Solvatore
+
 from cipher_description import CipherDescription
 from ciphers import present
+from solvatore import Solvatore
 
 cipher = present.present
 rounds = 9
@@ -23,5 +24,5 @@ for bits in combinations(range(64), 1):
 
     if len(balanced_bits) > 0:
         print("Found distinguisher!")
-        print("Constant Bits: ", len(constant_bits),constant_bits)
-        print("Balanced Bits: ", len(balanced_bits),balanced_bits)
+        print("Constant Bits: ", len(constant_bits), constant_bits)
+        print("Balanced Bits: ", len(balanced_bits), balanced_bits)

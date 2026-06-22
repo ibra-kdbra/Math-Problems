@@ -48,3 +48,13 @@ __pycache__/
 
 # Debug files
 *.dSYM/
+
+# Java
+*.class
+*.jar
+*.war
+*.ear
+
+# Build directories
+bin/
+target/

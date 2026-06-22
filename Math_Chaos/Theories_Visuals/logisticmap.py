@@ -1,16 +1,17 @@
 import time
-import numpy as np
-import matplotlib.pyplot as plt
+
 import matplotlib.image as mpimg
+import matplotlib.pyplot as plt
+import numpy as np
+from parameters import endv, inv
 from scipy.integrate import solve_ivp
 
-from parameters import inv, endv
 
 def main(inputs):
     global inv
     global endv
-    inv = inputs['inv']
-    endv = inputs['endv']
+    inv = inputs["inv"]
+    endv = inputs["endv"]
     interval = (inv, endv)  # start, end
     accuracy = 0.0001
     reps = 600  # number of repetitions
@@ -20,14 +21,15 @@ def main(inputs):
     plt7.set_size_inches(16, 9)
     lims[0] = np.random.rand()
     for r in np.arange(interval[0], interval[1], accuracy):
-        for i in range(reps-1):
-            lims[i+1] = r*lims[i]*(1-lims[i])
-        biax.plot([r]*numtoplot, lims[reps-numtoplot:], 'b.', markersize=.02)
-    biax.set(xlabel='r', ylabel='X Axis', title='Logistic Map')
+        for i in range(reps - 1):
+            lims[i + 1] = r * lims[i] * (1 - lims[i])
+        biax.plot([r] * numtoplot, lims[reps - numtoplot :], "b.", markersize=0.02)
+    biax.set(xlabel="r", ylabel="X Axis", title="Logistic Map")
     # Save the plot to an image file
     plt7.savefig("./assets/LogisticMap.png")
     # plt.show()
 
+
 # Calling main function with example inputs
-inputs = {'inv': inv, 'endv': endv}
+inputs = {"inv": inv, "endv": endv}
 main(inputs)

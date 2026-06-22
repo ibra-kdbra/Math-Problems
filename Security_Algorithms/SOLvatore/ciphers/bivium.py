@@ -1,6 +1,5 @@
 from cipher_description import CipherDescription
 
-
 bivium = CipherDescription(177)
 bivium.apply_xor("s65", "s92", "t0")
 bivium.apply_and("s90", "s91", "t1")

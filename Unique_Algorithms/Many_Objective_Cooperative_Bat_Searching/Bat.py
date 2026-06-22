@@ -1,7 +1,6 @@
 # Abstract Bat Class
 import numpy as np
-from numpy.random import seed
-from numpy.random import rand
+from numpy.random import rand, seed
 from Objective import Objective
 
 # from copy import deepcopy
@@ -9,16 +8,31 @@ from Objective import Objective
 
 class Bat:
 
-    def __init__(self, numOfFeature, featureRange,
-                 f_min, f_max, w1, w2, w3, A_base,
-                 alpha, r_base, gama, epsilon,
-                 objectiveFunction):
+    def __init__(
+        self,
+        numOfFeature,
+        featureRange,
+        f_min,
+        f_max,
+        w1,
+        w2,
+        w3,
+        A_base,
+        alpha,
+        r_base,
+        gama,
+        epsilon,
+        objectiveFunction,
+    ):
 
-        seed(int(rand(1)[0]*100))
+        seed(int(rand(1)[0] * 100))
 
         self.x = []
         for i in range(numOfFeature):
-            self.x.append(featureRange[i][0] + ((featureRange[i][1] - featureRange[i][0]) * rand(1)[0]))
+            self.x.append(
+                featureRange[i][0]
+                + ((featureRange[i][1] - featureRange[i][0]) * rand(1)[0])
+            )
         self.x = np.array(self.x)
         self.x_new = self.x
         self.xBest = self.x
@@ -143,10 +157,10 @@ class Bat:
     def calc_f(self):
         beta = rand(1)[0]
         f = self.f_min + ((self.f_max - self.f_min) * beta)
-        f = f/(self.f_max - self.f_min)
+        f = f / (self.f_max - self.f_min)
         return f
 
-    def calc_ObjectiveValues(self,xType=0):
+    def calc_ObjectiveValues(self, xType=0):
         X = 0
         if xType == 0:
             X = self.x
@@ -160,7 +174,7 @@ class Bat:
                 fInput.append(X[index])
             self.objectiveValues_new.append(item.function(fInput))
 
-    def calc_Fitness(self,allBats,oType=0):
+    def calc_Fitness(self, allBats, oType=0):
         fitVal = 0
         if oType == 0:
             for i in range(len(self.objectiveFunction)):
@@ -168,7 +182,9 @@ class Bat:
                 newAllBats = sorted(allBats, key=lambda x: x.objectiveValues[i])
                 mmin = newAllBats[0].objectiveValues[i]
                 mmax = newAllBats[-1].objectiveValues[i]
-                fitVal = fitVal + ((self.objectiveValues[i] - mmin) / (mmax - mmin)) #normal
+                fitVal = fitVal + (
+                    (self.objectiveValues[i] - mmin) / (mmax - mmin)
+                )  # normal
         else:
             for i in range(len(self.objectiveFunction)):
                 # allBats.sort(key=lambda x: x.objectiveValues_new[i])
@@ -228,9 +244,14 @@ class Bat:
         return True
 
     def __str__(self):
-        name = "X : " + str(self.x) + "\n" \
-               + "fitness : " + str(self.fitnessValue) + "\n"\
-               + "Objective :" + str(self.objectiveValues)
+        name = (
+            "X : "
+            + str(self.x)
+            + "\n"
+            + "fitness : "
+            + str(self.fitnessValue)
+            + "\n"
+            + "Objective :"
+            + str(self.objectiveValues)
+        )
         return name
-
-

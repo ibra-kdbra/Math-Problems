@@ -1,8 +1,10 @@
-from solvatore import Solvatore
-from cipher_description import CipherDescription
 from itertools import combinations, groupby
-from ciphers import RoadRunnerR, speck, LEA, spongent, HIGHT, GIFT, skipjack
-#import ciphers
+
+from cipher_description import CipherDescription
+from ciphers import GIFT, HIGHT, LEA, RoadRunnerR, skipjack, speck, spongent
+from solvatore import Solvatore
+
+# import ciphers
 
 # # # Cipher Definition
 # cipher = speck.generate_speck_version(64,8,3)
@@ -68,7 +70,6 @@ statesize = 64
 # statesize = 64
 
 
-
 def getSetOfBalancedBits(constant_bits, bits_to_test):
     active_bits = [i for i in range(statesize) if i not in constant_bits]
     # Compute Set of balanced bits
@@ -78,10 +79,11 @@ def getSetOfBalancedBits(constant_bits, bits_to_test):
             B.append(i)
     return B
 
+
 # Find best distinguisher with single active bit
 good_indices = []
 for b in range(statesize):
-    #print(b)
+    # print(b)
     constant_bits = [b]
     B = getSetOfBalancedBits(constant_bits, range(statesize))
     if len(B) > 0:
@@ -92,7 +94,7 @@ if len(good_indices) == 0:
     exit(1)
 
 # Check all combination of good indices and reduce
-while True:    
+while True:
     # Only get the combinations which share balanced bits between
     # the two sets.
     combination_indices = []
@@ -113,7 +115,13 @@ while True:
             max_set = G
 
     # Filter duplicates
-    print("Constant bits:", len(good_indices), len(combination_indices), len(good_indices[0][:-1]), max_set)
+    print(
+        "Constant bits:",
+        len(good_indices),
+        len(combination_indices),
+        len(good_indices[0][:-1]),
+        max_set,
+    )
     good_indices = []
     for i, new_index in enumerate(combination_indices):
         constant_bits = list(set([item for item in new_index]))

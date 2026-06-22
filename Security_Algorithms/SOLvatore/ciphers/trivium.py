@@ -1,6 +1,5 @@
 from cipher_description import CipherDescription
 
-
 trivium = CipherDescription(288)
 trivium.apply_xor("s65", "s92", "t1")
 trivium.apply_xor("s161", "s176", "t2")

@@ -1,10 +1,10 @@
 # Abstract EA Class
-import numpy as np
-from numpy.random import seed
-from numpy.random import rand
-from Bat import Bat
-from Objective import Objective
 from copy import deepcopy
+
+import numpy as np
+from Bat import Bat
+from numpy.random import rand, seed
+from Objective import Objective
 
 
 class SEA:
@@ -14,7 +14,7 @@ class SEA:
 
     def crossover(self, x1, x2):
         child = deepcopy(x1)
-        child.x = x1.x + (x2.x-x1.x)
+        child.x = x1.x + (x2.x - x1.x)
         return child
 
     def mutation(self, x):
@@ -29,7 +29,9 @@ class SEA:
         for i in range(batCount):
             parents = []
             for i in range(2):
-                selectionIndex = np.random.randint(low=0, high=batCount-1, size=self.q)
+                selectionIndex = np.random.randint(
+                    low=0, high=batCount - 1, size=self.q
+                )
                 selectionList = []
                 for index in selectionIndex:
                     selectionList.append(batList[index])
@@ -38,7 +40,7 @@ class SEA:
             child = self.crossover(parents[0], parents[1])
             child = self.mutation(child)
             child.calc_ObjectiveValues()
-            child.calc_Fitness(batList,oType=1)
+            child.calc_Fitness(batList, oType=1)
             child.objectiveValues = child.objectiveValues_new
             child.fitnessValue = child.fitnessValue_new
             childs.append(child)

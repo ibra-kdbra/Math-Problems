@@ -1,16 +1,29 @@
-import os
 import argparse
-import sys
 import math
-import time
+import os
 import random
+import sys
+import time
 from tkinter import *
-from PIL import Image, ImageTk
+
 from mandelbrot import Mandelbrot
+from PIL import Image, ImageTk
 
 
 class Framework(Frame):
-    def __init__(self, parent, h, x=-0.75, y=0, m=1.5, iterations=None, imgWidth=None, imgHeight=None, save=False, multi=True):
+    def __init__(
+        self,
+        parent,
+        h,
+        x=-0.75,
+        y=0,
+        m=1.5,
+        iterations=None,
+        imgWidth=None,
+        imgHeight=None,
+        save=False,
+        multi=True,
+    ):
         Frame.__init__(self, parent)
         self.parent = parent
         self.parent.title("Mandelbrot")
@@ -20,13 +33,23 @@ class Framework(Frame):
         if None in {imgWidth, imgHeight}:
             imgWidth, imgHeight = h, h
         if imgWidth > imgHeight:
-            ratio = imgHeight/imgWidth
-            self.canvasW, self.canvasH = h, round(h*ratio)
+            ratio = imgHeight / imgWidth
+            self.canvasW, self.canvasH = h, round(h * ratio)
         else:
-            ratio = imgWidth/imgHeight
-            self.canvasW, self.canvasH = round(h*ratio), h
+            ratio = imgWidth / imgHeight
+            self.canvasW, self.canvasH = round(h * ratio), h
 
-        self.fractal = Mandelbrot(self.canvasW, self.canvasH, x=x, y=y, m=m, iterations=iterations, w=imgWidth, h=imgHeight, multi=multi)
+        self.fractal = Mandelbrot(
+            self.canvasW,
+            self.canvasH,
+            x=x,
+            y=y,
+            m=m,
+            iterations=iterations,
+            w=imgWidth,
+            h=imgHeight,
+            multi=multi,
+        )
         self.setPalette()
         self.pixelColors = []
         self.img = None
@@ -52,15 +75,19 @@ class Framework(Frame):
         self.draw()
 
     def draw(self):
-        print('-' * 20)
+        print("-" * 20)
         start = time.time()
         self.fractal.getPixels()
         self.getColors()
         self.drawPixels()
         self.canvas.create_image(0, 0, image=self.background, anchor=NW)
         self.canvas.pack(fill=BOTH, expand=1)
-        print("Process took {} seconds".format(round(time.time()-start, 2)))
-        print("Current coordinates (x, y, m): {}, {}, {}".format(self.fractal.xCenter, self.fractal.yCenter, self.fractal.delta))
+        print("Process took {} seconds".format(round(time.time() - start, 2)))
+        print(
+            "Current coordinates (x, y, m): {}, {}, {}".format(
+                self.fractal.xCenter, self.fractal.yCenter, self.fractal.delta
+            )
+        )
 
     def setPalette(self):
         palette = [(0, 0, 0)]
@@ -92,7 +119,7 @@ class Framework(Frame):
         self.pixelColors = pixelColors
 
     def drawPixels(self):
-        img = Image.new('RGB', (self.fractal.w, self.fractal.h), "black")
+        img = Image.new("RGB", (self.fractal.w, self.fractal.h), "black")
         pixels = img.load()  # create the pixel map
         for index, p in enumerate(self.fractal.pixels):
             pixels[int(p[0]), int(p[1])] = self.pixelColors[index]
@@ -103,7 +130,11 @@ class Framework(Frame):
         self.background = photoimg
 
     def saveImage(self, event):
-        self.img.save("output/{}.png".format(time.strftime("%Y-%m-%d-%H:%M:%S")), "PNG", optimize=True)
+        self.img.save(
+            "output/{}.png".format(time.strftime("%Y-%m-%d-%H:%M:%S")),
+            "PNG",
+            optimize=True,
+        )
 
 
 def clamp(x):
@@ -112,26 +143,58 @@ def clamp(x):
 
 def main():
     master = Tk()
-    height = round(master.winfo_screenheight()*0.9)
-    parser = argparse.ArgumentParser(description='Generate the Mandelbrot set')
-    parser.add_argument('-i', '--iterations', type=int, help='The number of iterations done for each pixel. Higher is more accurate but slower.')
-    parser.add_argument('-x', type=float, help='The x-center coordinate of the frame.')
-    parser.add_argument('-y', type=float, help='The y-center coordinate of the frame.')
-    parser.add_argument('-m', '--magnification', type=float, help='The magnification level of the frame.')
-    parser.add_argument('-wi', '--width', type=int, help='The width of the image.')
-    parser.add_argument('-he', '--height', type=int, help='The width of the image.')
-    parser.add_argument('-s', '--save', action='store_true', help='Save the generated image.')
-    parser.add_argument('-nm', '--noMulti', action='store_false', help="Don't use multiprocessing.")
+    height = round(master.winfo_screenheight() * 0.9)
+    parser = argparse.ArgumentParser(description="Generate the Mandelbrot set")
+    parser.add_argument(
+        "-i",
+        "--iterations",
+        type=int,
+        help="The number of iterations done for each pixel. Higher is more accurate but slower.",
+    )
+    parser.add_argument("-x", type=float, help="The x-center coordinate of the frame.")
+    parser.add_argument("-y", type=float, help="The y-center coordinate of the frame.")
+    parser.add_argument(
+        "-m",
+        "--magnification",
+        type=float,
+        help="The magnification level of the frame.",
+    )
+    parser.add_argument("-wi", "--width", type=int, help="The width of the image.")
+    parser.add_argument("-he", "--height", type=int, help="The width of the image.")
+    parser.add_argument(
+        "-s", "--save", action="store_true", help="Save the generated image."
+    )
+    parser.add_argument(
+        "-nm", "--noMulti", action="store_false", help="Don't use multiprocessing."
+    )
     args = parser.parse_args()
     if None not in [args.x, args.y, args.magnification]:
-        render = Framework(master, height, x=args.x, y=args.y, m=args.magnification, multi=args.noMulti,
-                           iterations=args.iterations, imgWidth=args.width, imgHeight=args.height, save=args.save)
+        render = Framework(
+            master,
+            height,
+            x=args.x,
+            y=args.y,
+            m=args.magnification,
+            multi=args.noMulti,
+            iterations=args.iterations,
+            imgWidth=args.width,
+            imgHeight=args.height,
+            save=args.save,
+        )
     else:
         if not all(arg is None for arg in [args.x, args.y, args.magnification]):
             print("Arguments ignored. Please provide all of x, y, & m.")
-        render = Framework(master, height, multi=args.noMulti, iterations=args.iterations,
-                           imgWidth=args.width, imgHeight=args.height, save=args.save)
+        render = Framework(
+            master,
+            height,
+            multi=args.noMulti,
+            iterations=args.iterations,
+            imgWidth=args.width,
+            imgHeight=args.height,
+            save=args.save,
+        )
     master.geometry("{}x{}".format(render.canvasW, render.canvasH))
     master.mainloop()
+
 
 main()
