@@ -37,7 +37,7 @@ if __name__ == "__main__":
         numOfFeature=numOfFeature,
         featureRange=featureRange,
         numberOfIter=numberOfIter,
-        q=q
+        q=q,
     )
 
     swarm.initialize()
