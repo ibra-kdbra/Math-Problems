@@ -1,5 +1,6 @@
 from cipher_description import CipherDescription
 
+
 def maj(cipher, a, b, c, out):
     cipher.apply_and(a, b, "t1")
     cipher.apply_and(a, c, "t2")
@@ -7,10 +8,12 @@ def maj(cipher, a, b, c, out):
     cipher.apply_xor("t1", "t2", "t4")
     cipher.apply_xor("t3", "t4", out)
 
+
 def ch(cipher, a, b, c, out):
     cipher.apply_and(a, b, "t1")
-    cipher.apply_and(a, c, "t2") # TODO: Add not to first parameter
+    cipher.apply_and(a, c, "t2")  # TODO: Add not to first parameter
     cipher.apply_xor("t1", "t2", out)
+
 
 acorn = CipherDescription(293)
 
@@ -40,11 +43,11 @@ acorn.apply_xor("t1", "s0", "s61")
 # f = s0 + ~s107 + maj(s244, s23, s160) + ch(s230, s111, s66) + s196 + k
 maj(acorn, "s244", "s23", "s160", "tmaj2")
 ch(acorn, "s230", "s111", "s66", "tch")
-acorn.apply_xor("s0", "s107", "t1") # TODO: Add not to second parameter
+acorn.apply_xor("s0", "s107", "t1")  # TODO: Add not to second parameter
 acorn.apply_xor("t1", "tmaj2", "t2")
 acorn.apply_xor("t2", "tch", "t3")
 acorn.apply_xor("t3", "s196", "t4")
-acorn.apply_xor("t4", "tk", "s0") # s0 gets feedback bit
+acorn.apply_xor("t4", "tk", "s0")  # s0 gets feedback bit
 
 # Shift everything
 permutation = tuple("s{}".format(i) for i in range(292, -1, -1))
