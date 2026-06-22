@@ -1,0 +1,79 @@
+---
+title: LeaPHI
+description: Procedural growth pattern generation based on the golden ratio phi.
+---
+
+import { Aside, Steps, Badge, Card, CardGrid } from '@astrojs/starlight/components'
+import { GroupName, TextBlock } from '../../../components/components'
+
+<div class="space-y-0">
+<GroupName>Math Chaos</GroupName>
+# LeaPHI: Organic Growth Simulation
+</div>
+
+<TextBlock size="lg" maxWidth="3xl" isProse={true} invertInDark={true}>
+LeaPHI is a procedural generation project that explores the emergence of natural growth patterns in plants, specifically focusing on how the **golden ratio (phi)** governs the arrangement and development of leaves and stems.
+</TextBlock>
+
+## Core Principles
+
+The project aims to replicate the "natural and organic" look of plants by simulating several key biological and mathematical rules:
+
+### 1. The Golden Ratio (Phi)
+New leaves and branches typically emerge at an angle related to the golden ratio (~137.5 degrees), which allows for optimal space filling and exposure to sunlight without overlap.
+
+### 2. Cubic Bézier Curves
+Leaf contours are procedurally generated using Bézier curves. The shape is controlled by a growth-stage factor and a random seed, ensuring each leaf is unique while maintaining a characteristic species look.
+
+### 3. Logarithmic Growth
+To mimic real plant development, the growth rate is adjusted using a **decadic logarithm**. This ensures that leaves grow rapidly in their early stages and slow down as they mature and increase in size.
+
+## Technical Implementation
+
+<CardGrid>
+  <Card title="Delaunay Triangulation" icon="puzzle">
+    Uses Shewchuk's Triangle library to generate high-quality 2D meshes for the leaf surfaces.
+  </Card>
+
+  <Card title="OpenGL Rendering" icon="rocket">
+    Hardware-accelerated rendering using OpenGL 3.3+ for smooth growth animations.
+  </Card>
+
+  <Card title="Parametric Modeling" icon="settings">
+    Every aspect of the plant—from stem curvature to leaf size—is driven by mathematical parameters.
+  </Card>
+
+  <Card title="Interactive Animation" icon="play">
+    Real-time timeline control for growth rate and leaf spawn frequency.
+  </Card>
+</CardGrid>
+
+## Building and Running
+
+LeaPHI requires a C++ compiler and several graphics libraries.
+
+<Steps>
+1. **Prerequisites**
+   Install CMake, OpenGL, GLEW, GLM, and GLFW3.
+
+2. **Configure and Build**
+   The project includes a `run.sh` script to simplify the build process:
+   ```bash
+   ./run.sh cmake
+   ./run.sh make
+   ```
+
+3. **Execution**
+   ```bash
+   ./run.sh
+   ```
+</Steps>
+
+<Aside type="tip">
+Experiment with the random seed and growth rate parameters in the UI to discover a wide variety of plant-like structures!
+</Aside>
+
+<Aside type="note">
+Inspired by the phyllotaxis patterns found in sunflowers, pinecones, and succulents.
+Explore the source at [Math_Chaos/LeaPHI](https://github.com/ibra-kdbra/Math-Problems/tree/main/Math_Chaos/LeaPHI).
+</Aside>

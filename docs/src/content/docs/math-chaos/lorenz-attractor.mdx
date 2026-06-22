@@ -1,0 +1,234 @@
+---
+title: Lorenz Attractor
+description: Animated 3D simulation of the Lorenz attractor demonstrating chaotic dynamics and the butterfly effect.
+---
+
+import { GroupName, TextBlock, Album, Math } from '../../../components/components'
+
+export const lorenzImages = [
+  { src: '/imgs/lorenz_attractor/screenshot1.png', alt: 'Lorenz Attractor Visualization' },
+  { src: '/imgs/lorenz_attractor/screenshot2.png', alt: 'Lorenz Attractor Trajectory' },
+  { src: '/imgs/lorenz_attractor/screenshot3.png', alt: 'Lorenz Attractor Details' }
+];
+
+<div class="space-y-0">
+<GroupName>Math Chaos</GroupName>
+# Lorenz Attractor
+</div>
+
+<TextBlock size="lg" maxWidth="3xl" weight="medium" isProse invertInDark>
+An animated 3D simulation of the Lorenz attractor, a fundamental system in chaos theory that demonstrates the butterfly effect and sensitive dependence on initial conditions. This implementation uses OpenGL for real-time visualization and interactive exploration of chaotic dynamics.
+</TextBlock>
+
+<Album title="Lorenz Attractor Visualizations" images={lorenzImages} columns={3} />
+
+## Mathematical Foundation
+
+<TextBlock size="base" maxWidth="3xl" isProse invertInDark>
+  The Lorenz attractor is defined by a system of three coupled ordinary differential equations:
+  <Math 
+    displayMode={true}
+    formula={`
+      \\begin{align}
+        \\frac{dx}{dt} &= \\sigma(y - x) \\\\
+        \\frac{dy}{dt} &= x(\\rho - z) - y \\\\
+        \\frac{dz}{dt} &= xy - \\beta z
+      \\end{align}
+    `}
+  />
+  Where the standard parameters are:
+
+  - <Math formula={`\\sigma = 10`} /> (Prandtl number)
+  - <Math formula={`\\rho = 28`} /> (Rayleigh number)
+  - <Math formula={`\\beta = \\frac{8}{3}`} /> (geometric parameter)
+</TextBlock>
+
+### Chaotic Properties
+
+<TextBlock size="base" maxWidth="3xl" isProse invertInDark>
+The Lorenz system exhibits quintessential chaotic behavior:
+- **Sensitive Dependence**: Small changes in initial conditions lead to vastly different trajectories
+- **Strange Attractor**: Bounded aperiodic behavior with fractal structure
+- **Butterfly Shape**: Characteristic two-lobed attractor geometry
+- **Deterministic Chaos**: Predictable equations producing unpredictable behavior
+</TextBlock>
+
+## Numerical Integration
+
+<TextBlock size="lg" maxWidth="3xl" weight="medium" isProse invertInDark>
+The simulation implements advanced numerical methods for solving the differential equations with high accuracy and stability.
+</TextBlock>
+
+### Runge-Kutta Method
+
+
+<TextBlock size="base" maxWidth="3xl" isProse invertInDark>
+  The fourth-order Runge-Kutta method provides accurate integration:
+
+  <Math 
+    displayMode={true}
+    formula={`\\vec{y}_{n+1} = \\vec{y}_n + \\frac{h}{6}(k_1 + 2k_2 + 2k_3 + k_4)`}
+  />
+
+  Where:
+  - <Math formula={`k_1 = f(t_n, \\vec{y}_n)`} />
+  - <Math formula={`k_2 = f(t_n + \\frac{h}{2}, \\vec{y}_n + \\frac{h}{2}k_1)`} />
+  - <Math formula={`k_3 = f(t_n + \\frac{h}{2}, \\vec{y}_n + \\frac{h}{2}k_2)`} />
+  - <Math formula={`k_4 = f(t_n + h, \\vec{y}_n + hk_3)`} />
+  - <Math formula={`h`} /> is the time step
+</TextBlock>
+
+### Implementation Details
+
+```cpp
+void RK4(State& state, float dt) {
+    State k1, k2, k3, k4;
+    
+    k1 = derivatives(state) * dt;
+    k2 = derivatives(state + k1 * 0.5f) * dt;
+    k3 = derivatives(state + k2 * 0.5f) * dt;
+    k4 = derivatives(state + k3) * dt;
+    
+    state += (k1 + k2 * 2.0f + k3 * 2.0f + k4) * (1.0f / 6.0f);
+}
+```
+
+## Visualization System
+
+<TextBlock size="lg" maxWidth="3xl" weight="medium" isProse invertInDark>
+Advanced 3D graphics implementation for real-time chaotic system visualization.
+</TextBlock>
+
+### OpenGL Implementation
+
+<TextBlock size="base" maxWidth="3xl" isProse invertInDark>
+- **Vertex Buffer Objects**: Efficient geometry rendering
+- **Shader Pipeline**: Modern OpenGL with custom shaders
+- **Dynamic Geometry**: Real-time trajectory generation
+- **Camera System**: Interactive 3D navigation
+- **Lighting Model**: Phong shading for 3D depth perception
+- **Performance Optimization**: Frame rate control and adaptive quality
+</TextBlock>
+
+### Rendering Features
+
+<TextBlock size="base" maxWidth="3xl" isProse invertInDark>
+- **Trajectory Trails**: Variable length history for path visualization
+- **Color Mapping**: Time-based color gradients for trajectory segments
+- **Point Clouds**: Dense particle representation of recent positions
+- **Surface Rendering**: Optional attractor surface reconstruction
+- **Export Capabilities**: Screenshot and data recording functions
+</TextBlock>
+
+## Interactive Controls
+
+<TextBlock size="lg" maxWidth="3xl" weight="medium" isProse invertInDark>
+Comprehensive user interface for exploring chaotic dynamics.
+</TextBlock>
+
+### Navigation Controls
+
+<TextBlock size="base" maxWidth="3xl" isProse invertInDark>
+- **Mouse Movement**: Rotate camera view around attractor
+- **Space Bar**: Play/pause animation
+- **ESC Key**: Exit application
+- **Keys 1-5**: Preset parameter configurations
+- **+/- Keys**: Zoom in/out for detailed examination
+- **U Key**: Switch animation modes (full graph, start to current, trail)
+- **R/T Keys**: Increase/decrease animation speed
+- **Y Key**: Restart animation with current parameters
+- **O Key**: Toggle line rendering modes (points/lines/triangles)
+- **P Key**: Show projection graphs for each axis
+</TextBlock>
+
+### Parameter Presets
+
+<TextBlock size="base" maxWidth="3xl" isProse invertInDark>
+  1. **Standard Lorenz**: <Math formula={`\\sigma=10, \\rho=28, \\beta=8/3`} /> (classic chaotic)
+  2. **Transient Chaos**: <Math formula={`\\sigma=10, \\rho=24.74, \\beta=8/3`} /> (intermittent behavior)
+  3. **Convergent**: <Math formula={`\\sigma=10, \\rho=99.96, \\beta=8/3`} /> (stable fixed points)
+  4. **Periodic**: <Math formula={`\\sigma=10, \\rho=100, \\beta=8/3`} /> (limit cycles)
+  5. **High Chaos**: <Math formula={`\\sigma=10, \\rho=350, \\beta=8/3`} /> (extreme chaos)
+</TextBlock>
+
+## Performance Characteristics
+
+<TextBlock size="lg" maxWidth="3xl" weight="medium" isProse invertInDark>
+Optimized implementation for smooth real-time visualization.
+</TextBlock>
+
+### Computational Efficiency
+
+<TextBlock size="base" maxWidth="3xl" isProse invertInDark>
+  - **Time Complexity**: <Math formula={`O(n \\cdot s)`} /> where n is trail length and s is simulation steps
+  - **Space Complexity**: <Math formula={`O(n)`} /> for trajectory storage
+  - **GPU Utilization**: Hardware-accelerated rendering
+  - **Frame Rate**: 60+ FPS on modern hardware with standard trails
+  - **Memory Usage**: Efficient circular buffer for trajectory history
+</TextBlock>
+
+### Rendering Pipeline
+
+<TextBlock size="base" maxWidth="3xl" isProse invertInDark>
+- **Batch Rendering**: Multiple trajectory segments per draw call
+- **Level of Detail**: Adaptive point/line density based on view distance
+- **Culling**: Efficient frustum and occlusion culling
+- **Buffer Management**: Streaming vertex data for large trajectories
+</TextBlock>
+
+## Scientific Applications
+
+<TextBlock size="base" maxWidth="3xl" isProse invertInDark>
+The Lorenz attractor simulation has extensive research and educational value:
+- **Chaos Theory**: Demonstrating fundamental chaotic principles
+- **Meteorology**: Modeling atmospheric convection patterns
+- **Climate Science**: Understanding long-term weather behavior
+- **Engineering**: Analyzing control systems and stability
+- **Education**: Teaching nonlinear dynamics and sensitivity analysis
+</TextBlock>
+
+## Technical Implementation
+
+<TextBlock size="lg" maxWidth="3xl" weight="medium" isProse invertInDark>
+Robust C++ implementation with OpenGL and GLUT for cross-platform compatibility.
+</TextBlock>
+
+### Dependencies
+
+<TextBlock size="base" maxWidth="3xl" isProse invertInDark>
+**Linux**: `sudo apt-get install freeglut3-dev libgles2-mesa-dev`
+**OSX**: Included with Xcode installation
+**OpenGL**: Version 3.3+ with core profile support
+**GLUT**: Window management and input handling
+</TextBlock>
+
+### Compilation
+
+```bash
+make
+./lorenz
+```
+
+### Architecture
+
+- **Modular Design**: Separate solver, renderer, and interface modules
+- **Memory Management**: RAII principles for resource safety
+- **Error Handling**: Graceful degradation on hardware limitations
+- **Cross-Platform**: Linux, macOS, and Windows compatibility
+
+
+## Extensions and Modifications
+
+<TextBlock size="base" maxWidth="3xl" isProse invertInDark>
+- **Parameter Morphing**: Animated transitions between different chaotic regimes
+- **Multiple Attractors**: Simultaneous visualization of related systems
+- **Analysis Tools**: Lyapunov exponent calculation and bifurcation diagrams
+- **VR Support**: Immersive 3D exploration with head tracking
+- **Data Export**: Trajectory data for further analysis
+</TextBlock>
+
+## Implementation Notes
+
+<TextBlock size="sm" maxWidth="lg" isProse invertInDark>
+This Lorenz attractor simulation provides an interactive platform for exploring chaotic dynamics, demonstrating both the mathematical beauty of strange attractors and the practical challenges of numerical integration in nonlinear systems.
+</TextBlock>

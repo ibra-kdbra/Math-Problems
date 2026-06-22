@@ -1,0 +1,173 @@
+---
+title: Firefly Algorithm
+description: Nature-inspired metaheuristic optimization algorithm based on the flashing behavior of fireflies.
+---
+
+import { GroupName, TextBlock, Math } from '../../../components/components'
+
+<div class="space-y-0">
+<GroupName>Unique Algorithms</GroupName>
+# Firefly Algorithm
+</div>
+
+<TextBlock size="lg" maxWidth="3xl" weight="medium" isProse invertInDark>
+A nature-inspired metaheuristic optimization algorithm based on the flashing behavior and movement patterns of fireflies. The algorithm simulates how fireflies attract each other through light intensity to find optimal solutions in complex search spaces.
+</TextBlock>
+
+## Biological Inspiration
+
+<TextBlock size="base" maxWidth="3xl" isProse invertInDark>
+The Firefly Algorithm is inspired by the flashing behavior of fireflies in nature. The fundamental principles are:
+- **Fireflies produce light flashes** as a signal system for communication
+- **Light intensity correlates with fitness** - brighter fireflies represent better solutions
+- **Less bright fireflies move toward brighter ones** - attraction based on light intensity
+- **Light intensity decreases with distance** - following the inverse square law
+</TextBlock>
+
+## Algorithm Architecture
+
+<TextBlock size="lg" maxWidth="3xl" weight="medium" isProse invertInDark>
+The algorithm operates on a population of fireflies, each representing a potential solution in the search space.
+</TextBlock>
+
+### Mathematical Formulation
+
+
+<TextBlock size="base" maxWidth="3xl" isProse invertInDark>
+  The attractiveness between two fireflies is modeled as:
+
+  <Math 
+    displayMode={true}
+    formula={`\\beta(r) = \\beta_0 \\exp(-\\gamma r^2)`}
+  />
+
+  Where:
+  - <Math formula={`\\beta_0`} /> is the attractiveness at <Math formula={`r=0`} />
+  - <Math formula={`\\gamma`} /> is the light absorption coefficient
+  - <Math formula={`r`} /> is the distance between two fireflies
+
+  The movement of firefly <Math formula={`i`} /> toward firefly <Math formula={`j`} /> is given by:
+
+  <Math 
+    displayMode={true}
+    formula={`x_i^{t+1} = x_i^t + \\beta(r_{ij})(x_j^t - x_i^t) + \\alpha \\epsilon_i^t`}
+  />
+  Where <Math formula={`\\alpha`} /> is the randomization parameter and <Math formula={`\\epsilon_i^t`} /> is a random vector.
+</TextBlock>
+
+## Implementation Details
+
+<TextBlock size="base" maxWidth="3xl" isProse invertInDark>
+The Firefly Algorithm implementation supports various optimization functions:
+</TextBlock>
+
+### Test Functions
+```python
+def test_function(X, D):
+    x1 = X[0]
+    x2 = X[1]
+    return x1**2 - x1*x2 + x2**2 + 2*x1 + 4*x2 + 3
+
+def RastriginFunc(X, D):
+    funsum = 0
+    for i in range(D):
+        x = X[i]
+        funsum += x**2 - 10*np.cos(2*np.pi*x)
+    funsum += 10*D
+    return funsum
+
+def StyblinskiTangFunc(X, D):
+    funsum = 0
+    for i in range(D):
+        x = X[i]
+        funsum += (x**4) - 16*(x**2) + 5*x
+    funsum *= 0.5
+    return funsum
+```
+
+### Algorithm Configuration
+```python
+FA = FireflyAlgorithm(
+    dimensions=2,      # D: Number of dimensions
+    lower_bound=-5,     # Lb: Lower boundary
+    upper_bound=5,      # Ub: Upper boundary
+    population=5,       # n: Number of fireflies
+    alpha=1.0,          # Randomization parameter
+    beta0=1.0,         # Attractiveness at r=0
+    gamma=0.01,         # Light absorption coefficient
+    theta=0.97,        # Parameter reduction factor
+    max_iterations=1000, # Maximum iterations
+    objective_function=test_function
+)
+```
+
+## Parameter Analysis
+
+<TextBlock size="lg" maxWidth="3xl" weight="medium" isProse invertInDark>
+The performance of the Firefly Algorithm depends critically on parameter selection.
+</TextBlock>
+
+### Key Parameters
+
+<TextBlock size="base" maxWidth="3xl" isProse invertInDark>
+- **Population Size**: Larger populations provide better exploration but increase computational cost
+- **Light Absorption ($\gamma$)**: Controls the convergence speed and local vs. global search balance
+- **Randomization ($\alpha$)**: Prevents premature convergence to local optima
+- **Attractiveness ($\beta_0$)**: Determines the influence of brighter fireflies
+- **Reduction Factor ($\theta$)**: Gradually reduces parameters to fine-tune solutions
+</TextBlock>
+
+## Applications
+
+<TextBlock size="base" maxWidth="3xl" isProse invertInDark>
+The Firefly Algorithm is particularly effective for:
+- **Continuous Optimization**: Multi-dimensional function optimization
+- **Engineering Design**: Structural optimization, parameter tuning
+- **Machine Learning**: Feature selection, hyperparameter optimization
+- **Operations Research**: Scheduling, routing problems
+- **Signal Processing**: Filter design, signal reconstruction
+</TextBlock>
+
+## Computational Complexity
+
+<TextBlock size="lg" maxWidth="3xl" weight="medium" isProse invertInDark>
+The algorithm exhibits favorable computational characteristics:
+</TextBlock>
+
+### Performance Analysis
+
+<TextBlock size="base" maxWidth="3xl" isProse invertInDark>
+- **Time Complexity**: $O(n^2 \times t)$ where $n$ is population size and $t$ is iterations
+- **Space Complexity**: $O(n \times d)$ where $d$ is the number of dimensions
+- **Parallelizability**: High potential for parallel implementation
+- **Convergence**: Typically converges in 100-1000 iterations for most problems
+</TextBlock>
+
+## Advantages and Limitations
+
+### Advantages
+- **Simple Implementation**: Few parameters to tune
+- **Global Optimization**: Effective at avoiding local optima
+- **Flexibility**: Works with various objective functions
+- **Scalability**: Handles multi-dimensional problems well
+
+### Limitations
+- **Parameter Sensitivity**: Performance depends on parameter selection
+- **Computational Cost**: $O(n^2)$ comparisons per iteration
+- **Convergence Speed**: May be slower than gradient-based methods for simple problems
+
+## Usage Example
+
+<TextBlock size="base" maxWidth="3xl" isProse invertInDark>
+```python
+# Initialize and run the algorithm
+FA = FireflyAlgorithm(2, -5, 5, 5, 1.0, 1.0, 0.01, 0.97, 1000, test_function)
+result = FA.doRun()
+print("Optimal solution:", result)
+```
+</TextBlock>
+## Implementation Notes
+
+<TextBlock size="sm" maxWidth="lg" isProse invertInDark>
+The Python implementation provides a clean interface for experimenting with different objective functions and parameter settings, making it suitable for both research and practical optimization problems.
+</TextBlock>

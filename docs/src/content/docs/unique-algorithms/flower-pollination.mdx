@@ -1,0 +1,84 @@
+---
+title: Flower Pollination Algorithm
+description: A nature-inspired metaheuristic for minimizing functions with continuous variables.
+---
+
+import { Aside, Steps, Badge, Card, CardGrid } from '@astrojs/starlight/components'
+import { GroupName, TextBlock } from '../../../components/components'
+
+<div class="space-y-0">
+<GroupName>Unique Algorithms</GroupName>
+# Flower Pollination Metaheuristic
+</div>
+
+<TextBlock size="lg" maxWidth="3xl" isProse={true} invertInDark={true}>
+The Flower Pollination Algorithm (FPA) is a nature-inspired optimization method that mimics the pollination process of flowering plants. It is particularly effective for minimizing complex mathematical functions with continuous variables.
+</TextBlock>
+
+## Algorithm Overview
+
+FPA is based on four idealized rules of pollination behavior:
+1. **Biotic and cross-pollination** are considered as global pollination processes, where pollen-carrying pollinators move in a way that obeys Lévy flights.
+2. **Abiotic and self-pollination** are considered as local pollination.
+3. **Flower constancy** is used as a reproduction probability, proportional to the similarity of two flowers involved.
+4. **Local vs. Global**: The switch between local and global pollination is controlled by a proximity probability $p$.
+
+## Configurable Parameters
+
+The implementation allows for fine-tuning the search behavior through several parameters:
+
+<CardGrid>
+  <Card title="Population (flowers)" icon="random">
+    Total number of pollen gametes or flowers in the population. (Default: 3)
+  </Card>
+
+  <Card title="Switch Probability (p)" icon="settings">
+    Chance to create a global solution versus a local one. (Default: 0.8)
+  </Card>
+
+  <Card title="Lévy Flight (gamma/lamb)" icon="rocket">
+    Parameters controlling the step size and distribution of global pollination moves.
+  </Card>
+
+  <Card title="Search Space" icon="bars">
+    Defined by `min_values` and `max_values` to constrain the continuous variables.
+  </Card>
+</CardGrid>
+
+## Usage
+
+The algorithm is implemented as a standalone Python script that can be integrated into larger optimization workflows.
+
+<Steps>
+1. **Setup Environment**
+   Ensure Python 3 is installed.
+
+2. **Define Target Function**
+   Specify the function you wish to minimize (e.g., Sphere function, Rosenbrock function).
+
+3. **Run Optimization**
+   ```python
+   # Example usage within a script
+   from MH_flower_pollination_algorithm import flower_pollination_algorithm
+
+   best_solution = flower_pollination_algorithm(
+       flowers=50,
+       generations=100,
+       target_function=my_math_function
+   )
+   print(f"Optimal variables and fitness: {best_solution}")
+   ```
+</Steps>
+
+## Output Format
+The algorithm returns an array containing the optimized variable values followed by the final fitness value:
+`[x1, x2, ..., xn, f(x1, x2, ..., xn)]`
+
+<Aside type="tip">
+FPA is highly robust for global optimization. If the algorithm gets stuck in local minima, try increasing the population size or adjusting the switch probability $p$.
+</Aside>
+
+<Aside type="note">
+Original implementation by Valdecy.
+Explore the source at [Unique_Algorithms/Metaheuristic_Flower_Pollination](https://github.com/ibra-kdbra/Math-Problems/tree/main/Unique_Algorithms/Metaheuristic_Flower_Pollination).
+</Aside>

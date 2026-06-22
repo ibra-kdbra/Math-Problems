@@ -1,0 +1,79 @@
+---
+title: Cryptography Analysis
+description: Performance and memory analysis of cryptographic primitives like ECC, KEM, and RSA.
+---
+
+import { Aside, Steps, Badge, Card, CardGrid } from '@astrojs/starlight/components'
+import { GroupName, TextBlock } from '../../../components/components'
+
+<div class="space-y-0">
+<GroupName>Security Algorithms</GroupName>
+# Cryptography Performance Analysis
+</div>
+
+<TextBlock size="lg" maxWidth="3xl" isProse={true} invertInDark={true}>
+A framework for measuring and comparing the computational performance and memory footprint of various cryptographic schemes, including Elliptic Curve Cryptography (ECC), Key Encapsulation Mechanisms (KEM), and RSA.
+</TextBlock>
+
+## Scope of Analysis
+
+The project provides tools to benchmark several categories of cryptographic algorithms:
+
+<CardGrid>
+  <Card title="ECC" icon="random">
+    Elliptic Curve Cryptography performance metrics across different curves (e.g., `secp224r1`).
+  </Card>
+
+  <Card title="KEM" icon="key">
+    Key Encapsulation Mechanisms evaluation for secure key exchange.
+  </Card>
+
+  <Card title="RSA" icon="shield">
+    Comparison of classic RSA performance with modern alternatives.
+  </Card>
+
+  <Card title="Signatures" icon="pen">
+    Efficiency analysis of digital signature schemes.
+  </Card>
+</CardGrid>
+
+## Measured Metrics
+
+For each algorithm, the framework tracks two primary categories of data:
+
+### 1. Memory Usage
+- **Virtual Memory (VmSize)**: Total virtual memory allocated by the process.
+- **Resident Set Size (RSS)**: Actual physical memory occupied by the process.
+- Measurements are taken at key stages: initialization, key generation, operation (encryption/signing), and verification.
+
+### 2. Execution Time
+- Precise timing of core cryptographic operations.
+- Multiple runs are conducted to ensure statistical significance and identify outliers.
+
+## Technical Details
+
+### Implementation
+- **C-based Tooling**: The core measurement logic is implemented in C for low-level access to system metrics.
+- **System Calls**: Uses Linux-specific process information to extract memory statistics accurately.
+
+### Components
+- `measure_performance.c`: Core logic for tracking time and memory.
+- `utils.c`: Helper functions for cryptographic setup and data management.
+
+## Usage
+
+<Steps>
+1. **Build the analyzer**
+   ```bash
+   cmake .
+   make
+   ```
+
+2. **Run Benchmarks**
+   Execute the generated benchmark tools for specific algorithms to generate performance reports.
+</Steps>
+
+<Aside type="note">
+Detailed performance logs and comparisons can be found in the project's `PerformanceAnalysis.md`.
+Explore the source at [Security_Algorithms/Cryptography-Analysis](https://github.com/ibra-kdbra/Math-Problems/tree/main/Security_Algorithms/Cryptography-Analysis).
+</Aside>

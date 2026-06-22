@@ -1,0 +1,81 @@
+---
+title: Physarum
+description: Particle-based simulation inspired by Physarum polycephalum slime mold.
+---
+
+import { Aside, Steps, Badge, Card, CardGrid } from '@astrojs/starlight/components'
+import { GroupName, TextBlock } from '../../../components/components'
+
+<div class="space-y-0">
+<GroupName>Math Chaos</GroupName>
+# Physarum Transport Networks
+</div>
+
+<TextBlock size="lg" maxWidth="3xl" isProse={true} invertInDark={true}>
+Physarum is a particle-based simulation that mimics the foraging behavior and transport network formation of the *Physarum polycephalum* slime mold. It demonstrates how complex, efficient networks can emerge from a collection of simple agents.
+</TextBlock>
+
+## Emergent Complexity
+
+The simulation relies on agents (particles) that follow a few basic rules:
+1. **Sensing**: Each agent senses the "chemical" (trail) density in its immediate vicinity.
+2. **Rotation**: Agents turn toward areas with higher trail concentration.
+3. **Movement**: Agents move forward and deposit their own trail onto the environment.
+4. **Diffusion & Decay**: The global trail map slowly diffuses and decays over time.
+
+These simple interactions result in the formation of intricate, branching networks that resemble biological transport systems.
+
+## Key Features
+
+<CardGrid>
+  <Card title="Agent-Based Modeling" icon="random">
+    Thousands of independent agents interacting with a shared environment.
+  </Card>
+
+  <Card title="Generative Networks" icon="star">
+    Creates complex, organic-looking branching structures from minimal rules.
+  </Card>
+
+  <Card title="Go Implementation" icon="seti:go">
+    High-performance simulation logic implemented in Go.
+  </Card>
+
+  <Card title="Visual Output" icon="eye">
+    Generates high-contrast visualizations of the emergent transport networks.
+  </Card>
+</CardGrid>
+
+## Getting Started
+
+### Prerequisites
+- [Go](https://go.dev/) (Golang) installed on your system.
+
+### Running the Simulation
+Execute the following command to start the simulation:
+
+<Steps>
+1. **Navigate to the directory**
+   ```bash
+   cd Math_Chaos/Physarum
+   ```
+
+2. **Run the main script**
+   ```bash
+   go run cmd/physarum/main.go
+   ```
+</Steps>
+
+## Architecture
+
+- **`pkg/`**: Contains the core simulation logic, including agent behavior and trail map processing.
+- **`cmd/`**: Entry point for the application.
+- **`images/`**: Sample outputs showing different network configurations and color palettes.
+
+<Aside type="tip">
+Adjust the sensor angle and distance to see how it affects the "branchiness" of the resulting network. Small changes can lead to completely different topographical patterns.
+</Aside>
+
+<Aside type="note">
+Inspired by Sage Jenson's work on Physarum simulations.
+Explore the source at [Math_Chaos/Physarum](https://github.com/ibra-kdbra/Math-Problems/tree/main/Math_Chaos/Physarum).
+</Aside>

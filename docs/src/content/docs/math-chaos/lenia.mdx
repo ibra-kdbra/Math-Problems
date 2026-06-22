@@ -1,0 +1,75 @@
+---
+title: Lenia
+description: A 2D cellular automata with continuous space, time, and states.
+---
+
+import { Aside, Steps, Badge, Card, CardGrid } from '@astrojs/starlight/components'
+import { GroupName, TextBlock } from '../../../components/components'
+
+<div class="space-y-0">
+<GroupName>Math Chaos</GroupName>
+# Lenia: Continuous Cellular Automata
+</div>
+
+<TextBlock size="lg" maxWidth="3xl" isProse={true} invertInDark={true}>
+Lenia is a mathematical framework for **cellular automata** that operates with continuous space, time, and states. It produces a remarkably large variety of complex and lifelike structures, often referred to as "digital life forms."
+</TextBlock>
+
+## Core Concept
+
+Unlike traditional cellular automata (such as Conway's Game of Life) which operate on a discrete grid with binary states, Lenia generalizes these rules into continuous domains. This continuity allows for smooth motion and the emergence of stable, mobile patterns with surprising biological resemblances.
+
+### Key Characteristics
+- **Continuous Space**: Particles can exist at any coordinate, not just discrete grid cells.
+- **Continuous States**: Cell values range smoothly from 0.0 to 1.0.
+- **Continuous Time**: State updates are calculated using differential equations or small time steps.
+
+## Platform Support
+
+<CardGrid>
+  <Card title="JavaScript" icon="seti:javascript">
+    The original implementation, feature-rich and interactive within the browser.
+  </Card>
+
+  <Card title="Python" icon="seti:python">
+    The fastest version, optimized for performance and now featuring GPU acceleration.
+  </Card>
+
+  <Card title="Matlab" icon="settings">
+    Includes advanced tools for statistical analysis and pattern categorization.
+  </Card>
+
+  <Card title="Jupyter/R" icon="document">
+    Demonstration-focused versions for research and reproducibility.
+  </Card>
+</CardGrid>
+
+## Simulation Variants
+
+Depending on the version used, Lenia provides different tools for exploring these complex systems:
+
+1. **Interactive Mode**: Real-time manipulation of parameters and kernel functions to discover new life forms.
+2. **Statistical Analysis**: Tools for tracking the population dynamics and stability of generated patterns.
+3. **3D Rendering**: Visualization support using plotting libraries like `plot.ly` for higher-dimensional projections.
+
+## Getting Started
+
+### Python Version
+The Python implementation is recommended for the best performance.
+
+<Steps>
+1. **Prerequisites**
+   Ensure Python 3 is installed along with relevant libraries for numerical computation.
+
+2. **Execution**
+   Run the main script to start the simulation window. GPU support will be utilized if available.
+</Steps>
+
+<Aside type="tip">
+Try loading different "species" presets to see how subtle changes in the kernel function leads to drastically different behaviors, from static clusters to oscillating "pulsars" and mobile "gliders."
+</Aside>
+
+<Aside type="note">
+Based on the research and implementation by the Lenia community.
+Explore the source at [Math_Chaos/Lenia](https://github.com/ibra-kdbra/Math-Problems/tree/main/Math_Chaos/Lenia).
+</Aside>

@@ -1,0 +1,94 @@
+---
+title: Chaos Theories Visuals
+description: Visualization of Lorenz Attractors and Logistic Maps using Python.
+---
+
+import { Aside, Steps, Badge, Card, CardGrid } from '@astrojs/starlight/components'
+import { GroupName, TextBlock } from '../../../components/components'
+
+<div class="space-y-0">
+<GroupName>Math Chaos</GroupName>
+# Chaos Theory Visualizations
+</div>
+
+<TextBlock size="lg" maxWidth="3xl" isProse={true} invertInDark={true}>
+This project provides a suite of Python tools for computing and graphing classic systems from chaos theory, specifically focusing on the **Lorenz Attractor** and the **Logistic Map**.
+</TextBlock>
+
+## Featured Systems
+
+<CardGrid>
+  <Card title="3D Lorenz Attractor" icon="random">
+    A 3D representation of the Lorenz system, showcasing the famous butterfly-shaped strange attractor.
+  </Card>
+
+  <Card title="2D Axis Projections" icon="eye">
+    Detailed 2D graphs of the Lorenz attractor's trajectories across the XY, YZ, and XZ planes.
+  </Card>
+
+  <Card title="Logistic Map" icon="bars">
+    Visualization of the logistic map and its bifurcation diagram, illustrating how simple non-linear equations lead to chaos.
+  </Card>
+
+  <Card title="Interactive Parameters" icon="settings">
+    Customizable system parameters (sigma, beta, rho) to explore different chaotic regimes.
+  </Card>
+</CardGrid>
+
+## Theoretical Context
+
+### Lorenz System
+The Lorenz system is a set of three ordinary differential equations first studied by Edward Lorenz. It is notable for having chaotic solutions for certain parameter values and initial conditions.
+
+```math
+dx/dt = sigma * (y - x)
+dy/dt = x * (rho - z) - y
+dz/dt = x * y - beta * z
+```
+
+### Logistic Map
+The logistic map is a polynomial mapping of degree 2, often cited as an archetypal example of how complex, chaotic behavior can arise from very simple non-linear dynamical equations.
+
+## Getting Started
+
+### Prerequisites
+Ensure you have Python installed along with the following libraries:
+- `numpy`
+- `matplotlib`
+- `scipy`
+
+Install them using pip:
+```shell
+pip install -r requirements.txt
+```
+
+### Usage
+
+<Steps>
+1. **Configure Parameters**
+   Open `parameters.py` and set your desired values for `sigma`, `beta`, `rho`, and `time`.
+
+2. **Run a Simulation**
+   Execute the desired script from the terminal:
+   ```shell
+   python 3D_Lorenz_Attractor.py
+   ```
+   or
+   ```shell
+   python logisticmap.py
+   ```
+</Steps>
+
+## Technical Details
+
+- **Language**: Python 3.x
+- **Visualization**: `matplotlib` for 2D and 3D plotting.
+- **Numerical Solver**: `scipy` for integrating the differential equations.
+
+<Aside type="tip">
+For the Lorenz Attractor, try the classic parameters: $\sigma=10, \beta=8/3, \rho=28$. This is where the iconic butterfly shape is most prominent.
+</Aside>
+
+<Aside type="note">
+Explore the source and different visuals at [Math_Chaos/Theories_Visuals](https://github.com/ibra-kdbra/Math-Problems/tree/main/Math_Chaos/Theories_Visuals).
+</Aside>

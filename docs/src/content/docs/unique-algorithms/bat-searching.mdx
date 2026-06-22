@@ -1,0 +1,84 @@
+---
+title: Bat Searching Algorithm
+description: Implementation of a many-objective cooperative bat searching algorithm for numerical optimization.
+---
+
+import { Aside, Steps, Badge, Card, CardGrid } from '@astrojs/starlight/components'
+import { GroupName, TextBlock } from '../../../components/components'
+
+<div class="space-y-0">
+<GroupName>Unique Algorithms</GroupName>
+# Cooperative Bat Searching
+</div>
+
+<TextBlock size="lg" maxWidth="3xl" isProse={true} invertInDark={true}>
+This project implements a **Many-Objective Cooperative Bat Searching Algorithm**, a nature-inspired metaheuristic used for optimizing complex problems with multiple, often conflicting, objective functions.
+</TextBlock>
+
+## Optimization Strategy
+
+The algorithm is based on the echolocation behavior of microbats. In this cooperative variant, the swarm is designed to handle "many-objective" problems, where the goal is to find a set of optimal solutions (Pareto front) across a high-dimensional objective space.
+
+### Key Mechanisms
+- **Echolocation Simulation**: Bats use frequency, loudness, and pulse emission rates to sense distance and find "prey" (optimal solutions).
+- **Cooperative Search**: Multiple swarms or sub-groups cooperate to explore different regions of the objective space.
+- **Fitness Evaluation**: Continuous monitoring of best-fit individuals to guide the swarm toward global optima.
+
+## Implementation Details
+
+<CardGrid>
+  <Card title="Python-Based" icon="seti:python">
+    Modular implementation using Python for flexible objective function definition.
+  </Card>
+
+  <Card title="Swarm Dynamics" icon="random">
+    Simulates complex group behaviors including velocity updates and local search near the current best solutions.
+  </Card>
+
+  <Card title="Many-Objective Support" icon="bars">
+    Designed specifically to handle optimization problems with more than three objectives.
+  </Card>
+
+  <Card title="Performance Plotting" icon="eye">
+    Built-in support for visualizing fitness optimization and convergence over time.
+  </Card>
+</CardGrid>
+
+## Getting Started
+
+### Prerequisites
+- Python 3.x
+- `numpy`
+- `matplotlib`
+
+Install dependencies:
+```shell
+pip install -r requirements.txt
+```
+
+### Running the Optimizer
+
+<Steps>
+1. **Define Objectives**
+   Modify `Objective.py` to specify the mathematical functions you wish to optimize.
+
+2. **Configure Swarm**
+   Adjust bat population and iteration counts in `Main.py`.
+
+3. **Execute**
+   ```bash
+   python Main.py
+   ```
+</Steps>
+
+## Architecture
+
+- **`Bat.py`**: Defines the individual agent's state (position, velocity, frequency).
+- **`Swarm.py`**: Manages the collection of bats and the cooperative logic.
+- **`EA.py`**: Contains the Evolutionary Algorithm framework and selection operators.
+- **`Objective.py`**: Repository of benchmark functions and custom optimization targets.
+
+<Aside type="note">
+Based on research into "Many objective cooperative bat searching algorithm."
+Explore the source at [Unique_Algorithms/Many_Objective_Cooperative_Bat_Searching](https://github.com/ibra-kdbra/Math-Problems/tree/main/Unique_Algorithms/Many_Objective_Cooperative_Bat_Searching).
+</Aside>

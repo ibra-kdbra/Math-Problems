@@ -1,0 +1,95 @@
+---
+title: Solvatore
+description: Bit-based division property for finding integral distinguishers in cryptographic primitives.
+---
+
+import { Aside, Steps, Badge, Card, CardGrid } from '@astrojs/starlight/components'
+import { GroupName, TextBlock } from '../../../components/components'
+
+<div class="space-y-0">
+<GroupName>Security Algorithms</GroupName>
+# Solvatore Cryptanalysis Tool
+</div>
+
+<TextBlock size="lg" maxWidth="3xl" isProse={true} invertInDark={true}>
+Solvatore is a specialized tool designed to assist in the cryptanalysis of cryptographic primitives. It simplifies the process of finding **integral distinguishers** using the bit-based division property.
+</TextBlock>
+
+## Overview
+
+The primary objective of Solvatore is to identify distinguishers that allow a researcher to differentiate a cryptographic primitive from a truly random function. These distinguishers are often the first step in constructing powerful key-recovery attacks.
+
+### Integral Distinguishers
+The tool searches for sets of inputs where certain output bits are "balanced." A bit is considered balanced if the XOR sum of that bit across all outputs is zero with a probability of 1.
+
+## Key Features
+
+<CardGrid>
+  <Card title="Division Property" icon="magnifier">
+    Implements bit-based division property analysis for modern block ciphers.
+  </Card>
+
+  <Card title="Design Flexibility" icon="pencil">
+    Supports various design strategies: S-boxes, bit permutations, modular addition, and matrix multiplications.
+  </Card>
+
+  <Card title="Python Integration" icon="seti:python">
+    Built with Python, leveraging `pycryptosat` for SAT-based solving of division trails.
+  </Card>
+
+  <Card title="Easy Modeling" icon="add-document">
+    Simple API for describing cipher structures and round functions.
+  </Card>
+</CardGrid>
+
+## Getting Started
+
+### Installation
+
+<Steps>
+1. **Install Dependencies**
+   Solvatore requires the `pycryptosat` package.
+   ```bash
+   pip install pycryptosat
+   ```
+
+2. **Python Environment**
+   Compatible with both Python 2 and Python 3.
+</Steps>
+
+## Example: Analyzing PRESENT
+
+To analyze a cipher like `PRESENT`, you define its structure and use the Solvatore solver to check for balanced bits.
+
+```python
+from solvatore import Solvatore
+from ciphers import present
+
+cipher = present.present
+rounds = 9
+
+solver = Solvatore()
+solver.load_cipher(cipher)
+solver.set_rounds(rounds)
+
+# Check if bit 0 is balanced after 9 rounds with specific active bits
+active_bits = {i for i in range(1, 64)} # Bit 0 is constant
+if solver.is_bit_balanced(0, rounds, active_bits):
+    print("Found distinguisher!")
+```
+
+## Technical Components
+
+### Core Classes
+- `CipherDescription`: Used to model the internal state and operations of the primitive.
+- `Solvatore`: The main engine that processes the cipher description and evaluates division properties.
+
+### Supported Operations
+- **S-box Application**: Map input bits to output bits through non-linear tables.
+- **Permutations**: Arbitrary bit-level shuffling.
+- **Linear Layers**: Support for complex linear transformations.
+
+<Aside type="note">
+Based on research in "Finding Integral Distinguishers with Ease" and "Bit-Based Division Property and Application to Simon Family".
+Explore the source at [Security_Algorithms/SOLvatore](https://github.com/ibra-kdbra/Math-Problems/tree/main/Security_Algorithms/SOLvatore).
+</Aside>

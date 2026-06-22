@@ -1,0 +1,75 @@
+---
+title: Cryptographic Clang
+description: Implementation of AES, CMAC, SHA256, HMAC, and RSA in C.
+---
+
+import { Aside, Steps, Badge, Card, CardGrid } from '@astrojs/starlight/components'
+import { GroupName, TextBlock } from '../../../components/components'
+
+<div class="space-y-0">
+<GroupName>Security Algorithms</GroupName>
+# Cryptographic Clang
+</div>
+
+<TextBlock size="lg" maxWidth="3xl" isProse={true} invertInDark={true}>
+A collection of fundamental cryptographic algorithms implemented in C for educational and demonstration purposes.
+</TextBlock>
+
+## Implemented Algorithms
+
+The library includes implementations for several widely-used cryptographic primitives:
+
+<CardGrid>
+  <Card title="AES" icon="seti:c">
+    Advanced Encryption Standard with support for CBC mode.
+  </Card>
+
+  <Card title="SHA256" icon="seti:c">
+    Secure Hash Algorithm 256-bit for data integrity.
+  </Card>
+
+  <Card title="HMAC" icon="seti:c">
+    Hash-based Message Authentication Code using SHA256.
+  </Card>
+
+  <Card title="RSA" icon="seti:c">
+    Asymmetric encryption and digital signatures using large number arithmetic.
+  </Card>
+</CardGrid>
+
+## Key Components
+
+### Symmetric Encryption
+- `aes.c` / `aes.h`: Core AES implementation.
+- `aes_cbc.c`: Cipher Block Chaining mode for AES.
+- `aes_cmac.c`: Cipher-based Message Authentication Code.
+
+### Hashing & Authentication
+- `sha256.c`: The hashing engine.
+- `hmac.c`: Keyed-hash message authentication.
+
+### Public Key Cryptography
+- `rsa.c`: RSA key generation and encryption.
+- `bignum.c`: Custom big integer library for handling large primes and modular exponentiation.
+
+## Building and Usage
+
+The project includes a `Makefile` for easy compilation of the source files and demonstration clients.
+
+<Steps>
+1. **Compile the library**
+   ```bash
+   make
+   ```
+
+2. **Run Demonstration**
+   Execute the compiled clients (e.g., `aes_client` or `signature_client`) to see the algorithms in action.
+</Steps>
+
+<Aside type="danger" title="Educational Use Only">
+These implementations are intended for demonstration and learning purposes. They are not audited for security and should not be used in production environments where security is critical.
+</Aside>
+
+<Aside type="note">
+Explore the source at [Security_Algorithms/Cryptographic_Clang](https://github.com/ibra-kdbra/Math-Problems/tree/main/Security_Algorithms/Cryptographic_Clang).
+</Aside>

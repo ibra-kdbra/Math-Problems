@@ -1,0 +1,213 @@
+---
+title: Ray Marching Demo
+description: 3D ray marching demonstration using Python for procedural terrain and volume rendering.
+---
+
+import { GroupName, TextBlock, Math } from '../../../components/components'
+
+<div class="space-y-0">
+<GroupName>PySpace</GroupName>
+# Ray Marching Demo
+</div>
+
+<TextBlock size="lg" maxWidth="3xl" weight="medium" isProse invertInDark>
+A Python-based 3D ray marching demonstration that showcases advanced volumetric rendering techniques for creating procedural terrains and atmospheric effects. This implementation demonstrates the mathematical foundations of real-time 3D graphics rendering using signed distance functions.
+</TextBlock>
+
+## Ray Marching Fundamentals
+
+<TextBlock size="base" maxWidth="3xl" isProse invertInDark>
+Ray marching is a technique for rendering implicit surfaces by progressively stepping along camera rays until a surface intersection is detected. Unlike traditional ray tracing, it works with signed distance functions (SDFs) that provide the distance to the nearest surface from any point in space.
+</TextBlock>
+
+### Mathematical Foundation
+
+<TextBlock size="base" maxWidth="3xl" isProse invertInDark>
+  The core ray marching algorithm follows the iterative equation:
+  <Math 
+    displayMode={true} 
+    formula={`\\vec{p}_{n+1} = \\vec{p}_n + \\vec{d} \\cdot \\text{SDF}(\\vec{p}_n)`} 
+  />
+
+  Where:
+  - <Math formula={`\\vec{p}_n`} /> is the current ray position
+  - <Math formula={`\\vec{d}`} /> is the ray direction
+  - <Math formula={`\\text{SDF}(\\vec{p}_n)`} /> is the signed distance at current position
+  - Iteration continues until <Math formula={`\\text{SDF}(\\vec{p}_n) < \\epsilon`} />
+</TextBlock>
+
+### Signed Distance Functions
+
+<TextBlock size="base" maxWidth="3xl" isProse invertInDark>
+  SDFs provide the exact distance to the nearest surface, with sign indicating interior (negative) or exterior (positive) regions:
+
+  <Math 
+    displayMode={true} 
+    formula={`
+      \\text{SDF}(\\vec{p}) = \\begin{cases}
+        -d(\\vec{p}, S) & \\text{if } \\vec{p} \\in S \\\\
+        d(\\vec{p}, S) & \\text{if } \\vec{p} \\notin S
+      \\end{cases}
+    `} 
+  />
+
+  Where <Math formula={`d(\\vec{p}, S)`} /> is the Euclidean distance to surface <Math formula={`S`} />.
+</TextBlock>
+
+## Implementation Architecture
+
+<TextBlock size="lg" maxWidth="3xl" weight="medium" isProse invertInDark>
+The Python implementation uses NumPy for efficient vector operations and matplotlib for visualization, providing a clean educational framework for understanding ray marching algorithms.
+</TextBlock>
+
+### Core Components
+
+<TextBlock size="base" maxWidth="3xl" isProse invertInDark>
+- **Camera System**: Pinhole camera model with configurable position and orientation
+- **Ray Generation**: Perspective-correct ray casting through pixel grid
+- **SDF Library**: Collection of primitive and complex distance functions
+- **Marching Loop**: Adaptive step size and convergence criteria
+- **Shading Model**: Basic lighting and surface normal calculation
+- **Output Pipeline**: High-quality image generation and saving
+</TextBlock>
+
+### Supported Primitives
+
+<TextBlock size="base" maxWidth="3xl" isProse invertInDark>
+The implementation includes various geometric primitives:
+
+  **Sphere**: <Math formula={`|\\vec{p} - \\vec{c}| - r`} />
+
+  **Box**: <Math formula={`\\max(|\\vec{p} - \\vec{c}|) - \\vec{d}`} />
+
+  **Plane**: <Math formula={`(\\vec{p} - \\vec{c}) \\cdot \\vec{n}`} />
+
+  **Terrain**: Fractal noise-based height fields
+</TextBlock>
+
+## Procedural Generation
+
+<TextBlock size="lg" maxWidth="3xl" weight="medium" isProse invertInDark>
+The demo showcases procedural content generation using mathematical functions and noise algorithms.
+</TextBlock>
+
+### Noise Functions
+
+<TextBlock size="base" maxWidth="3xl" isProse invertInDark>
+Implementation includes multiple noise types:
+- **Perlin Noise**: Gradient-based coherent noise function
+- **Fractal Brownian Motion**: Multi-octave noise synthesis
+- **Simplex Noise**: Improved gradient noise with reduced artifacts
+- **Worley Noise**: Cellular pattern generation for organic textures
+</TextBlock>
+
+### Terrain Generation
+
+<TextBlock size="base" maxWidth="3xl" isProse invertInDark>
+Procedural terrain is created through:
+- **Height Field**: 2D noise function mapped to elevation
+- **Erosion Simulation**: Simple smoothing and sediment transport
+- **Color Mapping**: Height-based texture and material assignment
+- **Level of Detail**: Multi-resolution representation for efficiency
+</TextBlock>
+
+## Rendering Pipeline
+
+<TextBlock size="lg" maxWidth="3xl" weight="medium" isProse invertInDark>
+The complete rendering pipeline demonstrates real-time 3D graphics concepts.
+</TextBlock>
+
+### Ray Marching Algorithm
+
+```python
+def ray_march(origin, direction, max_distance, max_steps):
+    distance = 0.0
+    for step in range(max_steps):
+        point = origin + direction * distance
+        sdf_value = scene_sdf(point)
+        
+        if sdf_value < MIN_DISTANCE:
+            return point, compute_normal(point), distance
+            
+        distance += sdf_value
+        if distance > max_distance:
+            break
+    
+    return None, None, max_distance
+```
+
+### Shading and Lighting
+
+<TextBlock size="base" maxWidth="3xl" isProse invertInDark>
+Basic Phong shading model implementation:
+- **Diffuse Lighting**: Lambertian surface reflection
+- **Specular Highlights**: Blinn-Phong for glossy surfaces
+- **Ambient Occlusion**: Approximate ambient shadowing
+- **Fog Effects**: Distance-based atmospheric attenuation
+</TextBlock>
+
+## Performance Optimizations
+
+<TextBlock size="base" maxWidth="3xl" isProse invertInDark>
+- **Bounding Volumes**: Early ray termination for empty regions
+- **Adaptive Step Size**: Larger steps in open space
+- **Spatial Partitioning**: Hierarchical acceleration structures
+- **Vectorization**: NumPy operations for parallel processing
+- **Level of Detail**: Reduced complexity for distant objects
+</TextBlock>
+
+## Usage and Configuration
+
+<TextBlock size="lg" maxWidth="3xl" weight="medium" isProse invertInDark>
+The demo provides flexible configuration for experimentation and learning.
+</TextBlock>
+
+### Running the Demo
+
+```bash
+# Install dependencies
+pip install -r requirements.txt
+
+# Run the ray marching demo
+python ray_marcher_demo.py
+
+# Quick execution on Windows
+Run.bat
+```
+
+### Customization Options
+
+<TextBlock size="base" maxWidth="3xl" isProse invertInDark>
+- **Scene Configuration**: Modify SDF combinations and transformations
+- **Camera Parameters**: Adjust position, orientation, and field of view
+- **Rendering Settings**: Control resolution, quality, and output format
+- **Performance Tuning**: Balance quality vs. rendering speed
+- **Export Options**: Save generated scenes as images or data
+</TextBlock>
+
+## Applications
+
+<TextBlock size="base" maxWidth="3xl" isProse invertInDark>
+Ray marching techniques are fundamental to:
+- **Real-Time Graphics**: Games and interactive applications
+- **Scientific Visualization**: Medical imaging and volume rendering
+- **Architectural Design**: Procedural building and landscape generation
+- **Artistic Creation**: Digital sculpture and abstract graphics
+- **Educational Tools**: Teaching 3D mathematics and computer graphics
+</TextBlock>
+
+## Technical Specifications
+
+<TextBlock size="base" maxWidth="3xl" isProse invertInDark>
+- **Language**: Python 3.x with NumPy and Matplotlib
+- **Performance**: Real-time rendering for moderate complexity scenes
+- **Output**: High-quality raster images with configurable resolution
+- **Memory**: Efficient implementation with minimal overhead
+- **Compatibility**: Cross-platform support with minimal dependencies
+</TextBlock>
+
+## Implementation Notes
+
+<TextBlock size="sm" maxWidth="lg" isProse invertInDark>
+This ray marching demonstration serves as an educational introduction to advanced 3D graphics concepts, providing a solid foundation for understanding volumetric rendering and procedural content generation techniques used in modern graphics applications.
+</TextBlock>

@@ -1,0 +1,83 @@
+---
+title: Perlin Noise
+description: A modern, header-only C++ library for generating Perlin noise.
+---
+
+import { Aside, Steps, Badge, Card, CardGrid } from '@astrojs/starlight/components'
+import { GroupName, TextBlock } from '../../../components/components'
+
+<div class="space-y-0">
+<GroupName>Math Chaos</GroupName>
+# Perlin Noise Generation
+</div>
+
+<TextBlock size="lg" maxWidth="3xl" isProse={true} invertInDark={true}>
+Perlin noise is a type of gradient noise used by visual artists to increase the appearance of realism in computer graphics. This header-only C++ library provides an efficient implementation based on Ken Perlin's "Improved Noise" algorithm.
+</TextBlock>
+
+## Key Features
+
+<CardGrid>
+  <Card title="Multi-Dimensional" icon="random">
+    Support for 1D, 2D, and 3D noise generation.
+  </Card>
+
+  <Card title="Octave Noise" icon="bars">
+    Generate fractal noise by layering multiple octaves of Perlin noise at different frequencies and amplitudes.
+  </Card>
+
+  <Card title="Header-Only" icon="seti:cpp">
+    Zero-dependency, single-header library for easy integration into any C++ project.
+  </Card>
+
+  <Card title="Deterministic" icon="check-circle">
+    Produces consistent results across different platforms for the same initial seed.
+  </Card>
+</CardGrid>
+
+## Basic Usage
+
+Integrating the library is as simple as including the header file and initializing the noise generator with a seed.
+
+```cpp
+#include "PerlinNoise.hpp"
+
+int main() {
+    const siv::PerlinNoise::seed_type seed = 123456u;
+    const siv::PerlinNoise perlin{ seed };
+
+    // Generate a 2D noise value at (x, y)
+    double val = perlin.noise2D_01(0.5, 0.8);
+
+    // Generate 4 octaves of noise for a more complex texture
+    double octVal = perlin.octave2D_01(0.5, 0.8, 4);
+}
+```
+
+## Advanced API
+
+The library offers various methods for remapping and normalizing the output noise:
+
+### Noise Range Variants
+- `noiseXD`: Returns values in the range **[-1, 1]**.
+- `noiseXD_01`: Returns values remapped to the range **[0, 1]**.
+
+### Octave Control
+Octave functions allow for the creation of more detailed "cloud-like" textures by summing multiple noise layers:
+- `octaveXD(x, y, octaves, persistence)`
+- `normalizedOctaveXD_01(...)`
+
+## Implementation Details
+
+- **Language**: Modern C++ (C++17/20 recommended).
+- **Foundation**: Based on the 2002 "Improved Noise" implementation by Ken Perlin.
+- **Serialization**: Supports serializing and deserializing the state of the noise generator.
+
+<Aside type="tip">
+Perlin noise is perfect for generating procedural terrains, clouds, and organic textures in games and simulations. Combine it with the [LeaPHI](/math-chaos/leaphi) project for even more complex organic patterns!
+</Aside>
+
+<Aside type="note">
+Header-only library by siv.
+Explore the source at [Math_Chaos/PerlinNoise](https://github.com/ibra-kdbra/Math-Problems/tree/main/Math_Chaos/PerlinNoise).
+</Aside>

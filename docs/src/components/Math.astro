@@ -1,0 +1,31 @@
+---
+import katex from 'katex';
+
+interface Props {
+  formula: string;
+  displayMode?: boolean; // Use true for block ($$...$$), false for inline ($...$)
+}
+
+const { formula, displayMode = false } = Astro.props;
+
+// Render the LaTeX formula to an HTML string
+const renderedFormula = katex.renderToString(formula, {
+  throwOnError: false, // Don't break the page on a LaTeX error
+  displayMode: displayMode,
+});
+---
+{/* 
+  STEP 1: Import the KaTeX CSS directly into the component.
+  The 'is:global' attribute is CRITICAL. It tells Astro not to scope these
+  styles, because KaTeX relies on global class names like '.katex'.
+*/}
+<style is:global>
+  @import "katex/dist/katex.min.css";
+</style>
+
+{/* 
+  STEP 2: Render the HTML from KaTeX.
+  This part remains the same.
+*/}
+<span set:html={renderedFormula} />
+

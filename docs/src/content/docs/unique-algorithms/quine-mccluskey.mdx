@@ -1,0 +1,232 @@
+---
+title: Quine-McCluskey Algorithm
+description: Python implementation of the Quine-McCluskey algorithm for Boolean function minimization and prime implicant analysis.
+---
+
+import { GroupName, TextBlock, Album, Math } from '../../../components/components'
+
+export const quineMcCluskeyImages = [
+  { src: '/imgs/quine_mccluskey/Sample.jpg', alt: 'Sample Run 1' },
+  { src: '/imgs/quine_mccluskey/Sample2.jpg', alt: 'Sample Run 2' },
+  { src: '/imgs/quine_mccluskey/Sample3.jpg', alt: 'Sample Run 3' }
+];
+
+<div class="space-y-0">
+<GroupName>Unique Algorithms</GroupName>
+# Quine-McCluskey Algorithm
+</div>
+
+<TextBlock size="lg" maxWidth="3xl" weight="medium" isProse invertInDark>
+A comprehensive Python implementation of the Quine-McCluskey algorithm for Boolean function minimization. This algorithm systematically finds prime implicants, essential prime implicants, and generates all minimum sum of products forms for Boolean functions with up to 26 variables.
+</TextBlock>
+
+<Album title="Algorithm Execution Examples" images={quineMcCluskeyImages} columns={3} />
+
+## Theoretical Foundation
+
+<TextBlock size="base" maxWidth="3xl" isProse invertInDark>
+The Quine-McCluskey algorithm is a tabular method for minimizing Boolean functions. It provides an exact solution for finding the minimal sum of products (MSOP) representation, making it fundamental to digital logic design and optimization.
+</TextBlock>
+
+### Mathematical Background
+
+<TextBlock size="base" maxWidth="3xl" isProse invertInDark>
+  Given a Boolean function <Math formula={`f: \\{0,1\\}^n \\rightarrow \\{0,1\\}`} />, the algorithm finds the minimal expression:
+  <Math 
+    displayMode={true}
+    formula={`f_{min} = \\sum_{i=1}^{k} P_i`}
+  />
+  Where each <Math formula={`P_i`} /> is a prime implicant and the sum represents logical OR operation.
+</TextBlock>
+
+## Algorithm Phases
+
+<TextBlock size="lg" maxWidth="3xl" weight="medium" isProse invertInDark>
+The algorithm operates in two main phases: finding prime implicants and selecting essential ones for minimal coverage.
+</TextBlock>
+
+### Phase 1: Prime Implicant Generation
+
+<TextBlock size="base" maxWidth="3xl" isProse invertInDark>
+1. **List Minterms**: Enumerate all minterms where function evaluates to 1
+2. **Group by Ones**: Group minterms by number of 1s in binary representation
+3. **Combine Terms**: Iteratively combine terms that differ by exactly one bit
+4. **Mark Combined**: Remove terms that were successfully combined
+5. **Repeat**: Continue until no more combinations possible
+6. **Extract Primes**: Unmarked terms are prime implicants
+</TextBlock>
+
+### Phase 2: Prime Implicant Selection
+
+<TextBlock size="base" maxWidth="3xl" isProse invertInDark>
+1. **Coverage Table**: Create table showing which prime implicants cover which minterms
+2. **Essential Primes**: Identify prime implicants that uniquely cover minterms
+3. **Select Essential**: Include all essential prime implicants in final expression
+4. **Cover Remaining**: Select minimal subset of remaining primes for complete coverage
+5. **Generate Solutions**: Produce all minimal sum of products forms
+</TextBlock>
+
+## Implementation Features
+
+<TextBlock size="lg" maxWidth="3xl" weight="medium" isProse invertInDark>
+The implementation provides both interactive and programmatic interfaces with comprehensive output analysis.
+</TextBlock>
+
+### Supported Operations
+
+<TextBlock size="base" maxWidth="3xl" isProse invertInDark>
+- **Prime Implicant Discovery**: Systematic finding of all prime implicants
+- **Essential Prime Identification**: Automatic detection of essential prime implicants
+- **Multiple Solutions**: Generation of all minimum sum of products forms
+- **Don't Care Handling**: Support for don't care conditions in specification
+- **Variable Limitation**: Support for up to 26 variables (A-Z)
+</TextBlock>
+
+### Usage Modes
+
+#### Interactive Mode
+```bash
+python main.py
+```
+Provides step-by-step guided input with real-time visualization of the minimization process.
+
+#### Batch Mode
+```bash
+python main.py <variables> <minterms> -d <dont_cares>
+```
+
+Example with don't cares:
+```bash
+python main.py 4 0 1 2 3 4 -d 5 6 7 8
+```
+
+Example without don't cares:
+```bash
+python main.py 3 0 4 2 6 7
+```
+
+## Algorithm Complexity
+
+<TextBlock size="lg" maxWidth="3xl" weight="medium" isProse invertInDark>
+The computational complexity grows exponentially with the number of variables, making it suitable for moderate-sized problems.
+</TextBlock>
+
+### Time Complexity Analysis
+
+<TextBlock size="base" maxWidth="3xl" isProse invertInDark>
+  - **Minterm Generation**: <Math formula={`O(2^n)`} /> for n variables
+  - **Combination Phase**: <Math formula={`O(m^2 \\cdot n)`} /> where m is number of minterms
+  - **Coverage Analysis**: <Math formula={`O(p \\cdot m)`} /> where p is number of prime implicants
+  - **Solution Generation**: Exponential in worst case for multiple minimal solutions
+</TextBlock>
+
+### Space Complexity
+
+<TextBlock size="base" maxWidth="3xl" isProse invertInDark>
+  - **Storage Requirements**: <Math formula={`O(2^n)`} /> for complete truth table representation
+  - **Intermediate Terms**: <Math formula={`O(m \\cdot n)`} /> during combination phase
+  - **Result Storage**: <Math formula={`O(p)`} /> for prime implicants and minimal solutions
+</TextBlock>
+
+## Applications
+
+<TextBlock size="base" maxWidth="3xl" isProse invertInDark>
+The Quine-McCluskey algorithm is fundamental to:
+- **Digital Logic Design**: Minimization of combinational logic circuits
+- **Computer Architecture**: Optimization of arithmetic and logic units
+- **VLSI Design**: Reduction of transistor count in integrated circuits
+- **Formal Verification**: Analysis of Boolean specifications
+- **Educational Tools**: Teaching of logic minimization concepts
+</TextBlock>
+
+## Comparison with Other Methods
+
+<TextBlock size="lg" maxWidth="3xl" weight="medium" isProse invertInDark>
+The Quine-McCluskey algorithm offers distinct advantages compared to alternative minimization techniques.
+</TextBlock>
+
+### vs. Karnaugh Maps
+
+**Quine-McCluskey Advantages:**
+- **Scalability**: Works with more than 6 variables systematically
+- **Algorithmic**: Suitable for computer implementation
+- **Completeness**: Guaranteed to find minimal solutions
+- **Multiple Solutions**: Finds all minimal expressions
+
+**Karnaugh Map Advantages:**
+- **Visual Intuition**: Easier for small numbers of variables
+- **Manual Speed**: Faster for 2-4 variable problems
+- **Pattern Recognition**: Human-friendly for simple cases
+
+### vs. Espresso Algorithm
+
+**Quine-McCluskey:**
+- **Exact Method**: Guaranteed minimal results
+- **Educational Value**: Clear theoretical foundation
+- **Systematic**: Well-defined algorithmic steps
+
+**Espresso:**
+- **Heuristic**: Faster for large problems
+- **Practical**: Better for real-world circuit sizes
+- **Optimization**: Additional heuristic improvements
+
+## Implementation Details
+
+<TextBlock size="base" maxWidth="3xl" isProse invertInDark>
+The Python implementation uses efficient data structures and algorithms:
+- **Bit Manipulation**: Fast binary operations for term combination
+- **Set Operations**: Efficient coverage analysis
+- **Recursive Search**: Exhaustive solution enumeration
+- **Memory Optimization**: Minimal intermediate storage
+</TextBlock>
+
+## Usage Examples
+
+<TextBlock size="lg" maxWidth="3xl" weight="medium" isProse invertInDark>
+The algorithm handles various Boolean function specifications effectively.
+</TextBlock>
+
+### Example: 4-Variable Function
+
+Input specification for function with minterms (0,1,2,3,4) and don't cares (5,6,7,8):
+
+```bash
+python main.py 4 0 1 2 3 4 -d 5 6 7 8
+```
+
+Output provides:
+- Prime implicants with binary representations
+- Essential prime implicants identification
+- All minimal sum of products forms
+- Coverage analysis tables
+
+### Example: 3-Variable Function
+
+Simple function without don't cares:
+
+```bash
+python main.py 3 0 4 2 6 7
+```
+
+Demonstrates algorithm operation on smaller problem spaces with clear visualization of each step.
+
+## Limitations and Extensions
+
+<TextBlock size="base" maxWidth="3xl" isProse invertInDark>
+**Current Limitations:**
+- **Variable Count**: Maximum 26 variables due to naming convention
+- **Exponential Growth**: Becomes impractical for very large functions
+- **Memory Usage**: Truth table storage for large variable counts
+
+**Potential Extensions:**
+- **Heuristic Pruning**: Early elimination of non-essential terms
+- **Parallel Processing**: Distributed computation for large problems
+- **Incremental Updates**: Efficient modification of existing solutions
+- **Output Formats**: Support for VHDL, Verilog, and other HDLs
+</TextBlock>
+
+## Implementation Notes
+
+<TextBlock size="sm" maxWidth="lg" isProse invertInDark>
+This implementation serves as both an educational tool and a practical utility for digital logic design, providing clear visualization of algorithmic steps and comprehensive analysis of Boolean function minimization.
+</TextBlock>

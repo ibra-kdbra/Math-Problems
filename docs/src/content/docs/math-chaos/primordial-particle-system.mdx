@@ -1,0 +1,75 @@
+---
+title: Primordial Particle System
+description: A JavaScript implementation of the Primordial Particle System (PPS).
+---
+
+import { Aside, Steps, Badge, Card, CardGrid } from '@astrojs/starlight/components'
+import { GroupName, TextBlock } from '../../../components/components'
+
+<div class="space-y-0">
+<GroupName>Math Chaos</GroupName>
+# Primordial Particle System (PPS)
+</div>
+
+<TextBlock size="lg" maxWidth="3xl" isProse={true} invertInDark={true}>
+The Primordial Particle System is a simple yet powerful simulation where large numbers of particles interact through basic steering behaviors, leading to the emergence of complex, lifelike multicellular structures.
+</TextBlock>
+
+## Theoretical Background
+
+PPS is based on the idea that biological-like complexity can emerge from very simple kinetic rules. Particles in the system move with a constant speed and adjust their heading based on the number and orientation of neighboring particles within specific sensing radii.
+
+### Emergent Behaviors
+- **String Formation**: Particles align to form long, flexible chains.
+- **Cellular Clusters**: Particles aggregate into stable, rotating or pulsating circular groups.
+- **Self-Replication**: Under certain parameters, clusters can exhibit behaviors similar to biological cell division.
+
+## Implementation Features
+
+<CardGrid>
+  <Card title="Web-Based" icon="seti:javascript">
+    Implemented using HTML5 Canvas and vanilla JavaScript for instant accessibility in any modern browser.
+  </Card>
+
+  <Card title="Interactive Controls" icon="settings">
+    Real-time adjustment of parameters like sensing radius, rotation speed, and particle density.
+  </Card>
+
+  <Card title="Version Evolution" icon="rocket">
+    Includes multiple iterations (v1.0 to v5.2) showcasing the refinement of the algorithm and performance.
+  </Card>
+
+  <Card title="Physics Engine" icon="random">
+    Custom kinetic engine optimized for handling hundreds of particles simultaneously on the web.
+  </Card>
+</CardGrid>
+
+## Getting Started
+
+Since this is a web-based project, no compilation is required.
+
+<Steps>
+1. **Open the Project**
+   Navigate to the `Math_Chaos/Primordial-Particle-System` directory.
+
+2. **Launch the Simulation**
+   Open `PPSv5.2.html` in any modern web browser.
+
+3. **Interact**
+   Use the on-screen controls (if available in the specific version) or modify the `PPSv5.js` constants to experiment with different behaviors.
+</Steps>
+
+## Key Components
+
+- **`PPSv5.js`**: The core simulation logic, including the spatial hashing and steering calculations.
+- **`PPSv5.2.html`**: The UI wrapper and rendering loop.
+- **`analysis.pdf`**: Detailed theoretical analysis of the system and its emergent properties.
+
+<Aside type="tip">
+Try adjusting the "Alpha" (rotation angle) and "Beta" (neighborhood weighting) parameters. Small tweaks to these constants are the key to transitioning between chaotic motion and stable "life-like" clusters.
+</Aside>
+
+<Aside type="note">
+Implementation by ibra-kdbra.
+Explore the source at [Math_Chaos/Primordial-Particle-System](https://github.com/ibra-kdbra/Math-Problems/tree/main/Math_Chaos/Primordial-Particle-System).
+</Aside>

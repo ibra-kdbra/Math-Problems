@@ -1,0 +1,216 @@
+---
+title: Path Planning Algorithms
+description: Advanced path planning algorithms including Bi-RRT and Artificial Potential Fields for robotics navigation.
+---
+
+import { GroupName, TextBlock, Album, Math } from '../../../components/components'
+
+export const pathPlanningImages = [
+  { src: '/imgs/path_planning/bi_rrt.png', alt: 'Bi-RRT Path Planning Visualization' },
+  { src: '/imgs/path_planning/apf.png', alt: 'Artificial Potential Field Visualization' }
+];
+
+<div class="space-y-0">
+<GroupName>Unique Algorithms</GroupName>
+# Path Planning Algorithms
+</div>
+
+<TextBlock size="lg" maxWidth="3xl" weight="medium" isProse invertInDark>
+Comprehensive path planning implementation featuring Bi-Directional Rapidly-exploring Random Trees (Bi-RRT) and Artificial Potential Field (APF) methods for robot navigation in complex environments.
+</TextBlock>
+
+<Album title="Path Planning Visualizations" images={pathPlanningImages} columns={2} />
+
+## Algorithm Overview
+
+<TextBlock size="base" maxWidth="3xl" isProse invertInDark>
+Path planning is fundamental to robotics and autonomous systems, determining optimal collision-free paths from start to goal positions while respecting environmental constraints and kinematic limitations.
+</TextBlock>
+
+## Bi-Directional RRT
+
+<TextBlock size="lg" maxWidth="3xl" weight="medium" isProse invertInDark>
+An efficient sampling-based algorithm that grows two trees simultaneously from start and goal positions, significantly improving convergence speed over traditional single-tree RRT.
+</TextBlock>
+
+### Algorithm Principles
+
+<TextBlock size="base" maxWidth="3xl" isProse invertInDark>
+Bi-RRT operates on the principle of dual exploration:
+- **Simultaneous Tree Growth**: Two trees expand from start and goal positions
+- **Random Sampling**: Generates random configurations in configuration space
+- **Tree Connection**: Attempts to connect trees when they approach each other
+- **Path Extraction**: Once connected, extracts complete path
+</TextBlock>
+
+### Mathematical Foundation
+
+<TextBlock size="base" maxWidth="3xl" isProse invertInDark>
+  The algorithm explores configuration space C using random sampling:
+  <Math 
+    displayMode={true} 
+    formula={`q_{rand} \\sim U(C_{free})`} 
+  />
+
+  Tree expansion follows:
+  <Math 
+    displayMode={true}
+    formula={`q_{new} = q_{near} + \\alpha \\cdot \\frac{q_{rand} - q_{near}}{|q_{rand} - q_{near}|}`}
+  />
+
+  Where <Math formula={`\\alpha`} /> is the step size parameter.
+</TextBlock>
+
+### Implementation Details
+
+```bash
+# Bi-RRT execution with custom iterations
+python bi_rrt.py --iter 200
+
+# Default configuration (100 iterations)
+python bi_rrt.py
+```
+
+## Artificial Potential Fields
+
+<TextBlock size="lg" maxWidth="3xl" weight="medium" isProse invertInDark>
+A physics-inspired approach that models the environment as potential fields, where obstacles generate repulsive forces and the goal generates attractive forces.
+</TextBlock>
+
+### Potential Field Theory
+
+<TextBlock size="base" maxWidth="3xl" isProse invertInDark>
+  The total potential at any point q is the superposition:
+
+  <Math 
+    displayMode={true} 
+    formula={`U(q) = U_{att}(q) + \\sum_{i=1}^{n} U_{rep_i}(q)`} 
+  />
+
+  Where:
+  - <Math formula={`U_{att}(q)`} /> is the attractive potential from the goal
+  - <Math formula={`U_{rep_i}(q)`} /> is the repulsive potential from obstacle i
+</TextBlock>
+
+### Attractive Potential Functions
+
+<TextBlock size="base" maxWidth="3xl" isProse invertInDark>
+  Two formulations are supported:
+
+  **Parabolic Function**:
+  <Math 
+    displayMode={true} 
+    formula={`U_{att}(q) = \\frac{1}{2} \\kappa |q - q_{goal}|^2`} 
+  />
+
+  **Conical Function**:
+  <Math 
+    displayMode={true} 
+    formula={`U_{att}(q) = \\kappa |q - q_{goal}|`} 
+  />
+</TextBlock>
+
+### Repulsive Potential
+
+<TextBlock size="base" maxWidth="3xl" isProse invertInDark>
+  For obstacle i with distance <Math formula={`d_i = |q - q_{obs_i}|`} />:
+  <Math 
+    displayMode={true}
+    formula={`
+      U_{rep_i}(q) = \\begin{cases}
+        \\frac{1}{2} \\eta \\left(\\frac{1}{d_i} - \\frac{1}{Q}\\right)^2 & \\text{if } d_i \\leq Q \\\\
+        0 & \\text{if } d_i > Q
+      \\end{cases}
+    `}
+  />
+
+  Where <Math formula={`Q`} /> is the influence distance and <Math formula={`\\eta`} /> is the repulsive gain.
+</TextBlock>
+### Implementation
+
+```bash
+# Custom configuration
+python pf.py --grid 0.5 --function conical --attractive 1 --repulsive 5000
+
+# Default settings
+python pf.py
+```
+
+## Streamlit Visualization
+
+<TextBlock size="lg" maxWidth="3xl" weight="medium" isProse invertInDark>
+Interactive web-based visualization using Streamlit for real-time algorithm demonstration and parameter tuning.
+</TextBlock>
+
+### Features
+
+<TextBlock size="base" maxWidth="3xl" isProse invertInDark>
+- **Real-time Visualization**: Watch algorithms explore the space
+- **Parameter Adjustment**: Modify algorithm parameters during execution
+- **Multiple Algorithms**: Switch between Bi-RRT and APF methods
+- **Environment Customization**: Define custom obstacle configurations
+- **Path Analysis**: Examine generated paths and algorithm performance
+</TextBlock>
+
+### Launch Interface
+
+```bash
+streamlit run app.py
+```
+
+## Algorithm Comparison
+
+<TextBlock size="lg" maxWidth="3xl" weight="medium" isProse invertInDark>
+Different path planning approaches offer distinct advantages for various scenarios.
+</TextBlock>
+
+### Bi-RRT Characteristics
+
+**Advantages:**
+- **Probabilistic Completeness**: Guaranteed to find a path if one exists
+- **High-Dimensional Support**: Works well in complex configuration spaces
+- **Fast Convergence**: Bidirectional search improves efficiency
+- **Optimality**: Can approach optimal solutions with sufficient iterations
+
+**Limitations:**
+- **Non-Deterministic**: Path quality varies between runs
+- **Parameter Sensitivity**: Performance depends on step size and iterations
+- **Memory Usage**: Tree structures can grow large
+
+### APF Characteristics
+
+**Advantages:**
+- **Deterministic**: Reproducible paths for given configurations
+- **Real-time Capability**: Suitable for dynamic environments
+- **Smooth Paths**: Naturally generates smooth trajectories
+- **Local Optimality**: Converges to local minima
+
+**Limitations:**
+- **Local Minima**: Can get trapped in non-optimal solutions
+- **Narrow Passage Difficulty**: Struggles with tight corridors
+- **Parameter Tuning**: Requires careful gain selection
+- **Completeness Issues**: Not guaranteed to find paths
+
+## Applications
+
+<TextBlock size="base" maxWidth="3xl" isProse invertInDark>
+- **Mobile Robotics**: Autonomous navigation in unknown environments
+- **Manipulator Planning**: Robot arm trajectory planning
+- **Autonomous Vehicles**: Self-driving car path planning
+- **Game AI**: Non-player character navigation
+- **Aerospace**: Aircraft trajectory optimization
+</TextBlock>
+## Technical Requirements
+
+<TextBlock size="base" maxWidth="3xl" isProse invertInDark>
+```bash
+pip install -r requirements.txt
+```
+
+Dependencies include NumPy for numerical computations, Matplotlib for visualization, and Streamlit for the interactive interface.
+</TextBlock>
+## Implementation Notes
+
+<TextBlock size="sm" maxWidth="lg" isProse invertInDark>
+The modular design allows easy extension with additional algorithms and supports both 2D and 3D planning spaces with minimal modification.
+</TextBlock>
