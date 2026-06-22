@@ -4,9 +4,11 @@ Implementation of the NORX permutation.
 https://norx.io
 
 """
+
 from cipher_description import CipherDescription
 
 r = []
+
 
 def apply_h(cipher, x, y, wordsize):
     """
@@ -16,56 +18,71 @@ def apply_h(cipher, x, y, wordsize):
     """
 
     for bit in range(wordsize):
-        cipher.apply_xor("s{}".format(x + bit), "s{}".format(y + bit), "txor{}".format(bit))
-        cipher.apply_and("s{}".format(x + bit), "s{}".format(y + bit), "tand{}".format(bit))
+        cipher.apply_xor(
+            "s{}".format(x + bit), "s{}".format(y + bit), "txor{}".format(bit)
+        )
+        cipher.apply_and(
+            "s{}".format(x + bit), "s{}".format(y + bit), "tand{}".format(bit)
+        )
 
     cipher.apply_xor("s{}".format(x), "s{}".format(y), "s{}".format(x))
     for bit in range(1, wordsize):
-        cipher.apply_xor("txor{}".format(bit), "tand{}".format(bit - 1), "s{}".format(x + bit))
+        cipher.apply_xor(
+            "txor{}".format(bit), "tand{}".format(bit - 1), "s{}".format(x + bit)
+        )
+
 
 def apply_g(cipher, a, b, c, d, wordsize):
     apply_h(cipher, a, b, wordsize)
     for bit in range(wordsize):
-        cipher.apply_xor("s{}".format(a + bit),
-                         "s{}".format(d + bit),
-                         "t{}".format(bit))
+        cipher.apply_xor(
+            "s{}".format(a + bit), "s{}".format(d + bit), "t{}".format(bit)
+        )
     for bit in range(wordsize):
-        cipher.apply_and("t{}".format(bit),
-                         "t{}".format(bit),
-                         "s{}".format(d + (bit - r[0]) % wordsize))
+        cipher.apply_and(
+            "t{}".format(bit),
+            "t{}".format(bit),
+            "s{}".format(d + (bit - r[0]) % wordsize),
+        )
     apply_h(cipher, c, d, wordsize)
     for bit in range(wordsize):
-        cipher.apply_xor("s{}".format(b + bit),
-                         "s{}".format(c + bit),
-                         "t{}".format(bit))
+        cipher.apply_xor(
+            "s{}".format(b + bit), "s{}".format(c + bit), "t{}".format(bit)
+        )
     for bit in range(wordsize):
-        cipher.apply_and("t{}".format(bit),
-                         "t{}".format(bit),
-                         "s{}".format(b + (bit - r[1]) % wordsize))
+        cipher.apply_and(
+            "t{}".format(bit),
+            "t{}".format(bit),
+            "s{}".format(b + (bit - r[1]) % wordsize),
+        )
     apply_h(cipher, a, b, wordsize)
     for bit in range(wordsize):
-        cipher.apply_xor("s{}".format(a + bit),
-                         "s{}".format(d + bit),
-                         "t{}".format(bit))
+        cipher.apply_xor(
+            "s{}".format(a + bit), "s{}".format(d + bit), "t{}".format(bit)
+        )
     for bit in range(wordsize):
-        cipher.apply_and("t{}".format(bit),
-                         "t{}".format(bit),
-                         "s{}".format(d + (bit - r[2]) % wordsize))
+        cipher.apply_and(
+            "t{}".format(bit),
+            "t{}".format(bit),
+            "s{}".format(d + (bit - r[2]) % wordsize),
+        )
     apply_h(cipher, c, d, wordsize)
     for bit in range(wordsize):
-        cipher.apply_xor("s{}".format(b + bit),
-                         "s{}".format(c + bit),
-                         "t{}".format(bit))
+        cipher.apply_xor(
+            "s{}".format(b + bit), "s{}".format(c + bit), "t{}".format(bit)
+        )
     for bit in range(wordsize):
-        cipher.apply_and("t{}".format(bit),
-                         "t{}".format(bit),
-                         "s{}".format(b + (bit - r[3]) % wordsize))
+        cipher.apply_and(
+            "t{}".format(bit),
+            "t{}".format(bit),
+            "s{}".format(b + (bit - r[3]) % wordsize),
+        )
 
 
 def generate_norx_version(wordsize, rounds):
     global r
     norx = CipherDescription(16 * wordsize)
-    s = [i*wordsize for i in range(16)]
+    s = [i * wordsize for i in range(16)]
 
     if wordsize == 32:
         r = [8, 11, 16, 31]
@@ -85,6 +102,7 @@ def generate_norx_version(wordsize, rounds):
     apply_g(norx, s[3], s[4], s[9], s[14], wordsize)
 
     return norx
+
 
 norx32 = generate_norx_version(32, 4)
 norx64 = generate_norx_version(64, 4)
