@@ -1,9 +1,8 @@
-from solvatore import Solvatore
-from cipher_description import CipherDescription
-
 from itertools import combinations
 
+from cipher_description import CipherDescription
 from ciphers import skinny
+from solvatore import Solvatore
 
 constant_sboxes = 1
 wordsize = 4
@@ -22,11 +21,11 @@ found_distinguisher = False
 
 print("Skinny Wordsize: {} Rounds: {}".format(wordsize, rounds))
 
-#for constant_bit in range(16*wordsize):
+# for constant_bit in range(16*wordsize):
 #   constant_bits = [constant_bit]
 for constant_sboxes in combinations(range(16), constant_sboxes):
     constant_bits = [24 + i for i in range(wordsize)]
-    #for sbox in constant_sboxes:
+    # for sbox in constant_sboxes:
     #    for i in range(wordsize):
     #        constant_bits.append(wordsize*sbox + i)
 
@@ -46,7 +45,7 @@ for constant_sboxes in combinations(range(16), constant_sboxes):
         print("------------------------------")
         print("Found Distinguisher")
         print("Constant Bits: ", constant_bits)
-        #print("Active Bits: ", list(active_bits))
+        # print("Active Bits: ", list(active_bits))
         print("Balanced Bits: ", balanced_bits)
         break
 
