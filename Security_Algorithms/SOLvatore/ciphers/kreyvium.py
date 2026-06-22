@@ -1,13 +1,13 @@
 from cipher_description import CipherDescription
 
-#(iv127 ... iv0) = (s288 ... s415)
+# (iv127 ... iv0) = (s288 ... s415)
 
 
 def generate_Kreyvium_version(rounds):
     kreyvium = CipherDescription(416)
 
     for i in range(128):
-        kreyvium.apply_mov("s{}".format(93+i), "s{}".format(288+i))
+        kreyvium.apply_mov("s{}".format(93 + i), "s{}".format(288 + i))
 
     for r in range(rounds):
         kreyvium.apply_xor("s65", "s92", "t1")
