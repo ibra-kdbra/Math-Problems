@@ -1,6 +1,5 @@
 from cipher_description import CipherDescription
 
-
 grain = CipherDescription(256)
 
 # LFSR (s0 ... s127)
