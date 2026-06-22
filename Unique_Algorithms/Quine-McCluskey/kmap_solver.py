@@ -1,5 +1,6 @@
 from itertools import combinations
 
+
 class KMap:
     def __init__(self, num_of_vars: int, minterms: set, dont_cares: set):
         """
@@ -11,14 +12,16 @@ class KMap:
         self.dont_cares = set(map(self.to_binary, dont_cares))
         self.minterms_and_dont_cares = self.minterms.union(self.dont_cares)
         self.prime_implicants = self.get_prime_implicants()
-        self.implicant_to_minterms, self.minterm_to_implicants = self.get_coverage_dicts()
+        self.implicant_to_minterms, self.minterm_to_implicants = (
+            self.get_coverage_dicts()
+        )
         self.essential_prime_implicants = self.get_essential_prime_implicants()
 
     def to_binary(self, num) -> str:
         """
         Returns the binary representation of the number in str format
         """
-        binary_num = format(int(num), 'b')
+        binary_num = format(int(num), "b")
         if len(binary_num) < self.num_of_vars:
             # 0 extension to the left
             binary_num = "0" * (self.num_of_vars - len(binary_num)) + binary_num
@@ -53,11 +56,10 @@ class KMap:
         returned_implicant = ""
         for i, bit in enumerate(implicant):
             if bit == "0":
-                returned_implicant += chr(ord('A') + i) + "'"
+                returned_implicant += chr(ord("A") + i) + "'"
             elif bit == "1":
-                returned_implicant += chr(ord('A') + i)
+                returned_implicant += chr(ord("A") + i)
         return returned_implicant
-    
 
     def count_literals(self, sop):
         """
@@ -65,12 +67,12 @@ class KMap:
         """
         return sum([(len(implicant) - implicant.count("-")) for implicant in sop])
 
-    def is_covered(self, minterm,implicant):
+    def is_covered(self, minterm, implicant):
         """
         Returns true if the minterm is covered by the implicant
         """
         is_covered = True
-        for minterm_bit, implicant_bit in zip(minterm,implicant):
+        for minterm_bit, implicant_bit in zip(minterm, implicant):
             if implicant_bit == "-":
                 continue
             elif implicant_bit != minterm_bit:
@@ -85,20 +87,25 @@ class KMap:
             {minterm: [prime implicants that cover it]}
         """
         # {prime implicant : minterms that are covered by it}
-        implicant_to_minterms = {implicant:set() for implicant in self.prime_implicants}
+        implicant_to_minterms = {
+            implicant: set() for implicant in self.prime_implicants
+        }
         # {minterm : set of implicants that cover it}
-        minterm_to_implicants = {minterm:set() for minterm in self.minterms}
+        minterm_to_implicants = {minterm: set() for minterm in self.minterms}
         for minterm in self.minterms:
             for implicant in self.prime_implicants:
-                if self.is_covered(minterm,implicant):
+                if self.is_covered(minterm, implicant):
                     implicant_to_minterms[implicant].add(minterm)
                     minterm_to_implicants[minterm].add(implicant)
         return implicant_to_minterms, minterm_to_implicants
-    
+
     def get_prime_implicants(self):
         prime_implicants = set()
         # a list of sets for each implicant size: 1,2,4,8,16
-        implicants_all_sizes = [self.minterms_and_dont_cares if i == 0 else set() for i in range(self.num_of_vars+1)]
+        implicants_all_sizes = [
+            self.minterms_and_dont_cares if i == 0 else set()
+            for i in range(self.num_of_vars + 1)
+        ]
         for i, size in enumerate(implicants_all_sizes):
             for implicant1 in size:
                 used_once = False
@@ -106,12 +113,12 @@ class KMap:
                     differ = self.differ_by_one_bit(implicant1, implicant2)
                     if differ:
                         used_once = True
-                        implicants_all_sizes[i+1].add(differ)
+                        implicants_all_sizes[i + 1].add(differ)
                 if not used_once:
-                    #Cannot be expanded further, i.e. Prime Implicant   
+                    # Cannot be expanded further, i.e. Prime Implicant
                     prime_implicants.add(implicant1)
         return prime_implicants
-    
+
     def get_essential_prime_implicants(self):
         """
         Returns the essential prime implicants
@@ -119,20 +126,22 @@ class KMap:
         """
         essential_prime_implicants = set()
         for minterm, prime_implicants in self.minterm_to_implicants.items():
-            #If the minterm is covered by only one prime implicant, it is essential
+            # If the minterm is covered by only one prime implicant, it is essential
             if len(prime_implicants) == 1:
-                essential_prime_implicants = essential_prime_implicants.union(prime_implicants)
+                essential_prime_implicants = essential_prime_implicants.union(
+                    prime_implicants
+                )
 
         return essential_prime_implicants
-    
-    def is_covering_all_minterms(self,possible_min_sop):
+
+    def is_covering_all_minterms(self, possible_min_sop):
         """
         Returns true if the possible_min_sop covers all the minterms
         """
         covered_minterms = set()
         for implicant in possible_min_sop:
             for minterm in self.minterms:
-                if self.is_covered(minterm,implicant):
+                if self.is_covered(minterm, implicant):
                     covered_minterms.add(minterm)
         return covered_minterms == self.minterms
 
@@ -141,38 +150,40 @@ class KMap:
         """
         Returns all the min possible_min_sop forms
         """
-        #determining the minterms that are not covered by essential prime implicants
+        # determining the minterms that are not covered by essential prime implicants
         minterms_not_covered = self.minterms.copy()
         for essential_prime_implicant in self.essential_prime_implicants:
             for minterm in self.implicant_to_minterms[essential_prime_implicant]:
                 if minterm in minterms_not_covered:
                     minterms_not_covered.remove(minterm)
 
-        #If they are all covered, return the essential prime implicants, as they are the only valid sop.
+        # If they are all covered, return the essential prime implicants, as they are the only valid sop.
         if len(minterms_not_covered) == 0:
             return [list(self.essential_prime_implicants)]
 
-        #find all combinations of prime implciants that cover all the minterms
+        # find all combinations of prime implciants that cover all the minterms
         else:
             usable_implicants = set()
             for minterm in minterms_not_covered:
                 for prime_implicant in self.minterm_to_implicants[minterm]:
                     usable_implicants.add(prime_implicant)
-                        
+
             combinations_of_implicants = list()
-            for i in range(1,len(minterms_not_covered)+1):
-                #generate all combinations of prime implicants, of length 1 to len(minterms_not_covered)
-                combinations_of_implicants.extend(list(combinations(usable_implicants,i)))
-            
+            for i in range(1, len(minterms_not_covered) + 1):
+                # generate all combinations of prime implicants, of length 1 to len(minterms_not_covered)
+                combinations_of_implicants.extend(
+                    list(combinations(usable_implicants, i))
+                )
+
             min_sops = list()
             min_sop_len = 0
             for combination in combinations_of_implicants:
                 possible_min_sop = list(self.essential_prime_implicants)
                 possible_min_sop.extend(combination)
                 if self.is_covering_all_minterms(possible_min_sop):
-                    if min_sop_len == 0:    
+                    if min_sop_len == 0:
                         min_sop_len = self.count_literals(possible_min_sop)
                         min_sops.append(possible_min_sop)
-                    elif self.count_literals(possible_min_sop) == min_sop_len:   
+                    elif self.count_literals(possible_min_sop) == min_sop_len:
                         min_sops.append(possible_min_sop)
             return min_sops
