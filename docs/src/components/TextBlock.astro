@@ -1,6 +1,4 @@
 ---
-import NumberWrapper from './NumberWrapper';
-
 export interface Props {
   size?: 'sm' | 'base' | 'lg' | 'xl';
   weight?: 'light' | 'normal' | 'medium' | 'bold';
@@ -54,7 +52,7 @@ const spacingMap = {
 };
 
 const classes = [
-  'mx-auto',
+  'mx-auto reveal-on-scroll',
   `max-w-${maxWidth}`,
   sizeMap[size],
   weightMap[weight],

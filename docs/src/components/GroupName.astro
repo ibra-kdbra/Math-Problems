@@ -1,14 +1,40 @@
-<div class='flex items-center gap-3 mb-6'>
-  <svg class='w-6 h-6 text-primary' fill='none' stroke='currentColor' viewBox='0 0 24 24'>
-    <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M7 4V2a1 1 0 011-1h4a1 1 0 011 1v2m4 0H6m6 0H9m4 4v1m-4-1v1m2-1h.01M3 21h18a2 2 0 002-2V7a2 2 0 00-2-2H3a2 2 0 00-2 2v12a2 2 0 002 2z'></path>
-  </svg>
-  <span class='text-primary font-semibold text-lg'>
+---
+export interface Props {
+  color?: 'blue' | 'purple' | 'pink' | 'emerald' | 'amber';
+}
+
+const { color = 'blue' } = Astro.props;
+
+const colorMap: Record<string, { text: string; bg: string; border: string }> = {
+  blue:    { text: 'text-blue-400',    bg: 'bg-blue-500/10',    border: 'border-blue-500/30' },
+  purple:  { text: 'text-purple-400',  bg: 'bg-purple-500/10',  border: 'border-purple-500/30' },
+  pink:    { text: 'text-pink-400',    bg: 'bg-pink-500/10',    border: 'border-pink-500/30' },
+  emerald: { text: 'text-emerald-400', bg: 'bg-emerald-500/10', border: 'border-emerald-500/30' },
+  amber:   { text: 'text-amber-400',   bg: 'bg-amber-500/10',   border: 'border-amber-500/30' },
+};
+
+const colors = colorMap[color] || colorMap.blue;
+---
+
+<div class="group-label">
+  <span class:list={[
+    'inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider border',
+    colors.text,
+    colors.bg,
+    colors.border,
+  ]}>
+    <svg class='w-3.5 h-3.5' fill='none' stroke='currentColor' viewBox='0 0 24 24' stroke-width="2">
+      <path stroke-linecap='round' stroke-linejoin='round' d='M7 4V2a1 1 0 011-1h4a1 1 0 011 1v2m4 0H6m6 0H9m4 4v1m-4-1v1m2-1h.01M3 21h18a2 2 0 002-2V7a2 2 0 00-2-2H3a2 2 0 00-2 2v12a2 2 0 002 2z'></path>
+    </svg>
     <slot />
   </span>
 </div>
 
 <style>
+  .group-label {
+    margin-bottom: 0.75rem;
+  }
   div:has(+ h1) {
-    margin-bottom: 0 !important;
+    margin-bottom: 0.5rem !important;
   }
 </style>

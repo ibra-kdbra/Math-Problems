@@ -8,60 +8,112 @@ const { title, images, columns = 3 } = Astro.props;
 ---
 
 <style>
+.album-section {
+  margin: 2em 0;
+}
+
 .album-grid {
   display: grid;
   gap: 1rem;
 }
+
+@media (max-width: 640px) {
+  .album-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 1024px) {
+  .album-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+
+.album-item {
+  margin: 0;
+}
+
 .album-item img {
   width: 100%;
-  border-radius: 0.5rem;
+  border-radius: 0.75rem;
   cursor: zoom-in;
-  transition: transform 0.2s ease;
+  transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1),
+              box-shadow 0.3s ease,
+              border-color 0.3s ease;
+  border: 1px solid hsl(var(--border) / 0.5);
+  box-shadow: 0 4px 16px -4px rgba(0, 0, 0, 0.2);
+  background-color: hsl(var(--secondary) / 0.1);
 }
+
 .album-item img:hover {
   transform: scale(1.02);
+  box-shadow: 0 12px 32px -8px hsl(var(--primary) / 0.25);
+  border-color: hsl(var(--primary) / 0.5);
 }
+
 figcaption {
   text-align: center;
-  font-size: 0.9rem;
-  margin-top: 0.25rem;
-  color: #666;
+  font-size: 0.82rem;
+  margin-top: 0.5rem;
+  color: hsl(var(--muted-foreground));
 }
+
+/* Lightbox with smooth transitions */
 .lightbox {
   display: none;
   position: fixed;
   inset: 0;
-  background: rgba(0, 0, 0, 0.85);
+  background: rgba(0, 0, 0, 0);
   justify-content: center;
   align-items: center;
   z-index: 1000;
+  cursor: zoom-out;
+  transition: background 0.3s ease;
 }
+
 .lightbox.open {
   display: flex;
+  background: rgba(0, 0, 0, 0.88);
 }
+
 .lightbox img {
   max-width: 90vw;
   max-height: 90vh;
-  border-radius: 0.5rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 24px 80px -12px rgba(0, 0, 0, 0.5);
+  animation: lightbox-zoom-in 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@keyframes lightbox-zoom-in {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 </style>
 
-{title && <h2>{title}</h2>}
+<div class="album-section reveal-on-scroll">
+  {title && <h2>{title}</h2>}
 
-<div class="album-grid" style={`grid-template-columns: repeat(${columns}, 1fr)`}>
-  {images.map((img, i) => (
-    <figure class="album-item">
-      <img
-        src={img.src}
-        alt={img.alt || `Image ${i}`}
-        loading="lazy"
-        class="zoomable"
-        data-src={img.src}
-        data-alt={img.alt || `Image ${i}`}
-      />
-      {img.caption && <figcaption>{img.caption}</figcaption>}
-    </figure>
-  ))}
+  <div class="album-grid" style={`grid-template-columns: repeat(${columns}, 1fr)`}>
+    {images.map((img, i) => (
+      <figure class="album-item">
+        <img
+          src={img.src}
+          alt={img.alt || `Image ${i}`}
+          loading="lazy"
+          class="zoomable"
+          data-src={img.src}
+          data-alt={img.alt || `Image ${i}`}
+        />
+        {img.caption && <figcaption>{img.caption}</figcaption>}
+      </figure>
+    ))}
+  </div>
 </div>
 
 <!-- Lightbox -->

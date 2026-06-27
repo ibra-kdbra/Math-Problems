@@ -106,3 +106,44 @@ import { HeaderMenu } from './header-menu'
   }
 }
 </style>
+
+<script is:inline>
+  // Scroll-driven reveal animation system
+  // Powered by IntersectionObserver for performance
+  function initRevealAnimations() {
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (prefersReducedMotion) {
+      // Immediately reveal all elements
+      document.querySelectorAll('.reveal-on-scroll').forEach(el => {
+        el.classList.add('revealed');
+      });
+      return;
+    }
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('revealed');
+            observer.unobserve(entry.target); // Only animate once
+          }
+        });
+      },
+      { threshold: 0.1, rootMargin: '0px 0px -40px 0px' }
+    );
+
+    document.querySelectorAll('.reveal-on-scroll').forEach(el => {
+      observer.observe(el);
+    });
+  }
+
+  // Run on initial load
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initRevealAnimations);
+  } else {
+    initRevealAnimations();
+  }
+
+  // Re-run after Astro view transitions (for SPA navigation)
+  document.addEventListener('astro:after-swap', initRevealAnimations);
+</script>

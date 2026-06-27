@@ -4,7 +4,7 @@ description: Visualization of Lorenz Attractors and Logistic Maps using Python.
 ---
 
 import { Aside, Steps, Badge, Card, CardGrid } from '@astrojs/starlight/components'
-import { GroupName, TextBlock } from '../../../components/components'
+import { GroupName, TextBlock, Math } from '../../../components/components'
 
 <div class="space-y-0">
 <GroupName>Math Chaos</GroupName>
@@ -40,11 +40,7 @@ This project provides a suite of Python tools for computing and graphing classic
 ### Lorenz System
 The Lorenz system is a set of three ordinary differential equations first studied by Edward Lorenz. It is notable for having chaotic solutions for certain parameter values and initial conditions.
 
-```math
-dx/dt = sigma * (y - x)
-dy/dt = x * (rho - z) - y
-dz/dt = x * y - beta * z
-```
+<Math displayMode={true} formula={`\\begin{align} \\frac{dx}{dt} &= \\sigma(y - x) \\\\ \\frac{dy}{dt} &= x(\\rho - z) - y \\\\ \\frac{dz}{dt} &= xy - \\beta z \\end{align}`} />
 
 ### Logistic Map
 The logistic map is a polynomial mapping of degree 2, often cited as an archetypal example of how complex, chaotic behavior can arise from very simple non-linear dynamical equations.

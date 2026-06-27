@@ -1,3 +1,4 @@
+@import 'katex/dist/katex.min.css';
 
 :root,
 :root[data-theme='dark'],
@@ -18,19 +19,6 @@
 
   --sl-color-bg-sidebar: #020817;
   --sl-color-bg: #020817;
-
-  --background: 222.2, 84%, 4.9%;
-  --foreground: 210, 40%, 98%;
-
-  --primary: 217.2, 91.2%, 59.8%;
-  --primary-foreground: 222.2, 47.4%, 11.2%;
-
-  --border: 217.2 32.6% 17.5%;
-
-  --warning-foreground: 48 97% 77%;
-
-  --tip: 272 72% 47%;
-  --tip-foreground: 264 67% 35%;
 }
 
 :root[data-theme='light'] {
@@ -51,28 +39,8 @@
 
   --sl-color-text-accent: hsl(221.2 83.2% 53.3%);
 
-  --background: 0, 0%, 100%;
-  --foreground: 222.2, 84%, 4.9%;
-  --muted-foreground: 215.4 16.3% 46.9%;
-
-  --primary: 221.2 83.2% 53.3%;
-  --primary-foreground: 210 40% 98%;
-
-  --border: 214.3, 31.8%, 91.4%;
-
   --sl-color-bg-sidebar: var(--background);
   --sl-color-hairline-shade: var(--border);
-
-  --warning: 42 100% 62%;
-  /* --warning-foreground: 48 97% 77%; */
-  --warning-foreground: 38 92% 50%;
-
-  /* --note-foreground: 210 100% 72%; */
-  --note-foreground: 207 100% 23%;
-  --note: 207 100% 23%;
-
-  --tip: 272 72% 47%;
-  /* --tip-foreground: 264 67% 35%; */
 }
 
 /* BADGE STYLES */
@@ -130,23 +98,64 @@
 }
 
 .card {
-  @apply bg-background border flex flex-col rounded-lg px-6 py-5;
+  display: flex;
+  flex-direction: column;
+  padding: 1.25rem;
+  border: 1px solid hsl(var(--border) / 0.5);
+  border-radius: 0.75rem;
+  background: linear-gradient(135deg, hsl(var(--secondary) / 0.3), hsl(var(--background)));
+  box-shadow: inset 0 1px 1px hsl(var(--white) / 0.05), var(--shadow-sm);
+  transition: all 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: radial-gradient(circle at top left, hsl(var(--primary) / 0.15), transparent 60%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
 }
 
 .card .title {
-  @apply flex flex-col justify-start text-left align-text-top gap-[2px] text-foreground font-bold;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  text-align: left;
+  gap: 2px;
+  color: var(--sl-color-white);
+  font-weight: 600;
+  font-size: 1.1rem;
 }
 
-a > .card {
-  @apply hover:border-primary;
+a > .card:hover,
+a:focus-visible > .card,
+.card:hover {
+  border-color: hsl(var(--primary) / 0.5);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px -6px hsl(var(--primary) / 0.15);
+  background: linear-gradient(135deg, hsl(var(--secondary) / 0.5), hsl(var(--background)));
+}
+
+a > .card:hover::before,
+a:focus-visible > .card::before,
+.card:hover::before {
+  opacity: 1;
 }
 
 .card .icon {
-  @apply !border-none !bg-transparent !text-primary;
+  background: transparent !important;
+  border: none !important;
+  color: hsl(var(--primary));
 }
 
 .card .body {
-  @apply text-muted-foreground mt-0;
+  color: hsl(var(--muted-foreground));
+  margin-top: 0;
+  line-height: 1.6;
 }
 
 /* SIDEBAR STYLES */
@@ -194,22 +203,70 @@ li {
 
 .pagination-links {
   @apply flex flex-row sm:flex-row justify-between items-center gap-4;
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid hsl(var(--border) / 0.5);
 }
 
 .pagination-links a {
-  @apply border-none shadow-none
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.25rem;
+  padding: 1.25rem;
+  border-radius: 0.75rem;
+  border: 1px solid hsl(var(--border) / 0.5);
+  background: linear-gradient(135deg, hsl(var(--secondary) / 0.3), hsl(var(--background)));
+  box-shadow: inset 0 1px 1px hsl(var(--white) / 0.05), var(--shadow-sm);
+  transition: all 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+  text-decoration: none !important;
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+}
+
+.pagination-links a[rel="prev"] {
+  align-items: flex-start;
+}
+.pagination-links a[rel="next"] {
+  align-items: flex-end;
+}
+
+.pagination-links a::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: radial-gradient(circle at center, hsl(var(--primary) / 0.1), transparent 70%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.pagination-links a:hover {
+  border-color: hsl(var(--primary) / 0.5);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px -6px hsl(var(--primary) / 0.15);
+  background: linear-gradient(135deg, hsl(var(--secondary) / 0.5), hsl(var(--background)));
+}
+
+.pagination-links a:hover::before {
+  opacity: 1;
 }
 
 .pagination-links svg {
-  @apply size-5 text-muted-foreground;
+  @apply size-5 text-muted-foreground transition-colors duration-300;
+}
+
+.pagination-links a:hover svg {
+  @apply text-primary;
 }
 
 .link-title {
-  @apply text-[hsl(var(--muted-foreground))] hover:underline;
+  @apply text-foreground font-semibold text-base transition-colors duration-300;
 }
 
-.link-title {
-  @apply text-base transition-colors duration-100;
+.pagination-links a:hover .link-title {
+  @apply text-primary;
 }
 
 .pagination-links span {
@@ -234,14 +291,79 @@ li {
 
 .sl-markdown-content h1:first-of-type {
   @apply text-2xl sm:text-3xl mt-0;
+  letter-spacing: -0.025em;
+  margin-top: 0 !important;
 }
 
 h1[data-page-title] {
   @apply text-3xl md:text-5xl font-extrabold text-center;
+  letter-spacing: -0.035em;
+  line-height: 1.1;
 }
 
 .sl-markdown-content h2 {
-  @apply !text-xl sm:!text-2xl !mt-[2em];
+  @apply !text-xl sm:!text-2xl !mt-[2.5em] relative;
+  padding-bottom: 0.6em;
+  letter-spacing: -0.02em;
+}
+
+.sl-markdown-content h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 3rem;
+  height: 3px;
+  border-radius: 2px;
+  background: linear-gradient(90deg, hsl(var(--primary)), hsl(var(--primary) / 0.3));
+}
+
+.sl-markdown-content h3 {
+  @apply !mt-[1.8em];
+  letter-spacing: -0.01em;
+}
+
+.sl-markdown-content h4 {
+  @apply !mt-[1.4em];
+  color: hsl(var(--muted-foreground));
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+}
+
+/* Refined paragraph spacing inside content */
+.sl-markdown-content p {
+  line-height: 1.8;
+}
+
+.sl-markdown-content > * + * {
+  margin-top: 1.5em;
+}
+
+/* Inline code styling - Terminal Vibe */
+.sl-markdown-content code:not(pre code) {
+  font-size: 0.88em;
+  padding: 0.2em 0.4em;
+  border-radius: 0.3em;
+  background-color: hsl(var(--muted));
+  border: 1px solid hsl(var(--border) / 0.5);
+  color: var(--sl-color-text-accent);
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+/* Lists styling upgrade */
+.sl-markdown-content ul,
+.sl-markdown-content ol {
+  padding-left: 1.5em;
+}
+
+.sl-markdown-content li {
+  line-height: 1.75;
+  margin-bottom: 0.35em;
+}
+
+.sl-markdown-content li strong {
+  color: hsl(var(--foreground));
 }
 
 .sl-link-button.not-content.primary {
@@ -254,6 +376,14 @@ h1[data-page-title] {
 
 .sl-markdown-content img {
   @apply rounded-xl;
+  border: 1px solid hsl(var(--border));
+  box-shadow: 0 4px 24px -4px rgba(0, 0, 0, 0.12);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.sl-markdown-content img:hover {
+  transform: scale(1.01);
+  box-shadow: 0 8px 32px -4px rgba(0, 0, 0, 0.2);
 }
 
 /* TOC STYLES */
@@ -318,22 +448,32 @@ mobile-starlight-toc .dropdown a {
 
 kbd {
   @apply !bg-secondary;
+  border: 1px solid hsl(var(--border));
+  border-bottom-width: 2px;
+  padding: 0.15em 0.45em;
+  border-radius: 0.35em;
+  font-size: 0.85em;
+  font-family: inherit;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 
 .expressive-code {
+  @apply !mt-6 !mb-6;
+
   .frame {
+    border: 1px solid hsl(var(--border) / 0.5);
+    border-left: 3px solid hsl(var(--primary) / 0.5);
+    border-radius: 0.5rem;
+
     pre {
       @apply !bg-transparent;
+      font-size: 0.9rem !important;
+      line-height: 1.7 !important;
+      border: none !important;
     }
 
-    &.not-content {
-      > pre {
-        @apply rounded-lg border-border;
-      }
-
-      .copy button {
-        @apply bg-background rounded-lg;
-      }
+    .copy button {
+      @apply bg-background rounded-lg;
     }
   }
 }
@@ -567,12 +707,237 @@ site-search dialog .pagefind-ui__result-link:focus {
   outline: 1px solid hsl(var(--primary));
 }
 
-/* Eliminate the massive space between GroupName (briefcase) and the H1 title */
-.flex.items-center.gap-3:has(span) {
-  margin-bottom: 0.5rem !important;
+/* Eliminate the massive space between GroupName and the H1 title */
+.group-label {
+  margin-bottom: 0.25rem !important;
 }
-.flex.items-center.gap-3:has(span) + h1,
-.flex.items-center.gap-3:has(svg) + h1,
-.space-y-0 > .flex.items-center.gap-3 + h1 {
-  margin-top: 0rem !important;
+.group-label + h1,
+.group-label + h2,
+.space-y-0 > .group-label + h1,
+.space-y-0 > .group-label + h2,
+.group-label + * {
+  margin-top: 0 !important;
+}
+
+/* ============================================ */
+/* GLOBAL TEXT COLOR & PROSE THEME ENFORCEMENT  */
+/* ============================================ */
+
+/* Force Tailwind prose to use Starlight theme colors in both modes */
+.prose, .prose-invert, .sl-markdown-content {
+  --tw-prose-body: var(--sl-color-text) !important;
+  --tw-prose-headings: var(--sl-color-white) !important;
+  --tw-prose-lead: var(--sl-color-text) !important;
+  --tw-prose-links: var(--sl-color-text-accent) !important;
+  --tw-prose-bold: var(--sl-color-white) !important;
+  --tw-prose-counters: var(--sl-color-text) !important;
+  --tw-prose-bullets: var(--sl-color-text) !important;
+  --tw-prose-hr: var(--sl-color-hairline) !important;
+  --tw-prose-quotes: var(--sl-color-white) !important;
+  --tw-prose-quote-borders: var(--sl-color-hairline) !important;
+  --tw-prose-captions: var(--sl-color-text) !important;
+  --tw-prose-code: var(--sl-color-white) !important;
+  --tw-prose-pre-code: var(--sl-color-text) !important;
+  --tw-prose-pre-bg: var(--sl-color-bg-nav) !important;
+  --tw-prose-th-borders: var(--sl-color-hairline) !important;
+  --tw-prose-td-borders: var(--sl-color-hairline) !important;
+  
+  --tw-prose-invert-body: var(--sl-color-text) !important;
+  --tw-prose-invert-headings: var(--sl-color-white) !important;
+  --tw-prose-invert-lead: var(--sl-color-text) !important;
+  --tw-prose-invert-links: var(--sl-color-text-accent) !important;
+  --tw-prose-invert-bold: var(--sl-color-white) !important;
+  --tw-prose-invert-counters: var(--sl-color-text) !important;
+  --tw-prose-invert-bullets: var(--sl-color-text) !important;
+  --tw-prose-invert-hr: var(--sl-color-hairline) !important;
+  --tw-prose-invert-quotes: var(--sl-color-white) !important;
+  --tw-prose-invert-quote-borders: var(--sl-color-hairline) !important;
+  --tw-prose-invert-captions: var(--sl-color-text) !important;
+  --tw-prose-invert-code: var(--sl-color-white) !important;
+  --tw-prose-invert-pre-code: var(--sl-color-text) !important;
+  --tw-prose-invert-pre-bg: var(--sl-color-bg-nav) !important;
+  --tw-prose-invert-th-borders: var(--sl-color-hairline) !important;
+  --tw-prose-invert-td-borders: var(--sl-color-hairline) !important;
+}
+
+/* Enforce global headers and text outside of prose just in case */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--sl-color-white) !important;
+}
+
+/* ============================================ */
+/* AGENCY-LEVEL VIBE ENHANCEMENTS               */
+/* ============================================ */
+
+/* Scientific Blueprint / Lab Canvas Vibe */
+body {
+  background-image: radial-gradient(hsl(var(--muted-foreground) / 0.15) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+/* Glowing Headers for Agency Vibe */
+.sl-markdown-content h1,
+.sl-markdown-content h2,
+h1[data-page-title] {
+  text-shadow: 0 4px 24px hsl(var(--primary) / 0.25);
+  position: relative;
+  z-index: 1;
+}
+
+/* Agency-Style Typography for Intro / Lead Paragraphs */
+.sl-markdown-content p {
+  line-height: 1.8;
+  letter-spacing: 0.015em;
+  font-size: 1.05rem;
+}
+
+.sl-markdown-content h1[data-page-title] + p,
+.sl-markdown-content h1[data-page-title] + * + p {
+  font-size: 1.25rem;
+  line-height: 1.7;
+  color: var(--sl-color-gray-3);
+  font-weight: 300;
+  max-width: 80ch;
+}
+
+/* Agency-Style Asides */
+.sl-markdown-content .starlight-aside {
+  background: linear-gradient(135deg, hsl(var(--muted-foreground) / 0.05) 0%, hsl(var(--background)) 100%) !important;
+  border: 1px solid hsl(var(--border) / 0.5) !important;
+  border-inline-start: 4px solid var(--sl-color-asides-border) !important;
+  border-radius: 0.5rem;
+  box-shadow: var(--shadow-sm);
+  padding: 1.5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.sl-markdown-content .starlight-aside .starlight-aside__content,
+.sl-markdown-content .starlight-aside .starlight-aside__content p {
+  color: var(--sl-color-text) !important;
+  font-weight: 400;
+}
+
+.sl-markdown-content .starlight-aside::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at top left, var(--sl-color-asides-border), transparent 40%);
+  opacity: 0.1;
+  pointer-events: none;
+}
+
+/* ============================================ */
+/* SCROLL-DRIVEN REVEAL ANIMATIONS              */
+/* ============================================ */
+
+@keyframes reveal-up {
+  from {
+    opacity: 0;
+    transform: translateY(0.75rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.reveal-on-scroll {
+  opacity: 0;
+  transform: translateY(0.75rem);
+  transition: opacity 0.4s ease-out,
+              transform 0.4s ease-out;
+}
+
+.reveal-on-scroll.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Staggered delays for sequential reveals */
+.reveal-on-scroll:nth-child(2) { transition-delay: 0.08s; }
+.reveal-on-scroll:nth-child(3) { transition-delay: 0.16s; }
+.reveal-on-scroll:nth-child(4) { transition-delay: 0.24s; }
+.reveal-on-scroll:nth-child(5) { transition-delay: 0.32s; }
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal-on-scroll {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+/* ============================================ */
+/* ENHANCED TABLE STYLES (markdown tables)      */
+/* ============================================ */
+
+.sl-markdown-content table {
+  border-collapse: separate;
+  border-spacing: 0;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  border: 1px solid hsl(var(--border));
+  width: 100%;
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+}
+
+.sl-markdown-content thead th {
+  background: hsl(var(--secondary));
+  font-weight: 600;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 0.75rem 1rem;
+  color: hsl(var(--foreground));
+  border-bottom: 2px solid hsl(var(--border));
+}
+
+.sl-markdown-content tbody td {
+  padding: 0.65rem 1rem;
+  font-size: 0.9rem;
+  border-bottom: 1px solid hsl(var(--border) / 0.5);
+}
+
+.sl-markdown-content tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.sl-markdown-content tbody tr:nth-child(even) {
+  background: hsl(var(--secondary) / 0.3);
+}
+
+.sl-markdown-content tbody tr:hover {
+  background: hsl(var(--primary) / 0.06);
+}
+
+/* ============================================ */
+/* SECTION DIVIDER ENHANCEMENT                  */
+/* ============================================ */
+
+.sl-markdown-content hr {
+  border: none;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, hsl(var(--border)), transparent);
+  margin: 3em 0;
+}
+
+/* ============================================ */
+/* BLOCKQUOTE ENHANCEMENT                       */
+/* ============================================ */
+
+.sl-markdown-content blockquote {
+  border-left: 3px solid hsl(var(--primary) / 0.4);
+  padding-left: 1.2em;
+  color: hsl(var(--muted-foreground));
+  font-style: italic;
+  margin: 1.5em 0;
+}
+
+.sl-markdown-content blockquote p {
+  line-height: 1.7;
 }
