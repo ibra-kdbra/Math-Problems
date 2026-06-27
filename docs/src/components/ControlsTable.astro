@@ -5,7 +5,7 @@ export interface Props {
 }
 const { title, controls } = Astro.props;
 ---
-<div class="controls-table">
+<div class="controls-table reveal-on-scroll">
   {title && <h3>{title}</h3>}
   <div class="table-wrapper">
     <table>
@@ -18,7 +18,7 @@ const { title, controls } = Astro.props;
       <tbody>
         {controls.map((ctrl) => (
           <tr>
-            <td class="key-cell">{ctrl.key}</td>
+            <td class="key-cell"><kbd>{ctrl.key}</kbd></td>
             <td>{ctrl.description}</td>
           </tr>
         ))}
@@ -29,53 +29,85 @@ const { title, controls } = Astro.props;
 
 <style>
 .controls-table {
-  text-align: center;
+  margin: 2em auto;
+  max-width: 100%;
 }
 
 .controls-table h3 {
-  margin-bottom: 0.75rem;
-  color: var(--sl-color-accent);
+  margin-bottom: 1rem;
+  color: var(--sl-color-white);
+  font-size: 1.25rem;
+  letter-spacing: -0.01em;
 }
 
-/* Wrapper ensures centering */
 .table-wrapper {
-  display: flex;
-  justify-content: center;
+  overflow-x: auto;
+  border-radius: 0.75rem;
+  border: 1px solid hsl(var(--border) / 0.5);
+  background: linear-gradient(to bottom right, hsl(var(--muted-foreground) / 0.05), transparent);
+  box-shadow: var(--shadow-sm);
 }
 
-/* Table: compact + adaptive theme colors */
 table {
+  width: 100%;
   border-collapse: collapse;
   font-size: 0.95rem;
-  border: 1px solid var(--sl-color-border);
-  border-radius: 0.5rem;
-  overflow: hidden;
-  margin-inline: auto;
-  width: auto; /* compact width */
-  min-width: 320px; /* prevents it from collapsing too much */
+  min-width: 400px;
 }
 
 thead {
-  background: var(--sl-color-muted-bg);
+  background: hsl(var(--secondary) / 0.8);
+  border-bottom: 1px solid hsl(var(--border));
 }
 
-th, td {
-  padding: 0.5rem 0.8rem;
+th {
+  padding: 0.85rem 1.25rem;
   text-align: left;
-}
-
-.key-cell {
-  font-family: monospace;
   font-weight: 600;
-  color: var(--sl-color-primary);
-  white-space: nowrap;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--sl-color-text-accent);
 }
 
-tbody tr:nth-child(even) {
-  background: var(--sl-color-bg-alt);
+td {
+  padding: 0.85rem 1.25rem;
+  text-align: left;
+  border-bottom: 1px solid hsl(var(--border) / 0.3);
+  color: var(--sl-color-text);
+}
+
+tbody tr:last-child td {
+  border-bottom: none;
+}
+
+tbody tr {
+  transition: background-color 0.2s ease;
 }
 
 tbody tr:hover {
-  background: var(--sl-color-muted-bg);
+  background: hsl(var(--primary) / 0.05);
+}
+
+.key-cell {
+  white-space: nowrap;
+  width: 30%;
+}
+
+.key-cell kbd {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: hsl(var(--background));
+  border: 1px solid hsl(var(--border));
+  border-bottom-width: 2px;
+  padding: 0.25em 0.6em;
+  border-radius: 0.35em;
+  font-family: 'JetBrains Mono', 'Fira Code', monospace;
+  font-size: 0.85em;
+  font-weight: 600;
+  color: var(--sl-color-white);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  min-width: 2em;
 }
 </style>
