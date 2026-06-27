@@ -49,44 +49,52 @@ const { title, controls } = Astro.props;
 }
 
 table {
-  width: 100%;
+  display: table !important;
+  width: 100% !important;
   border-collapse: collapse;
   font-size: 0.95rem;
   min-width: 400px;
+  background: transparent !important;
+  margin: 0 !important;
 }
 
 thead {
-  background: hsl(var(--secondary) / 0.8);
-  border-bottom: 1px solid hsl(var(--border));
+  background: hsl(var(--secondary) / 0.8) !important;
+  border-bottom: 1px solid hsl(var(--border)) !important;
 }
 
 th {
-  padding: 0.85rem 1.25rem;
-  text-align: left;
-  font-weight: 600;
-  font-size: 0.75rem;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  color: var(--sl-color-text-accent);
+  padding: 0.85rem 1.25rem !important;
+  text-align: left !important;
+  font-weight: 600 !important;
+  font-size: 0.75rem !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.1em !important;
+  color: var(--sl-color-text-accent) !important;
 }
 
 td {
-  padding: 0.85rem 1.25rem;
-  text-align: left;
-  border-bottom: 1px solid hsl(var(--border) / 0.3);
-  color: var(--sl-color-text);
+  padding: 0.85rem 1.25rem !important;
+  text-align: left !important;
+  border-bottom: 1px solid hsl(var(--border) / 0.3) !important;
+  color: var(--sl-color-text) !important;
 }
 
 tbody tr:last-child td {
-  border-bottom: none;
+  border-bottom: none !important;
 }
 
 tbody tr {
+  background: transparent !important;
   transition: background-color 0.2s ease;
 }
 
+tbody tr:nth-child(even) {
+  background: hsl(var(--secondary) / 0.2) !important;
+}
+
 tbody tr:hover {
-  background: hsl(var(--primary) / 0.05);
+  background: hsl(var(--primary) / 0.1) !important;
 }
 
 .key-cell {
