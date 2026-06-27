@@ -45,3 +45,63 @@ const { iconName, title, iconStyles, href } = Astro.props
     </article>
   )
 }
+
+<style>
+  .card {
+    border: 1px solid hsl(var(--border) / 0.5);
+    border-radius: 0.75rem;
+    background: linear-gradient(135deg, hsl(var(--secondary) / 0.3), hsl(var(--background)));
+    box-shadow: inset 0 1px 1px hsl(var(--white) / 0.05), var(--shadow-sm);
+    transition: all 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+    position: relative;
+    overflow: hidden;
+    padding: 1.25rem;
+    height: 100%;
+  }
+
+  .card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: radial-gradient(circle at top left, hsl(var(--primary) / 0.15), transparent 60%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+  }
+
+  .title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--sl-color-white);
+    margin-bottom: 0.75rem;
+    gap: 0.5rem;
+    align-items: center;
+  }
+
+  .body {
+    color: hsl(var(--muted-foreground));
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+
+  a {
+    text-decoration: none !important;
+    display: block;
+    height: 100%;
+  }
+
+  a:hover > .card,
+  a:focus-visible > .card,
+  .card:hover {
+    border-color: hsl(var(--primary) / 0.5);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 24px -6px hsl(var(--primary) / 0.15);
+    background: linear-gradient(135deg, hsl(var(--secondary) / 0.5), hsl(var(--background)));
+  }
+
+  a:hover > .card::before,
+  a:focus-visible > .card::before,
+  .card:hover::before {
+    opacity: 1;
+  }
+</style>
