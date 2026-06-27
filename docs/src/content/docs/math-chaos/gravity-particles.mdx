@@ -4,7 +4,7 @@ description: A real-time gravity simulation using RayLib.
 ---
 
 import { Aside, Steps, Badge, Card, CardGrid } from '@astrojs/starlight/components'
-import { GroupName, TextBlock } from '../../../components/components'
+import { GroupName, TextBlock, Math } from '../../../components/components'
 
 <div class="space-y-0">
 <GroupName>Math Chaos</GroupName>
@@ -43,9 +43,7 @@ The Gravity Particle simulation (also known as `raylib-particle-toy`) models the
 
 The simulation tracks each particle's position, velocity, and mass. At every frame, it calculates the net force acting on each particle:
 
-```math
-F = G * (m1 * m2) / r^2
-```
+<Math displayMode={true} formula={`F = G \\cdot \\frac{m_1 \\cdot m_2}{r^2}`} />
 
 ### Key Components
 - `particle.h`: Defines the particle structure and physics update logic.
